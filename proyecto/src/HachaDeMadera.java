@@ -4,7 +4,6 @@ public class HachaDeMadera extends Hacha {
 
         durabilidad = 100;
         fuerza = 2;
-    //    desgaste = new DesgastePorPorcentajeDeFuerza();
-
+        desgaste = new DesgastePorPorcentaje(1);
     }
 }

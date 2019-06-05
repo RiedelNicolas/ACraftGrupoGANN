@@ -4,7 +4,7 @@ public class PicoFino extends Pico {
 
         durabilidad = 1000;
         fuerza = 20;
-    //    desgaste = new DesgastePorPorcentajeDeDurabilidad();
+        desgaste = new DesgastePorPorcentaje(10);
 
     }
 
