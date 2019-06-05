@@ -1,12 +1,18 @@
-import org.junit.Assert;
-import org.junit.Test;
-
+import org.junit.*;
+import org.hamcrest.*;
 
 public class JugadorTest {
 
     @Test
-    public void testJugadorSeCreaCorrectamente() {
-      // Assert.fail();
+    public void test01JugadorSeCreaCorrectamente() {
+        Jugador jugador = new Jugador();
+        Assert.assertNotNull(jugador);
 
+    }
+
+    @Test
+    public void test02JugadorSeCreaConHachaDeMaderaEnMano() {
+        Jugador jugador = new Jugador();
+        Assert.assertThat(jugador.getHerramientaEnMano(), CoreMatchers.instanceOf(HachaDeMadera.class));
     }
 }
