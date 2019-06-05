@@ -89,17 +89,17 @@ public class HerramientasTest {
         Herramienta hacha = new HachaDeMetal();
         assertEquals(10, hacha.getFuerza());
     }
-}
 
-//    @Test
-//    public void test15SeUsaHachaDeMaderaContraMaderaYPierde2DeDurabilidad(){
-//
-//        Herramienta hacha = new HachaDeMadera();
-//        Material madera = new Madera();
-//        hacha.golpear(madera);
-//
-//        assertEquals(98, hacha.getDurabilidad());
-//    }
+
+    @Test
+    public void test15SeUsaHachaDeMaderaContraMaderaYPierde2DeDurabilidad(){
+
+        Herramienta hacha = new HachaDeMadera();
+        Material madera = new Madera();
+        hacha.golpear(madera);
+
+        assertEquals(98, hacha.getDurabilidad(), 0.0001);
+    }}
 //
 //    @Test
 //    public void test16SeUsaHachaDeMaderaContraPiedraYPierde2DeDurabilidad(){
