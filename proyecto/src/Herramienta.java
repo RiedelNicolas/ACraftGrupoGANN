@@ -7,17 +7,17 @@ public abstract class Herramienta {
   //  Desgaste desgaste;
 
 
-   /* public void golpear(Material material){
+   public void golpear(Material material){
 
-        material.gastarCon(this);
-        durabilidad = desgastar();
+       material.gastarCon(this);
+       durabilidad = desgastar();
 
-    }*/
+    }
 
-/*
+
     public int desgastar(){
         return desgaste.aplicar();
-    }*/
+    }
 
     public int getDurabilidad(){
         return durabilidad;
@@ -27,8 +27,4 @@ public abstract class Herramienta {
         return fuerza;
     }
 
-
-    public void setDurabilidad(int durabilidad) {
-        this.durabilidad = durabilidad;
-    }
 }
