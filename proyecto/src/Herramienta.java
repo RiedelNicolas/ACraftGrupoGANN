@@ -2,7 +2,7 @@ public abstract class Herramienta {
 
     protected int fuerza;
 
-    private int durabilidad;
+    protected int durabilidad;
 
   //  Desgaste desgaste;
 
@@ -16,11 +16,13 @@ public abstract class Herramienta {
 
 
     public int desgastar(){
-        return desgaste.aplicar();
+
+       return desgaste.aplicar();
     }
 
     public int getDurabilidad(){
-        return durabilidad;
+
+       return durabilidad;
     }
 
     public int getFuerza(){
