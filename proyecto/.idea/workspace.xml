@@ -2,39 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4d1fe24-551c-4bae-83f4-2da4628da5a5" name="Default Changelist" comment="">
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HachaDeMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HachaDeMadera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HachaDeMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HachaDeMetal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HachaDePiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HachaDePiedra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Herramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramienta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PicoDeMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PicoDeMadera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PicoDeMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PicoDeMetal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PicoDePiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PicoDePiedra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PicoFino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/HerramientasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/HerramientasTest.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/Hacha.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/HachaDeMadera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/HachaDeMetal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/HachaDePiedra.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/Herramienta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/Material.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP2/Material.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/Pico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/PicoDeMadera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/PicoDeMetal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/PicoDePiedra.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP2/PicoFino.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TP2/HerramientasTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TP2/JugadorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/JugadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/JugadorTest.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/HachaDePiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HachaDePiedra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramienta.java" afterDir="false" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,181 +23,116 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
-=======
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Herramienta.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="128">
-              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-              <folding>
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#308#309#0" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="263">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Jugador.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-=======
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Herramienta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-              <folding>
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-              </folding>
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DesgastePorPorcentaje.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Hacha.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="48" selection-start-column="48" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pico.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state>
-              <caret column="48" selection-start-column="48" selection-end-column="48" />
-=======
-            <state relative-caret-position="20">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
-              <folding>
-                <element signature="e#104#105#0" expanded="true" />
-                <element signature="e#159#160#0" expanded="true" />
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-              </folding>
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/DesgastePorCantidadDeGolpes.java">
+        <entry file="file://$PROJECT_DIR$/src/PicoFino.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-=======
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/test/JugadorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-=======
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/HerramientasTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8600">
-              <caret line="430" column="9" selection-start-line="430" selection-start-column="9" selection-end-line="430" selection-end-column="9" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
+            <state relative-caret-position="90">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#215#216#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/GolpesMaximosExcedidosException.java">
-=======
-<<<<<<< HEAD
-        <entry file="jar://$PROJECT_DIR$/../libs/junit-jar-4.12.jar!/org/junit/Assert.class">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="354" column="35" selection-start-line="354" selection-start-column="23" selection-end-line="354" selection-end-column="35" />
-=======
+            <state relative-caret-position="8715">
+              <caret line="581" column="10" selection-start-line="581" selection-start-column="10" selection-end-line="581" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Material.java">
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="120">
+              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Madera.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+              <folding>
+                <element signature="e#67#68#0" expanded="true" />
+                <element signature="e#98#99#0" expanded="true" />
+                <element signature="e#144#145#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+                <element signature="e#289#290#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Piedra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding>
+                <element signature="e#68#69#0" expanded="true" />
+                <element signature="e#99#100#0" expanded="true" />
+                <element signature="e#142#143#0" expanded="true" />
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PicoDeMadera.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PicoDePiedra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/HerramientasTest.java">
+        <entry file="file://$PROJECT_DIR$/src/Pico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="101" column="7" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Desgaste.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="40">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-=======
-            <state relative-caret-position="60">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/PicoDeMetal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-=======
-        <entry file="file://$PROJECT_DIR$/test/HerramientasTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="1455">
-              <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="60">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
+            <state>
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -239,8 +149,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Fino</find>
-      <find>equalsRegardingNull</find>
-      <find>assertEquals</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -250,50 +158,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/JugadorTest.java" />
+        <option value="$PROJECT_DIR$/src/Pico.java" />
+        <option value="$PROJECT_DIR$/src/Hacha.java" />
         <option value="$PROJECT_DIR$/src/test/JugadorTest.java" />
-        <option value="$PROJECT_DIR$/test/JugadorTest.java" />
         <option value="$PROJECT_DIR$/src/HachaDePiedra.java" />
-        <option value="$PROJECT_DIR$/src/PicoDeMadera.java" />
-        <option value="$PROJECT_DIR$/src/PicoDePiedra.java" />
-        <option value="$PROJECT_DIR$/src/HachaDeMetal.java" />
+        <option value="$PROJECT_DIR$/test/JugadorTest.java" />
+        <option value="$PROJECT_DIR$/test/HerramientasTest.java" />
         <option value="$PROJECT_DIR$/src/PicoFino.java" />
         <option value="$PROJECT_DIR$/src/HachaDeMadera.java" />
-        <option value="$PROJECT_DIR$/src/DesgastePorPorcentaje.java" />
         <option value="$PROJECT_DIR$/src/PicoDeMetal.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/Desgaste.java" />
-        <option value="$PROJECT_DIR$/src/DesgastePorCantidadDeGolpes.java" />
-        <option value="$PROJECT_DIR$/src/GolpesMaximosExcedidosException.java" />
-        <option value="$PROJECT_DIR$/src/Hacha.java" />
-        <option value="$PROJECT_DIR$/src/Pico.java" />
-        <option value="$PROJECT_DIR$/src/Herramienta.java" />
-        <option value="$PROJECT_DIR$/test/HerramientasTest.java" />
-=======
         <option value="$PROJECT_DIR$/src/HachaDeMetal.java" />
         <option value="$PROJECT_DIR$/src/PicoDeMadera.java" />
         <option value="$PROJECT_DIR$/src/PicoDePiedra.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/HachaDeMetal.java" />
-        <option value="$PROJECT_DIR$/src/PicoDeMetal.java" />
         <option value="$PROJECT_DIR$/src/Herramienta.java" />
-        <option value="$PROJECT_DIR$/test/HerramientasTest.java" />
-        <option value="$PROJECT_DIR$/test/JugadorTest.java" />
-        <option value="$PROJECT_DIR$/src/Jugador.java" />
-=======
-        <option value="$PROJECT_DIR$/src/HachaDePiedra.java" />
-        <option value="$PROJECT_DIR$/src/Herramienta.java" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-<<<<<<< HEAD
-    <option name="x" value="479" />
-=======
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="830" />
     <option name="y" value="54" />
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
     <option name="width" value="954" />
     <option name="height" value="1049" />
   </component>
@@ -327,10 +210,6 @@
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-      <pane id="Scope" />
-=======
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -340,16 +219,9 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../build.xml" />
-    <property name="project.structure.last.edited" value="Libraries" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../libs/hamcrest-core-jar-1.3.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -372,17 +244,17 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.HerramientasTest">
-=======
-<<<<<<< HEAD
-  <component name="RunManager" selected="JUnit.JugadorTest.test01JugadorSeCreaCorrectamente">
-    <configuration name="HerramientasTest.test01PicoDeMaderaSeCreaCon100DeDurabilidad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
-  <component name="RunManager" selected="JUnit.HerramientasTest.test01PicoDeMaderaSeCreaCon100DeDurabilidad">
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
     <configuration name="HerramientasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
+      <module name="TP2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HerramientasTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HerramientasTest.test01PicoDeMaderaSeCreaCon100DeDurabilidad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HerramientasTest" />
@@ -392,47 +264,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JugadorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <configuration name="JugadorTest.test01JugadorSeCreaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JugadorTest" />
-      <option name="METHOD_NAME" value="test01JugadorSeCreaCorrectamente" />
-=======
     <configuration name="HerramientasTest.test02PicoDeMaderaSeCreaCon2DeFuerza" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HerramientasTest" />
       <option name="METHOD_NAME" value="test02PicoDeMaderaSeCreaCon2DeFuerza" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="JugadorTest.test02JugadorSeCreaConHachaDeMaderaEnMano" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JugadorTest" />
-      <option name="METHOD_NAME" value="test02JugadorSeCreaConHachaDeMaderaEnMano" />
-      <option name="TEST_OBJECT" value="method" />
-=======
     <configuration name="JugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JugadorTest" />
       <option name="TEST_OBJECT" value="class" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -449,22 +295,10 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
         <item itemvalue="JUnit.HerramientasTest" />
-        <item itemvalue="JUnit.HerramientasTest.test01PicoDeMaderaSeCreaCon100DeDurabilidad" />
         <item itemvalue="JUnit.HerramientasTest.test02PicoDeMaderaSeCreaCon2DeFuerza" />
-=======
-<<<<<<< HEAD
-        <item itemvalue="JUnit.JugadorTest.test01JugadorSeCreaCorrectamente" />
-=======
         <item itemvalue="JUnit.HerramientasTest.test01PicoDeMaderaSeCreaCon100DeDurabilidad" />
-        <item itemvalue="JUnit.HerramientasTest.test02PicoDeMaderaSeCreaCon2DeFuerza" />
-        <item itemvalue="JUnit.HerramientasTest" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
         <item itemvalue="JUnit.JugadorTest" />
-        <item itemvalue="JUnit.HerramientasTest.test01PicoDeMaderaSeCreaCon100DeDurabilidad" />
-        <item itemvalue="JUnit.JugadorTest.test02JugadorSeCreaConHachaDeMaderaEnMano" />
         <item itemvalue="JUnit.JugadorTest.testJugadorSeCreaCorrectamente (1)" />
       </list>
     </recent_temporary>
@@ -479,11 +313,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559678809533</updated>
-      <workItem from="1559762283111" duration="2812000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="JugadorTest_testJugadorSeCreaCorrectamente - 2019.06.04 at 17h 59m 52s.xml">
+      <configuration name="JugadorTest.testJugadorSeCreaCorrectamente" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JugadorTest_testJugadorSeCreaCorrectamente - 2019.06.05 at 11h 44m 51s.xml">
+      <configuration name="JugadorTest.testJugadorSeCreaCorrectamente" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="JugadorTest_testJugadorSeCreaCorrectamente - 2019.06.05 at 11h 48m 19s.xml">
       <configuration name="JugadorTest.testJugadorSeCreaCorrectamente" configurationId="JUnit" />
     </history-entry>
@@ -508,28 +347,12 @@
     <history-entry file="HerramientasTest - 2019.06.05 at 12h 41m 44s.xml">
       <configuration name="HerramientasTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HerramientasTest - 2019.06.05 at 17h 45m 30s.xml">
-      <configuration name="HerramientasTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HerramientasTest - 2019.06.05 at 17h 51m 32s.xml">
-      <configuration name="HerramientasTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2812000" />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="-2" y="0" width="1924" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989224" visible="true" weight="0.14764565" />
-=======
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989224" visible="true" weight="0.14834578" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989224" visible="true" weight="0.14674494" />
       <window_info id="Structure" order="1" sideWeight="0.5010776" side_tool="true" weight="0.14514408" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -537,30 +360,17 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3284055" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286638" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32946146" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32946146" />
-=======
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50039905" side_tool="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49960095" visible="true" weight="0.32899022" />
-      <window_info anchor="right" id="Database" />
-=======
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3297414" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32946146" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3297414" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -570,25 +380,107 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14514408" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Learn" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3297414" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+    </layout-to-restore>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/../build.xml">
+      <targetFilters>
+        <filter targetName="setup" isVisible="false" />
+        <filter targetName="compilar.aplicacion" isVisible="false" />
+        <filter targetName="compilar.tests" isVisible="false" />
+        <filter targetName="compilar.tests.sin.instrumentar" isVisible="false" />
+        <filter targetName="instrumentar.aplicacion" isVisible="false" />
+        <filter targetName="ejecutar.tests" isVisible="false" />
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="coverage-check" isVisible="false" />
+        <filter targetName="coverage-report" isVisible="false" />
+        <filter targetName="summary-coverage-report" isVisible="false" />
+        <filter targetName="alternate-coverage-report" isVisible="false" />
+        <filter targetName="test" isVisible="false" />
+        <filter targetName="compilar.paquete" isVisible="false" />
+        <filter targetName="empaquetar" isVisible="false" />
+        <filter targetName="integracion-continua" isVisible="true" />
+        <filter targetName="download-ivy" isVisible="false" />
+        <filter targetName="install-ivy" isVisible="true" />
+        <filter targetName="resolve" isVisible="true" />
+        <filter targetName="run-pmd" isVisible="false" />
+        <filter targetName="empaquetar.con.imagenes" isVisible="false" />
+        <filter targetName="ejecutar.aplicacion" isVisible="false" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/junit-4.12.jar!/org/junit/Assert.class" />
+    <entry file="jar://$PROJECT_DIR$/../../../junit-4.12.jar!/org/junit/Assert.class" />
     <entry file="file://$PROJECT_DIR$/TP2.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/JugadorTest.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Hacha.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HachaDePiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PicoFino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HachaDeMadera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PicoDeMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" lean-forward="true" selection-start-column="39" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/JugadorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
+        <state relative-caret-position="15">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -598,265 +490,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Material.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PicoDePiedra.java">
+    <entry file="file://$PROJECT_DIR$/src/HachaDeMetal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PicoDeMadera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        <state relative-caret-position="45">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HachaDeMetal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HachaDePiedra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-=======
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/HachaDePiedra.java">
+    <entry file="file://$PROJECT_DIR$/src/Herramienta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-=======
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8715">
+          <caret line="581" column="10" selection-start-line="581" selection-start-column="10" selection-end-line="581" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientasTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PicoDePiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PicoFino.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/PicoDePiedra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PicoDeMetal.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/PicoFino.java">
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HachaDeMadera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Material.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HachaDeMadera.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/PicoDeMetal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Desgaste.java">
-=======
-    <entry file="file://$PROJECT_DIR$/test/JugadorTest.java">
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Hacha.java">
-=======
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/HachaDeMetal.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/Material.java">
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Pico.java">
-=======
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Hacha.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/HerramientasTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../libs/junit-jar-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="354" column="35" selection-start-line="354" selection-start-column="23" selection-end-line="354" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/JugadorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/src/HachaDeMetal.java">
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesgastePorCantidadDeGolpes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GolpesMaximosExcedidosException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramienta.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="360">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-          </folding>
-=======
-        <state relative-caret-position="80">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesgastePorPorcentaje.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="160">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../libs/junit-jar-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/HerramientasTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="101" column="7" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-=======
-<<<<<<< HEAD
-        <state relative-caret-position="128">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding>
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-=======
-        <state relative-caret-position="8600">
-          <caret line="430" column="9" selection-start-line="430" selection-start-column="9" selection-end-line="430" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Jugador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#159#160#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-          </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/src/Herramienta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
->>>>>>> 2304b2046c6f073a1059729951770c28f2e4bb3b
->>>>>>> 44ed0098f2da7bd599c568c703998bf264e10576
         </state>
       </provider>
     </entry>
