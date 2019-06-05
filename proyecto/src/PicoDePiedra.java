@@ -1,9 +1,9 @@
-public class PicoPiedra extends Pico {
+public class PicoDePiedra extends Pico {
 
-    public PicoPiedra (){
+    public PicoDePiedra (){
         durabilidad = 200;
         fuerza = 4;
-        desgaste = new DesgastePorPorcentajeDeDurabilidad();
+        desgaste = new DesgastePorPorcentajeDeFuerza();
     }
 
 }
