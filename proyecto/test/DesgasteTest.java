@@ -55,21 +55,14 @@ public class DesgasteTest {
     }
 
 
-
-
-
-
-
-
-
-    @Test
-    public void test07DesgastePorCantidadDeGolpesAplicaBienElDesgaste(){
-        int durabilidad = 100;
-        DesgastePorGolpes desgaste = new DesgastePorGolpes(5);
-        for (int i = 0; i < 4; i++){
-            durabilidad = desgaste.aplicar(durabilidad, )
-        }
-    }
+//    @Test
+//    public void test07DesgastePorCantidadDeGolpesAplicaBienElDesgaste(){
+//        int durabilidad = 100;
+//        DesgastePorGolpes desgaste = new DesgastePorGolpes(5);
+//        for (int i = 0; i < 4; i++){
+//            durabilidad = desgaste.aplicar(durabilidad, )
+//        }
+//    }
 
 
 

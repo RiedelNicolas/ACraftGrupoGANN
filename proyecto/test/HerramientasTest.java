@@ -321,7 +321,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test32SeUsaPicoDeMetalContraPiedraYDurabilidadNoSeVeAfectadaTrasUnUso(){
+    public void test36SeUsaPicoDeMetalContraPiedraYDurabilidadNoSeVeAfectadaTrasUnUso(){
 
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
@@ -332,7 +332,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test33SeUsaPicoDeMetalContraMetalYDurabilidadNoSeVeAfectadaTrasUnUso(){
+    public void test37SeUsaPicoDeMetalContraMetalYDurabilidadNoSeVeAfectadaTrasUnUso(){
 
         Herramienta pico = new PicoDeMetal();
         Material metal = new Metal();
@@ -343,7 +343,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test34SeUsaPicoDeMetalContraDiamanteYDurabilidadNoSeVeAfectadaTrasUnUso(){
+    public void test38SeUsaPicoDeMetalContraDiamanteYDurabilidadNoSeVeAfectadaTrasUnUso(){
 
         Herramienta pico = new PicoDeMetal();
         Material diamante = new Diamante();
@@ -354,7 +354,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test35PicoDeMetalSeRompeAlDecimoUsoContraMadera(){
+    public void test39PicoDeMetalSeRompeAlDecimoUsoContraMadera(){
 
         Herramienta pico = new PicoDeMetal();
         Material madera = new Madera();
@@ -374,7 +374,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test36PicoDeMetalSeRompeAlDecimoUsoContraPiedra(){
+    public void test40PicoDeMetalSeRompeAlDecimoUsoContraPiedra(){
 
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
@@ -394,7 +394,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test37PicoDeMetalSeRompeAlDecimoUsoContraMetal(){
+    public void test41PicoDeMetalSeRompeAlDecimoUsoContraMetal(){
 
         Herramienta pico = new PicoDeMetal();
         Material metal = new Metal();
@@ -415,7 +415,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test38PicoDeMetalSeRompeAlDecimoUsoContraDiamante(){
+    public void test42PicoDeMetalSeRompeAlDecimoUsoContraDiamante(){
 
         Herramienta pico = new PicoDeMetal();
         Material diamante = new Diamante();
@@ -436,7 +436,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test39PicoFinoSeUsaContraDiamanteYPierde100DeDurabilidad(){
+    public void test43PicoFinoSeUsaContraDiamanteYPierde100DeDurabilidad(){
 
         Herramienta pico = new PicoFino();
         Material diamante = new Diamante();
@@ -447,7 +447,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test40SeUsaPicoFinoContraMaderaYDurabilidadNoSeVeAfectada(){
+    public void test44SeUsaPicoFinoContraMaderaYDurabilidadNoSeVeAfectada(){
 
         Herramienta pico = new PicoFino();
         Material madera = new Madera();
@@ -458,7 +458,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test41SeUsaPicoFinoContraPiedraYDurabilidadNoSeVeAfectada(){
+    public void test45SeUsaPicoFinoContraPiedraYDurabilidadNoSeVeAfectada(){
 
         Herramienta pico = new PicoFino();
         Material piedra = new Piedra();
@@ -469,7 +469,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test42SeUsaPicoFinoContraMetalYDurabilidadNoSeVeAfectada(){
+    public void test46SeUsaPicoFinoContraMetalYDurabilidadNoSeVeAfectada(){
 
         Herramienta pico = new PicoFino();
         Material metal = new Metal();
