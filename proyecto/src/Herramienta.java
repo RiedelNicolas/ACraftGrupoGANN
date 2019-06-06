@@ -2,7 +2,7 @@ public abstract class Herramienta {
 
     protected int fuerza;
 
-    protected double durabilidad;
+    protected int durabilidad;
 
     Desgaste desgaste;
 
@@ -15,11 +15,11 @@ public abstract class Herramienta {
     }
 
 
-    public double desgastar(){
+    public int desgastar(){
        return desgaste.aplicar(durabilidad, fuerza);
     }
 
-    public double getDurabilidad(){
+    public int getDurabilidad(){
 
        return durabilidad;
     }

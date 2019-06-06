@@ -7,7 +7,7 @@ public class DesgastePorPorcentaje extends Desgaste {
     }
 
     @Override
-    public double aplicar(int durabilidad, int fuerza){
+    public int aplicar(int durabilidad, int fuerza){
         durabilidad -= (fuerza / porcentaje);
 
         return durabilidad;
