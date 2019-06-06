@@ -5,7 +5,7 @@ public abstract class Herramienta {
 
     protected int durabilidad;
 
-    Desgaste desgaste;
+    protected Desgaste desgaste;
 
 
     //Métodos
