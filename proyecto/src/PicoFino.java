@@ -13,6 +13,6 @@ public class PicoFino extends Pico {
         try {
             material.gastarCon(this);
             durabilidad = desgastar();
-        } catch (MaterialNoSeDanioException e){}
+        } catch (RuntimeException e){}
     }
 }

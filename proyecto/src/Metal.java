@@ -4,6 +4,7 @@ public class Metal extends Material {
         durabilidad = 50;
     }
 
+    @Override
     public void gastarCon(PicoDePiedra pico){
         durabilidad -= pico.getFuerza();
     }
