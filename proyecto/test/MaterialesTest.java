@@ -63,7 +63,9 @@ public class MaterialesTest {
 
         Madera madera = new Madera();
         PicoDeMadera pico = new PicoDeMadera();
-        madera.gastarCon(pico);
+        try {
+            madera.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -73,7 +75,9 @@ public class MaterialesTest {
 
         Madera madera = new Madera();
         PicoDePiedra pico = new PicoDePiedra();
-        madera.gastarCon(pico);
+        try {
+            madera.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -83,7 +87,9 @@ public class MaterialesTest {
 
         Madera madera = new Madera();
         PicoDeMetal pico = new PicoDeMetal();
-        madera.gastarCon(pico);
+        try {
+            madera.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -93,7 +99,9 @@ public class MaterialesTest {
 
         Madera madera = new Madera();
         PicoFino pico = new PicoFino();
-        madera.gastarCon(pico);
+        try {
+            madera.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -103,7 +111,9 @@ public class MaterialesTest {
 
         Piedra piedra = new Piedra();
         HachaDeMadera hacha = new HachaDeMadera();
-        piedra.gastarCon(hacha);
+        try {
+            piedra.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(30, piedra.getDurabilidad());
     }
@@ -113,7 +123,9 @@ public class MaterialesTest {
 
         Piedra piedra = new Piedra();
         HachaDePiedra hacha = new HachaDePiedra();
-        piedra.gastarCon(hacha);
+        try {
+            piedra.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(30, piedra.getDurabilidad());
     }
@@ -123,7 +135,9 @@ public class MaterialesTest {
 
         Piedra piedra = new Piedra();
         HachaDeMetal hacha = new HachaDeMetal();
-        piedra.gastarCon(hacha);
+        try {
+            piedra.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(30, piedra.getDurabilidad());
     }
@@ -149,7 +163,7 @@ public class MaterialesTest {
     }
 
     @Test
-    public void test17PiedraSeGolpeaConPicoDeMetalYNoSeReduceEn12LaDurabilidad(){
+    public void test17PiedraSeGolpeaConPicoDeMetalYSeReduceEn12LaDurabilidad(){
 
         Piedra piedra = new Piedra();
         PicoDeMetal pico = new PicoDeMetal();
@@ -159,11 +173,13 @@ public class MaterialesTest {
     }
 
     @Test
-    public void test18PiedraSeGolpeaConPicoFinoYNoSeReduceEn20LaDurabilidad(){
+    public void test18PiedraSeGolpeaConPicoFinoYSeReduceEn20LaDurabilidad(){
 
         Piedra piedra = new Piedra();
         PicoFino pico = new PicoFino();
-        piedra.gastarCon(pico);
+        try {
+            piedra.gastarCon(pico);
+        } catch (PicoFinoException e){}
 
         assertEquals(10, piedra.getDurabilidad());
     }
@@ -173,7 +189,9 @@ public class MaterialesTest {
 
         Metal metal = new Metal();
         HachaDeMadera hacha = new HachaDeMadera();
-        metal.gastarCon(hacha);
+        try {
+            metal.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -183,7 +201,9 @@ public class MaterialesTest {
 
         Metal metal = new Metal();
         HachaDePiedra hacha = new HachaDePiedra();
-        metal.gastarCon(hacha);
+        try {
+            metal.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -193,7 +213,9 @@ public class MaterialesTest {
 
         Metal metal = new Metal();
         HachaDeMetal hacha = new HachaDeMetal();
-        metal.gastarCon(hacha);
+        try {
+            metal.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -203,7 +225,9 @@ public class MaterialesTest {
 
         Metal metal = new Metal();
         PicoDeMadera pico = new PicoDeMadera();
-        metal.gastarCon(pico);
+        try {
+            metal.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -223,7 +247,9 @@ public class MaterialesTest {
 
         Metal metal = new Metal();
         PicoDeMetal pico = new PicoDeMetal();
-        metal.gastarCon(pico);
+        try {
+            metal.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -233,7 +259,9 @@ public class MaterialesTest {
 
         Metal metal = new Metal();
         PicoFino pico = new PicoFino();
-        metal.gastarCon(pico);
+        try {
+            metal.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -243,7 +271,9 @@ public class MaterialesTest {
 
         Diamante diamante = new Diamante();
         HachaDeMadera hacha = new HachaDeMadera();
-        diamante.gastarCon(hacha);
+        try {
+            diamante.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(100, diamante.getDurabilidad());
     }
@@ -253,7 +283,9 @@ public class MaterialesTest {
 
         Diamante diamante = new Diamante();
         HachaDePiedra hacha = new HachaDePiedra();
-        diamante.gastarCon(hacha);
+        try {
+            diamante.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(100, diamante.getDurabilidad());
     }
@@ -263,7 +295,9 @@ public class MaterialesTest {
 
         Diamante diamante = new Diamante();
         HachaDeMetal hacha = new HachaDeMetal();
-        diamante.gastarCon(hacha);
+        try {
+            diamante.gastarCon(hacha);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(100, diamante.getDurabilidad());
     }
@@ -273,7 +307,9 @@ public class MaterialesTest {
 
         Diamante diamante = new Diamante();
         PicoDeMadera pico = new PicoDeMadera();
-        diamante.gastarCon(pico);
+        try {
+            diamante.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(100, diamante.getDurabilidad());
 
@@ -284,7 +320,9 @@ public class MaterialesTest {
 
         Diamante diamante = new Diamante();
         PicoDePiedra pico = new PicoDePiedra();
-        diamante.gastarCon(pico);
+        try {
+            diamante.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(100, diamante.getDurabilidad());
 
@@ -295,7 +333,9 @@ public class MaterialesTest {
 
         Diamante diamante = new Diamante();
         PicoDeMetal pico = new PicoDeMetal();
-        diamante.gastarCon(pico);
+        try {
+            diamante.gastarCon(pico);
+        } catch (MaterialNoSeDanioException e){}
 
         assertEquals(100, diamante.getDurabilidad());
 
