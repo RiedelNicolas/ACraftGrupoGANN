@@ -67,7 +67,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test11HachaDeMaderaSeCreaCon200DeDurabilidad() {
+    public void test11HachaDePiedraSeCreaCon200DeDurabilidad() {
         Herramienta hacha = new HachaDePiedra();
         assertEquals(200, hacha.getDurabilidad());
     }
