@@ -357,12 +357,14 @@ public class HerramientasTest {
     public void test39PicoDeMetalSeRompeAlDecimoUsoContraMadera(){
 
         Herramienta pico = new PicoDeMetal();
-        Material madera = new Madera();
+        Madera madera = new Madera();
         boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(madera);
         }
+
+        //assertEquals(400, pico.getDurabilidad()); //funciona hasta aca
 
         try {
             pico.golpear(madera);

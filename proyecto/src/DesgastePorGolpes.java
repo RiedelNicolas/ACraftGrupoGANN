@@ -12,6 +12,7 @@ public class DesgastePorGolpes extends Desgaste {
             throw new GolpesExcedidosException();
         }
         else{
+            golpesMaximos -= 1;
             return durabilidad;
         }
     }
