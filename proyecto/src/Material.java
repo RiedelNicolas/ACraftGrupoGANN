@@ -2,6 +2,10 @@ public abstract class Material {
 
     protected int durabilidad;
 
+    public int getDurabilidad(){
+        return durabilidad;
+    }
+
     public void gastarCon(HachaDeMadera hacha){}
     public void gastarCon(HachaDePiedra hacha){}
     public void gastarCon(HachaDeMetal hacha){}
