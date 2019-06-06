@@ -8,4 +8,11 @@ public class PicoFino extends Pico {
 
     }
 
+    @Override
+    public void golpear(Material material) {
+        try {
+            material.gastarCon(this);
+            durabilidad = desgastar();
+        } catch (MaterialNoSeDanioException e){}
+    }
 }

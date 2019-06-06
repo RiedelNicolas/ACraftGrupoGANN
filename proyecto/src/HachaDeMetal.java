@@ -7,4 +7,12 @@ public class HachaDeMetal extends Hacha {
         desgaste = new DesgastePorPorcentaje(2);
 
     }
+
+    @Override
+    public void golpear(Material material) {
+        try {
+            durabilidad = desgastar();
+            material.gastarCon(this);
+        } catch (MaterialNoSeDanioException e){}
+    }
 }

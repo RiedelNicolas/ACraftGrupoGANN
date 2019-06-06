@@ -6,4 +6,11 @@ public class PicoDePiedra extends Pico {
         desgaste = new DesgastePorPorcentaje(1.5);
     }
 
+    @Override
+    public void golpear(Material material) {
+        try {
+            durabilidad = desgastar();
+            material.gastarCon(this);
+        } catch (MaterialNoSeDanioException e){}
+    }
 }
