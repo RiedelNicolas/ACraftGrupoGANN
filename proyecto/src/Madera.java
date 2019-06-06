@@ -1,6 +1,6 @@
 public class Madera extends Material{
 
-    public void Madera(){
+    public Madera(){
         durabilidad = 10;
     }
 

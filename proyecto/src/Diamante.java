@@ -1,6 +1,6 @@
 public class Diamante extends Material {
 
-    public void Diamante(){
+    public Diamante(){
         durabilidad = 100;
     }
 
