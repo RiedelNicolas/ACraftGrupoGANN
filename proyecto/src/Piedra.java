@@ -1,6 +1,6 @@
 public class Piedra extends Material {
 
-    public void Piedra(){
+    public Piedra(){
         durabilidad = 30;
     }
 

@@ -1,6 +1,6 @@
 public class Metal extends Material {
 
-    public void Metal (){
+    public Metal (){
         durabilidad = 50;
     }
 
