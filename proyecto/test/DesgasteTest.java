@@ -55,14 +55,38 @@ public class DesgasteTest {
     }
 
 
-//    @Test
-//    public void test07DesgastePorCantidadDeGolpesAplicaBienElDesgaste(){
-//        int durabilidad = 100;
-//        DesgastePorGolpes desgaste = new DesgastePorGolpes(5);
-//        for (int i = 0; i < 4; i++){
-//            durabilidad = desgaste.aplicar(durabilidad, )
-//        }
-//    }
+    @Test
+    public void test10DesgastePorCantidadDeGolpesAplicaBienElDesgaste(){
+        int durabilidad = 100;
+        int fuerza = 10;
+        DesgastePorGolpes desgaste = new DesgastePorGolpes(5);
+        for (int i = 0; i < 4; i++){ // cantidad de desgastes es menor a cantidad de golpes, asi que deberia seguir igual la durabilidad
+            durabilidad = desgaste.aplicar(durabilidad, fuerza);
+        }
+        Assert.assertEquals(100, durabilidad);
+    }
+
+    @Test
+    public void test11DesgastePorPorcentajeDeFuerzaAplicaBienElDesgaste(){
+        int durabilidad = 100;
+        int fuerza = 10;
+        DesgastePorPorcentajeDeFuerza desgaste = new DesgastePorPorcentajeDeFuerza(2);
+        for (int i = 0; i < 4; i++){
+            durabilidad = desgaste.aplicar(durabilidad, fuerza);
+        }
+        Assert.assertEquals(80, durabilidad); //100- (5*4)
+    }
+
+    @Test
+    public void test12DesgastePorPorcentajeDeDurabilidadAplicaBienElDesgaste(){
+        int durabilidad = 100;
+        int fuerza = 10;
+        DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(10);
+
+        durabilidad = desgaste.aplicar(durabilidad, fuerza);
+
+        Assert.assertEquals(90, durabilidad); //100- (100/10)
+    }
 
 
 
