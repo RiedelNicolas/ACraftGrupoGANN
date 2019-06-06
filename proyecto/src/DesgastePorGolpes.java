@@ -11,13 +11,16 @@ public class DesgastePorGolpes implements Desgaste {
 
     @Override
     public int aplicar(int durabilidad) {
-        if(golpesMaximos <= 0){
+
+        golpesMaximos -= 1;
+
+        if(golpesMaximos == 0){
             return 0;
         }
-        else{
-            golpesMaximos -= 1;
+        if (golpesMaximos > 0){
             return durabilidad;
         }
+        throw new GolpesExcedidosException();
     }
 
     public int getGolpesMaximos(){

@@ -354,7 +354,7 @@ public class HerramientasTest {
     }
 
     @Test
-    public void test39PicoDeMetalSeRompeAlDecimoUsoContraMadera(){
+    public void test39PicoDeMetalSeQuedaSinDurabilidadAlDecimoUsoContraMadera(){
 
         Herramienta pico = new PicoDeMetal();
         Madera madera = new Madera();
@@ -363,13 +363,11 @@ public class HerramientasTest {
             pico.golpear(madera);
         }
 
-        pico.golpear(madera);
-
         assertEquals(0, pico.getDurabilidad());
     }
 
     @Test
-    public void test40PicoDeMetalSeRompeAlDecimoUsoContraPiedra(){
+    public void test40PicoDeMetalSeQuedaSinDurabilidadAlDecimoUsoContraPiedra(){
 
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
@@ -378,40 +376,32 @@ public class HerramientasTest {
             pico.golpear(piedra);
         }
 
-        pico.golpear(piedra);
-
         assertEquals(0, pico.getDurabilidad());
     }
 
     @Test
-    public void test41PicoDeMetalSeRompeAlDecimoUsoContraMetal(){
+    public void test41PicoDeMetalSeQuedaSinDurabilidadAlDecimoUsoContraMetal(){
 
         Herramienta pico = new PicoDeMetal();
         Material metal = new Metal();
-        boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(metal);
         }
 
-        pico.golpear(metal);
-
         assertEquals(0, pico.getDurabilidad());
 
     }
 
     @Test
-    public void test42PicoDeMetalSeRompeAlDecimoUsoContraDiamante(){
+    public void test42PicoDeMetalSeQuedaSinDurabilidadAlDecimoUsoContraDiamante(){
 
         Herramienta pico = new PicoDeMetal();
         Material diamante = new Diamante();
-        boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(diamante);
         }
-
-        pico.golpear(diamante);
 
         assertEquals(0, pico.getDurabilidad());
 
@@ -459,5 +449,25 @@ public class HerramientasTest {
 
         assertEquals(1000, pico.getDurabilidad());
 
+    }
+
+    @Test
+    public void test47NoSePuedeUsarPicoDeMetalMasDe10Veces() {
+
+        Herramienta pico = new PicoDeMetal();
+        Diamante diamante = new Diamante();
+        boolean herramientaRota = false;
+
+        for (int i = 0; i < 10; i++) {
+            pico.golpear(diamante);
+        }
+
+        try {
+            pico.golpear(diamante);
+        } catch (GolpesExcedidosException e) {
+            herramientaRota = true;
+        }
+
+        assertTrue(herramientaRota);
     }
 }
