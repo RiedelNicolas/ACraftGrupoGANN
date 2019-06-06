@@ -4,7 +4,7 @@ public class HachaDeMetal extends Hacha {
 
         durabilidad = 400;
         fuerza = 10;
-        desgaste = new DesgastePorPorcentaje(2);
+        desgaste = new DesgastePorPorcentajeDeFuerza(2);
 
     }
 
