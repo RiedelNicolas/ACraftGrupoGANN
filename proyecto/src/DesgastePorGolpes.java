@@ -1,7 +1,10 @@
 public class DesgastePorGolpes extends Desgaste {
 
+    //Atributos
     private int golpesMaximos;
 
+
+    //Métodos
     public DesgastePorGolpes(int unaCantidadDeGolpes){
         golpesMaximos = unaCantidadDeGolpes;
     }
