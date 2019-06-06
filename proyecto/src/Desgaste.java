@@ -1,4 +1,4 @@
-public abstract class Desgaste {
+public interface Desgaste {
 
     abstract public int aplicar(int durabilidad);
 }

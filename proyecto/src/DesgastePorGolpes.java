@@ -1,4 +1,4 @@
-public class DesgastePorGolpes extends Desgaste {
+public class DesgastePorGolpes implements Desgaste {
 
     private int golpesMaximos;
 

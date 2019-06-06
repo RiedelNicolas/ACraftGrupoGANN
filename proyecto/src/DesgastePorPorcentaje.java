@@ -1,4 +1,4 @@
-public abstract class DesgastePorPorcentaje extends Desgaste {
+public abstract class DesgastePorPorcentaje implements Desgaste {
 
     protected double porcentaje;
 
