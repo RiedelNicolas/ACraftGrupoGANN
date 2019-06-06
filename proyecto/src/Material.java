@@ -1,7 +1,9 @@
 public abstract class Material {
 
+    //Atributos
     protected int durabilidad;
 
+    //Métodos
     public int getDurabilidad(){
         return durabilidad;
     }
