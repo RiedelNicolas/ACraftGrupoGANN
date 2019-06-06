@@ -4,7 +4,7 @@ public class HachaDeMadera extends Hacha {
 
         durabilidad = 100;
         fuerza = 2;
-        desgaste = new DesgastePorPorcentajeDeFuerza(1);
+        desgaste = new DesgastePorPorcentajeDeFuerza(1, fuerza);
     }
 
     @Override

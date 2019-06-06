@@ -7,7 +7,7 @@ public class DesgastePorGolpes extends Desgaste {
     }
 
     @Override
-    public int aplicar(int durabilidad, int fuerza) {
+    public int aplicar(int durabilidad) {
         if(golpesMaximos <= 0){
             return 0;
         }
