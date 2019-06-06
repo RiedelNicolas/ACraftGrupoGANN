@@ -1,4 +1,4 @@
 public abstract class Desgaste {
 
-    abstract public double aplicar(double durabilidad, int fuerza);
+    abstract public double aplicar(int durabilidad, int fuerza);
 }

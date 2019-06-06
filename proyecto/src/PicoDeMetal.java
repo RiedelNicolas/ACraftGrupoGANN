@@ -4,7 +4,7 @@ public class PicoDeMetal extends Pico {
 
         durabilidad = 400;
         fuerza = 12;
-        desgaste = new DesgastePorCantidadDeGolpes(10);
+        desgaste = new DesgastePorGolpes(10);
 
     }
 }
