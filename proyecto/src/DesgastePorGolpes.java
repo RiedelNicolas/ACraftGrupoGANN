@@ -9,7 +9,7 @@ public class DesgastePorGolpes extends Desgaste {
     @Override
     public int aplicar(int durabilidad, int fuerza) {
         if(golpesMaximos <= 0){
-            throw new GolpesExcedidosException();
+            return 0;
         }
         else{
             golpesMaximos -= 1;

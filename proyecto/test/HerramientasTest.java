@@ -358,21 +358,14 @@ public class HerramientasTest {
 
         Herramienta pico = new PicoDeMetal();
         Madera madera = new Madera();
-        boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(madera);
         }
 
-        //assertEquals(400, pico.getDurabilidad()); //funciona hasta aca
+        pico.golpear(madera);
 
-        try {
-            pico.golpear(madera);
-        } catch (HerramientaRotaException e){
-            herramientaRota = true;
-        }
-
-        assertTrue(herramientaRota);
+        assertEquals(0, pico.getDurabilidad());
     }
 
     @Test
@@ -380,19 +373,14 @@ public class HerramientasTest {
 
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
-        boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(piedra);
         }
 
-        try {
-            pico.golpear(piedra);
-        } catch (HerramientaRotaException e){
-            herramientaRota = true;
-        }
+        pico.golpear(piedra);
 
-        assertTrue(herramientaRota);
+        assertEquals(0, pico.getDurabilidad());
     }
 
     @Test
@@ -406,13 +394,9 @@ public class HerramientasTest {
             pico.golpear(metal);
         }
 
-        try {
-            pico.golpear(metal);
-        } catch (HerramientaRotaException e){
-            herramientaRota = true;
-        }
+        pico.golpear(metal);
 
-        assertTrue(herramientaRota);
+        assertEquals(0, pico.getDurabilidad());
 
     }
 
@@ -427,13 +411,9 @@ public class HerramientasTest {
             pico.golpear(diamante);
         }
 
-        try {
-            pico.golpear(diamante);
-        } catch (HerramientaRotaException e){
-            herramientaRota = true;
-        }
+        pico.golpear(diamante);
 
-        assertTrue(herramientaRota);
+        assertEquals(0, pico.getDurabilidad());
 
     }
 
