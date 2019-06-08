@@ -1,6 +1,5 @@
 #IntelliJ
-proyecto/
-.idea/
+proyecto/.idea/
 *.iml
 
 #Compiled class files
