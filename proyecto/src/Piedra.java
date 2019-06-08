@@ -22,7 +22,6 @@ public class Piedra extends Material {
     @Override
     public void gastarCon(PicoFino pico){
         durabilidad -= pico.getFuerza();
-        throw new PicoFinoException();
     }
 
 }

@@ -10,6 +10,9 @@ public class DesgastePorPorcentajeDeFuerza extends DesgastePorPorcentaje{
     @Override
     public int aplicar(int durabilidad){
         durabilidad -= (fuerza / porcentaje);
+        if(durabilidad < 0){
+            throw new HerramientaRotaException();
+        }
 
         return durabilidad;
     }

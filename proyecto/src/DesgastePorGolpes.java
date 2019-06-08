@@ -20,7 +20,7 @@ public class DesgastePorGolpes implements Desgaste {
         if (golpesMaximos > 0){
             return durabilidad;
         }
-        throw new GolpesExcedidosException();
+        throw new HerramientaRotaException();
     }
 
     public int getGolpesMaximos(){

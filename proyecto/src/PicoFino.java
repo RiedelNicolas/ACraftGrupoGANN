@@ -12,7 +12,6 @@ public class PicoFino extends Pico {
     public void golpear(Material material) {
         try {
             material.gastarCon(this);
-            durabilidad = desgastar();
         } catch (RuntimeException e){}
     }
 }
