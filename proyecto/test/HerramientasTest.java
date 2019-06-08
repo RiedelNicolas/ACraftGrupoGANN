@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
 public class HerramientasTest {
@@ -388,13 +387,10 @@ public class HerramientasTest {
 
         Herramienta pico = new PicoDeMetal();
         Material metal = new Metal();
-        boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(metal);
         }
-
-        pico.golpear(metal);
 
         assertEquals(0, pico.getDurabilidad());
 
@@ -405,7 +401,6 @@ public class HerramientasTest {
 
         Herramienta pico = new PicoDeMetal();
         Material diamante = new Diamante();
-        boolean herramientaRota = false;
 
         for(int i=0; i<10; i++){
             pico.golpear(diamante);

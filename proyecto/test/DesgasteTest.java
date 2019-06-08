@@ -64,7 +64,6 @@ public class DesgasteTest {
     @Test
     public void test10DesgastePorCantidadDeGolpesAplicaBienElDesgaste(){
         int durabilidad = 100;
-        int fuerza = 10;
         DesgastePorGolpes desgaste = new DesgastePorGolpes(5);
         for (int i = 0; i < 4; i++){ // cantidad de desgastes es menor a cantidad de golpes, asi que deberia seguir igual la durabilidad
             durabilidad = desgaste.aplicar(durabilidad);
@@ -75,23 +74,67 @@ public class DesgasteTest {
     @Test
     public void test11DesgastePorPorcentajeDeFuerzaAplicaBienElDesgaste(){
         int durabilidad = 100;
-        int fuerza = 10;
         DesgastePorPorcentajeDeFuerza desgaste = new DesgastePorPorcentajeDeFuerza(2, 10);
-        for (int i = 0; i < 4; i++){
-            durabilidad = desgaste.aplicar(durabilidad);
+        for (int i = 0; i < 3; i++){
+            desgaste.aplicar(durabilidad);
         }
-        Assert.assertEquals(80, durabilidad); //100- (5*4)
+        Assert.assertEquals(80, desgaste.aplicar(durabilidad)); //100- (5*4)
     }
 
     @Test
     public void test12DesgastePorPorcentajeDeDurabilidadAplicaBienElDesgaste(){
-        int durabilidad = 100;
-        int fuerza = 10;
-        DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(10);
+        int durabilidad = 110;
+        DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(9);
 
         durabilidad = desgaste.aplicar(durabilidad);
 
-        Assert.assertEquals(90, durabilidad); //100- (100/10)
+        Assert.assertEquals(101.1 , durabilidad, 0.1);
+    }
+
+    @Test
+    public void test13DesgastePorGolpesDevuelve0AlDecimoUso(){
+        int durabilidad = 50;
+        DesgastePorGolpes desgaste = new DesgastePorGolpes();
+        for (int i = 0; i < 9; i++){
+            desgaste.aplicar(durabilidad);
+        }
+
+        Assert.assertEquals(0, desgaste.aplicar(durabilidad));
+    }
+
+    @Test
+    public void test14DesgastePorGolpesDevuelvoErrorAlOnceavoUso(){  //FALTA MODIFICAR
+        int durabilidad = 50;
+        DesgastePorGolpes desgaste = new DesgastePorGolpes();
+        for (int i = 0; i < 10; i++){
+            desgaste.aplicar(durabilidad);
+        }
+
+    }
+
+    @Test
+    public void test15DesgastePorGolpesDevuelveErrorConDurabilidadNegativa(){  //FALTA MODIFICAR
+        int durabilidad = -1;
+        DesgastePorGolpes desgaste = new DesgastePorGolpes();
+
+        desgaste.aplicar(durabilidad);
+
+    }
+
+    @Test
+    public void test16DesgastePorPorcentajeDeDurabilidadDevuelveErrorSiRecibe0DeDurabilidad(){  //FALTA MODIFICAR, Asumimos que la durabilidad inicial de una herramienta es solamente positiva
+        int durabilidad = 0;
+        DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(50);  //Asumimos que el porcentaje no puede ser mayor a 100%
+
+        desgaste.aplicar(durabilidad);
+    }
+
+    @Test
+    public void test17DesgastePorPorcentajeDeFuerzaDevuelveErrorSiLaDurabilidadQueDeberiaDevolverEsNegativa(){  //FALTA MODIFICAR
+        int durabilidad = 1;
+        DesgastePorPorcentajeDeFuerza desgaste = new DesgastePorPorcentajeDeFuerza(50, 5);
+
+        desgaste.aplicar(durabilidad);
     }
 
 }
