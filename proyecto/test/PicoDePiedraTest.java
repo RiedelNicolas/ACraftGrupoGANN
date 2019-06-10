@@ -51,7 +51,6 @@ public class PicoDePiedraTest {
 
     @Test
     public void test06SeUsaPicoDePiedraContraDiamanteYPierde3DeDurabilidad(){
-
         Herramienta pico = new PicoDePiedra();
         Material diamante = new Diamante();
         pico.golpear(diamante);
