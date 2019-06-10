@@ -11,8 +11,8 @@ public abstract class Herramienta {
     //Métodos
     abstract public void golpear(Material material);
 
-    public int desgastar(){
-       return desgaste.aplicar(durabilidad);
+    public void desgastar(){
+       durabilidad = desgaste.aplicar(durabilidad);
     }
 
     public int getDurabilidad(){

@@ -9,7 +9,7 @@ public class PicoDePiedra extends Pico {
     @Override
     public void golpear(Material material) {
         try {
-            durabilidad = desgastar();
+            desgastar();
             material.gastarCon(this);
         } catch (MaterialNoSeDanioException e){}
     }

@@ -10,7 +10,7 @@ public class HachaDeMadera extends Hacha {
     @Override
     public void golpear(Material material) {
         try {
-            durabilidad = desgastar();
+            desgastar();
             material.gastarCon(this);
         } catch (MaterialNoSeDanioException e){}
     }

@@ -7,5 +7,6 @@ public class Diamante extends Material {
     @Override
     public void gastarCon(PicoFino pico){
         durabilidad -= pico.getFuerza();
+        pico.desgastar();
     }
 }
