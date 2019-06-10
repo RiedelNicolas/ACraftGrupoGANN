@@ -1,9 +1,9 @@
 #IntelliJ
-proyecto/.idea/
+.idea/
 *.iml
+*.xml
 
 #Compiled class files
-proyecto/
 out/
 build/
 *.class
