@@ -172,7 +172,7 @@ public class MaterialesTest {
         assertEquals(18, piedra.getDurabilidad());
     }
 
-    @Test
+   /* @Test
     public void test18PiedraSeGolpeaConPicoFinoYSeReduceEn20LaDurabilidad(){
 
         Piedra piedra = new Piedra();
@@ -182,7 +182,7 @@ public class MaterialesTest {
         } catch (PicoFinoException e){}
 
         assertEquals(10, piedra.getDurabilidad());
-    }
+    }*/
 
     @Test
     public void test19MetalSeGolpeaConHachaDeMaderaYNoSeReduceLaDurabilidad(){

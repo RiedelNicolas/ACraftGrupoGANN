@@ -1,11 +1,16 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
 #IntelliJ
 .idea/
 *.iml
 *.xml
 
-#Compiled class files
+# Build
 out/
-build/
 *.class
 
 # Package Files #
