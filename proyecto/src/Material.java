@@ -1,4 +1,4 @@
-public abstract class Material {
+public abstract class Material extends Posicionable {
 
     //Atributos
     protected int durabilidad;

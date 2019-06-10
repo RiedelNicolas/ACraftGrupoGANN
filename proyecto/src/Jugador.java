@@ -1,4 +1,4 @@
-public class Jugador {
+public class Jugador extends Posicionable{
     //Atributos
     private Herramienta HerramientaEnMano;
 
@@ -10,6 +10,5 @@ public class Jugador {
     public Herramienta getHerramientaEnMano(){
         return HerramientaEnMano;
     }
-
 
 }
