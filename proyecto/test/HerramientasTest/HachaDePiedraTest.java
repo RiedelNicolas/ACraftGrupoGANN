@@ -1,3 +1,5 @@
+package HerramientasTest;
+
 import Algocraft.Herramientas.HachaDePiedra;
 import Algocraft.Herramientas.Herramienta;
 import Algocraft.Materiales.*;

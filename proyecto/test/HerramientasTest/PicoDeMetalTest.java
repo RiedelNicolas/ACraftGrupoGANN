@@ -1,3 +1,5 @@
+package HerramientasTest;
+
 import Algocraft.Excepciones.HerramientaRotaException;
 import Algocraft.Herramientas.Herramienta;
 import Algocraft.Herramientas.PicoDeMetal;
