@@ -1,3 +1,5 @@
+import Algocraft.Herramientas.HachaDeMadera;
+import Algocraft.Jugador.Jugador;
 import org.junit.*;
 import org.hamcrest.*;
 

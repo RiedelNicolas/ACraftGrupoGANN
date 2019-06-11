@@ -1,3 +1,4 @@
+import Algocraft.Desgastes.*;
 import org.hamcrest.*;
 import org.junit.*;
 
@@ -74,7 +75,7 @@ public class DesgasteTest {
     @Test
     public void test11DesgastePorPorcentajeDeFuerzaAplicaBienElDesgaste() {
         int durabilidad = 100;
-        DesgastePorPorcentajeDeFuerza desgaste = new DesgastePorPorcentajeDeFuerza(2, 10);
+        Algocraft.Desgastes.DesgastePorPorcentajeDeFuerza desgaste = new Algocraft.Desgastes.DesgastePorPorcentajeDeFuerza(2, 10);
         for (int i = 0; i < 3; i++) {
             desgaste.aplicar(durabilidad);
         }
@@ -84,7 +85,7 @@ public class DesgasteTest {
     @Test
     public void test12DesgastePorPorcentajeDeDurabilidadAplicaBienElDesgaste() {
         int durabilidad = 110;
-        DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(9);
+        Algocraft.Desgastes.DesgastePorPorcentajeDeDurabilidad desgaste = new Algocraft.Desgastes.DesgastePorPorcentajeDeDurabilidad(9);
 
         durabilidad = desgaste.aplicar(durabilidad);
 
@@ -106,7 +107,7 @@ public class DesgasteTest {
   /*  @Test
     public void test14DesgastePorGolpesDevuelvoErrorAlOnceavoUso(){  //FALTA MODIFICAR
         int durabilidad = 50;
-        DesgastePorGolpes desgaste = new DesgastePorGolpes(10);
+        Algocraft.Desgastes.DesgastePorGolpes desgaste = new Algocraft.Desgastes.DesgastePorGolpes(10);
         for (int i = 0; i < 10; i++){
             desgaste.aplicar(durabilidad);
         }
@@ -116,7 +117,7 @@ public class DesgasteTest {
     @Test
     public void test15DesgastePorGolpesDevuelveErrorConDurabilidadNegativa(){  //FALTA MODIFICAR
         int durabilidad = -1;
-        DesgastePorGolpes desgaste = new DesgastePorGolpes(10);
+        Algocraft.Desgastes.DesgastePorGolpes desgaste = new Algocraft.Desgastes.DesgastePorGolpes(10);
 
         desgaste.aplicar(durabilidad);
 
@@ -125,7 +126,7 @@ public class DesgasteTest {
     @Test
     public void test16DesgastePorPorcentajeDeDurabilidadDevuelveErrorSiRecibe0DeDurabilidad(){  //FALTA MODIFICAR, Asumimos que la durabilidad inicial de una herramienta es solamente positiva
         int durabilidad = 0;
-        DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(50);  //Asumimos que el porcentaje no puede ser mayor a 100%
+        Algocraft.Desgastes.DesgastePorPorcentajeDeDurabilidad desgaste = new Algocraft.Desgastes.DesgastePorPorcentajeDeDurabilidad(50);  //Asumimos que el porcentaje no puede ser mayor a 100%
 
         desgaste.aplicar(durabilidad);
     }
@@ -133,7 +134,7 @@ public class DesgasteTest {
     @Test
     public void test17DesgastePorPorcentajeDeFuerzaDevuelveErrorSiLaDurabilidadQueDeberiaDevolverEsNegativa(){  //FALTA MODIFICAR
         int durabilidad = 1;
-        DesgastePorPorcentajeDeFuerza desgaste = new DesgastePorPorcentajeDeFuerza(50, 5);
+        Algocraft.Desgastes.DesgastePorPorcentajeDeFuerza desgaste = new Algocraft.Desgastes.DesgastePorPorcentajeDeFuerza(50, 5);
 
         desgaste.aplicar(durabilidad);
     }

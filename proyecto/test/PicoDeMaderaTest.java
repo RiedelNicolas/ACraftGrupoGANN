@@ -1,3 +1,6 @@
+import Algocraft.Herramientas.Herramienta;
+import Algocraft.Herramientas.PicoDeMadera;
+import Algocraft.Materiales.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

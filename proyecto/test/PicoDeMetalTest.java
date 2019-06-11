@@ -1,3 +1,7 @@
+import Algocraft.Excepciones.HerramientaRotaException;
+import Algocraft.Herramientas.Herramienta;
+import Algocraft.Herramientas.PicoDeMetal;
+import Algocraft.Materiales.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

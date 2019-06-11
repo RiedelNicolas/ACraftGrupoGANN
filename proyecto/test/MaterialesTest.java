@@ -1,3 +1,9 @@
+import Algocraft.Excepciones.MaterialNoSeDanioException;
+import Algocraft.Herramientas.*;
+import Algocraft.Materiales.Diamante;
+import Algocraft.Materiales.Madera;
+import Algocraft.Materiales.Metal;
+import Algocraft.Materiales.Piedra;
 import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
@@ -175,8 +181,8 @@ public class MaterialesTest {
    /* @Test
     public void test18PiedraSeGolpeaConPicoFinoYSeReduceEn20LaDurabilidad(){
 
-        Piedra piedra = new Piedra();
-        PicoFino pico = new PicoFino();
+        Algocraft.Materiales.Piedra piedra = new Algocraft.Materiales.Piedra();
+        Algocraft.Herramientas.PicoFino pico = new Algocraft.Herramientas.PicoFino();
         try {
             piedra.gastarCon(pico);
         } catch (PicoFinoException e){}
