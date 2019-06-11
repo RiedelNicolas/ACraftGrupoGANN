@@ -1,10 +1,12 @@
 package ConstruccionTest;
 
+import Algocraft.Excepciones.ConstruccionInvalidaException;
 import Algocraft.Herramientas.*;
 import org.junit.Test;
 import Algocraft.Construccion.*;
 import Algocraft.Materiales.*;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class MesaDeCrafteoTest {
@@ -114,4 +116,63 @@ public class MesaDeCrafteoTest {
 
         assertTrue(mesa.craftear().getClass().equals(hachaDeMetal.getClass()));
     }
+
+    @Test
+    public void test08SeIntentaConstruirHerramientaInexistente(){
+
+        MesaDeCrafteo mesa = new MesaDeCrafteo();
+        boolean noSePudoConstruir = false;
+
+        mesa.anadirMaterial(new Metal(), 0);
+        mesa.anadirMaterial(new Metal(), 1);
+
+        try{
+            mesa.craftear();
+        }catch(ConstruccionInvalidaException e){
+            noSePudoConstruir = true;
+        }
+
+        assertTrue(noSePudoConstruir);
+    }
+
+
+    @Test
+    public void test09SePuedeConstruirPicoDeMaderaPeroAlRemoverUnMaterialEIntentarCraftearSeLanzaExcepcion() {
+
+        MesaDeCrafteo mesa = new MesaDeCrafteo();
+        PicoDeMadera picoDeMadera = new PicoDeMadera();
+        boolean noSePudoConstruir = false;
+
+        mesa.anadirMaterial(new Madera(), 0);
+        mesa.anadirMaterial(new Madera(), 1);
+        mesa.anadirMaterial(new Madera(), 2);
+        mesa.anadirMaterial(new Madera(), 4);
+        mesa.anadirMaterial(new Madera(), 7);
+
+        mesa.quitarMaterial(4);
+
+        try{
+            mesa.craftear();
+        }catch (ConstruccionInvalidaException e){
+            noSePudoConstruir = true;
+        }
+
+        assertTrue(noSePudoConstruir);
+    }
+
+    @Test
+    public void test10MaterialRemovidoDeLaMesaSeDevuelveExitosamente(){
+
+        MesaDeCrafteo mesa = new MesaDeCrafteo();
+        Madera madera = new Madera();
+
+        mesa.anadirMaterial(madera, 6);
+
+        Madera materialRemovido = (Madera)mesa.quitarMaterial(6);
+
+        assertEquals(madera, materialRemovido);
+
+    }
+
+
 }

@@ -30,4 +30,12 @@ public class MesaDeCrafteo {
         elementosEnMesa.set(posicion, material);
     }
 
+    public Material quitarMaterial(int posicion){
+
+        Material elementoRemovido = elementosEnMesa.get(posicion);
+        elementosEnMesa.add(posicion, new MaterialVacio());
+
+        return elementoRemovido;
+    }
+
 }
