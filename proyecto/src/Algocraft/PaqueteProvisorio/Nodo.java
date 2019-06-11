@@ -6,6 +6,11 @@ import Algocraft.Excepciones.NodoOcupadoException;
 public class Nodo {
     private Posicionable contenido;
 
+
+    public Nodo(){
+        contenido = null;
+    }
+
     public Posicionable getContenido() {
         return contenido;
     }
