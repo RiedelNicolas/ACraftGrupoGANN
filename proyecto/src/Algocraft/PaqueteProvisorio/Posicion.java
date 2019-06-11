@@ -1,4 +1,5 @@
-package Algocraft.PaqueteProvisorio;
+
+import Algocraft.Excepciones.PosicionCreadaSinDatosException;
 
 import java.lang.*;
 
@@ -14,8 +15,9 @@ public class Posicion {
         this.y=y;
     }
 
+
     public Posicion(){
-        //hacer excepcion.
+        throw new PosicionCreadaSinDatosException();
     }
 
     public int calcularDistanciaCon(Posicion posicionRecibida){
@@ -34,14 +36,32 @@ public class Posicion {
     //distancia Manhattan
     public int distanciaCon(Posicion posicionRecibida){
         int diferenciaDeColumnas, diferenciaDeFilas;
+
         diferenciaDeColumnas = Math.abs(posicionRecibida.getVertical() - x );
         diferenciaDeFilas  = Math.abs(posicionRecibida.getHorizontal() - y );
 
-        return ( diferenciaDeColumnas+ diferenciaDeFilas );
+        return ( diferenciaDeColumnas + diferenciaDeFilas );
     }
 
     public boolean esIgual(Posicion posicionRecibida){
         return( this.distanciaCon(posicionRecibida) == 0 );
+    }
+
+
+    public void moverDerecha(){
+        x++;
+    }
+
+    public void moverIzquierda(){
+        x--;
+    }
+
+    public void moverAbajo(){
+        y++;
+    }
+
+    public void moverArriba(){
+        y--;
     }
 
 
