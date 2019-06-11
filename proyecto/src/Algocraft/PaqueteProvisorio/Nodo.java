@@ -10,7 +10,7 @@ public class Nodo {
         return contenido;
     }
 
-    public void setContenido(Posicionable contenidoRecibido) throws NodoOcupadoException {
+    public void setContenido(Posicionable contenidoRecibido) {
         if( this.ocupado() ){
             throw new NodoOcupadoException();
         }
