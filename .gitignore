@@ -10,8 +10,7 @@
 *.xml
 
 # Build
-proyecto/
-out/
+build/
 *.class
 
 # Package Files #

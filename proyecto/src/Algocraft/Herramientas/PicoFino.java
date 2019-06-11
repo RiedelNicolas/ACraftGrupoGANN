@@ -1,6 +1,7 @@
 package Algocraft.Herramientas;
 
 import Algocraft.Desgastes.DesgastePorPorcentajeDeDurabilidad;
+import Algocraft.Excepciones.MaterialNoSeDanioException;
 import Algocraft.Materiales.*;
 
 public class PicoFino extends Pico {
@@ -17,6 +18,6 @@ public class PicoFino extends Pico {
     public void golpear(Material material) {
         try {
             material.gastarCon(this);
-        } catch (RuntimeException e){}
+        } catch (MaterialNoSeDanioException e){}
     }
 }
