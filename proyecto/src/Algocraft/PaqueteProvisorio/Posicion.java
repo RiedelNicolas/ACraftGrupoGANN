@@ -1,3 +1,4 @@
+package Algocraft.PaqueteProvisorio;
 
 import Algocraft.Excepciones.PosicionCreadaSinDatosException;
 
