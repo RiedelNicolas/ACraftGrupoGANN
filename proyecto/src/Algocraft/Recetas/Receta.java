@@ -13,7 +13,7 @@ public abstract class Receta {
 
         int i = 0;
 
-        while(materialesEnMesa.get(i).getClass().equals(receta.get(i).getClass())){
+        while(i<9 && materialesEnMesa.get(i).getClass().equals(receta.get(i).getClass())){
             i++;
         }
 
