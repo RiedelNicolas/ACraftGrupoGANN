@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class PiedraTest {
 
@@ -98,19 +99,38 @@ public class PiedraTest {
         }
 
         assertEquals(0, piedra.getDurabilidad());
-
-        thrown.expect(MaterialRotoException.class);
-        piedra.gastarCon(pico);
     }
 
     @Test
     public void test09PiedraSeGolpeaConPicoFinoYSeReduceEn20LaDurabilidad(){
 
-        Algocraft.Materiales.Piedra piedra = new Algocraft.Materiales.Piedra();
-        Algocraft.Herramientas.PicoFino pico = new Algocraft.Herramientas.PicoFino();
+        Piedra piedra = new Piedra();
+        PicoFino pico = new PicoFino();
 
         piedra.gastarCon(pico);
 
         assertEquals(10, piedra.getDurabilidad());
+    }
+
+    @Test
+    public void test10PiedraRotaNoPuedeSerGolpeada(){
+
+        Piedra piedra = new Piedra();
+        PicoDeMadera pico = new PicoDeMadera();
+        boolean noSePuedeGolpearMaterial = false;
+
+        for(int i = 0; i < 15; i++) {
+            piedra.gastarCon(pico);
+        }
+
+        try{
+            System.out.println(piedra.getDurabilidad());
+            piedra.gastarCon(pico);
+            System.out.println(piedra.getDurabilidad());
+        }catch(MaterialRotoException e){
+            noSePuedeGolpearMaterial = true;
+        }
+
+        assertTrue(noSePuedeGolpearMaterial);
     }
 }
