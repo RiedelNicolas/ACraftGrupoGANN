@@ -1,4 +1,5 @@
 package Algocraft.PaqueteProvisorio;
 
-public class Posicionable {
+public interface Posicionable {
+
 }

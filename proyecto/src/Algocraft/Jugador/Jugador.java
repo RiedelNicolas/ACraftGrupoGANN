@@ -5,7 +5,7 @@ import Algocraft.Herramientas.Herramienta;
 import Algocraft.PaqueteProvisorio.Posicionable;
 
 
-public class Jugador extends Posicionable {
+public class Jugador implements Posicionable {
     //Atributos
     private Herramienta HerramientaEnMano;
     private static Jugador instancia_unica = null;
@@ -25,5 +25,10 @@ public class Jugador extends Posicionable {
     public Herramienta getHerramientaEnMano(){
         return HerramientaEnMano;
     }
+
+    public void moverDerecha(){
+
+    }
+
 
 }
