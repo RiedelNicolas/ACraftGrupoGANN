@@ -14,17 +14,28 @@ public class MesaDeCrafteo {
 
     public MesaDeCrafteo(){
 
+        constructor = new Constructor();
+        elementosEnMesa = new ArrayList<Material>();
+
         for(int i=0; i<9; i++){
             elementosEnMesa.add(new MaterialVacio());
         }
     }
 
-    public Herramienta craftear(ArrayList<Material> elementosEnMesa){
+    public Herramienta craftear(){
         return constructor.construirCon(elementosEnMesa);
     }
 
     public void anadirMaterial(Material material, int posicion){
         elementosEnMesa.set(posicion, material);
+    }
+
+    public Material quitarMaterial(int posicion){
+
+        Material elementoRemovido = elementosEnMesa.get(posicion);
+        elementosEnMesa.add(posicion, new MaterialVacio());
+
+        return elementoRemovido;
     }
 
 }
