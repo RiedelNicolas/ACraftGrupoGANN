@@ -10,6 +10,6 @@ public class Metal extends Material {
 
     @Override
     public void gastarCon(PicoDePiedra pico){
-        durabilidad -= pico.getFuerza();
+        desgastarse(pico.getFuerza());
     }
 }

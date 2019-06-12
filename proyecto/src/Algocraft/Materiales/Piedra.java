@@ -10,22 +10,22 @@ public class Piedra extends Material {
 
     @Override
     public void gastarCon(PicoDeMetal pico){
-        durabilidad -= pico.getFuerza();
+        desgastarse(pico.getFuerza());
     }
 
     @Override
     public void gastarCon(PicoDePiedra pico){
-        durabilidad -= pico.getFuerza();
+        desgastarse(pico.getFuerza());
     }
 
     @Override
     public void gastarCon(PicoDeMadera pico){
-        durabilidad -= pico.getFuerza();
+        desgastarse(pico.getFuerza());
     }
 
     @Override
     public void gastarCon(PicoFino pico){
-        durabilidad -= pico.getFuerza();
+        desgastarse(pico.getFuerza());
     }
 
 }

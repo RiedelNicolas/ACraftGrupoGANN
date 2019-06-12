@@ -10,16 +10,16 @@ public class Madera extends Material {
 
     @Override
     public void gastarCon(HachaDeMadera hacha){
-        durabilidad -= hacha.getFuerza();
+        desgastarse(hacha.getFuerza());
     }
 
     @Override
     public void gastarCon(HachaDePiedra hacha){
-        durabilidad -= hacha.getFuerza();
+        desgastarse(hacha.getFuerza());
     }
 
     @Override
     public void gastarCon(HachaDeMetal hacha) {
-        durabilidad -= hacha.getFuerza();
+        desgastarse(hacha.getFuerza());
     }
 }

@@ -1,6 +1,7 @@
 package Algocraft.Materiales;
 
 import Algocraft.Excepciones.MaterialNoSeDanioException;
+import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
 import Algocraft.PaqueteProvisorio.Posicion;
 import Algocraft.PaqueteProvisorio.Posicionable;
@@ -36,5 +37,15 @@ public abstract class Material extends Posicionable {
     public void gastarCon(PicoFino pico){
         throw new MaterialNoSeDanioException();
     }
+
+    public void desgastarse(int fuerza){
+        durabilidad -= fuerza;
+
+        if(durabilidad <= 0){
+            throw new MaterialRotoException();
+        }
+    }
+
+
 
 }

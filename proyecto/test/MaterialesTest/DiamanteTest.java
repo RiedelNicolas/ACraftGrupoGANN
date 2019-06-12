@@ -111,11 +111,11 @@ public class DiamanteTest {
         Diamante diamante = new Diamante();
         PicoFino pico = new PicoFino();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             diamante.gastarCon(pico);
         }
 
-        assertEquals(0, diamante.getDurabilidad());
+        assertEquals(20, diamante.getDurabilidad());
 
         thrown.expect(MaterialRotoException.class);
         diamante.gastarCon(pico);
