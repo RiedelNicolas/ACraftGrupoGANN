@@ -49,20 +49,20 @@ public class Posicion {
     }
 
 
-    public void moverDerecha(){
-        x++;
+    public int moverDerecha(){
+        return x++;
     }
 
-    public void moverIzquierda(){
-        x--;
+    public int moverIzquierda(){
+        return  x--;
     }
 
-    public void moverAbajo(){
-        y++;
+    public int moverAbajo(){
+       return y++;
     }
 
-    public void moverArriba(){
-        y--;
+    public int moverArriba(){
+       return y--;
     }
 
 

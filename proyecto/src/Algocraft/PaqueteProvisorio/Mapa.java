@@ -52,6 +52,7 @@ public class Mapa {
         if( fueraDeRango(posicionAnterior) || fueraDeRango(posicionNueva) ){
             throw new PosicionFueraDeRangoException();
         }
+
         //esto tiene que quedar mas lindo.
         Nodo auxiliar = plano[posicionAnterior.getHorizontal()][posicionAnterior.getVertical()];
         plano[posicionNueva.getHorizontal()][posicionNueva.getVertical()] = auxiliar;

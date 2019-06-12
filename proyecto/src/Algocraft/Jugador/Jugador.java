@@ -30,20 +30,24 @@ public class Jugador extends Posicionable {
 
     //referidos a movimiento
 
-    public void moverDerecha(){
-        posicion.moverDerecha();
+    public Posicion moverDerecha(){
+            posicion.moverDerecha();
+            return posicion;
     }
 
-    public void moverIzquierda(){
+    public Posicion moverIzquierda(){
         posicion.moverIzquierda();
+        return posicion;
     }
 
-    public void moverArriba(){
+    public Posicion moverArriba(){
         posicion.moverArriba();
+        return posicion;
     }
 
-    public void moverAbajo(){
+    public Posicion moverAbajo(){
         posicion.moverAbajo();
+        return posicion;
     }
 
 

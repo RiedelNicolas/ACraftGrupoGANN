@@ -9,16 +9,11 @@ public abstract class Material extends Posicionable {
 
     //Atributos
     protected int durabilidad;
-    protected Posicion posicion;
 
     //Métodos
     public int getDurabilidad(){
         return durabilidad;
     }
-    public Posicion getPosicion(){
-        return posicion;
-    }
-
 
     public void gastarCon(HachaDeMadera hacha){
         throw new MaterialNoSeDanioException();
@@ -42,5 +37,4 @@ public abstract class Material extends Posicionable {
         throw new MaterialNoSeDanioException();
     }
 
-    
 }
