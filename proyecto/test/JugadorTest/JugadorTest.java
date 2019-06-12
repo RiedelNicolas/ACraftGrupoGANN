@@ -19,4 +19,12 @@ public class JugadorTest {
         Jugador jugador = Jugador.crearUnico();
         Assert.assertThat(jugador.getHerramientaEnMano(), CoreMatchers.instanceOf(HachaDeMadera.class));
     }
+
+    @Test
+    public void test03SeCreanDosInstanciasDeJugadorYEsLaMisma(){
+        Jugador jugadorUno = Jugador.crearUnico();
+        Jugador jugadorDos = Jugador.crearUnico();
+
+        Assert.assertEquals(jugadorUno, jugadorDos);
+    }
 }
