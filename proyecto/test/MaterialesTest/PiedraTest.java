@@ -94,9 +94,12 @@ public class PiedraTest {
         Piedra piedra = new Piedra();
         PicoDeMadera pico = new PicoDeMadera();
 
-        for(int i = 0; i < 15; i++) {
+        for(int i = 0; i < 14; i++) {
             piedra.gastarCon(pico);
         }
+        try {
+            piedra.gastarCon(pico);
+        } catch (MaterialRotoException e) {}
 
         assertEquals(0, piedra.getDurabilidad());
     }
@@ -118,9 +121,11 @@ public class PiedraTest {
         Piedra piedra = new Piedra();
         PicoDeMadera pico = new PicoDeMadera();
 
-        for(int i = 0; i < 15; i++) {
+        for(int i = 0; i < 14; i++) {
             piedra.gastarCon(pico);
         }
+
+        assertEquals(2, piedra.getDurabilidad());
 
         thrown.expect(MaterialRotoException.class);
         piedra.gastarCon(pico);

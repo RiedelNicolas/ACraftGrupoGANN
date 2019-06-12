@@ -6,6 +6,7 @@ public class Metal extends Material {
 
     public Metal (){
         durabilidad = 50;
+        id = 3;
     }
 
     @Override

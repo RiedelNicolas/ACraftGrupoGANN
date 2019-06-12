@@ -6,6 +6,7 @@ public class Diamante extends Material {
 
     public Diamante(){
         durabilidad = 100;
+        id = 4;
     }
 
     @Override

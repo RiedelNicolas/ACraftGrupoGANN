@@ -15,13 +15,12 @@ public class MapaTest {
     public void test01MapaSeInstanciaConUnMetodoPropio(){
         Mapa mapa = Mapa.instanciar();
         Assert.assertNotNull(mapa);
-        Assert.assertEquals(50, mapa.getAncho());
     }
 
     @Test
     public void test02MapaNoPuedeInstanciarse2Veces(){
-        Mapa mapa1 = Mapa.instanciar(1, 1);
-        Mapa mapa2 = Mapa.instanciar(1, 1);
+        Mapa mapa1 = Mapa.instanciar();
+        Mapa mapa2 = Mapa.instanciar();
 
         Assert.assertEquals(mapa1, mapa2);
     }

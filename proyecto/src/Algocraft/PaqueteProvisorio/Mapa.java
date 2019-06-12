@@ -4,12 +4,13 @@ package Algocraft.PaqueteProvisorio;
 import Algocraft.Excepciones.NodoOcupadoException;
 
 public class Mapa {
+
     private Posicion[][] mapa;
     final int alto = 81;
     final int ancho = 61;
+
     private Ubicador ubicador;
 
-    //para el singleton
     private static Mapa instanciaUnica = null;
 
     public static Mapa instanciar(){
