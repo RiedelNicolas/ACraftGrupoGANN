@@ -1,12 +1,12 @@
 
 package Algocraft.PaqueteProvisorio;
 
-import Algocraft.Excepciones.PosicionFueraDeRangoException;
+import Algocraft.Excepciones.NodoOcupadoException;
 
 public class Mapa {
-    private Nodo[][] plano;
-    final int alto = 50;
-    final int ancho = 50;
+    private Posicion[][] mapa;
+    final int alto = 81;
+    final int ancho = 61;
     private Ubicador ubicador;
 
     //para el singleton
@@ -19,26 +19,17 @@ public class Mapa {
         return instanciaUnica;
     }
 
-    private Mapa(int ancho, int alto){
-        plano = new Nodo[ancho][alto];
+    private Mapa(){
+        mapa = new Posicion[ancho][alto];
         ubicador = new Ubicador();
     }
 
-    public void agregarElemento(Posicionable elemento, Posicion pos){
-        if(fueraDeRango(pos)){
-            throw new PosicionFueraDeRangoException();
+    public void ubicar(Posicion posicion){
+        Posicion aOcupar = mapa[posicion.componenteHorizontal()][posicion.componenteVertical()];
+        if(aOcupar != null){
+            throw new NodoOcupadoException();
         }
-        Nodo nodoActual = plano [pos.getHorizontal()] [pos.getVertical()];
-        nodoActual.setContenido(elemento);
-    }
-
-    public Posicionable getElemento(Posicion pos){
-        if( fueraDeRango(pos) ){
-            throw new PosicionFueraDeRangoException();
-        }
-
-        Nodo nodoActual = plano [pos.getHorizontal()] [pos.getVertical()];
-        return nodoActual.getContenido();
+        aOcupar = posicion;
     }
 
     public void limpiar(Posicion posicion) {
@@ -46,27 +37,16 @@ public class Mapa {
         ( plano[posicion.getHorizontal()][posicion.getVertical()] ).limpiar();
     }
 
-    public void mover(Posicion posicionAnterior, Posicion posicionNueva){
-        if( fueraDeRango(posicionAnterior) || fueraDeRango(posicionNueva) ){
-            throw new PosicionFueraDeRangoException();
-        }
-
-        //esto tiene que quedar mas lindo.
-        Nodo auxiliar = plano[posicionAnterior.getHorizontal()][posicionAnterior.getVertical()];
-        plano[posicionNueva.getHorizontal()][posicionNueva.getVertical()] = auxiliar;
-        limpiar(posicionAnterior);
-
-    }
-
     public boolean fueraDeRango(Posicion posicion){
             return( !(posicion.getHorizontal()<=ancho && posicion.getVertical()<=alto) );
     }
 
-    public int getAncho(){
-        return ancho;
-    }
-
     public void inicializar(){
+//        for(int i : ancho){
+//            for(int j : alto){
+//                mapa[i][j] = null;
+//            }
+//        }
         ubicador.ubicarElementos(this, ancho, alto);
     }
 

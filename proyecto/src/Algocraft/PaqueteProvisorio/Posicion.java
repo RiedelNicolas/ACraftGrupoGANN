@@ -1,69 +1,44 @@
 package Algocraft.PaqueteProvisorio;
 
-import Algocraft.Excepciones.PosicionCreadaSinDatosException;
-
-import java.lang.*;
-
 public class Posicion {
 
     //Atributos
-    protected int x;
-    protected int y;
+    private Posicionable ocupante;
+    private int x;
+    private int y;
 
     //Métodos
     public Posicion(int x, int y){
-        this.x=x;
-        this.y=y;
+        this.x = x;
+        this.y = y;
+        ocupante = null;
     }
 
-
-    public Posicion(){
-        throw new PosicionCreadaSinDatosException();
+    public Posicion(Posicionable ocupante, int x, int y){
+        this.x = x;
+        this.y = y;
+        this.ocupante = ocupante;
     }
 
-    public int calcularDistanciaCon(Posicion posicionRecibida){
-        return 0;
-    }
-
-    //no se si deberian ser publica, ver tema de paquetes.
-    public int getVertical(){
+    public int componenteHorizontal(){
         return y;
     }
 
-    public int getHorizontal(){
+    public int componenteVertical(){
         return x;
     }
 
-    //distancia Manhattan
-    public int distanciaCon(Posicion posicionRecibida){
-        int diferenciaDeColumnas, diferenciaDeFilas;
-
-        diferenciaDeColumnas = Math.abs(posicionRecibida.getVertical() - x );
-        diferenciaDeFilas  = Math.abs(posicionRecibida.getHorizontal() - y );
-
-        return ( diferenciaDeColumnas + diferenciaDeFilas );
+    public void ocupar(Posicionable nuevoOcupante){
+        ocupante = nuevoOcupante;
     }
 
-    public boolean esIgual(Posicion posicionRecibida){
-        return( this.distanciaCon(posicionRecibida) == 0 );
+    public Posicionable getOcupante(){
+        return ocupante;
     }
 
-
-    public int moverDerecha(){
-        return x++;
+    public void mover(Posicion posicion){
+        posicion.ocupar(ocupante);
+        ocupante = null;
     }
-
-    public int moverIzquierda(){
-        return  x--;
-    }
-
-    public int moverAbajo(){
-       return y++;
-    }
-
-    public int moverArriba(){
-       return y--;
-    }
-
 
 }
