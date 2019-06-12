@@ -15,7 +15,6 @@ public class Mapa {
         if(instancia_unica == null ){
             instancia_unica = new Mapa(ancho,alto);
         }
-
         return instancia_unica;
     }
 
@@ -61,5 +60,7 @@ public class Mapa {
     public boolean fueraDeRango(Posicion posicion){
             return( !(posicion.getHorizontal()<=ancho && posicion.getVertical()<=alto) );
         }
+
+
 
 }
