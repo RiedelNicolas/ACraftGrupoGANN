@@ -66,4 +66,13 @@ public class Mapa {
     public void inicializar(){
         ubicador.ubicarElementos(this, ancho, alto);
     }
+
+    public void actualizar(){
+
+    }
+
+    private void limpiarNodosAbsurdos(){
+
+    }
+
 }

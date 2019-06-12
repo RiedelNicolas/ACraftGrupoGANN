@@ -22,7 +22,6 @@ public class Nodo {
         contenido=contenidoRecibido;
     }
 
-
     public void limpiar(){
         this.contenido = null;
     }
@@ -31,4 +30,11 @@ public class Nodo {
         return (contenido != null);
     }
 
+
+    private boolean posicionAbsurda(){
+
+        if(contenido == null) return false;
+        if( contenido.getPosicion() == null) return true;
+        return false;
+    }
 }
