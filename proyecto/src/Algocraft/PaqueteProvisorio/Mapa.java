@@ -16,7 +16,6 @@ public class Mapa {
         if(instancia_unica == null ){
             instancia_unica = new Mapa(ancho,alto);
         }
-
         return instancia_unica;
     }
 

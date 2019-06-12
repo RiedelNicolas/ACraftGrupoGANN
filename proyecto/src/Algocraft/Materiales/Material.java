@@ -4,7 +4,7 @@ import Algocraft.Excepciones.MaterialNoSeDanioException;
 import Algocraft.Herramientas.*;
 import Algocraft.PaqueteProvisorio.Posicionable;
 
-public abstract class Material extends Posicionable {
+public abstract class Material implements Posicionable {
 
     //Atributos
     protected int durabilidad;
