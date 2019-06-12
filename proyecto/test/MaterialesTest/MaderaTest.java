@@ -46,7 +46,9 @@ public class MaderaTest {
 
         Madera madera = new Madera();
         HachaDeMetal hacha = new HachaDeMetal();
-        madera.gastarCon(hacha);
+        try{
+            madera.gastarCon(hacha);
+        }catch (MaterialRotoException e){}
 
         assertEquals(0, madera.getDurabilidad());
     }
@@ -105,13 +107,13 @@ public class MaderaTest {
         Madera madera = new Madera();
         HachaDeMadera hacha = new HachaDeMadera();
 
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < 4; i++) {
             madera.gastarCon(hacha);
         }
 
-        assertEquals(0, madera.getDurabilidad());
+        assertEquals(2, madera.getDurabilidad());
 
         thrown.expect(MaterialRotoException.class);
-        madera.gastarCon(hacha);
+        madera.gastarCon(hacha); //Chequea que se rompa con el ultimo gastar
     }
 }
