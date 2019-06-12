@@ -4,12 +4,16 @@ import Algocraft.Excepciones.HerramientaRotaException;
 import Algocraft.Herramientas.Herramienta;
 import Algocraft.Herramientas.PicoDeMetal;
 import Algocraft.Materiales.*;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
 public class PicoDeMetalTest {
 
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01PicoDeMetalSeCreaCon400DeDurabilidad() {
@@ -86,11 +90,13 @@ public class PicoDeMetalTest {
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
 
-        for(int i=0; i<10; i++){
+        for(int i = 0; i < 2; i++) {
             pico.golpear(piedra);
         }
+        assertEquals(400, pico.getDurabilidad());
 
-        assertEquals(0, pico.getDurabilidad());
+        thrown.expect(HerramientaRotaException.class);
+        pico.golpear(piedra);
     }
 
     @Test
@@ -99,7 +105,7 @@ public class PicoDeMetalTest {
         Herramienta pico = new PicoDeMetal();
         Material metal = new Metal();
 
-        for(int i=0; i<10; i++){
+        for(int i = 0; i < 10; i++){
             pico.golpear(metal);
         }
 
@@ -113,7 +119,7 @@ public class PicoDeMetalTest {
         Herramienta pico = new PicoDeMetal();
         Material diamante = new Diamante();
 
-        for(int i=0; i<10; i++){
+        for(int i = 0; i < 10; i++){
             pico.golpear(diamante);
         }
 
