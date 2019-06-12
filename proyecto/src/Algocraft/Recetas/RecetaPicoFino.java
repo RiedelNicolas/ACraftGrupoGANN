@@ -7,8 +7,8 @@ import java.util.Arrays;
 public class RecetaPicoFino extends Receta {
 
     public RecetaPicoFino(){
-        receta = new ArrayList<Material>(Arrays.asList(new Metal(), new Metal(), new Metal(),
-                new Piedra(), new Madera(), new MaterialVacio(),
-                new MaterialVacio(), new Madera(), new MaterialVacio()));
+        receta = new ArrayList<Integer>(Arrays.asList(METAL, METAL, METAL,
+                                                      PIEDRA, MADERA, VACIO,
+                                                      VACIO, MADERA, VACIO));
     }
 }

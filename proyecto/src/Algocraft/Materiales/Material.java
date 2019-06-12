@@ -10,10 +10,15 @@ public abstract class Material extends Posicionable {
 
     //Atributos
     protected int durabilidad;
+    protected int id;
 
     //Métodos
     public int getDurabilidad(){
         return durabilidad;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public void gastarCon(HachaDeMadera hacha){

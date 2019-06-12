@@ -6,6 +6,7 @@ public class Piedra extends Material {
 
     public Piedra(){
         durabilidad = 30;
+        id = 2;
     }
 
     @Override
