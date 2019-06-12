@@ -8,10 +8,18 @@ import Algocraft.PaqueteProvisorio.Posicionable;
 public class Jugador extends Posicionable {
     //Atributos
     private Herramienta HerramientaEnMano;
+    private static Jugador instancia_unica = null;
 
-    //Metodos
-    public Jugador() {
+    //
+    private Jugador() {
         HerramientaEnMano = new HachaDeMadera();
+    }
+
+    public static Jugador crearUnico(){
+        if(instancia_unica == null){
+            instancia_unica = new Jugador();
+        }
+        return instancia_unica;
     }
 
     public Herramienta getHerramientaEnMano(){

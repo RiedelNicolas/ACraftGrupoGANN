@@ -9,14 +9,14 @@ public class JugadorTest {
 
     @Test
     public void test01JugadorSeCreaCorrectamente() {
-        Jugador jugador = new Jugador();
+        Jugador jugador = Jugador.crearUnico();
         Assert.assertNotNull(jugador);
 
     }
 
     @Test
     public void test02JugadorSeCreaConHachaDeMaderaEnMano() {
-        Jugador jugador = new Jugador();
+        Jugador jugador = Jugador.crearUnico();
         Assert.assertThat(jugador.getHerramientaEnMano(), CoreMatchers.instanceOf(HachaDeMadera.class));
     }
 }
