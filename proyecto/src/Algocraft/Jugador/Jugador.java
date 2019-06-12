@@ -9,7 +9,7 @@ import Algocraft.PaqueteProvisorio.Posicion;
 public class Jugador extends Posicionable {
     //Atributos
     private Herramienta HerramientaEnMano;
-    private static Jugador instancia_unica = null;
+    private static Jugador instanciaUnica = null;
 
 
     private Jugador() {
@@ -17,10 +17,10 @@ public class Jugador extends Posicionable {
     }
 
     public static Jugador crearUnico(){
-        if(instancia_unica == null){
-            instancia_unica = new Jugador();
+        if(instanciaUnica == null){
+            instanciaUnica = new Jugador();
         }
-        return instancia_unica;
+        return instanciaUnica;
     }
 
     public Herramienta getHerramientaEnMano(){

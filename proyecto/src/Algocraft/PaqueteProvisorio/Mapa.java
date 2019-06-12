@@ -5,24 +5,22 @@ import Algocraft.Excepciones.PosicionFueraDeRangoException;
 
 public class Mapa {
     private Nodo[][] plano;
-    private int alto;
-    private int ancho;
+    final int alto = 50;
+    final int ancho = 50;
     private Ubicador ubicador;
 
     //para el singleton
-    private static Mapa instancia_unica = null;
+    private static Mapa instanciaUnica = null;
 
-    public static Mapa NuevoConDimesiones(int ancho, int alto){
-        if(instancia_unica == null ){
-            instancia_unica = new Mapa(ancho,alto);
+    public static Mapa instanciar(){
+        if(instanciaUnica == null ){
+            instanciaUnica = new Mapa();
         }
-        return instancia_unica;
+        return instanciaUnica;
     }
 
     private Mapa(int ancho, int alto){
         plano = new Nodo[ancho][alto];
-        this.alto = alto;
-        this.ancho = ancho;
         ubicador = new Ubicador();
     }
 
@@ -30,7 +28,7 @@ public class Mapa {
         if(fueraDeRango(pos)){
             throw new PosicionFueraDeRangoException();
         }
-        Nodo nodoActual = plano[pos.getHorizontal()][pos.getVertical()];
+        Nodo nodoActual = plano [pos.getHorizontal()] [pos.getVertical()];
         nodoActual.setContenido(elemento);
     }
 
@@ -39,7 +37,7 @@ public class Mapa {
             throw new PosicionFueraDeRangoException();
         }
 
-        Nodo nodoActual = plano[pos.getHorizontal()][pos.getVertical()];
+        Nodo nodoActual = plano [pos.getHorizontal()] [pos.getVertical()];
         return nodoActual.getContenido();
     }
 
@@ -62,6 +60,10 @@ public class Mapa {
 
     public boolean fueraDeRango(Posicion posicion){
             return( !(posicion.getHorizontal()<=ancho && posicion.getVertical()<=alto) );
+    }
+
+    public int getAncho(){
+        return ancho;
     }
 
     public void inicializar(){

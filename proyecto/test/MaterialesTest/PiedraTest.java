@@ -117,20 +117,12 @@ public class PiedraTest {
 
         Piedra piedra = new Piedra();
         PicoDeMadera pico = new PicoDeMadera();
-        boolean noSePuedeGolpearMaterial = false;
 
         for(int i = 0; i < 15; i++) {
             piedra.gastarCon(pico);
         }
 
-        try{
-            System.out.println(piedra.getDurabilidad());
-            piedra.gastarCon(pico);
-            System.out.println(piedra.getDurabilidad());
-        }catch(MaterialRotoException e){
-            noSePuedeGolpearMaterial = true;
-        }
-
-        assertTrue(noSePuedeGolpearMaterial);
+        thrown.expect(MaterialRotoException.class);
+        piedra.gastarCon(pico);
     }
 }

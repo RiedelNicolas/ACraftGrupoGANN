@@ -12,7 +12,7 @@ public class Juego {
 
     public Juego(){
 
-        mapa = Mapa.NuevoConDimesiones(80, 60);
+        mapa = Mapa.nuevoConDimesiones(80, 60);
         jugador = Jugador.crearUnico();
 
     }
