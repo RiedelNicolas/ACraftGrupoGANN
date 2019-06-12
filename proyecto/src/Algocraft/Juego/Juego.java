@@ -27,5 +27,5 @@ public class Juego {
     public void inicializarMapa(){
         mapa.inicializar();
     }
-    
+
 }

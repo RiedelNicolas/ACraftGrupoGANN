@@ -7,6 +7,7 @@ public class Mapa {
     private Nodo[][] plano;
     private int alto;
     private int ancho;
+    private Ubicador ubicador;
 
     //para el singleton
     private static Mapa instancia_unica = null;
@@ -23,6 +24,7 @@ public class Mapa {
         plano = new Nodo[ancho][alto];
         this.alto = alto;
         this.ancho = ancho;
+        ubicador = new Ubicador();
     }
 
     public void agregarElemento(Posicionable elemento, Posicion pos){
@@ -60,6 +62,9 @@ public class Mapa {
 
     public boolean fueraDeRango(Posicion posicion){
             return( !(posicion.getHorizontal()<=ancho && posicion.getVertical()<=alto) );
-        }
+    }
 
+    public void inicializar(){
+        ubicador.ubicarElementos(this, ancho, alto);
+    }
 }
