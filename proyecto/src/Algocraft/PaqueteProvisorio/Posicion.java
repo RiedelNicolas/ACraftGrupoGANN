@@ -1,7 +1,5 @@
 package Algocraft.PaqueteProvisorio;
 
-import Algocraft.Excepciones.PosicionCreadaSinDatosException;
-
 import java.lang.*;
 
 public class Posicion {
@@ -14,15 +12,6 @@ public class Posicion {
     public Posicion(int x, int y){
         this.x=x;
         this.y=y;
-    }
-
-
-    public Posicion(){
-        throw new PosicionCreadaSinDatosException();
-    }
-
-    public int calcularDistanciaCon(Posicion posicionRecibida){
-        return 0;
     }
 
     //no se si deberian ser publica, ver tema de paquetes.

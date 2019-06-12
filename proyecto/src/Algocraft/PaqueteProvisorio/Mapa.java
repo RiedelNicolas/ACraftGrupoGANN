@@ -5,11 +5,10 @@ import Algocraft.Excepciones.PosicionFueraDeRangoException;
 
 public class Mapa {
     private Nodo[][] plano;
-    final int alto = 50;
-    final int ancho = 50;
+    final int alto = 60;       // Plano Fijo
+    final int ancho = 80;
     private Ubicador ubicador;
 
-    //para el singleton
     private static Mapa instanciaUnica = null;
 
     public static Mapa instanciar(){
@@ -19,7 +18,7 @@ public class Mapa {
         return instanciaUnica;
     }
 
-    private Mapa(int ancho, int alto){
+    private Mapa(){
         plano = new Nodo[ancho][alto];
         ubicador = new Ubicador();
     }
@@ -60,10 +59,6 @@ public class Mapa {
 
     public boolean fueraDeRango(Posicion posicion){
             return( !(posicion.getHorizontal()<=ancho && posicion.getVertical()<=alto) );
-    }
-
-    public int getAncho(){
-        return ancho;
     }
 
     public void inicializar(){

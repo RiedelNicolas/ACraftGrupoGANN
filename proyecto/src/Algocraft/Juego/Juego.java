@@ -12,7 +12,7 @@ public class Juego {
 
     public Juego(){
 
-        mapa = Mapa.nuevoConDimesiones(80, 60);
+        mapa = Mapa.instanciar();
         jugador = Jugador.crearUnico();
 
     }
