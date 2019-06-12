@@ -1,6 +1,5 @@
 package Algocraft.PaqueteProvisorio;
 
-
 import Algocraft.Excepciones.NodoOcupadoException;
 
 public class Nodo {
@@ -31,10 +30,4 @@ public class Nodo {
     }
 
 
-    private boolean posicionAbsurda(){
-
-        if(contenido == null) return false;
-        if( contenido.getPosicion() == null) return true;
-        return false;
-    }
 }

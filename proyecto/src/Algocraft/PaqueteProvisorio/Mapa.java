@@ -67,12 +67,5 @@ public class Mapa {
         ubicador.ubicarElementos(this, ancho, alto);
     }
 
-    public void actualizar(){
-
-    }
-
-    private void limpiarNodosAbsurdos(){
-
-    }
-
 }
+

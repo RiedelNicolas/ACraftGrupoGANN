@@ -1,8 +1,12 @@
 package Algocraft.PaqueteProvisorio;
 
 
-public interface Posicionable {
+public abstract class Posicionable {
 
-    public Posicion getPosicion();
+    protected Posicion posicion;
+
+    public Posicion getPosicion(){
+        return posicion;
+    }
 
 }
