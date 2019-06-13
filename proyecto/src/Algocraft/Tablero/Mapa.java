@@ -26,6 +26,13 @@ public class Mapa {
     private Mapa(){
         mapa = new Posicion[ancho][alto];
         ubicador = new Ubicador();
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                mapa[i][j] = new Posicion(i, j);
+            }
+        }
+        jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
+        ubicar(jugador);
     }
 
     public void ubicar(Posicion posicion){
@@ -36,16 +43,6 @@ public class Mapa {
     }
 
     public void inicializar(){
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                mapa[i][j] = new Posicion(i, j);
-            }
-        }
-
-        jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
-        ubicar(jugador);
-
         ubicador.ubicarElementos(this, ancho, alto);
     }
 
