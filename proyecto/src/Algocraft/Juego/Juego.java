@@ -8,7 +8,7 @@ public class Juego {
 
     private static Juego instancia_unica = null;
 
-    public Juego(){
+    private Juego(){
         mapa = Mapa.instanciar();
     }
 
