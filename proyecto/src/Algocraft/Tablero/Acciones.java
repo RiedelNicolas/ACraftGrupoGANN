@@ -1,9 +1,10 @@
-package Algocraft.PaqueteProvisorio;
+package Algocraft.Tablero;
 
 import Algocraft.Excepciones.PosicionOcupadaException;
 import Algocraft.Excepciones.PosicionFueraDeRangoException;
 import Algocraft.Jugador.Jugador;
 import Algocraft.Materiales.Material;
+import Algocraft.Posicion.Posicion;
 
 public class Acciones {
 

@@ -1,7 +1,6 @@
 package Algocraft.Juego;
 
-import Algocraft.PaqueteProvisorio.*;
-import Algocraft.Jugador.*;
+import Algocraft.Tablero.*;
 
 public class Juego {
 

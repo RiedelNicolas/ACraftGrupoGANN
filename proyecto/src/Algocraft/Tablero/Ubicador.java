@@ -1,7 +1,9 @@
-package Algocraft.PaqueteProvisorio;
+package Algocraft.Tablero;
 
 import Algocraft.Excepciones.PosicionOcupadaException;
 import Algocraft.Materiales.*;
+import Algocraft.Posicion.Posicion;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Ubicador {

@@ -1,4 +1,4 @@
-package Algocraft.PaqueteProvisorio;
+package Algocraft.Posicion;
 
 
 public abstract class Posicionable {

@@ -1,8 +1,9 @@
 
-package Algocraft.PaqueteProvisorio;
+package Algocraft.Tablero;
 
 import Algocraft.Excepciones.PosicionOcupadaException;
 import Algocraft.Jugador.Jugador;
+import Algocraft.Posicion.Posicion;
 
 public class Mapa {
 

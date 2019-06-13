@@ -12,8 +12,6 @@ import static org.junit.Assert.*;
 
 public class PicoDeMetalTest {
 
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01PicoDeMetalSeCreaCon400DeDurabilidad() {
@@ -85,7 +83,7 @@ public class PicoDeMetalTest {
     }
 
     @Test
-    public void test08PicoDeMetalSeQuedaSinDurabilidadAlDecimoUsoContraPiedra(){
+    public void test08PicoDeMetalSeGastaContraPiedra(){
 
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
@@ -94,9 +92,6 @@ public class PicoDeMetalTest {
             pico.golpear(piedra);
         }
         assertEquals(400, pico.getDurabilidad());
-
-        thrown.expect(HerramientaRotaException.class);
-        pico.golpear(piedra);
     }
 
     @Test

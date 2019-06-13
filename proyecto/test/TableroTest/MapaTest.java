@@ -1,9 +1,7 @@
-package MapaTest;
+package TableroTest;
 
-import Algocraft.Jugador.Jugador;
-import Algocraft.PaqueteProvisorio.Mapa;
-import Algocraft.PaqueteProvisorio.Posicion;
-import org.hamcrest.CoreMatchers;
+import Algocraft.Posicion.Posicion;
+import Algocraft.Tablero.Mapa;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
