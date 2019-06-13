@@ -1,15 +1,12 @@
 package JuegoTest;
 
 import Algocraft.Juego.Juego;
-import Algocraft.Jugador.Jugador;
 import Algocraft.Posicion.Posicion;
 import Algocraft.Tablero.Mapa;
 import Algocraft.Materiales.*;
 
 
 import org.junit.*;
-import org.hamcrest.*;
-
 
 public class JuegoTest {
 
