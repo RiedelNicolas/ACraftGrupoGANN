@@ -23,4 +23,9 @@ public class Juego {
         mapa.inicializar();
     }
 
+    //para pruebas parciales
+    public Mapa getMapa(){
+        return mapa;
+    }
+
 }
