@@ -12,15 +12,15 @@ import org.hamcrest.*;
 
 public class AccionesTest {
 
-  /*  @Test
+    @Test
     public void test01AccionesSeCrea() {
-        Acciones acciones = new Acciones(41, 85);
+        Acciones acciones = new Acciones();
         Assert.assertNotNull(acciones);
     }
 
     @Test
     public void test02SeCreaAccionesYSeIntentaMoverJugadorEntreDosPosicionesvalidas() {
-        Acciones acciones = new Acciones(41, 85);
+        Acciones acciones = new Acciones();
         Posicion posicionAnterior = new Posicion(0, 0);
         Posicion posicionNueva = new Posicion(1, 0);
 
@@ -30,21 +30,11 @@ public class AccionesTest {
         Assert.assertNotNull(posicionNueva.getOcupante());
     }
 
-    @Test(expected = PosicionFueraDeRangoException.class)
-    public void test03SeCreaAccionesYSeIntentaMoverJugadorAUnaPosicionFueraDeRangoLevantaExcepcion() {
-        Acciones acciones = new Acciones(41, 85);
-        Posicion posicionAnterior = new Posicion(0, 0);
-        Posicion posicionNueva = new Posicion(80, 87);
-
-        posicionAnterior.ocupar(Jugador.crearUnico());
-        acciones.mover(posicionAnterior, posicionNueva);
-
-    }
 
 
     @Test(expected = PosicionOcupadaException.class)
-    public void test04SeCreaAccionesYSeIntentaMoverJugadorAUnaPosicionOcupadaLevantaExcepcion() {
-        Acciones acciones = new Acciones(41, 85);
+    public void test03SeCreaAccionesYSeIntentaMoverJugadorAUnaPosicionOcupadaLevantaExcepcion() {
+        Acciones acciones = new Acciones();
         Posicion posicionAnterior = new Posicion(0, 0);
         Posicion posicionNueva = new Posicion(1, 5);
 
@@ -55,20 +45,7 @@ public class AccionesTest {
 
     }
 
-    @Test(expected = PosicionFueraDeRangoException.class)
-    public void test05SeCreaAccionesYSeIntentaGolpearUnMineralEnUnaPosicionNoValida() {
-        Acciones acciones = new Acciones(41, 85);
-        Posicion posicionJuegador = new Posicion(0, 0);
-        Posicion posicionMaterial = new Posicion(80, 0;
 
-        posicionJuegador.ocupar(Jugador.crearUnico());
-        posicionMaterial.ocupar( new Madera() );
-
-        acciones.golpear(posicionJuegador, posicionMaterial);
-
-    }
-
-*/
 
 
 }
