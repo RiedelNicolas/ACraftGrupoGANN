@@ -9,8 +9,8 @@ public class Mapa {
 
 //Atributos
     private Posicion[][] mapa;
-    final int alto = 81;  //Asumimos que es esta la dimension del ancho y del alto
-    final int ancho = 61;
+    final int alto = 45;  //Asumimos que es esta la dimension del ancho y del alto
+    final int ancho = 81;
     private Ubicador ubicador;
     private static Mapa instanciaUnica = null;
     private Posicion jugador;
