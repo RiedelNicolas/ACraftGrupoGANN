@@ -1,6 +1,7 @@
 
 package Algocraft.Tablero;
 
+import Algocraft.Excepciones.PosicionFueraDeRangoException;
 import Algocraft.Excepciones.PosicionOcupadaException;
 import Algocraft.Jugador.Jugador;
 import Algocraft.Posicion.Posicion;
@@ -14,6 +15,7 @@ public class Mapa {
     private Ubicador ubicador;
     private static Mapa instanciaUnica = null;
     private Posicion jugador;
+    Acciones accion;
 
 //Metodos
     public static Mapa instanciar(){
@@ -33,6 +35,7 @@ public class Mapa {
         }
         jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
         ubicar(jugador);
+        accion = new Acciones();
     }
 
     public void ubicar(Posicion posicion){
@@ -50,5 +53,44 @@ public class Mapa {
         return mapa;
     }
 
+    public void moverJugadorIzquierda(){   //Refactoring
+        if(!estaEnElMapa(jugador.componenteHorizontal() - 1, jugador.componenteVertical())){
+            throw new PosicionFueraDeRangoException();
+        }
+        try {
+            jugador = accion.mover(jugador, mapa[jugador.componenteHorizontal() - 1][jugador.componenteVertical()]);
+        } catch (PosicionOcupadaException e) {}
+    }
+
+    public void moverJugadorDerecha(){
+        if(!estaEnElMapa(jugador.componenteHorizontal() + 1, jugador.componenteVertical())){
+            throw new PosicionFueraDeRangoException();
+        }
+        try {
+            jugador = accion.mover(jugador, mapa[jugador.componenteHorizontal() + 1][jugador.componenteVertical()]);
+        } catch (PosicionOcupadaException e) {}
+    }
+
+    public void moverJugadorArriba(){
+        if(!estaEnElMapa(jugador.componenteHorizontal(), jugador.componenteVertical() - 1)){
+            throw new PosicionFueraDeRangoException();
+        }
+        try {
+            jugador = accion.mover(jugador, mapa[jugador.componenteHorizontal()][jugador.componenteVertical() - 1]);
+        } catch (PosicionOcupadaException e) {}
+    }
+
+    public void moverJugadorAbajo(){
+        if(!estaEnElMapa(jugador.componenteHorizontal(), jugador.componenteVertical() + 1)){
+            throw new PosicionFueraDeRangoException();
+        }
+        try {
+            jugador = accion.mover(jugador, mapa[jugador.componenteHorizontal()][jugador.componenteVertical() + 1]);
+        } catch (PosicionOcupadaException e) {}
+    }
+
+    private boolean estaEnElMapa(int componenteHorizontal, int componenteVertical){
+        return ((0 <= componenteHorizontal) && (componenteHorizontal < ancho) && (0 <= componenteVertical) && (componenteVertical < alto));
+    }
 }
 
