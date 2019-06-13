@@ -42,12 +42,15 @@ public abstract class Material extends Posicionable {
         throw new MaterialNoSeDanioException();
     }
 
-    public void desgastarse(int fuerza){
+    public void desgastarse(int fuerza) {
         durabilidad -= fuerza;
 
-        if(durabilidad <= 0){
+        if (durabilidad <= 0) {
+            //aca se devuelve materia prima.
             throw new MaterialRotoException();
         }
+    // acá se devuelve antimateria
+    //y luego el jugador le dice a las materias primas o antimateria "equipar" y se manda por parametro, y solo las materias primas se equipan gg
     }
 
 

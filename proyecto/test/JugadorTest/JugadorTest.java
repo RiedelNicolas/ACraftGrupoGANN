@@ -27,7 +27,7 @@ public class JugadorTest {
 
         Assert.assertEquals(jugadorUno, jugadorDos);
     }
-    
+
 }
 
 
