@@ -16,7 +16,7 @@ notifications:
       - nmarianetti@fi.uba.ar
       - ateston@fi.uba.ar
       - gonzalomartinezsastre@gmail.com
-      - nariedel99@gmail.com
+      - nriedel@fi.uba.ar
 on_failure: always
 
 
