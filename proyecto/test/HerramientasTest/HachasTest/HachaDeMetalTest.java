@@ -1,12 +1,19 @@
 package HerramientasTest.HachasTest;
 
+import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.HachaDeMetal;
 import Algocraft.Herramientas.Herramienta;
 import Algocraft.Materiales.*;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
 import static org.junit.Assert.*;
 
 public class HachaDeMetalTest {
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01HachaDeMetalSeCreaCon400DeDurabilidad() {
@@ -26,9 +33,10 @@ public class HachaDeMetalTest {
 
         Herramienta hacha = new HachaDeMetal();
         Material madera = new Madera();
+
+        thrown.expect(MaterialRotoException.class);
         hacha.golpear(madera);
 
-        assertEquals(395, hacha.getDurabilidad());
     }
 
     @Test
