@@ -4,6 +4,9 @@ import Algocraft.Juego.Juego;
 import Algocraft.Jugador.Jugador;
 import Algocraft.Posicion.Posicion;
 import Algocraft.Tablero.Mapa;
+import Algocraft.Materiales.*;
+
+
 import org.junit.*;
 import org.hamcrest.*;
 
@@ -92,4 +95,30 @@ public class JuegoTest {
         Assert.assertFalse(_mapa[ancho/2][alto/2].estaOcupada());
         Assert.assertTrue(_mapa[(ancho/2) + 1][(alto/2)].estaOcupada());
     }
+
+    @Test
+    public void test08SeCreaJuegoYContieneMadera(){
+
+        int alto = 45;
+        int ancho = 81;
+
+        Juego juego = Juego.crearUnico();
+        juego.inicializar();
+        Mapa mapa = juego.getMapa();
+        Posicion[][] _mapa = mapa.getMapa();
+
+        boolean contiene = false;
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if((_mapa[i][j]).getOcupante() instanceof Madera){
+                    contiene = true;
+                }
+            }
+        }
+
+        Assert.assertTrue(contiene);
+    }
+
+
 }

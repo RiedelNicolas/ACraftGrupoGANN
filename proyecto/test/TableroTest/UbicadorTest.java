@@ -6,7 +6,6 @@ import Algocraft.Materiales.Metal;
 import Algocraft.Materiales.Piedra;
 import Algocraft.Posicion.Posicion;
 import Algocraft.Tablero.Mapa;
-import Algocraft.Tablero.Ubicador;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -22,7 +21,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDeMaderas = 0;
 
@@ -41,7 +40,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int i = 0, j = 0;
         int contadorDeDiamantes = 0;
@@ -63,7 +62,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDeDiamantes = 0;
 
@@ -82,7 +81,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int i = 0, j = 0;
         int contadorDePiedras = 0;
@@ -104,7 +103,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDePiedras = 0;
 
@@ -123,7 +122,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDeMetal = 0;
 
@@ -142,7 +141,7 @@ public class UbicadorTest {
 
         Mapa mapa = Mapa.instanciar();
         Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
 
         int i = (int)(0.75*ancho), j = 0;
         int contadorDeMetal = 0;

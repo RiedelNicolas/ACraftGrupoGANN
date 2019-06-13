@@ -45,7 +45,7 @@ public class Mapa {
         mapa[posicion.componenteHorizontal()][posicion.componenteVertical()] = posicion;
     }
 
-    public void inicializar(){
+    public void ubicarMateriales(){
         ubicador.ubicarElementos(this, ancho, alto);
     }
 

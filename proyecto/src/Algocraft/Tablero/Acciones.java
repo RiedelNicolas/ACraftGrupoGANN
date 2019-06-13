@@ -22,4 +22,7 @@ public class Acciones {
             _jugador.golpear((Material) mineral.getOcupante());
         }
     }
+
+
+
 }

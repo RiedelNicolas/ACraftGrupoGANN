@@ -70,6 +70,7 @@ public class HachaDeMetalTest {
 
         assertEquals(395, hacha.getDurabilidad());
 
+
     }
 
 }

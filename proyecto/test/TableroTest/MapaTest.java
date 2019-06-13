@@ -57,7 +57,7 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.inicializar();
+        mapa.ubicarMateriales();
         Posicion[][] _mapa = mapa.getMapa();
         int total = 0;
 
@@ -78,7 +78,7 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.inicializar();
+        mapa.ubicarMateriales();
         Posicion[][] _mapa = mapa.getMapa();
         int total = 0;
 
@@ -99,7 +99,7 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.inicializar();
+        mapa.ubicarMateriales();
         Posicion[][] _mapa = mapa.getMapa();
         int total = 0;
 
@@ -120,7 +120,7 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.inicializar();
+        mapa.ubicarMateriales();
         Posicion[][] _mapa = mapa.getMapa();
         int total = 0;
 

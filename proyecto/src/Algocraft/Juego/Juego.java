@@ -19,13 +19,15 @@ public class Juego {
         return instancia_unica;
     }
 
-    public void inicializar(){
-        mapa.inicializar();
+   public void inicializar(){
+        mapa.ubicarMateriales();
     }
 
     //para pruebas parciales
     public Mapa getMapa(){
         return mapa;
     }
+
+
 
 }
