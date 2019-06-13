@@ -1,11 +1,13 @@
 package ConstruccionTest;
 
-import Algocraft.Construccion.Constructor;
-import Algocraft.Recetas.Receta;
+import Algocraft.Materiales.*;
+import Algocraft.Herramientas.*;
+import Algocraft.Construccion.*;
+import Algocraft.Recetas.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class ConstructorTest {
 
@@ -15,6 +17,5 @@ public class ConstructorTest {
         ArrayList<Receta> recetas = constructor.getRecetas();
 
         Assert.assertEquals(recetas.size(), 7);
-
     }
 }
