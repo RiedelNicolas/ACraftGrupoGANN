@@ -27,13 +27,7 @@ public class JugadorTest {
 
         Assert.assertEquals(jugadorUno, jugadorDos);
     }
-
-//    @Test
-//    public void test04SeInicializaAlJugadorEnElCentroDelMapa(){
-//
-//    }
-
-
+    
 }
 
 
