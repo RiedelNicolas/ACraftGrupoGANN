@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/agusteston/ACraftGrupoGANN.png?branch=master)](https://travis-ci.org/agusteston/ACraftGrupoGANN)
+
 # ACraftGrupoGANN
 
 Informe https://es.overleaf.com/read/jkfbcwndcnnv
