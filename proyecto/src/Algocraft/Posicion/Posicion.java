@@ -4,28 +4,28 @@ public class Posicion {
 
     //Atributos
     private Posicionable ocupante;
-    private int x;
-    private int y;
+    private int componenteHorizontal;
+    private int componenteVertical;
 
     //Métodos
-    public Posicion(int x, int y){
-        this.x = x;
-        this.y = y;
+    public Posicion(int _componenteHorizontal, int _componenteVertical){
+        this.componenteHorizontal = _componenteHorizontal;
+        this.componenteVertical = _componenteVertical;
         ocupante = null;
     }
 
-    public Posicion(Posicionable ocupante, int x, int y){
-        this.x = x;
-        this.y = y;
+    public Posicion(Posicionable ocupante, int _componenteHorizontal, int _componenteVertical){
+        this.componenteHorizontal = _componenteHorizontal;
+        this.componenteVertical = _componenteVertical;
         this.ocupante = ocupante;
     }
 
     public int componenteHorizontal(){
-        return y;
+        return componenteHorizontal;
     }
 
     public int componenteVertical(){
-        return x;
+        return componenteVertical;
     }
 
     public void ocupar(Posicionable nuevoOcupante){
