@@ -36,8 +36,8 @@ public class Mapa {
 
     public void inicializar(){
 
-        for(int i : ancho){
-            for(int j : alto){
+        for(int i=0; i<ancho; i++){
+            for(int j=0; j<alto; j++){
                 mapa[i][j] = new Posicion(i, j);
             }
         }
