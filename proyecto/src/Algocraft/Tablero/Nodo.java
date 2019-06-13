@@ -1,6 +1,7 @@
-package Algocraft.PaqueteProvisorio;
+package Algocraft.Tablero;
 
 import Algocraft.Excepciones.PosicionOcupadaException;
+import Algocraft.Posicion.Posicionable;
 
 public class Nodo {
     private Posicionable contenido;

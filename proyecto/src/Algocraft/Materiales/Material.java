@@ -3,8 +3,7 @@ package Algocraft.Materiales;
 import Algocraft.Excepciones.MaterialNoSeDanioException;
 import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
-import Algocraft.PaqueteProvisorio.Posicion;
-import Algocraft.PaqueteProvisorio.Posicionable;
+import Algocraft.Posicion.Posicionable;
 
 public abstract class Material extends Posicionable {
 

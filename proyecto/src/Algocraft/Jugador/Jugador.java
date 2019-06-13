@@ -3,7 +3,7 @@ package Algocraft.Jugador;
 import Algocraft.Herramientas.HachaDeMadera;
 import Algocraft.Herramientas.Herramienta;
 import Algocraft.Materiales.Material;
-import Algocraft.PaqueteProvisorio.Posicionable;
+import Algocraft.Posicion.Posicionable;
 
 
 public class Jugador extends Posicionable {
