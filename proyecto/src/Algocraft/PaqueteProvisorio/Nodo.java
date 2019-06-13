@@ -1,6 +1,6 @@
 package Algocraft.PaqueteProvisorio;
 
-import Algocraft.Excepciones.NodoOcupadoException;
+import Algocraft.Excepciones.PosicionOcupadaException;
 
 public class Nodo {
     private Posicionable contenido;
@@ -16,7 +16,7 @@ public class Nodo {
 
     public void setContenido(Posicionable contenidoRecibido) {
         if( this.ocupado() ){
-            throw new NodoOcupadoException();
+            throw new PosicionOcupadaException();
         }
         contenido=contenidoRecibido;
     }

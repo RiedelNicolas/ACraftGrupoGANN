@@ -6,15 +6,11 @@ import Algocraft.Jugador.*;
 public class Juego {
 
     private Mapa mapa;
-    private Jugador jugador;
 
     private static Juego instancia_unica = null;
 
     public Juego(){
-
         mapa = Mapa.instanciar();
-        jugador = Jugador.crearUnico();
-
     }
 
     public static Juego crearUnico(){
@@ -24,7 +20,7 @@ public class Juego {
         return instancia_unica;
     }
 
-    public void inicializarMapa(){
+    public void inicializar(){
         mapa.inicializar();
     }
 

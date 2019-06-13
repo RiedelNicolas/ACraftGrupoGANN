@@ -2,18 +2,18 @@ package Algocraft.Jugador;
 
 import Algocraft.Herramientas.HachaDeMadera;
 import Algocraft.Herramientas.Herramienta;
+import Algocraft.Materiales.Material;
 import Algocraft.PaqueteProvisorio.Posicionable;
-import Algocraft.PaqueteProvisorio.Posicion;
 
 
 public class Jugador extends Posicionable {
     //Atributos
-    private Herramienta HerramientaEnMano;
+    private Herramienta herramientaEnMano;
     private static Jugador instanciaUnica = null;
 
 
     private Jugador() {
-        HerramientaEnMano = new HachaDeMadera();
+        herramientaEnMano = new HachaDeMadera();
     }
 
     public static Jugador crearUnico(){
@@ -24,31 +24,11 @@ public class Jugador extends Posicionable {
     }
 
     public Herramienta getHerramientaEnMano(){
-        return HerramientaEnMano;
+        return herramientaEnMano;
     }
 
-
-    //referidos a movimiento
-
-    public Posicion moverDerecha(){
-            posicion.moverDerecha();
-            return posicion;
+    public void golpear(Material material){
+        herramientaEnMano.golpear(material);
     }
-
-    public Posicion moverIzquierda(){
-        posicion.moverIzquierda();
-        return posicion;
-    }
-
-    public Posicion moverArriba(){
-        posicion.moverArriba();
-        return posicion;
-    }
-
-    public Posicion moverAbajo(){
-        posicion.moverAbajo();
-        return posicion;
-    }
-
 
 }

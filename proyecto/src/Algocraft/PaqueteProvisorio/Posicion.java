@@ -41,4 +41,10 @@ public class Posicion {
         ocupante = null;
     }
 
+    public boolean estaOcupada(){
+        if(ocupante == null){
+            return false;
+        }
+        return true;
+    }
 }

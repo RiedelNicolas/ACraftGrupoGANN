@@ -1,18 +1,20 @@
 
 package Algocraft.PaqueteProvisorio;
 
-import Algocraft.Excepciones.NodoOcupadoException;
+import Algocraft.Excepciones.PosicionOcupadaException;
+import Algocraft.Jugador.Jugador;
 
 public class Mapa {
 
+//Atributos
     private Posicion[][] mapa;
-    final int alto = 81;
+    final int alto = 81;  //Asumimos que es esta la dimension del ancho y del alto
     final int ancho = 61;
-
     private Ubicador ubicador;
-
     private static Mapa instanciaUnica = null;
+    private Posicion jugador;
 
+//Metodos
     public static Mapa instanciar(){
         if(instanciaUnica == null ){
             instanciaUnica = new Mapa();
@@ -26,28 +28,23 @@ public class Mapa {
     }
 
     public void ubicar(Posicion posicion){
-        Posicion aOcupar = mapa[posicion.componenteHorizontal()][posicion.componenteVertical()];
-        if(aOcupar != null){
-            throw new NodoOcupadoException();
+        if(mapa[posicion.componenteHorizontal()][posicion.componenteVertical()].estaOcupada()){
+            throw new PosicionOcupadaException();
         }
-        aOcupar = posicion;
-    }
-
-    public void limpiar(Posicion posicion) {
-
-        ( plano[posicion.getHorizontal()][posicion.getVertical()] ).limpiar();
-    }
-
-    public boolean fueraDeRango(Posicion posicion){
-            return( !(posicion.getHorizontal()<=ancho && posicion.getVertical()<=alto) );
+        mapa[posicion.componenteHorizontal()][posicion.componenteVertical()] = posicion;
     }
 
     public void inicializar(){
-//        for(int i : ancho){
-//            for(int j : alto){
-//                mapa[i][j] = null;
-//            }
-//        }
+
+        for(int i : ancho){
+            for(int j : alto){
+                mapa[i][j] = new Posicion(i, j);
+            }
+        }
+
+        jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
+        ubicar(jugador);
+
         ubicador.ubicarElementos(this, ancho, alto);
     }
 
