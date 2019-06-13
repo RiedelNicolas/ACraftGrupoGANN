@@ -1,6 +1,6 @@
-package MapaTest;
+package TableroTest;
 
-import Algocraft.PaqueteProvisorio.Mapa;
+import Algocraft.Tablero.Mapa;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
