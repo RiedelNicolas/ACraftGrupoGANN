@@ -36,5 +36,7 @@ public class Constructor {
         throw new ConstruccionInvalidaException();
     }
 
-
+    public ArrayList<Receta> getRecetas() {
+        return recetas;
+    }
 }
