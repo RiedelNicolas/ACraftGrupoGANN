@@ -96,6 +96,8 @@ public class JuegoTest {
         Assert.assertTrue(_mapa[(ancho/2) + 1][(alto/2)].estaOcupada());
     }
 
+
+    //pruebasParaEnunciado.
     @Test
     public void test08SeCreaJuegoYContieneMadera(){
 
@@ -112,6 +114,78 @@ public class JuegoTest {
         for(int i = 0; i < ancho; i++){
             for(int j = 0; j < alto; j++){
                 if((_mapa[i][j]).getOcupante() instanceof Madera){
+                    contiene = true;
+                }
+            }
+        }
+
+        Assert.assertTrue(contiene);
+    }
+
+    @Test
+    public void test09SeCreaJuegoYContienePiedra(){
+
+        int alto = 45;
+        int ancho = 81;
+
+        Juego juego = Juego.crearUnico();
+        juego.inicializar();
+        Mapa mapa = juego.getMapa();
+        Posicion[][] _mapa = mapa.getMapa();
+
+        boolean contiene = false;
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if((_mapa[i][j]).getOcupante() instanceof Piedra){
+                    contiene = true;
+                }
+            }
+        }
+
+        Assert.assertTrue(contiene);
+    }
+
+    @Test
+    public void test10SeCreaJuegoYContieneDiamante(){
+
+        int alto = 45;
+        int ancho = 81;
+
+        Juego juego = Juego.crearUnico();
+        juego.inicializar();
+        Mapa mapa = juego.getMapa();
+        Posicion[][] _mapa = mapa.getMapa();
+
+        boolean contiene = false;
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if((_mapa[i][j]).getOcupante() instanceof Diamante){
+                    contiene = true;
+                }
+            }
+        }
+
+        Assert.assertTrue(contiene);
+    }
+
+    @Test
+    public void test11SeCreaJuegoYContieneMetal(){
+
+        int alto = 45;
+        int ancho = 81;
+
+        Juego juego = Juego.crearUnico();
+        juego.inicializar();
+        Mapa mapa = juego.getMapa();
+        Posicion[][] _mapa = mapa.getMapa();
+
+        boolean contiene = false;
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if((_mapa[i][j]).getOcupante() instanceof Metal){
                     contiene = true;
                 }
             }
