@@ -21,11 +21,11 @@ public class Posicion {
     }
 
     public int componenteHorizontal(){
-        return y;
+        return x;
     }
 
     public int componenteVertical(){
-        return x;
+        return y;
     }
 
     public void ocupar(Posicionable nuevoOcupante){
