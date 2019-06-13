@@ -1,6 +1,7 @@
 package Algocraft.Construccion;
 
 import Algocraft.Excepciones.ConstruccionInvalidaException;
+import Algocraft.Excepciones.RecetaIncompatibleException;
 import Algocraft.Herramientas.*;
 import Algocraft.Materiales.Material;
 import Algocraft.Recetas.*;
@@ -9,47 +10,28 @@ import java.util.ArrayList;
 
 public class Constructor {
 
-    private RecetaPicoDeMadera recetaPicoDeMadera;
-    private RecetaPicoDePiedra recetaPicoDePiedra;
-    private RecetaPicoDeMetal recetaPicoDeMetal;
-    private RecetaPicoFino recetaPicoFino;
-    private RecetaHachaDeMadera recetaHachaDeMadera;
-    private RecetaHachaDePiedra recetaHachaDePiedra;
-    private RecetaHachaDeMetal recetaHachaDeMetal;
+    private ArrayList<Receta> recetas;
 
 
     public Constructor(){
-        recetaPicoDeMadera = new RecetaPicoDeMadera();
-        recetaPicoDePiedra = new RecetaPicoDePiedra();
-        recetaPicoDeMetal = new RecetaPicoDeMetal();
-        recetaPicoFino = new RecetaPicoFino();
-        recetaHachaDeMadera = new RecetaHachaDeMadera();
-        recetaHachaDePiedra = new RecetaHachaDePiedra();
-        recetaHachaDeMetal = new RecetaHachaDeMetal();
+        recetas = new ArrayList<>();
+        recetas.add(new RecetaPicoDeMadera());
+        recetas.add(new RecetaPicoDePiedra());
+        recetas.add(new RecetaPicoDeMetal());
+        recetas.add(new RecetaPicoFino());
+        recetas.add(new RecetaHachaDeMadera());
+        recetas.add(new RecetaHachaDePiedra());
+        recetas.add(new RecetaHachaDeMetal());
     }
 
-    public Herramienta construirCon(ArrayList<Material> elementosEnMesa){
+    public Herramienta construirCon(ArrayList<Material> elementosEnMesa){  //Cada receta es unica
 
-        if(recetaPicoDeMadera.comparar(elementosEnMesa))
-            return new PicoDeMadera();
-
-        if(recetaPicoDePiedra.comparar(elementosEnMesa))
-            return new PicoDePiedra();
-
-        if(recetaPicoDeMetal.comparar(elementosEnMesa))
-            return new PicoDeMetal();
-
-        if(recetaPicoFino.comparar(elementosEnMesa))
-            return new PicoFino();
-
-        if(recetaHachaDeMadera.comparar(elementosEnMesa))
-            return new HachaDeMadera();
-
-        if(recetaHachaDePiedra.comparar(elementosEnMesa))
-            return new HachaDePiedra();
-
-        if(recetaHachaDeMetal.comparar(elementosEnMesa))
-            return new HachaDeMetal();
+        for( Receta receta : recetas){
+            try{
+                receta.comparar(elementosEnMesa);
+                return receta.getHerramienta();
+            } catch (RecetaIncompatibleException e){}
+        }
 
         throw new ConstruccionInvalidaException();
     }
