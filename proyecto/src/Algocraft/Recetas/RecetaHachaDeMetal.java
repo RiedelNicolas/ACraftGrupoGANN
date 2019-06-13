@@ -9,7 +9,7 @@ public class RecetaHachaDeMetal extends Receta {
 
     public RecetaHachaDeMetal(){
         herramientaAsociada = new HachaDeMetal();
-        receta = new ArrayList<Integer>(Arrays.asList(METAL, METAL, VACIO,
+        receta = new ArrayList<>(Arrays.asList(METAL, METAL, VACIO,
                                                       METAL, MADERA, VACIO,
                                                       VACIO, MADERA, VACIO));
     }

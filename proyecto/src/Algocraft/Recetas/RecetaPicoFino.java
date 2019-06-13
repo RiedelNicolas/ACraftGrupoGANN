@@ -9,7 +9,7 @@ public class RecetaPicoFino extends Receta {
 
     public RecetaPicoFino(){
         herramientaAsociada = new PicoFino();
-        receta = new ArrayList<Integer>(Arrays.asList(METAL, METAL, METAL,
+        receta = new ArrayList<>(Arrays.asList(METAL, METAL, METAL,
                                                       PIEDRA, MADERA, VACIO,
                                                       VACIO, MADERA, VACIO));
     }

@@ -1,6 +1,9 @@
 package MapaTest;
 
+import Algocraft.Jugador.Jugador;
 import Algocraft.PaqueteProvisorio.Mapa;
+import Algocraft.PaqueteProvisorio.Posicion;
+import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -26,7 +29,23 @@ public class MapaTest {
     }
 
     @Test
-    public void test03MapaInicializaAlJugadorEnElCentroDelMapa(){
+    public void test03MapaCreaUnaPosicionParaJugadorCorrectamente(){
+        Mapa mapa = Mapa.instanciar();
+        Posicion jugador = mapa.getJugador();
 
+        Assert.assertNotNull(jugador);
     }
+
+//    @Test
+
+//    @Test
+//    public void test03MapaInicializaAlJugadorEnElCentroDelMapa(){
+//        int ancho = 61;
+//        int alto = 81;
+//        Mapa mapa = Mapa.instanciar();
+//        Posicion jugador = mapa.getJugador();
+//
+//        Assert.assertEquals(jugador.componenteHorizontal(), ancho/2);
+//        Assert.assertEquals(jugador.componenteVertical(), alto/2);
+//    }
 }

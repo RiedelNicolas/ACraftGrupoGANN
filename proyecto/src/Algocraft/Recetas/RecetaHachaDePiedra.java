@@ -9,7 +9,7 @@ public class RecetaHachaDePiedra extends Receta {
 
     public RecetaHachaDePiedra(){
         herramientaAsociada = new HachaDePiedra();
-        receta = new ArrayList<Integer>(Arrays.asList(PIEDRA, PIEDRA, VACIO,
+        receta = new ArrayList<>(Arrays.asList(PIEDRA, PIEDRA, VACIO,
                                                       PIEDRA, MADERA, VACIO,
                                                       VACIO, MADERA, VACIO));
     }

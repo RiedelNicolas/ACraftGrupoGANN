@@ -8,7 +8,7 @@ public class RecetaHachaDeMadera extends Receta {
 
     public RecetaHachaDeMadera(){
         herramientaAsociada = new HachaDeMadera();
-        receta = new ArrayList<Integer>(Arrays.asList(MADERA, MADERA, VACIO,
+        receta = new ArrayList<>(Arrays.asList(MADERA, MADERA, VACIO,
                                                       MADERA, MADERA, VACIO,
                                                       VACIO, MADERA, VACIO));
     }
