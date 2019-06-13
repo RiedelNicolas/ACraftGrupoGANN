@@ -29,11 +29,15 @@ public class MapaTest {
     }
 
     @Test
-    public void test03MapaCreaUnaPosicionParaJugadorCorrectamente(){
-        Mapa mapa = Mapa.instanciar();
-        Posicion jugador = mapa.getJugador();
+    public void test03MapaInicializaAlJugadorEnElCentro(){
+        int alto = 81;
+        int ancho = 61;
 
-        Assert.assertNotNull(jugador);
+        Mapa mapa = Mapa.instanciar();
+        mapa.inicializar();
+        Posicion[][] _mapa = mapa.getMapa();
+
+        Assert.assertTrue((_mapa[ancho/2][alto/2]).estaOcupada());
     }
 
 //    @Test

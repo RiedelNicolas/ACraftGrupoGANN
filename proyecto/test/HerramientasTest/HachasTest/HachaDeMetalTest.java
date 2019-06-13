@@ -22,7 +22,7 @@ public class HachaDeMetalTest {
 
 
     @Test
-    public void test23SeUsaHachaDeMetalContraMaderaYPierde5DeDurabilidad(){
+    public void test03SeUsaHachaDeMetalContraMaderaYPierde5DeDurabilidad(){
 
         Herramienta hacha = new HachaDeMetal();
         Material madera = new Madera();
@@ -32,7 +32,7 @@ public class HachaDeMetalTest {
     }
 
     @Test
-    public void test24SeUsaHachaDeMetalContraPiedraYPierde5DeDurabilidad(){
+    public void test04SeUsaHachaDeMetalContraPiedraYPierde5DeDurabilidad(){
 
         Herramienta hacha = new HachaDeMetal();
         Material piedra = new Piedra();
@@ -43,7 +43,7 @@ public class HachaDeMetalTest {
     }
 
     @Test
-    public void test25SeUsaHachaDeMetalContraMetalYPierde5DeDurabilidad(){
+    public void test05SeUsaHachaDeMetalContraMetalYPierde5DeDurabilidad(){
 
         Herramienta hacha = new HachaDeMetal();
         Material metal = new Metal();
@@ -54,7 +54,7 @@ public class HachaDeMetalTest {
     }
 
     @Test
-    public void test26SeUsaHachaDeMetalContraDiamanteYPierde5DeDurabilidad(){
+    public void test06SeUsaHachaDeMetalContraDiamanteYPierde5DeDurabilidad(){
 
         Herramienta hacha = new HachaDeMetal();
         Material diamante = new Diamante();
