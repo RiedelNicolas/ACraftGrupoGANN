@@ -1,12 +1,14 @@
 package Algocraft.Materiales;
 
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.MateriaPrimaPiedra;
 
 public class Piedra extends Material {
 
     public Piedra(){
         durabilidad = 30;
         id = 2;
+        materiaPrimaAsociada = new MateriaPrimaPiedra();
     }
 
     @Override

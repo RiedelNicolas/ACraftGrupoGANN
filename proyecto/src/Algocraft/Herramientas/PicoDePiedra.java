@@ -13,7 +13,7 @@ public class PicoDePiedra extends Pico {
     }
 
     @Override
-    public void golpear(Material material) {
+    public void usarContra(Material material) {
         try {
             desgastar();
             material.gastarCon(this);

@@ -37,5 +37,4 @@ public class MesaDeCrafteo {
 
         return elementoRemovido;
     }
-
 }

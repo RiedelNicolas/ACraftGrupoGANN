@@ -35,7 +35,7 @@ public class HachaDeMetalTest {
         Material madera = new Madera();
 
         thrown.expect(MaterialRotoException.class);
-        hacha.golpear(madera);
+        hacha.usarContra(madera);
 
     }
 
@@ -44,7 +44,7 @@ public class HachaDeMetalTest {
 
         Herramienta hacha = new HachaDeMetal();
         Material piedra = new Piedra();
-        hacha.golpear(piedra);
+        hacha.usarContra(piedra);
 
         assertEquals(395, hacha.getDurabilidad());
 
@@ -55,7 +55,7 @@ public class HachaDeMetalTest {
 
         Herramienta hacha = new HachaDeMetal();
         Material metal = new Metal();
-        hacha.golpear(metal);
+        hacha.usarContra(metal);
 
         assertEquals(395, hacha.getDurabilidad());
 
@@ -66,7 +66,7 @@ public class HachaDeMetalTest {
 
         Herramienta hacha = new HachaDeMetal();
         Material diamante = new Diamante();
-        hacha.golpear(diamante);
+        hacha.usarContra(diamante);
 
         assertEquals(395, hacha.getDurabilidad());
 

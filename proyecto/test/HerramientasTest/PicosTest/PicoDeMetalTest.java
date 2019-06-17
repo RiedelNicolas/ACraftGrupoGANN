@@ -4,9 +4,7 @@ import Algocraft.Excepciones.HerramientaRotaException;
 import Algocraft.Herramientas.Herramienta;
 import Algocraft.Herramientas.PicoDeMetal;
 import Algocraft.Materiales.*;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
@@ -30,7 +28,7 @@ public class PicoDeMetalTest {
 
         Herramienta pico = new PicoDeMetal();
         Material madera = new Madera();
-        pico.golpear(madera);
+        pico.usarContra(madera);
 
         assertEquals(400, pico.getDurabilidad());
 
@@ -41,7 +39,7 @@ public class PicoDeMetalTest {
 
         Herramienta pico = new PicoDeMetal();
         Material piedra = new Piedra();
-        pico.golpear(piedra);
+        pico.usarContra(piedra);
 
         assertEquals(400, pico.getDurabilidad());
 
@@ -52,7 +50,7 @@ public class PicoDeMetalTest {
 
         Herramienta pico = new PicoDeMetal();
         Material metal = new Metal();
-        pico.golpear(metal);
+        pico.usarContra(metal);
 
         assertEquals(400, pico.getDurabilidad());
 
@@ -63,7 +61,7 @@ public class PicoDeMetalTest {
 
         Herramienta pico = new PicoDeMetal();
         Material diamante = new Diamante();
-        pico.golpear(diamante);
+        pico.usarContra(diamante);
 
         assertEquals(400, pico.getDurabilidad());
 
@@ -76,7 +74,7 @@ public class PicoDeMetalTest {
         Madera madera = new Madera();
 
         for(int i=0; i<10; i++){
-            pico.golpear(madera);
+            pico.usarContra(madera);
         }
 
         assertEquals(0, pico.getDurabilidad());
@@ -89,7 +87,7 @@ public class PicoDeMetalTest {
         Material piedra = new Piedra();
 
         for(int i = 0; i < 2; i++) {
-            pico.golpear(piedra);
+            pico.usarContra(piedra);
         }
         assertEquals(400, pico.getDurabilidad());
     }
@@ -101,7 +99,7 @@ public class PicoDeMetalTest {
         Material metal = new Metal();
 
         for(int i = 0; i < 10; i++){
-            pico.golpear(metal);
+            pico.usarContra(metal);
         }
 
         assertEquals(0, pico.getDurabilidad());
@@ -115,7 +113,7 @@ public class PicoDeMetalTest {
         Material diamante = new Diamante();
 
         for(int i = 0; i < 10; i++){
-            pico.golpear(diamante);
+            pico.usarContra(diamante);
         }
 
         assertEquals(0, pico.getDurabilidad());
@@ -130,11 +128,11 @@ public class PicoDeMetalTest {
         boolean herramientaRota = false;
 
         for (int i = 0; i < 10; i++) {
-            pico.golpear(diamante);
+            pico.usarContra(diamante);
         }
 
         try {
-            pico.golpear(diamante);
+            pico.usarContra(diamante);
         } catch (HerramientaRotaException e) {
             herramientaRota = true;
         }

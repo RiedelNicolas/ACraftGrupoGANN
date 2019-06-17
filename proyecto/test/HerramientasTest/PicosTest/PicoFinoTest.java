@@ -27,7 +27,7 @@ public class PicoFinoTest {
 
         Herramienta pico = new PicoFino();
         Material diamante = new Diamante();
-        pico.golpear(diamante);
+        pico.usarContra(diamante);
 
         assertEquals(900, pico.getDurabilidad());
 
@@ -38,7 +38,7 @@ public class PicoFinoTest {
 
         Herramienta pico = new PicoFino();
         Material madera = new Madera();
-        pico.golpear(madera);
+        pico.usarContra(madera);
 
         assertEquals(1000, pico.getDurabilidad());
 
@@ -49,7 +49,7 @@ public class PicoFinoTest {
 
         Herramienta pico = new PicoFino();
         Material piedra = new Piedra();
-        pico.golpear(piedra);
+        pico.usarContra(piedra);
 
         assertEquals(1000, pico.getDurabilidad());
 
@@ -60,7 +60,7 @@ public class PicoFinoTest {
 
         Herramienta pico = new PicoFino();
         Material metal = new Metal();
-        pico.golpear(metal);
+        pico.usarContra(metal);
 
         assertEquals(1000, pico.getDurabilidad());
 

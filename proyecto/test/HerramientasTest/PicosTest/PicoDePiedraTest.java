@@ -26,7 +26,7 @@ public class PicoDePiedraTest {
 
         Herramienta pico = new PicoDePiedra();
         Material madera = new Madera();
-        pico.golpear(madera);
+        pico.usarContra(madera);
 
         assertEquals(197, pico.getDurabilidad());
 
@@ -37,7 +37,7 @@ public class PicoDePiedraTest {
 
         Herramienta pico = new PicoDePiedra();
         Material piedra = new Piedra();
-        pico.golpear(piedra);
+        pico.usarContra(piedra);
 
         assertEquals(197, pico.getDurabilidad());
 
@@ -48,7 +48,7 @@ public class PicoDePiedraTest {
 
         Herramienta pico = new PicoDePiedra();
         Material metal = new Metal();
-        pico.golpear(metal);
+        pico.usarContra(metal);
 
         assertEquals(197, pico.getDurabilidad());
 
@@ -58,7 +58,7 @@ public class PicoDePiedraTest {
     public void test06SeUsaPicoDePiedraContraDiamanteYPierde3DeDurabilidad(){
         Herramienta pico = new PicoDePiedra();
         Material diamante = new Diamante();
-        pico.golpear(diamante);
+        pico.usarContra(diamante);
 
         assertEquals(197, pico.getDurabilidad());
 

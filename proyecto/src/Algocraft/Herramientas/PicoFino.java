@@ -15,7 +15,7 @@ public class PicoFino extends Pico {
     }
 
     @Override
-    public void golpear(Material material) {
+    public void usarContra(Material material) {
         try {
             material.gastarCon(this);
         } catch (MaterialNoSeDanioException e){}

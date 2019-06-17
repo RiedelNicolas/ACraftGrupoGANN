@@ -28,7 +28,7 @@ public class Jugador extends Posicionable {
     }
 
     public void golpear(Material material){
-        herramientaEnMano.golpear(material);
+        herramientaEnMano.usarContra(material);
     }
 
 }

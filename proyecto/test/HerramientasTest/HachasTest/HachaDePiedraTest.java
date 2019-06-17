@@ -25,7 +25,7 @@ public class HachaDePiedraTest {
 
         Herramienta hacha = new HachaDePiedra();
         Material madera = new Madera();
-        hacha.golpear(madera);
+        hacha.usarContra(madera);
 
         assertEquals(195, hacha.getDurabilidad());
     }
@@ -35,7 +35,7 @@ public class HachaDePiedraTest {
 
         Herramienta hacha = new HachaDePiedra();
         Material piedra = new Piedra();
-        hacha.golpear(piedra);
+        hacha.usarContra(piedra);
 
         assertEquals(195, hacha.getDurabilidad());
 
@@ -46,7 +46,7 @@ public class HachaDePiedraTest {
 
         Herramienta hacha = new HachaDePiedra();
         Material metal = new Metal();
-        hacha.golpear(metal);
+        hacha.usarContra(metal);
 
         assertEquals(195, hacha.getDurabilidad());
 
@@ -57,7 +57,7 @@ public class HachaDePiedraTest {
 
         Herramienta hacha = new HachaDePiedra();
         Material diamante = new Diamante();
-        hacha.golpear(diamante);
+        hacha.usarContra(diamante);
 
         assertEquals(195, hacha.getDurabilidad());
 

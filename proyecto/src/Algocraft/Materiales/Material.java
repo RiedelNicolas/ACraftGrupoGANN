@@ -3,6 +3,8 @@ package Algocraft.Materiales;
 import Algocraft.Excepciones.MaterialNoSeDanioException;
 import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.Antimateria;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.Posicion.Posicionable;
 
 public abstract class Material extends Posicionable {
@@ -10,6 +12,7 @@ public abstract class Material extends Posicionable {
     //Atributos
     protected int durabilidad;
     protected int id;
+    protected MateriaPrima materiaPrimaAsociada;
 
     //Métodos
     public int getDurabilidad(){
@@ -42,17 +45,12 @@ public abstract class Material extends Posicionable {
         throw new MaterialNoSeDanioException();
     }
 
-    public void desgastarse(int fuerza) {
+    public MateriaPrima desgastarse(int fuerza) {
         durabilidad -= fuerza;
 
         if (durabilidad <= 0) {
-            //aca se devuelve materia prima.
-            throw new MaterialRotoException();
+            return materiaPrimaAsociada;
         }
-    // acá se devuelve antimateria
-    //y luego el jugador le dice a las materias primas o antimateria "equipar" y se manda por parametro, y solo las materias primas se equipan gg
+        return (new Antimateria());
     }
-
-
-
 }

@@ -15,7 +15,7 @@ public class HachaDePiedra extends Hacha {
     }
 
     @Override
-    public void golpear(Material material) {
+    public void usarContra(Material material) {
         try {
             desgastar();
             material.gastarCon(this);
