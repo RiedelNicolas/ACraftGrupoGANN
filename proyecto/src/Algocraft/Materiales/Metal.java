@@ -1,6 +1,7 @@
 package Algocraft.Materiales;
 
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.MateriaPrima.MateriaPrimaMetal;
 
 public class Metal extends Material {
@@ -12,7 +13,7 @@ public class Metal extends Material {
     }
 
     @Override
-    public void gastarCon(PicoDePiedra pico){
-        desgastarse(pico.getFuerza());
+    public MateriaPrima gastarCon(PicoDePiedra pico){
+        return desgastarse(pico.getFuerza());
     }
 }

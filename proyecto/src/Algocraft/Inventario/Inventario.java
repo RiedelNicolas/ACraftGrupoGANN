@@ -9,7 +9,7 @@ public class Inventario {
     private ArrayList<Utilizable> items;
     private int posicionActual;
 
-    public Inventario{
+    public Inventario(){
 
         items = new ArrayList<>();
         for(int i = 0; i < 10; i++){

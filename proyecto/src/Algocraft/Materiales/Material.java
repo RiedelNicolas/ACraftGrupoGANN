@@ -23,25 +23,25 @@ public abstract class Material extends Posicionable {
         return id;
     }
 
-    public void gastarCon(HachaDeMadera hacha){
+    public MateriaPrima gastarCon(HachaDeMadera hacha){
         throw new MaterialNoSeDanioException();
     }
-    public void gastarCon(HachaDePiedra hacha){
+    public MateriaPrima gastarCon(HachaDePiedra hacha){
         throw new MaterialNoSeDanioException();
     }
-    public void gastarCon(HachaDeMetal hacha){
+    public MateriaPrima gastarCon(HachaDeMetal hacha){
         throw new MaterialNoSeDanioException();
     }
-    public void gastarCon(PicoDeMadera pico){
+    public MateriaPrima gastarCon(PicoDeMadera pico){
         throw new MaterialNoSeDanioException();
     }
-    public void gastarCon(PicoDePiedra pico){
+    public MateriaPrima gastarCon(PicoDePiedra pico){
         throw new MaterialNoSeDanioException();
     }
-    public void gastarCon(PicoDeMetal pico){
+    public MateriaPrima gastarCon(PicoDeMetal pico){
         throw new MaterialNoSeDanioException();
     }
-    public void gastarCon(PicoFino pico){
+    public MateriaPrima gastarCon(PicoFino pico){
         throw new MaterialNoSeDanioException();
     }
 
