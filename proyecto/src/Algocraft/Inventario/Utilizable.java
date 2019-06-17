@@ -5,8 +5,5 @@ import Algocraft.Materiales.Material;
 
 public abstract class Utilizable {
 
-    public MateriaPrima usarContra(Material material){
-
-
-    }
+    public abstract MateriaPrima usarContra(Material material);
 }
