@@ -1,6 +1,7 @@
 package Algocraft.Materiales;
 
 import Algocraft.Herramientas.PicoFino;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.MateriaPrima.MateriaPrimaDiamante;
 
 public class Diamante extends Material {
@@ -12,7 +13,7 @@ public class Diamante extends Material {
     }
 
     @Override
-    public void gastarCon(PicoFino pico){
+    public MateriaPrima gastarCon(PicoFino pico){
         desgastarse(pico.getFuerza());
         pico.desgastar();
     }

@@ -5,7 +5,7 @@ import Algocraft.Inventario.Utilizable;
 import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.Materiales.Material;
 
-public abstract class Herramienta extends Utilizable {
+public abstract class Herramienta implements Utilizable {
 
     //Atributos
     protected int fuerza;

@@ -1,24 +1,24 @@
 package Algocraft.Construccion;
 
 import Algocraft.Herramientas.Herramienta;
-import Algocraft.Materiales.Material;
-import Algocraft.Materiales.MaterialVacio;
+import Algocraft.MateriaPrima.Antimateria;
+import Algocraft.MateriaPrima.MateriaPrima;
 
 import java.util.ArrayList;
 
 public class MesaDeCrafteo {
 
-    private ArrayList<Material> elementosEnMesa;
+    private ArrayList<MateriaPrima> elementosEnMesa;
     private Constructor constructor;
 
 
     public MesaDeCrafteo(){
 
         constructor = new Constructor();
-        elementosEnMesa = new ArrayList<Material>();
+        elementosEnMesa = new ArrayList<MateriaPrima>();
 
         for(int i=0; i<9; i++){
-            elementosEnMesa.add(new MaterialVacio());
+            elementosEnMesa.add(new Antimateria());
         }
     }
 
@@ -26,14 +26,14 @@ public class MesaDeCrafteo {
         return constructor.construirCon(elementosEnMesa);
     }
 
-    public void anadirMaterial(Material material, int posicion){
-        elementosEnMesa.set(posicion, material);
+    public void anadirMateriaPrima(MateriaPrima materiaPrima, int posicion){
+        elementosEnMesa.set(posicion, materiaPrima);
     }
 
-    public Material quitarMaterial(int posicion){
+    public MateriaPrima quitarMateriaPrima(int posicion){
 
-        Material elementoRemovido = elementosEnMesa.get(posicion);
-        elementosEnMesa.add(posicion, new MaterialVacio());
+        MateriaPrima elementoRemovido = elementosEnMesa.get(posicion);
+        elementosEnMesa.add(posicion, new Antimateria());
 
         return elementoRemovido;
     }

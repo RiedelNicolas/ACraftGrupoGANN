@@ -3,6 +3,7 @@ package Algocraft.Construccion;
 import Algocraft.Excepciones.ConstruccionInvalidaException;
 import Algocraft.Excepciones.RecetaIncompatibleException;
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.Materiales.Material;
 import Algocraft.Recetas.*;
 
@@ -24,7 +25,7 @@ public class Constructor {
         recetas.add(new RecetaHachaDeMetal());
     }
 
-    public Herramienta construirCon(ArrayList<Material> elementosEnMesa){  //Cada receta es unica
+    public Herramienta construirCon(ArrayList<MateriaPrima> elementosEnMesa){  //Cada receta es unica
 
         for( Receta receta : recetas){
             try{

@@ -1,6 +1,7 @@
 package Algocraft.Materiales;
 
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.MateriaPrima.MateriaPrimaMadera;
 
 public class Madera extends Material {
@@ -12,17 +13,17 @@ public class Madera extends Material {
     }
 
     @Override
-    public void gastarCon(HachaDeMadera hacha){
-        desgastarse(hacha.getFuerza());
+    public MateriaPrima gastarCon(HachaDeMadera hacha){
+        return desgastarse(hacha.getFuerza());
     }
 
     @Override
-    public void gastarCon(HachaDePiedra hacha){
-        desgastarse(hacha.getFuerza());
+    public MateriaPrima gastarCon(HachaDePiedra hacha){
+        return desgastarse(hacha.getFuerza());
     }
 
     @Override
-    public void gastarCon(HachaDeMetal hacha) {
-        desgastarse(hacha.getFuerza());
+    public MateriaPrima gastarCon(HachaDeMetal hacha) {
+        return desgastarse(hacha.getFuerza());
     }
 }

@@ -1,6 +1,7 @@
 package Algocraft.Materiales;
 
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.MateriaPrima.MateriaPrimaPiedra;
 
 public class Piedra extends Material {
@@ -12,23 +13,23 @@ public class Piedra extends Material {
     }
 
     @Override
-    public void gastarCon(PicoDeMetal pico){
-        desgastarse(pico.getFuerza());
+    public MateriaPrima gastarCon(PicoDeMetal pico){
+        return desgastarse(pico.getFuerza());
     }
 
     @Override
-    public void gastarCon(PicoDePiedra pico){
-        desgastarse(pico.getFuerza());
+    public MateriaPrima gastarCon(PicoDePiedra pico){
+        return desgastarse(pico.getFuerza());
     }
 
     @Override
-    public void gastarCon(PicoDeMadera pico){
-        desgastarse(pico.getFuerza());
+    public MateriaPrima gastarCon(PicoDeMadera pico){
+        return desgastarse(pico.getFuerza());
     }
 
     @Override
-    public void gastarCon(PicoFino pico){
-        desgastarse(pico.getFuerza());
+    public MateriaPrima gastarCon(PicoFino pico){
+        return desgastarse(pico.getFuerza());
     }
 
 }

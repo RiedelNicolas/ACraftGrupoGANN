@@ -2,6 +2,7 @@ package Algocraft.Recetas;
 
 import Algocraft.Excepciones.RecetaIncompatibleException;
 import Algocraft.Herramientas.Herramienta;
+import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.Materiales.Material;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public abstract class Receta {
     protected static final int METAL = 3;
 
 
-    public void comparar(ArrayList<Material> materialesEnMesa){
+    public void comparar(ArrayList<MateriaPrima> materialesEnMesa){
 
         int i = 0;
 
