@@ -1,5 +1,6 @@
 package Algocraft.Jugador;
 
+import Algocraft.Construccion.MesaDeCrafteo;
 import Algocraft.Excepciones.MateriaPrimaNoEquipableException;
 import Algocraft.Excepciones.NoSePuedeGolpearConMateriaPrimaException;
 import Algocraft.Herramientas.HachaDeMadera;
@@ -16,10 +17,12 @@ public class Jugador extends Posicionable {
 
     private static Jugador instanciaUnica = null;
     private Inventario inventario;
+    private MesaDeCrafteo mesaDeCrafteo;
 
 
     private Jugador() {
         inventario = new Inventario();
+        mesaDeCrafteo = new MesaDeCrafteo();
     }
 
     public static Jugador crearUnico(){
