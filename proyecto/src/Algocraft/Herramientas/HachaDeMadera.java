@@ -18,14 +18,12 @@ public class HachaDeMadera extends Hacha {
     @Override
     public MateriaPrima usarContra(Material material) {
 
-        MateriaPrima materiaPrima = new MateriaPrima();
-
         try {
             desgastar();
-            materiaPrima = material.gastarCon(this);
+            return material.gastarCon(this);
 
         } catch (MaterialNoSeDanioException e){}
 
-        return materiaPrima;
+
     }
 }

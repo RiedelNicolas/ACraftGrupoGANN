@@ -1,6 +1,8 @@
 package Algocraft.Jugador;
 
 import Algocraft.Construccion.MesaDeCrafteo;
+import Algocraft.Excepciones.HerramientaRotaException;
+import Algocraft.Excepciones.InventarioVacioException;
 import Algocraft.Excepciones.MateriaPrimaNoEquipableException;
 import Algocraft.Excepciones.NoSePuedeGolpearConMateriaPrimaException;
 import Algocraft.Herramientas.HachaDeMadera;
@@ -33,20 +35,27 @@ public class Jugador extends Posicionable {
     }
 
     public Utilizable getUtilizableEnMano(){
-        return inventario.herramientaEnMano();
+        return inventario.getUtilizableActual();
     }
 
     public void golpear(Material material){
 
         MateriaPrima materiaPrima;
+        Utilizable utilizable;
 
         try {
-            materiaPrima = getUtilizableEnMano().usarContra(material);
-        } catch (NoSePuedeGolpearConMateriaPrimaException e) {}
+            utilizable = this.getUtilizableEnMano();
 
-        try{
-            materiaPrima.equipar(inventario);
-        } catch (MateriaPrimaNoEquipableException e){}
+            try {
+                materiaPrima = utilizable.usarContra(material);
+
+                try{
+                    materiaPrima.equipar(inventario);
+                } catch (MateriaPrimaNoEquipableException e3){}
+
+            } catch (NoSePuedeGolpearConMateriaPrimaException e2) { }
+
+        } catch (InventarioVacioException e1) {}
     }
 
 }

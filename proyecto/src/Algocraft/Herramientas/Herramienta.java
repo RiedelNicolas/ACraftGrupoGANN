@@ -18,7 +18,8 @@ public abstract class Herramienta implements Utilizable {
     //Métodos
 
     public void desgastar(){
-       durabilidad = desgaste.aplicar(durabilidad);
+
+        durabilidad = desgaste.aplicar(durabilidad);
     }
 
     public int getDurabilidad(){

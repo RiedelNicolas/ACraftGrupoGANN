@@ -21,7 +21,7 @@ public class Inventario {
         posicionActual = numero;
     }
 
-    public Utilizable herramientaEnMano(){
+    public Utilizable getUtilizableActual(){
         return items.get(posicionActual);
     }
 
