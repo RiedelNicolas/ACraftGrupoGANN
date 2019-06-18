@@ -3,6 +3,7 @@ package Algocraft.Herramientas;
 import Algocraft.Desgastes.DesgastePorPorcentajeDeFuerza;
 import Algocraft.Excepciones.MaterialNoSeDanioException;
 import Algocraft.MateriaPrima.MateriaPrima;
+import Algocraft.MateriaPrima.MateriaPrimaPiedra;
 import Algocraft.Materiales.Material;
 
 public class HachaDeMadera extends Hacha {
@@ -16,11 +17,15 @@ public class HachaDeMadera extends Hacha {
 
     @Override
     public MateriaPrima usarContra(Material material) {
+
+        MateriaPrima materiaPrima = new MateriaPrima();
+
         try {
             desgastar();
-            //MateriaPrima materia = material.desgastarCon(this);
-            material.gastarCon(this);
+            materiaPrima = material.gastarCon(this);
+
         } catch (MaterialNoSeDanioException e){}
-        //return materia;
+
+        return materiaPrima;
     }
 }

@@ -17,7 +17,7 @@ public class JugadorTest {
     @Test
     public void test02JugadorSeCreaConHachaDeMaderaEnMano() {
         Jugador jugador = Jugador.crearUnico();
-        Assert.assertThat(jugador.getHerramientaEnMano(), CoreMatchers.instanceOf(HachaDeMadera.class));
+        Assert.assertThat(jugador.getUtilizableEnMano(), CoreMatchers.instanceOf(HachaDeMadera.class));
     }
 
     @Test
