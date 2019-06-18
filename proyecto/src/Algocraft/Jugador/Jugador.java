@@ -2,8 +2,6 @@ package Algocraft.Jugador;
 
 import Algocraft.Construccion.MesaDeCrafteo;
 import Algocraft.Excepciones.*;
-import Algocraft.Herramientas.HachaDeMadera;
-import Algocraft.Herramientas.Herramienta;
 import Algocraft.Inventario.Inventario;
 import Algocraft.Inventario.Utilizable;
 import Algocraft.MateriaPrima.MateriaPrima;
@@ -49,9 +47,9 @@ public class Jugador extends Posicionable {
                 try{
                     materiaPrima.equipar(inventario);
 
-                } catch (MateriaPrimaNoEquipableException e3){}
+                } catch (MateriaPrimaNoEquipableException e3) {}
 
-            } catch (NoSePuedeGolpearConMateriaPrimaException e2) { }
+            } catch (ObjetoIncapazDeGolpearException e2) {}
 
         } catch (InventarioVacioException e1) {}
     }

@@ -5,7 +5,7 @@ import Algocraft.MateriaPrima.Antimateria;
 import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.Posicion.Posicionable;
 
-public abstract class Material extends Posicionable {
+public abstract class Material implements Posicionable {
 
     //Atributos
     protected int durabilidad;
@@ -19,6 +19,10 @@ public abstract class Material extends Posicionable {
 
     public int getId(){
         return id;
+    }
+
+    public void golpear(Material material){
+        throw new ObjetoIncapazDeGolpearException();
     }
 
     public MateriaPrima gastarCon(HachaDeMadera hacha){

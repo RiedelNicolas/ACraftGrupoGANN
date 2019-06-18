@@ -1,7 +1,7 @@
 package Algocraft.MateriaPrima;
 
 import Algocraft.Construccion.MesaDeCrafteo;
-import Algocraft.Excepciones.NoSePuedeGolpearConMateriaPrimaException;
+import Algocraft.Excepciones.ObjetoIncapazDeGolpearException;
 import Algocraft.Inventario.Inventario;
 import Algocraft.Inventario.Utilizable;
 import Algocraft.Materiales.Material;
@@ -13,7 +13,7 @@ public abstract class MateriaPrima implements Utilizable {
     @Override
     public MateriaPrima usarContra(Material material){
 
-        throw new NoSePuedeGolpearConMateriaPrimaException(); //hay que ponerle un nombre a esta excepcion
+        throw new ObjetoIncapazDeGolpearException();
     }
 
     @Override

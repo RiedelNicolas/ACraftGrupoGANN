@@ -2,7 +2,7 @@ package Algocraft.Posicion;
 
 import Algocraft.Excepciones.PosicionFueraDeRangoException;
 import Algocraft.Excepciones.PosicionOcupadaException;
-import Algocraft.Excepciones.PosicionableInamovibleException;
+import Algocraft.Excepciones.PosicionNoPicableException;
 import Algocraft.Tablero.Mapa;
 
 public class Posicion {
@@ -66,34 +66,59 @@ public class Posicion {
         } catch (PosicionFueraDeRangoException e){}
     }
 
-    public void moverArriba(){
-        mover(arriba);
+    public Posicion moverArriba(){
+        return mover(arriba);
     }
 
-    public void moverAbajo(){
-        mover(abajo);
+    public Posicion moverAbajo(){
+        return mover(abajo);
     }
 
-    public void moverIzquierda(){
-        mover(izquierda);
+    public Posicion moverIzquierda(){
+        return mover(izquierda);
     }
 
-    public void moverDerecha(){
-        mover(derecha);
+    public Posicion moverDerecha(){
+        return mover(derecha);
     }
 
-    private void mover(Posicion posicion){
+    public void picarArriba() { picar(arriba); }
+
+    public void picarAbajo() { picar(arriba); }
+
+    public void picarIzquierda() { picar(arriba); }
+
+    public void picarDerecha() { picar(arriba); }
+
+    private Posicion mover(Posicion posicion){
         if(posicion == null){
             throw new PosicionFueraDeRangoException();
         }
         try{
             posicion.ocupar(ocupante);
             ocupante = null;
-        } catch (PosicionOcupadaException e){}
+            return posicion;
+        } catch (PosicionOcupadaException e){
+            return this;
+        }
     }
 
-    private Posicion getIzquierda(){
-        return izquierda;
+    private void picar(Posicion objetivo){
+        if(objetivo == null){
+            throw new PosicionFueraDeRangoException();
+        }
+        try{
+            objetivo.recibirGolpe(ocupante);
+        } catch (PosicionNoPicableException e){}
+    }
+
+    public void recibirGolpe(Posicionable posicionable){
+        if(ocupante == null){
+            throw new PosicionNoPicableException();
+        }
+        try{
+            posicionable.golpear(ocupante);
+        } catch (PosicionFueraDeRangoException e){}
     }
 
 }

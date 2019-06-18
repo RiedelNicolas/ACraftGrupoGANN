@@ -1,6 +1,8 @@
 package Algocraft.Posicion;
 
+import Algocraft.Materiales.Material;
 
-public abstract class Posicionable {
+public interface Posicionable {
 
+    void golpear(Material material);
 }

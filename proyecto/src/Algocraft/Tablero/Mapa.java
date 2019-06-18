@@ -2,7 +2,6 @@
 package Algocraft.Tablero;
 
 import Algocraft.Excepciones.PosicionFueraDeRangoException;
-import Algocraft.Excepciones.PosicionOcupadaException;
 import Algocraft.Jugador.Jugador;
 import Algocraft.Posicion.Posicion;
 
@@ -10,29 +9,32 @@ public class Mapa {
 
 //Atributos
     private Posicion[][] campo;
-    final int alto = 45;  //Asumimos que es esta la dimension del ancho y del alto
-    final int ancho = 81;
+    private int alto;
+    private int ancho;
     private Ubicador ubicador;
     private static Mapa instanciaUnica = null;
-    private Posicion jugador;
 
 //Metodos
-    public static Mapa instanciar(){
+    public static Mapa instanciar(int _ancho, int _alto){
         if(instanciaUnica == null ){
-            instanciaUnica = new Mapa();
+            instanciaUnica = new Mapa(_ancho, _alto);
         }
         return instanciaUnica;
     }
 
-    private Mapa(){
+    private Mapa(int _ancho, int _alto){
+        alto = _alto;
+        ancho = _ancho;
         campo = new Posicion[ancho][alto];
         ubicador = new Ubicador();
+
         for(int i = 0; i < ancho; i++){
             for(int j = 0; j < alto; j++){
                 campo[i][j] = new Posicion(i, j);
             }
         }
-        jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
+
+        Posicion jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
         ubicar(jugador);
     }
 
