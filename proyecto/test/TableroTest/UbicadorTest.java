@@ -20,8 +20,8 @@ public class UbicadorTest {
     public void test01SeUbicaMaderaEnEl20PorcientoDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDeMaderas = 0;
 
@@ -39,8 +39,8 @@ public class UbicadorTest {
     public void test02HayDiamantesEnElPrimerCuartoDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int i = 0, j = 0;
         int contadorDeDiamantes = 0;
@@ -61,8 +61,8 @@ public class UbicadorTest {
     public void test03NoHayDiamantesEnTresCuartosDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDeDiamantes = 0;
 
@@ -80,8 +80,8 @@ public class UbicadorTest {
     public void test04HayPiedraEnPrimeraMitadDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int i = 0, j = 0;
         int contadorDePiedras = 0;
@@ -102,8 +102,8 @@ public class UbicadorTest {
     public void test05NoHayPiedraEnLaSegundaMitadDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDePiedras = 0;
 
@@ -121,8 +121,8 @@ public class UbicadorTest {
     public void test06NoHayMetalEnLosPrimerosTresCuartosDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int contadorDeMetal = 0;
 
@@ -140,8 +140,8 @@ public class UbicadorTest {
     public void test07HayMetalEnElUltimoCuartoDelMapa(){
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] elementosDelMapa = mapa.getMapa();
-        mapa.ubicarMateriales();//el unico metodo de ubicador se llama aca adentro
+        Posicion[][] elementosDelMapa = mapa.getCampo();
+        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
 
         int i = (int)(0.75*ancho), j = 0;
         int contadorDeMetal = 0;

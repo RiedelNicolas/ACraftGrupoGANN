@@ -1,18 +1,15 @@
 package MaterialesTest;
 
-import Algocraft.Excepciones.MaterialNoSeDanioException;
-import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.Antimateria;
+import Algocraft.MateriaPrima.MateriaPrima;
+import Algocraft.MateriaPrima.MateriaPrimaDiamante;
 import Algocraft.Materiales.Diamante;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
 public class DiamanteTest {
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01DiamanteSeCreaCon100DeDurabilidad(){
@@ -25,9 +22,7 @@ public class DiamanteTest {
 
         Diamante diamante = new Diamante();
         HachaDeMadera hacha = new HachaDeMadera();
-        try {
-            diamante.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        diamante.gastarCon(hacha);
 
         assertEquals(100, diamante.getDurabilidad());
     }
@@ -37,9 +32,7 @@ public class DiamanteTest {
 
         Diamante diamante = new Diamante();
         HachaDePiedra hacha = new HachaDePiedra();
-        try {
-            diamante.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        diamante.gastarCon(hacha);
 
         assertEquals(100, diamante.getDurabilidad());
     }
@@ -49,9 +42,7 @@ public class DiamanteTest {
 
         Diamante diamante = new Diamante();
         HachaDeMetal hacha = new HachaDeMetal();
-        try {
-            diamante.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        diamante.gastarCon(hacha);
 
         assertEquals(100, diamante.getDurabilidad());
     }
@@ -61,9 +52,7 @@ public class DiamanteTest {
 
         Diamante diamante = new Diamante();
         PicoDeMadera pico = new PicoDeMadera();
-        try {
-            diamante.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        diamante.gastarCon(pico);
 
         assertEquals(100, diamante.getDurabilidad());
 
@@ -74,9 +63,7 @@ public class DiamanteTest {
 
         Diamante diamante = new Diamante();
         PicoDePiedra pico = new PicoDePiedra();
-        try {
-            diamante.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        diamante.gastarCon(pico);
 
         assertEquals(100, diamante.getDurabilidad());
 
@@ -87,9 +74,7 @@ public class DiamanteTest {
 
         Diamante diamante = new Diamante();
         PicoDeMetal pico = new PicoDeMetal();
-        try {
-            diamante.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        diamante.gastarCon(pico);
 
         assertEquals(100, diamante.getDurabilidad());
 
@@ -106,7 +91,16 @@ public class DiamanteTest {
     }
 
     @Test
-    public void test09DiamanteSeGolpeaConPicoFinoYSeRompe() {
+    public void test09DiamanteDevuelveAntimateriaSiNoSeRompe(){
+        Diamante diamante = new Diamante();
+        PicoFino pico = new PicoFino();
+
+        assertTrue(diamante.gastarCon(pico) instanceof Antimateria);
+        assertNotEquals(diamante.getDurabilidad(), 0);
+    }
+
+    @Test
+    public void test10DiamanteAlRomperseDevuelveMateriaPrimaDiamante() {
 
         Diamante diamante = new Diamante();
         PicoFino pico = new PicoFino();
@@ -117,7 +111,6 @@ public class DiamanteTest {
 
         assertEquals(20, diamante.getDurabilidad());
 
-        thrown.expect(MaterialRotoException.class);
-        diamante.gastarCon(pico);
+        assertTrue(diamante.gastarCon(pico) instanceof MateriaPrimaDiamante);
     }
 }

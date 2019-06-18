@@ -79,13 +79,13 @@ public class PicoDeMetalTest {
     }
 
     @Test
-    public void test07PicoDeMetalNoSeDesgasteAlNovenoUsoContraMadera(){
+    public void test07PicoDeMetalNoSeDesgastaAlNovenoUsoContraMadera(){
 
         PicoDeMetal pico = new PicoDeMetal();
         Madera madera = new Madera();
         int durabilidadInicial = pico.getDurabilidad();
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 9; i++){
             pico.usarContra(madera);
         }
 
@@ -93,13 +93,13 @@ public class PicoDeMetalTest {
     }
 
     @Test
-    public void test08PicoDeMetalNoSeDesgasteAlNovenoUsoContraPiedra(){
+    public void test08PicoDeMetalNoSeDesgastaAlNovenoUsoContraPiedra(){
 
         PicoDeMetal pico = new PicoDeMetal();
         Piedra piedra = new Piedra();
         int durabilidadInicial = pico.getDurabilidad();
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 9; i++){
             pico.usarContra(piedra);
         }
 
@@ -107,12 +107,12 @@ public class PicoDeMetalTest {
     }
 
     @Test
-    public void test09PicoDeMetalNoSeDesgasteAlNovenoUsoContraMetal(){
+    public void test09PicoDeMetalNoSeDesgastaAlNovenoUsoContraMetal(){
         PicoDeMetal pico = new PicoDeMetal();
         Metal metal = new Metal();
         int durabilidadInicial = pico.getDurabilidad();
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 9; i++){
             pico.usarContra(metal);
         }
 
@@ -120,12 +120,12 @@ public class PicoDeMetalTest {
     }
 
     @Test
-    public void test10PicoDeMetalNoSeDesgasteAlNovenoUsoContraDiamante(){
+    public void test10PicoDeMetalNoSeDesgastaAlNovenoUsoContraDiamante(){
         PicoDeMetal pico = new PicoDeMetal();
         Diamante diamante = new Diamante();
         int durabilidadInicial = pico.getDurabilidad();
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 9; i++){
             pico.usarContra(diamante);
         }
 
@@ -177,7 +177,7 @@ public class PicoDeMetalTest {
         PicoDeMetal pico = new PicoDeMetal();
         Diamante diamante = new Diamante();
 
-        for(int i=0; i<10; i++){
+        for(int i = 0; i < 10; i++){
             pico.usarContra(diamante);
         }
 
@@ -189,7 +189,7 @@ public class PicoDeMetalTest {
         PicoDeMetal pico = new PicoDeMetal();
         Material diamante = new Diamante();
 
-        for(int i = 0; i < 50; i++){
+        for(int i = 0; i < 10; i++){
             pico.usarContra(diamante);
         }
 

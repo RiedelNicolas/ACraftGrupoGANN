@@ -3,20 +3,25 @@ package ConstruccionTest;
 import Algocraft.Excepciones.ConstruccionInvalidaException;
 import Algocraft.Herramientas.*;
 import Algocraft.MateriaPrima.MateriaPrimaMadera;
+import Algocraft.MateriaPrima.MateriaPrimaMetal;
 import Algocraft.MateriaPrima.MateriaPrimaPiedra;
+import org.junit.Rule;
 import org.junit.Test;
 import Algocraft.Construccion.*;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class MesaDeCrafteoTest {
 
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
     @Test
     public void test01PicoDeMaderaSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        PicoDeMadera picoDeMadera = new PicoDeMadera();
 
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 0);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 1);
@@ -24,14 +29,13 @@ public class MesaDeCrafteoTest {
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(picoDeMadera.getClass()));
+        assertTrue(mesa.craftear() instanceof PicoDeMadera);
     }
 
     @Test
     public void test02PicoDePiedraSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        PicoDePiedra picoDePiedra = new PicoDePiedra();
 
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 0);
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 1);
@@ -39,45 +43,42 @@ public class MesaDeCrafteoTest {
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(picoDePiedra.getClass()));
+        assertTrue(mesa.craftear() instanceof PicoDePiedra);
     }
 
     @Test
     public void test03PicoDeMetalSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        PicoDeMetal picoDeMetal = new PicoDeMetal();
 
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 0);
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 1);
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 2);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 0);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 1);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 2);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(picoDeMetal.getClass()));
+        assertTrue(mesa.craftear() instanceof PicoDeMetal);
     }
 
     @Test
     public void test04PicoFinoSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        PicoFino picoFino = new PicoFino();
 
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 0);
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 1);
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 2);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 0);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 1);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 2);
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 3);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(picoFino.getClass()));
+        assertTrue(mesa.craftear() instanceof PicoFino);
     }
 
     @Test
     public void test05HachaDeMaderaSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        HachaDeMadera hachaDeMadera = new HachaDeMadera();
 
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 0);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 1);
@@ -85,14 +86,13 @@ public class MesaDeCrafteoTest {
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(hachaDeMadera.getClass()));
+        assertTrue(mesa.craftear() instanceof HachaDeMadera);
     }
 
     @Test
     public void test06HachaDePiedraSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        HachaDePiedra hachaDePiedra = new HachaDePiedra();
 
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 0);
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 1);
@@ -100,40 +100,33 @@ public class MesaDeCrafteoTest {
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(hachaDePiedra.getClass()));
+        assertTrue(mesa.craftear() instanceof HachaDePiedra);
     }
 
     @Test
     public void test07HachaDeMetalSeCreaCorrectamente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        HachaDeMetal hachaDeMetal = new HachaDeMetal();
 
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 0);
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 1);
-        mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 3);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 0);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 1);
+        mesa.anadirMateriaPrima(new MateriaPrimaMetal(), 3);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 4);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 7);
 
-        assertTrue(mesa.craftear().getClass().equals(hachaDeMetal.getClass()));
+        assertTrue(mesa.craftear() instanceof HachaDeMetal);
     }
 
     @Test
     public void test08SeIntentaConstruirHerramientaInexistente(){
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        boolean noSePudoConstruir = false;
 
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 0);
         mesa.anadirMateriaPrima(new MateriaPrimaPiedra(), 1);
 
-        try{
-            mesa.craftear();
-        }catch(ConstruccionInvalidaException e){
-            noSePudoConstruir = true;
-        }
-
-        assertTrue(noSePudoConstruir);
+        thrown.expect(ConstruccionInvalidaException.class);
+        mesa.craftear();
     }
 
 
@@ -141,7 +134,6 @@ public class MesaDeCrafteoTest {
     public void test09SePuedeConstruirPicoDeMaderaPeroAlRemoverUnMaterialEIntentarCraftearSeLanzaExcepcion() {
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        PicoDeMadera picoDeMadera = new PicoDeMadera();
         boolean noSePudoConstruir = false;
 
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 0);
@@ -152,13 +144,8 @@ public class MesaDeCrafteoTest {
 
         mesa.quitarMateriaPrima(4);
 
-        try{
-            mesa.craftear();
-        }catch (ConstruccionInvalidaException e){
-            noSePudoConstruir = true;
-        }
-
-        assertTrue(noSePudoConstruir);
+        thrown.expect(ConstruccionInvalidaException.class);
+        mesa.craftear();
     }
 
     @Test

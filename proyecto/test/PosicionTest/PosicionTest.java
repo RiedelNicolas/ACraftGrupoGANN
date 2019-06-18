@@ -79,4 +79,5 @@ public class PosicionTest {
 
         Assert.assertNull(posicionOrigen.getOcupante());
     }
+
 }

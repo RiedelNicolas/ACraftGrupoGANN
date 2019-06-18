@@ -1,7 +1,5 @@
 package Algocraft.Materiales;
 
-import Algocraft.Excepciones.MaterialNoSeDanioException;
-import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
 import Algocraft.MateriaPrima.Antimateria;
 import Algocraft.MateriaPrima.MateriaPrima;

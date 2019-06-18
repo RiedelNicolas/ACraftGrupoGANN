@@ -39,10 +39,10 @@ public class DesgastePorPorcentajeDeDurabilidadTest {
 
     @Test
     public void test05DesgastePorPorcentajeDeDurabilidadDevuelveErrorSiRecibe0DeDurabilidad(){
-        int durabilidad = 1;
+        int durabilidad = 0;
         DesgastePorPorcentajeDeDurabilidad desgaste = new DesgastePorPorcentajeDeDurabilidad(0.5);
 
-        thrown.expect(HerramientaRotaException.class); //Chequeo que se lance la excepcion
+        thrown.expect(HerramientaRotaException.class);
         desgaste.aplicar(durabilidad);
     }
 

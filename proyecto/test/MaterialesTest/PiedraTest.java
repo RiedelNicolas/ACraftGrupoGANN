@@ -1,20 +1,14 @@
 package MaterialesTest;
 
-import Algocraft.Excepciones.MaterialNoSeDanioException;
-import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.Antimateria;
+import Algocraft.MateriaPrima.MateriaPrimaPiedra;
 import Algocraft.Materiales.Piedra;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class PiedraTest {
-
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01PiedraSeCreaCon30DeDurabilidad(){
@@ -27,9 +21,7 @@ public class PiedraTest {
 
         Piedra piedra = new Piedra();
         HachaDeMadera hacha = new HachaDeMadera();
-        try {
-            piedra.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        piedra.gastarCon(hacha);
 
         assertEquals(30, piedra.getDurabilidad());
     }
@@ -39,9 +31,7 @@ public class PiedraTest {
 
         Piedra piedra = new Piedra();
         HachaDePiedra hacha = new HachaDePiedra();
-        try {
-            piedra.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        piedra.gastarCon(hacha);
 
         assertEquals(30, piedra.getDurabilidad());
     }
@@ -51,9 +41,7 @@ public class PiedraTest {
 
         Piedra piedra = new Piedra();
         HachaDeMetal hacha = new HachaDeMetal();
-        try {
-            piedra.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        piedra.gastarCon(hacha);
 
         assertEquals(30, piedra.getDurabilidad());
     }
@@ -89,23 +77,7 @@ public class PiedraTest {
     }
 
     @Test
-    public void test08PiedraSeGolpeaConPicoDeMaderaYSeRompe() {
-
-        Piedra piedra = new Piedra();
-        PicoDeMadera pico = new PicoDeMadera();
-
-        for(int i = 0; i < 14; i++) {
-            piedra.gastarCon(pico);
-        }
-        try {
-            piedra.gastarCon(pico);
-        } catch (MaterialRotoException e) {}
-
-        assertEquals(0, piedra.getDurabilidad());
-    }
-
-    @Test
-    public void test09PiedraSeGolpeaConPicoFinoYSeReduceEn20LaDurabilidad(){
+    public void test08PiedraSeGolpeaConPicoFinoYSeReduceEn20LaDurabilidad(){
 
         Piedra piedra = new Piedra();
         PicoFino pico = new PicoFino();
@@ -116,7 +88,16 @@ public class PiedraTest {
     }
 
     @Test
-    public void test10PiedraRotaNoPuedeSerGolpeada(){
+    public void test09PiedraDevuelveAntimateriaSiNoSeRompe(){
+        Piedra metal  = new Piedra();
+        PicoFino pico = new PicoFino();
+
+        assertTrue(metal.gastarCon(pico) instanceof Antimateria);
+        assertNotEquals(metal.getDurabilidad(), 0);
+    }
+
+    @Test
+    public void test10PiedraAlRomperseDevuelveMateriaPrimaPiedra() {
 
         Piedra piedra = new Piedra();
         PicoDeMadera pico = new PicoDeMadera();
@@ -127,7 +108,7 @@ public class PiedraTest {
 
         assertEquals(2, piedra.getDurabilidad());
 
-        thrown.expect(MaterialRotoException.class);
-        piedra.gastarCon(pico);
+        assertTrue(piedra.gastarCon(pico) instanceof MateriaPrimaPiedra);
     }
+
 }

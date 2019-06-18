@@ -39,7 +39,7 @@ public class JuegoTest {
 
         Juego juego = Juego.crearUnico();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         mapa.moverJugadorArriba();
 
@@ -55,7 +55,7 @@ public class JuegoTest {
 
         Juego juego = Juego.crearUnico();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         mapa.moverJugadorAbajo();
 
@@ -70,7 +70,7 @@ public class JuegoTest {
 
         Juego juego = Juego.crearUnico();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         mapa.moverJugadorIzquierda();
 
@@ -85,7 +85,7 @@ public class JuegoTest {
 
         Juego juego = Juego.crearUnico();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         mapa.moverJugadorDerecha();
 
@@ -104,7 +104,7 @@ public class JuegoTest {
         Juego juego = Juego.crearUnico();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         boolean contiene = false;
 
@@ -128,7 +128,7 @@ public class JuegoTest {
         Juego juego = Juego.crearUnico();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         boolean contiene = false;
 
@@ -152,7 +152,7 @@ public class JuegoTest {
         Juego juego = Juego.crearUnico();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         boolean contiene = false;
 
@@ -176,7 +176,7 @@ public class JuegoTest {
         Juego juego = Juego.crearUnico();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         boolean contiene = false;
 

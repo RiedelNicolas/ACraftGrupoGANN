@@ -1,8 +1,6 @@
 package Algocraft.Herramientas;
 
 import Algocraft.Desgastes.DesgastePorGolpes;
-import Algocraft.Excepciones.HerramientaRotaException;
-import Algocraft.Excepciones.MaterialNoSeDanioException;
 import Algocraft.MateriaPrima.MateriaPrima;
 import Algocraft.Materiales.Material;
 
@@ -18,12 +16,8 @@ public class PicoDeMetal extends Pico {
     @Override
     public MateriaPrima usarContra(Material material) {
 
-        try {
-            desgastar();
-            return material.gastarCon(this);
-        } catch (HerramientaRotaException e){
-            throw e;
-        }
+        desgastar();
+        return material.gastarCon(this);
 
     }
 }

@@ -74,7 +74,7 @@ public class PicoDePiedraTest {
         PicoDePiedra pico = new PicoDePiedra();
         Material diamante = new Diamante();
 
-        for(int i = 0; i < 100; i++){
+        for(int i = 0; i < 67; i++){
             pico.usarContra(diamante);
         }
 
@@ -87,7 +87,7 @@ public class PicoDePiedraTest {
         PicoDePiedra pico = new PicoDePiedra();
         Material diamante = new Diamante();
 
-        for(int i = 0; i < 100; i++){
+        for(int i = 0; i < 67; i++){
             pico.usarContra(diamante);
         }
 

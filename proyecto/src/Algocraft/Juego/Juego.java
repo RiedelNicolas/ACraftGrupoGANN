@@ -20,7 +20,7 @@ public class Juego {
     }
 
    public void inicializar(){
-        mapa.ubicarMateriales();
+        mapa.inicializar();
     }
 
     //para pruebas parciales

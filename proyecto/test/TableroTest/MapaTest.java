@@ -35,7 +35,7 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         Assert.assertTrue((_mapa[ancho/2][alto/2]).estaOcupada());
     }
@@ -46,7 +46,7 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         Assert.assertTrue((_mapa[ancho/2][alto/2]).getOcupante() instanceof  Jugador);
     }
@@ -57,8 +57,8 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.ubicarMateriales();
-        Posicion[][] _mapa = mapa.getMapa();
+        mapa.inicializar();
+        Posicion[][] _mapa = mapa.getCampo();
         int total = 0;
 
         for(int i = 0; i < ancho; i++){
@@ -78,8 +78,8 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.ubicarMateriales();
-        Posicion[][] _mapa = mapa.getMapa();
+        mapa.inicializar();
+        Posicion[][] _mapa = mapa.getCampo();
         int total = 0;
 
         for(int i = 0; i < ancho; i++){
@@ -99,8 +99,8 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.ubicarMateriales();
-        Posicion[][] _mapa = mapa.getMapa();
+        mapa.inicializar();
+        Posicion[][] _mapa = mapa.getCampo();
         int total = 0;
 
         for(int i = 0; i < ancho; i++){
@@ -120,8 +120,8 @@ public class MapaTest {
         int ancho = 81;
 
         Mapa mapa = Mapa.instanciar();
-        mapa.ubicarMateriales();
-        Posicion[][] _mapa = mapa.getMapa();
+        mapa.inicializar();
+        Posicion[][] _mapa = mapa.getCampo();
         int total = 0;
 
         for(int i = 0; i < ancho; i++){
@@ -141,7 +141,7 @@ public class MapaTest {
 //        int ancho = 81;
 //
 //        Mapa mapa = Mapa.instanciar();
-//        Posicion[][] _mapa = mapa.getMapa();
+//        Posicion[][] _mapa = mapa.getCampo();
 //        int total = 0;
 //
 //        for(int i = 0; i < ancho; i++){
@@ -158,7 +158,7 @@ public class MapaTest {
     @Test
     public void test09MapaPermiteOcuparUnCasilleroVacioAUnJugador(){
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
         Posicion jugador = new Posicion(Jugador.crearUnico(), 3, 3);
 
         Assert.assertFalse(_mapa[3][3].estaOcupada());
@@ -169,7 +169,7 @@ public class MapaTest {
     @Test
     public void test10MapaPermiteOcuparUnCasilleroVacioAUnMaterial(){
         Mapa mapa = Mapa.instanciar();
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
         Posicion material = new Posicion(new Metal(), 3, 3);
 
         Assert.assertFalse(_mapa[3][3].estaOcupada());
@@ -182,7 +182,7 @@ public class MapaTest {
         Mapa mapa = Mapa.instanciar();
         Posicion material1 = new Posicion(new Madera(), 6, 8);
         Posicion material2 = new Posicion(new Diamante(), 6, 8);
-        Posicion[][] _mapa = mapa.getMapa();
+        Posicion[][] _mapa = mapa.getCampo();
 
         mapa.ubicar(material1);
         Assert.assertTrue(_mapa[6][8].estaOcupada());

@@ -1,19 +1,14 @@
 package MaterialesTest;
 
-import Algocraft.Excepciones.MaterialNoSeDanioException;
-import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.Antimateria;
+import Algocraft.MateriaPrima.MateriaPrimaMetal;
 import Algocraft.Materiales.Metal;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class MetalTest {
-
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01MetalSeCreaCon50DeDurabilidad(){
@@ -26,9 +21,7 @@ public class MetalTest {
 
         Metal metal = new Metal();
         HachaDeMadera hacha = new HachaDeMadera();
-        try {
-            metal.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        metal.gastarCon(hacha);
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -38,9 +31,7 @@ public class MetalTest {
 
         Metal metal = new Metal();
         HachaDePiedra hacha = new HachaDePiedra();
-        try {
-            metal.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        metal.gastarCon(hacha);
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -50,9 +41,7 @@ public class MetalTest {
 
         Metal metal = new Metal();
         HachaDeMetal hacha = new HachaDeMetal();
-        try {
-            metal.gastarCon(hacha);
-        } catch (MaterialNoSeDanioException e){}
+        metal.gastarCon(hacha);
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -62,9 +51,7 @@ public class MetalTest {
 
         Metal metal = new Metal();
         PicoDeMadera pico = new PicoDeMadera();
-        try {
-            metal.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        metal.gastarCon(pico);
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -84,9 +71,7 @@ public class MetalTest {
 
         Metal metal = new Metal();
         PicoDeMetal pico = new PicoDeMetal();
-        try {
-            metal.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        metal.gastarCon(pico);
 
         assertEquals(50, metal.getDurabilidad());
     }
@@ -96,26 +81,32 @@ public class MetalTest {
 
         Metal metal = new Metal();
         PicoFino pico = new PicoFino();
-        try {
-            metal.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        metal.gastarCon(pico);
 
         assertEquals(50, metal.getDurabilidad());
     }
 
     @Test
-    public void test09MetalSeGolpeaConPicoDePiedraYSeRompe() {
+    public void test09MetalDevuelveAntimateriaSiNoSeRompe(){
+        Metal metal  = new Metal();
+        PicoFino pico = new PicoFino();
+
+        assertTrue(metal.gastarCon(pico) instanceof Antimateria);
+        assertNotEquals(metal.getDurabilidad(), 0);
+    }
+
+    @Test
+    public void test10MaderaAlRomperseDevuelveMateriaPrimaMetal() {
 
         Metal metal = new Metal();
         PicoDePiedra pico = new PicoDePiedra();
 
-        for (int i = 0; i < 12; i++) {
+        for(int i = 0; i < 12; i++) {
             metal.gastarCon(pico);
         }
 
         assertEquals(2, metal.getDurabilidad());
 
-        thrown.expect(MaterialRotoException.class);
-        metal.gastarCon(pico);
+        assertTrue(metal.gastarCon(pico) instanceof MateriaPrimaMetal);
     }
 }

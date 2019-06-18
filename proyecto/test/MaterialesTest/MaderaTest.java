@@ -1,19 +1,14 @@
 package MaterialesTest;
 
-import Algocraft.Excepciones.MaterialNoSeDanioException;
-import Algocraft.Excepciones.MaterialRotoException;
 import Algocraft.Herramientas.*;
+import Algocraft.MateriaPrima.Antimateria;
+import Algocraft.MateriaPrima.MateriaPrimaMadera;
 import Algocraft.Materiales.Madera;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class MaderaTest {
-
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01MaderaSeCreaCon10DeDurabilidad(){
@@ -46,9 +41,7 @@ public class MaderaTest {
 
         Madera madera = new Madera();
         HachaDeMetal hacha = new HachaDeMetal();
-        try{
-            madera.gastarCon(hacha);
-        }catch (MaterialRotoException e){}
+        madera.gastarCon(hacha);
 
         assertEquals(0, madera.getDurabilidad());
     }
@@ -58,9 +51,7 @@ public class MaderaTest {
 
         Madera madera = new Madera();
         PicoDeMadera pico = new PicoDeMadera();
-        try {
-            madera.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        madera.gastarCon(pico);
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -70,9 +61,7 @@ public class MaderaTest {
 
         Madera madera = new Madera();
         PicoDePiedra pico = new PicoDePiedra();
-        try {
-            madera.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        madera.gastarCon(pico);
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -82,9 +71,7 @@ public class MaderaTest {
 
         Madera madera = new Madera();
         PicoDeMetal pico = new PicoDeMetal();
-        try {
-            madera.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        madera.gastarCon(pico);
 
         assertEquals(10, madera.getDurabilidad());
     }
@@ -94,15 +81,22 @@ public class MaderaTest {
 
         Madera madera = new Madera();
         PicoFino pico = new PicoFino();
-        try {
-            madera.gastarCon(pico);
-        } catch (MaterialNoSeDanioException e){}
+        madera.gastarCon(pico);
 
         assertEquals(10, madera.getDurabilidad());
     }
 
     @Test
-    public void test09MaderaSeGolpeaConHachaDeMaderaYSeRompe() {
+    public void test09MaderaDevuelveAntimateriaSiNoSeRompe(){
+        Madera madera = new Madera();
+        PicoFino pico = new PicoFino();
+
+        assertTrue(madera.gastarCon(pico) instanceof Antimateria);
+        assertNotEquals(madera.getDurabilidad(), 0);
+    }
+
+    @Test
+    public void test10MaderaAlRomperseDevuelveMateriaPrimaMadera() {
 
         Madera madera = new Madera();
         HachaDeMadera hacha = new HachaDeMadera();
@@ -113,7 +107,6 @@ public class MaderaTest {
 
         assertEquals(2, madera.getDurabilidad());
 
-        thrown.expect(MaterialRotoException.class);
-        madera.gastarCon(hacha); //Chequea que se rompa con el ultimo gastar
+        assertTrue(madera.gastarCon(hacha) instanceof MateriaPrimaMadera);
     }
 }
