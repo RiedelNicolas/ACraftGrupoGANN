@@ -24,25 +24,25 @@ public abstract class Material extends Posicionable {
     }
 
     public MateriaPrima gastarCon(HachaDeMadera hacha){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
     public MateriaPrima gastarCon(HachaDePiedra hacha){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
     public MateriaPrima gastarCon(HachaDeMetal hacha){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
     public MateriaPrima gastarCon(PicoDeMadera pico){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
     public MateriaPrima gastarCon(PicoDePiedra pico){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
     public MateriaPrima gastarCon(PicoDeMetal pico){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
     public MateriaPrima gastarCon(PicoFino pico){
-        throw new MaterialNoSeDanioException();
+        return new Antimateria();
     }
 
     public MateriaPrima desgastarse(int fuerza) {
@@ -51,6 +51,6 @@ public abstract class Material extends Posicionable {
         if (durabilidad <= 0) {
             return materiaPrimaAsociada;
         }
-        return (new Antimateria());
+        return new Antimateria();
     }
 }

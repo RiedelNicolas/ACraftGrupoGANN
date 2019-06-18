@@ -1,5 +1,6 @@
 package Algocraft.Inventario;
 
+import Algocraft.Excepciones.InventarioVacioException;
 import Algocraft.Herramientas.HachaDeMadera;
 import Algocraft.MateriaPrima.Antimateria;
 
@@ -22,11 +23,14 @@ public class Inventario {
     }
 
     public Utilizable getUtilizableActual(){
+        if(items.isEmpty()) {
+            throw new InventarioVacioException();
+        }
         return items.get(posicionActual);
     }
 
-    public void quitar(){
-        items.remove(posicionActual);
+    public Utilizable quitar(){
+        return items.remove(posicionActual);
     }
 
     public void equipar(Utilizable item){

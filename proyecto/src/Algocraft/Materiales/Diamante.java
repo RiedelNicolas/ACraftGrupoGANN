@@ -14,7 +14,7 @@ public class Diamante extends Material {
 
     @Override
     public MateriaPrima gastarCon(PicoFino pico){
-        desgastarse(pico.getFuerza());
         pico.desgastar();
+        return desgastarse(pico.getFuerza());
     }
 }

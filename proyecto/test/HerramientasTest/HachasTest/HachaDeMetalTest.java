@@ -1,8 +1,7 @@
 package HerramientasTest.HachasTest;
 
-import Algocraft.Excepciones.MaterialRotoException;
+import Algocraft.Excepciones.HerramientaRotaException;
 import Algocraft.Herramientas.HachaDeMetal;
-import Algocraft.Herramientas.Herramienta;
 import Algocraft.Materiales.*;
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,13 +16,13 @@ public class HachaDeMetalTest {
 
     @Test
     public void test01HachaDeMetalSeCreaCon400DeDurabilidad() {
-        Herramienta hacha = new HachaDeMetal();
+        HachaDeMetal hacha = new HachaDeMetal();
         assertEquals(400, hacha.getDurabilidad());
     }
 
     @Test
     public void test02HachaDeMetalSeCreaCon10DeFuerza() {
-        Herramienta hacha = new HachaDeMetal();
+        HachaDeMetal hacha = new HachaDeMetal();
         assertEquals(10, hacha.getFuerza());
     }
 
@@ -31,10 +30,9 @@ public class HachaDeMetalTest {
     @Test
     public void test03SeUsaHachaDeMetalContraMaderaYPierde5DeDurabilidad(){
 
-        Herramienta hacha = new HachaDeMetal();
+        HachaDeMetal hacha = new HachaDeMetal();
         Material madera = new Madera();
 
-        thrown.expect(MaterialRotoException.class);
         hacha.usarContra(madera);
 
     }
@@ -42,7 +40,7 @@ public class HachaDeMetalTest {
     @Test
     public void test04SeUsaHachaDeMetalContraPiedraYPierde5DeDurabilidad(){
 
-        Herramienta hacha = new HachaDeMetal();
+        HachaDeMetal hacha = new HachaDeMetal();
         Material piedra = new Piedra();
         hacha.usarContra(piedra);
 
@@ -53,7 +51,7 @@ public class HachaDeMetalTest {
     @Test
     public void test05SeUsaHachaDeMetalContraMetalYPierde5DeDurabilidad(){
 
-        Herramienta hacha = new HachaDeMetal();
+        HachaDeMetal hacha = new HachaDeMetal();
         Material metal = new Metal();
         hacha.usarContra(metal);
 
@@ -64,12 +62,39 @@ public class HachaDeMetalTest {
     @Test
     public void test06SeUsaHachaDeMetalContraDiamanteYPierde5DeDurabilidad(){
 
-        Herramienta hacha = new HachaDeMetal();
+        HachaDeMetal hacha = new HachaDeMetal();
         Material diamante = new Diamante();
         hacha.usarContra(diamante);
 
         assertEquals(395, hacha.getDurabilidad());
 
+
+    }
+
+    @Test
+    public void test07HachaDeMetalCon0DeDurabilidadNoSeRompe(){
+        HachaDeMetal hacha = new HachaDeMetal();
+        Material diamante = new Diamante();
+
+        for(int i = 0; i < 80; i++){
+            hacha.usarContra(diamante);
+        }
+
+        assertEquals(hacha.getDurabilidad(), 0);
+
+    }
+
+    @Test
+    public void test08HachaDeMetalConMenosDe0DurabilidadSeRompe(){
+        HachaDeMetal hacha = new HachaDeMetal();
+        Material diamante = new Diamante();
+
+        for(int i = 0; i < 80; i++){
+            hacha.usarContra(diamante);
+        }
+
+        thrown.expect(HerramientaRotaException.class);
+        hacha.usarContra(diamante);
 
     }
 

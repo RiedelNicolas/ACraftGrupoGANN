@@ -51,6 +51,7 @@ public class Jugador extends Posicionable {
 
                 try{
                     materiaPrima.equipar(inventario);
+
                 } catch (MateriaPrimaNoEquipableException e3){}
 
             } catch (NoSePuedeGolpearConMateriaPrimaException e2) { }

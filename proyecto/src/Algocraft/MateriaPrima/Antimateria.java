@@ -9,7 +9,9 @@ public class Antimateria extends MateriaPrima {
         id = 0;
     }
 
+    @Override
     public void equipar(Inventario inventario){
-        throw (new MateriaPrimaNoEquipableException());
+        throw new MateriaPrimaNoEquipableException();
     }
+
 }

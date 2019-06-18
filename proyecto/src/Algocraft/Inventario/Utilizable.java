@@ -5,5 +5,7 @@ import Algocraft.Materiales.Material;
 
 public interface Utilizable {
 
-    public abstract MateriaPrima usarContra(Material material);
+    MateriaPrima usarContra(Material material);  //Hacer prueba para que si se rompe la herramienta, no se desgaste el material
+
+}
 
