@@ -1,9 +1,8 @@
 package DesgastesTest.DesgastePorPorcentajeDeFuerzaTest;
 
-import Algocraft.Desgastes.DesgastePorPorcentaje;
-import Algocraft.Desgastes.DesgastePorPorcentajeDeDurabilidad;
-import Algocraft.Desgastes.DesgastePorPorcentajeDeFuerza;
-import Algocraft.Excepciones.HerramientaRotaException;
+import Modelo.Desgastes.DesgastePorPorcentaje;
+import Modelo.Desgastes.DesgastePorPorcentajeDeFuerza;
+import Modelo.Excepciones.HerramientaRotaException;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Rule;

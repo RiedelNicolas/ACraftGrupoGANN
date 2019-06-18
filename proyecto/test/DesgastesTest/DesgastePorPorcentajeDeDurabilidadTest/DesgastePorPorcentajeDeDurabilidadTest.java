@@ -1,6 +1,6 @@
 package DesgastesTest.DesgastePorPorcentajeDeDurabilidadTest;
-import Algocraft.Desgastes.*;
-import Algocraft.Excepciones.HerramientaRotaException;
+import Modelo.Desgastes.*;
+import Modelo.Excepciones.HerramientaRotaException;
 import org.hamcrest.CoreMatchers;
 import org.junit.*;
 import org.junit.rules.ExpectedException;

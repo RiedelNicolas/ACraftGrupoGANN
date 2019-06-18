@@ -1,10 +1,10 @@
 package TableroTest;
 
-import Algocraft.Excepciones.PosicionOcupadaException;
-import Algocraft.Jugador.Jugador;
-import Algocraft.Materiales.*;
-import Algocraft.Posicion.Posicion;
-import Algocraft.Tablero.Mapa;
+import Modelo.Excepciones.PosicionOcupadaException;
+import Modelo.Jugador.Jugador;
+import Modelo.Materiales.*;
+import Modelo.Posicion.Posicion;
+import Modelo.Tablero.Mapa;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
