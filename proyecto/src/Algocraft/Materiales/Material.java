@@ -1,5 +1,6 @@
 package Algocraft.Materiales;
 
+import Algocraft.Excepciones.ObjetoIncapazDeGolpearException;
 import Algocraft.Herramientas.*;
 import Algocraft.MateriaPrima.Antimateria;
 import Algocraft.MateriaPrima.MateriaPrima;

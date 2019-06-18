@@ -1,8 +1,10 @@
 package Algocraft.Posicion;
 
+import Algocraft.Excepciones.ObjetoIncapazDeGolpearException;
 import Algocraft.Excepciones.PosicionFueraDeRangoException;
 import Algocraft.Excepciones.PosicionOcupadaException;
 import Algocraft.Excepciones.PosicionNoPicableException;
+import Algocraft.Materiales.Material;
 import Algocraft.Tablero.Mapa;
 
 public class Posicion {
@@ -84,11 +86,11 @@ public class Posicion {
 
     public void picarArriba() { picar(arriba); }
 
-    public void picarAbajo() { picar(arriba); }
+    public void picarAbajo() { picar(abajo); }
 
-    public void picarIzquierda() { picar(arriba); }
+    public void picarIzquierda() { picar(izquierda); }
 
-    public void picarDerecha() { picar(arriba); }
+    public void picarDerecha() { picar(derecha); }
 
     private Posicion mover(Posicion posicion){
         if(posicion == null){
@@ -117,8 +119,8 @@ public class Posicion {
             throw new PosicionNoPicableException();
         }
         try{
-            posicionable.golpear(ocupante);
-        } catch (PosicionFueraDeRangoException e){}
+            posicionable.golpear((Material) ocupante);
+        } catch (ObjetoIncapazDeGolpearException e){}
     }
 
 }

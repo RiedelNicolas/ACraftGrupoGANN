@@ -9,7 +9,7 @@ import Algocraft.Materiales.Material;
 import Algocraft.Posicion.Posicionable;
 
 
-public class Jugador extends Posicionable {
+public class Jugador implements Posicionable {
     //Atributos
 
     private static Jugador instanciaUnica = null;
