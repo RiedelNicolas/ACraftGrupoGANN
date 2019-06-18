@@ -1,8 +1,8 @@
 package HerramientasTest.HachasTest;
 
-import Algocraft.Excepciones.HerramientaRotaException;
-import Algocraft.Herramientas.HachaDeMadera;
-import Algocraft.Materiales.*;
+import Modelo.Excepciones.HerramientaRotaException;
+import Modelo.Herramientas.HachaDeMadera;
+import Modelo.Materiales.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

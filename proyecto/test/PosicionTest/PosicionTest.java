@@ -1,10 +1,10 @@
 package PosicionTest;
 
-import Algocraft.Jugador.Jugador;
-import Algocraft.Materiales.Madera;
-import Algocraft.Materiales.Piedra;
-import Algocraft.Materiales.Metal;
-import Algocraft.Posicion.Posicion;
+import Modelo.Jugador.Jugador;
+import Modelo.Materiales.Madera;
+import Modelo.Materiales.Piedra;
+import Modelo.Materiales.Metal;
+import Modelo.Posicion.Posicion;
 import org.junit.Assert;
 import org.junit.Test;
 

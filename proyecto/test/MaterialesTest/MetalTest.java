@@ -1,9 +1,9 @@
 package MaterialesTest;
 
-import Algocraft.Herramientas.*;
-import Algocraft.MateriaPrima.Antimateria;
-import Algocraft.MateriaPrima.MateriaPrimaMetal;
-import Algocraft.Materiales.Metal;
+import Modelo.Herramientas.*;
+import Modelo.MateriaPrima.Antimateria;
+import Modelo.MateriaPrima.MateriaPrimaMetal;
+import Modelo.Materiales.Metal;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

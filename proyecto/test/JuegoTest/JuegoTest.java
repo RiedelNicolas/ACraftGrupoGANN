@@ -1,9 +1,9 @@
 package JuegoTest;
 
-import Algocraft.Juego.Juego;
-import Algocraft.Posicion.Posicion;
-import Algocraft.Tablero.Mapa;
-import Algocraft.Materiales.*;
+import Modelo.Juego.Juego;
+import Modelo.Posicion.Posicion;
+import Modelo.Tablero.Mapa;
+import Modelo.Materiales.*;
 
 
 import org.junit.*;

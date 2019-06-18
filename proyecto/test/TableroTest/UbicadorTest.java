@@ -1,11 +1,11 @@
 package TableroTest;
 
-import Algocraft.Materiales.Diamante;
-import Algocraft.Materiales.Madera;
-import Algocraft.Materiales.Metal;
-import Algocraft.Materiales.Piedra;
-import Algocraft.Posicion.Posicion;
-import Algocraft.Tablero.Mapa;
+import Modelo.Materiales.Diamante;
+import Modelo.Materiales.Madera;
+import Modelo.Materiales.Metal;
+import Modelo.Materiales.Piedra;
+import Modelo.Posicion.Posicion;
+import Modelo.Tablero.Mapa;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

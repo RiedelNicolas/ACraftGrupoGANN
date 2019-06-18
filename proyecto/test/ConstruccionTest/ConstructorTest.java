@@ -1,9 +1,7 @@
 package ConstruccionTest;
 
-import Algocraft.Materiales.*;
-import Algocraft.Herramientas.*;
-import Algocraft.Construccion.*;
-import Algocraft.Recetas.*;
+import Modelo.Construccion.*;
+import Modelo.Recetas.*;
 import org.junit.Assert;
 import org.junit.Test;
 

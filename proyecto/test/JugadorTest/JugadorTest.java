@@ -1,7 +1,7 @@
 package JugadorTest;
 
-import Algocraft.Herramientas.HachaDeMadera;
-import Algocraft.Jugador.Jugador;
+import Modelo.Herramientas.HachaDeMadera;
+import Modelo.Jugador.Jugador;
 import org.junit.*;
 import org.hamcrest.*;
 

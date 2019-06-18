@@ -1,13 +1,13 @@
 package ConstruccionTest;
 
-import Algocraft.Excepciones.ConstruccionInvalidaException;
-import Algocraft.Herramientas.*;
-import Algocraft.MateriaPrima.MateriaPrimaMadera;
-import Algocraft.MateriaPrima.MateriaPrimaMetal;
-import Algocraft.MateriaPrima.MateriaPrimaPiedra;
+import Modelo.Excepciones.ConstruccionInvalidaException;
+import Modelo.Herramientas.*;
+import Modelo.MateriaPrima.MateriaPrimaMadera;
+import Modelo.MateriaPrima.MateriaPrimaMetal;
+import Modelo.MateriaPrima.MateriaPrimaPiedra;
 import org.junit.Rule;
 import org.junit.Test;
-import Algocraft.Construccion.*;
+import Modelo.Construccion.*;
 import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;

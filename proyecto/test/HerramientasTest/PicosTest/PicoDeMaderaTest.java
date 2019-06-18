@@ -1,8 +1,8 @@
 package HerramientasTest.PicosTest;
 
-import Algocraft.Excepciones.HerramientaRotaException;
-import Algocraft.Herramientas.PicoDeMadera;
-import Algocraft.Materiales.*;
+import Modelo.Excepciones.HerramientaRotaException;
+import Modelo.Herramientas.PicoDeMadera;
+import Modelo.Materiales.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
