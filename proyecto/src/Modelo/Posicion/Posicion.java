@@ -20,12 +20,12 @@ public class Posicion {
     private Posicion abajo;
 
     //Métodos
-    public Posicion(int _componenteHorizontal, int _componenteVertical){
+    public Posicion(int _componenteVertical, int _componenteHorizontal){
         this.componenteHorizontal = _componenteHorizontal;
         this.componenteVertical = _componenteVertical;
     }
 
-    public Posicion(Posicionable ocupante, int _componenteHorizontal, int _componenteVertical){
+    public Posicion(Posicionable ocupante, int _componenteVertical, int _componenteHorizontal){
         this.componenteHorizontal = _componenteHorizontal;
         this.componenteVertical = _componenteVertical;
         this.ocupante = ocupante;
@@ -52,19 +52,19 @@ public class Posicion {
 
     public void setPosicionesVecinas(Mapa mapa){
         try {
-            izquierda = mapa.getPosicion(componenteVertical - 1, componenteHorizontal);
+            izquierda = mapa.getPosicion(componenteVertical, componenteHorizontal - 1);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            derecha = mapa.getPosicion(componenteVertical + 1, componenteHorizontal);
+            derecha = mapa.getPosicion(componenteVertical, componenteHorizontal + 1);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            arriba = mapa.getPosicion(componenteVertical, componenteHorizontal - 1);
+            arriba = mapa.getPosicion(componenteVertical - 1, componenteHorizontal);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            abajo = mapa.getPosicion(componenteVertical, componenteHorizontal + 1);
+            abajo = mapa.getPosicion(componenteVertical + 1, componenteHorizontal);
         } catch (PosicionFueraDeRangoException e){}
     }
 

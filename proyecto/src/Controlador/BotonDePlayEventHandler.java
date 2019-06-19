@@ -46,7 +46,9 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         System.out.println(anchoMapa + " y " + altoMapa);
 
         GridPane grid = new GridPane();
-        grid.setPrefSize(ancho*0.78, alto*0.95);
+        double anchoGrid = ancho*0.78;
+        double altoGrid = alto*0.95;
+        grid.setPrefSize(anchoGrid, altoGrid);
         grid.setLayoutX(ancho*0.015);
         grid.setLayoutY(alto*0.025);
         Image image = new Image("file:img/pasto.jpg");
@@ -55,35 +57,44 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
                 BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT)));
 
-        ImageView madera = new ImageView();
-        madera.setImage(new Image("file:img/madera.jpg"));
-
-        ImageView piedra = new ImageView();
-        piedra.setImage(new Image("file:img/piedra.jpg"));
-
-        ImageView metal = new ImageView();
-        metal.setImage(new Image("file:img/metal.jpg"));
-
-        ImageView diamante = new ImageView();
-        diamante.setImage(new Image("file:img/diamante.png"));
-
         for(int i=0; i<altoMapa; i++){
             for(int j=0; j<anchoMapa; j++) {
                 Posicion actual = campoDeJuego[i][j];
                 if(actual.getOcupante()!=null){
-                    if(actual.getOcupante().getClass().getName().equals("Madera"))
+                    System.out.println(actual.getOcupante().getClass().getName());
+
+                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Madera")){
+                        ImageView madera = new ImageView();
+                        madera.setFitHeight(altoGrid/altoMapa);
+                        madera.setFitWidth(anchoGrid/anchoMapa);
+                        madera.setImage(new Image("file:img/madera.jpg"));
                         grid.add(madera, j, i, 1, 1);
-                    if(actual.getOcupante().getClass().getName().equals("Piedra"))
+                    }
+                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Piedra")){
+                        ImageView piedra = new ImageView();
+                        piedra.setFitHeight(altoGrid/altoMapa);
+                        piedra.setFitWidth(anchoGrid/anchoMapa);
+                        piedra.setImage(new Image("file:img/piedra.jpg"));
                         grid.add(piedra, j, i, 1, 1);
-                    if(actual.getOcupante().getClass().getName().equals("Metal"))
+                    }
+
+                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Metal")){
+                        ImageView metal = new ImageView();
+                        metal.setFitHeight(altoGrid/altoMapa);
+                        metal.setFitWidth(anchoGrid/anchoMapa);
+                        metal.setImage(new Image("file:img/metal.jpg"));
                         grid.add(metal, j, i, 1, 1);
-                    if(actual.getOcupante().getClass().getName().equals("Diamante"))
+                    }
+                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Diamante")){
+                        ImageView diamante = new ImageView();
+                        diamante.setFitHeight(altoGrid/altoMapa);
+                        diamante.setFitWidth(anchoGrid/anchoMapa);
+                        diamante.setImage(new Image("file:img/diamante.png"));
                         grid.add(diamante, j, i, 1, 1);
+                    }
                 }
             }
         }
-
-        grid.add(diamante, anchoMapa-1, altoMapa-1, 1, 1);
         root.getChildren().addAll(grid);
     }
 }

@@ -16,7 +16,7 @@ public class Juego {
         int ancho = 21;
         int alto = 13;
         mapa = Mapa.instanciar(ancho, alto);
-        jugador = mapa.getPosicion(ancho/2, alto/2);
+        jugador = mapa.getPosicion(alto/2, ancho/2);
     }
 
     public static Juego crearUnico(){

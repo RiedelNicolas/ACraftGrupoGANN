@@ -25,24 +25,24 @@ public class Mapa {
     private Mapa(int _ancho, int _alto){
         alto = _alto;
         ancho = _ancho;
-        campo = new Posicion[ancho][alto];
+        campo = new Posicion[alto][ancho];
         ubicador = new Ubicador();
 
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
+        for(int i = 0; i < alto; i++){
+            for(int j = 0; j < ancho; j++){
                 campo[i][j] = new Posicion(i, j);
             }
         }
 
-        Posicion jugador = new Posicion(Jugador.crearUnico(), ancho/2, alto/2);
+        Posicion jugador = new Posicion(Jugador.crearUnico(), alto/2, ancho/2);
         ubicar(jugador);
     }
 
-    public Posicion getPosicion(int x, int y){
-        if(!estaEnElCampo(x, y)){
+    public Posicion getPosicion(int fila, int columna){
+        if(!estaEnElCampo(fila, columna)){
             throw new PosicionFueraDeRangoException();
         }
-        return campo[x][y];
+        return campo[fila][columna];
     }
 
     public void ubicar(Posicion posicion){
@@ -50,8 +50,8 @@ public class Mapa {
     }
 
     public void inicializar(){
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
+        for(int i = 0; i < alto; i++){
+            for(int j = 0; j < ancho; j++){
                 campo[i][j].setPosicionesVecinas(this);
             }
         }
@@ -70,8 +70,8 @@ public class Mapa {
         return ancho;
     }
 
-    private boolean estaEnElCampo(int x, int y){
-        return 0 <= x && x < ancho && 0 <= y && y < alto;
+    private boolean estaEnElCampo(int fila, int columna){
+        return 0 <= columna && columna < ancho && 0 <= fila && fila < alto;
     }
 
     //PARA TESTING
