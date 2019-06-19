@@ -1,6 +1,8 @@
 package Controlador;
 
+import Modelo.Inventario.Inventario;
 import Modelo.Juego.Juego;
+import Vista.InventarioView;
 import Vista.MapaView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -37,6 +39,7 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         root.getChildren().add(background);
 
         MapaView.crearUnico(root, ancho, alto);
+        InventarioView.instaciar(root, ancho, alto);
 
     }
 }
