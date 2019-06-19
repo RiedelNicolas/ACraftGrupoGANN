@@ -62,6 +62,14 @@ public class Mapa {
         return campo;
     }
 
+    public int getAlto(){
+        return alto;
+    }
+
+    public int getAncho(){
+        return ancho;
+    }
+
     private boolean estaEnElCampo(int x, int y){
         return 0 <= x && x < ancho && 0 <= y && y < alto;
     }
