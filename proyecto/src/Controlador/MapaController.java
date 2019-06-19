@@ -50,7 +50,7 @@ public class MapaController {
                         ImageView diamante = new ImageView();
                         diamante.setFitHeight(altoGrid/altoMapa);
                         diamante.setFitWidth(anchoGrid/anchoMapa);
-                        diamante.setImage(new Image("file:img/diamante.png"));
+                        diamante.setImage(new Image("file:img/diamante.jpg"));
                         grid.add(diamante, j, i, 1, 1);
                     }
                 }
