@@ -65,5 +65,11 @@ public class Mapa {
     private boolean estaEnElCampo(int x, int y){
         return 0 <= x && x < ancho && 0 <= y && y < alto;
     }
+
+    //PARA TESTING
+    public Mapa limpiar(){
+        instanciaUnica = null;
+        return instanciar(ancho, alto);
+    }
 }
 

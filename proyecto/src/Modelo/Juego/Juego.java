@@ -26,58 +26,61 @@ public class Juego {
         return instancia_unica;
     }
 
-   public void inicializar(){
+    public void inicializar(){
         mapa.inicializar();
     }
 
-    //para pruebas parciales
     public Mapa getMapa(){
         return mapa;
     }
 
-    public void JugadorMoverArriba(){
+    public Posicion getJugador(){
+        return jugador;
+    }
+
+    public void jugadorMoverArriba(){
         try {
             jugador = jugador.moverArriba();
         } catch (PosicionFueraDeRangoException e){}
     }
 
-    public void JugadorMoverAbajo(){
+    public void jugadorMoverAbajo(){
         try {
             jugador = jugador.moverAbajo();
         } catch (PosicionFueraDeRangoException e){}
     }
 
-    public void JugadorMoverIzquierda(){
+    public void jugadorMoverIzquierda(){
         try {
             jugador = jugador.moverIzquierda();
         } catch (PosicionFueraDeRangoException e){}
     }
 
-    public void JugadorMoverDerecha(){
+    public void jugadorMoverDerecha(){
         try {
             jugador = jugador.moverDerecha();
         } catch (PosicionFueraDeRangoException e){}
     }
 
-    public void JugadorPicarArriba(){
+    public void jugadorPicarArriba(){
         try {
             jugador.picarArriba();
         } catch (PosicionNoPicableException e){}
     }
 
-    public void JugadorPicarAbajo(){
+    public void jugadorPicarAbajo(){
         try {
             jugador.picarAbajo();
         } catch (PosicionNoPicableException e){}
     }
 
-    public void JugadorPicarIzquierda(){
+    public void jugadorPicarIzquierda(){
         try {
             jugador.picarIzquierda();
         } catch (PosicionNoPicableException e){}
     }
 
-    public void JugadorPicarDerecha(){
+    public void jugadorPicarDerecha(){
         try {
             jugador.picarDerecha();
         } catch (PosicionNoPicableException e){}

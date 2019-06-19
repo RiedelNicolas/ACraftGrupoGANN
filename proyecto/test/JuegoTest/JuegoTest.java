@@ -1,6 +1,7 @@
 package JuegoTest;
 
 import Modelo.Juego.Juego;
+import Modelo.Jugador.Jugador;
 import Modelo.Posicion.Posicion;
 import Modelo.Tablero.Mapa;
 import Modelo.Materiales.*;
@@ -9,6 +10,8 @@ import Modelo.Materiales.*;
 import org.junit.*;
 
 public class JuegoTest {
+    private final int alto = 45;
+    private final int ancho = 81;
 
     @Test
     public void test01JuegoSeCrea() {
@@ -33,73 +36,90 @@ public class JuegoTest {
     }
 
     @Test
-    public void test04SeMueveAlJugadorHaciaArriba(){  //Modificar a que juego le pase los parametros del campo al mapa
-        int alto = 45;
-        int ancho = 81;
-
+    public void test04JuegoTieneLaPosicionDelJugador(){
         Juego juego = Juego.crearUnico();
-        Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
+        Posicion jugador = juego.getJugador();
 
-        mapa.moverJugadorArriba();
-
-        Assert.assertFalse(_mapa[ancho/2][alto/2].estaOcupada());
-        Assert.assertTrue(_mapa[ancho/2][(alto/2) - 1].estaOcupada());
-
+        Assert.assertTrue(jugador.getOcupante() instanceof Jugador);
     }
 
     @Test
-    public void test05SeMueveAlJugadorHaciaAbajo(){
-        int alto = 45;
-        int ancho = 81;
+    public void test05SeMueveAlJugadorHaciaArriba(){
 
         Juego juego = Juego.crearUnico();
-        Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
+        Posicion jugadorPosicionInicial = juego.getJugador();
 
-        mapa.moverJugadorAbajo();
+        juego.jugadorMoverArriba();
+        Posicion jugadorPosicionFinal = juego.getJugador();
 
-        Assert.assertFalse(_mapa[ancho/2][alto/2].estaOcupada());
-        Assert.assertTrue(_mapa[ancho/2][(alto/2) + 1].estaOcupada());
+        Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
 
     @Test
-    public void test06SeMueveAlJugadorHaciaIzquierda(){
-        int alto = 45;
-        int ancho = 81;
+    public void test06SeMueveAlJugadorHaciaAbajo(){
 
         Juego juego = Juego.crearUnico();
-        Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
+        Posicion jugadorPosicionInicial = juego.getJugador();
 
-        mapa.moverJugadorIzquierda();
+        juego.jugadorMoverAbajo();
+        Posicion jugadorPosicionFinal = juego.getJugador();
 
-        Assert.assertFalse(_mapa[ancho/2][alto/2].estaOcupada());
-        Assert.assertTrue(_mapa[(ancho/2) - 1][(alto/2)].estaOcupada());
+        Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
 
     @Test
-    public void test07SeMueveAlJugadorHaciaDerecha(){
-        int alto = 45;
-        int ancho = 81;
+    public void test07SeMueveAlJugadorHaciaIzquierda(){
 
         Juego juego = Juego.crearUnico();
-        Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
+        Posicion jugadorPosicionInicial = juego.getJugador();
 
-        mapa.moverJugadorDerecha();
+        juego.jugadorMoverIzquierda();
+        Posicion jugadorPosicionFinal = juego.getJugador();
 
-        Assert.assertFalse(_mapa[ancho/2][alto/2].estaOcupada());
-        Assert.assertTrue(_mapa[(ancho/2) + 1][(alto/2)].estaOcupada());
+        Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
 
+    @Test
+    public void test08SeMueveAlJugadorHaciaDerecha(){
 
+        Juego juego = Juego.crearUnico();
+        Posicion jugadorPosicionInicial = juego.getJugador();
+
+        juego.jugadorMoverArriba();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
+
+    @Test
+    public void test09NoSeMueveALaDerechaSiLaPosicionEstaOcupada(){
+
+        Juego juego = Juego.crearUnico();
+        Posicion material = new Posicion(new Madera(), ancho/2 + 1, alto/2);
+        juego.getMapa().ubicar(material);
+        Posicion jugadorPosicionInicial = juego.getJugador();
+
+        juego.jugadorMoverDerecha();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
+
+    @Test
+    public void test10NoSeMueveALaIzquierdaSiLaPosicionEstaOcupada(){  //
+
+        Juego juego = Juego.crearUnico();
+        Posicion material = new Posicion(new Madera(), ancho/2 - 1, alto/2);
+        Posicion jugadorPosicionInicial = juego.getJugador();
+
+        juego.jugadorMoverDerecha();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
     //pruebasParaEnunciado.
     @Test
     public void test08SeCreaJuegoYContieneMadera(){
-
-        int alto = 45;
-        int ancho = 81;
 
         Juego juego = Juego.crearUnico();
         juego.inicializar();
@@ -122,9 +142,6 @@ public class JuegoTest {
     @Test
     public void test09SeCreaJuegoYContienePiedra(){
 
-        int alto = 45;
-        int ancho = 81;
-
         Juego juego = Juego.crearUnico();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
@@ -146,9 +163,6 @@ public class JuegoTest {
     @Test
     public void test10SeCreaJuegoYContieneDiamante(){
 
-        int alto = 45;
-        int ancho = 81;
-
         Juego juego = Juego.crearUnico();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
@@ -169,9 +183,6 @@ public class JuegoTest {
 
     @Test
     public void test11SeCreaJuegoYContieneMetal(){
-
-        int alto = 45;
-        int ancho = 81;
 
         Juego juego = Juego.crearUnico();
         juego.inicializar();
