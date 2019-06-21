@@ -3,7 +3,6 @@ package PosicionTest;
 import Modelo.Jugador.Jugador;
 import Modelo.Materiales.Madera;
 import Modelo.Materiales.Piedra;
-import Modelo.Materiales.Metal;
 import Modelo.Posicion.Posicion;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,7 +26,7 @@ public class PosicionTest {
 
     @Test
     public void test03ConstructorConOcupanteDeParametroAsignaUnOcupante(){
-        Jugador unJugador = Jugador.crearUnico();
+        Jugador unJugador = Jugador.instanciar();
         Posicion unaPosicion = new Posicion(unJugador, 2, 2);
 
         Assert.assertNotNull(unaPosicion.getOcupante());

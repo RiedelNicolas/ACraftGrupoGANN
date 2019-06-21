@@ -39,7 +39,8 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         root.getChildren().add(background);
 
         MapaView.crearUnico(root, ancho, alto);
-        InventarioView.instaciar(root, ancho, alto);
+        InventarioView inventario = InventarioView.instaciar(root, ancho, alto);
+        inventario.actualizarInventario();
 
     }
 }

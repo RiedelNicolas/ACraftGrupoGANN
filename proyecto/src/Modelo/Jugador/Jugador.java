@@ -22,7 +22,7 @@ public class Jugador implements Posicionable {
         mesaDeCrafteo = new MesaDeCrafteo();
     }
 
-    public static Jugador crearUnico(){
+    public static Jugador instanciar(){
         if(instanciaUnica == null){
             instanciaUnica = new Jugador();
         }
@@ -74,6 +74,11 @@ public class Jugador implements Posicionable {
 
     public void quitarMateriaPrimaDeMesa(int posicion){
         inventario.equipar(mesaDeCrafteo.quitarMateriaPrima(posicion));
+    }
+
+    //PARA CONTROLADOR
+    public Inventario getInventario(){
+        return inventario;
     }
 
 }

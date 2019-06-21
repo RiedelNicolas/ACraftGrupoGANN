@@ -1,5 +1,6 @@
 package Modelo.Inventario;
 
+import Modelo.Excepciones.InventarioLlenoException;
 import Modelo.Excepciones.InventarioVacioException;
 import Modelo.Herramientas.HachaDeMadera;
 
@@ -9,6 +10,7 @@ public class Inventario {
 
     private ArrayList<Utilizable> items;
     private int posicionActual;
+    private final int tamanioMaximo = 16;
 
     public Inventario(){
 
@@ -33,6 +35,15 @@ public class Inventario {
     }
 
     public void equipar(Utilizable item){
+
+        if(items.size()>=tamanioMaximo) {
+            throw new InventarioLlenoException();
+        }
         items.add(item);
+    }
+
+    //PARA CONTROLADOR
+    public ArrayList<Utilizable> getItems(){
+        return items;
     }
 }
