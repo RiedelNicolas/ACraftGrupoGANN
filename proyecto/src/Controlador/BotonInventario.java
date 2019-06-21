@@ -1,11 +1,12 @@
 package Controlador;
 
+import Modelo.Inventario.Inventario;
 import Modelo.Inventario.Utilizable;
 import Modelo.Jugador.Jugador;
 import Vista.ImagenInventario;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-
 import java.util.ArrayList;
 
 public class BotonInventario extends Button {
@@ -23,7 +24,16 @@ public class BotonInventario extends Button {
         this.utilizableAsociado = null;
         this.id = contador++;
         this.inicializarImagenesInventario();
+
+        this.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                Jugador.instanciar().getInventario().mover(id);
+            }
+        });
     }
+
 
     public void actualizar() {
 
@@ -37,6 +47,7 @@ public class BotonInventario extends Button {
                     this.setGraphic(imagen);
             }
         }
+
         else{
             this.setGraphic(imagenes.get(0));
         }

@@ -1,12 +1,8 @@
 package Vista;
 
 import Controlador.MapaController;
-import Modelo.Juego.Juego;
-import Modelo.Posicion.Posicion;
-import Modelo.Tablero.Mapa;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
 public class MapaView{

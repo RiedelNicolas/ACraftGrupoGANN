@@ -6,8 +6,6 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 
-import java.util.ArrayList;
-
 public class InventarioView {
 
     private GridPane grid;
