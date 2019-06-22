@@ -2,6 +2,7 @@ package Modelo.Inventario;
 
 import Modelo.Excepciones.InventarioLlenoException;
 import Modelo.Excepciones.InventarioVacioException;
+import Modelo.Excepciones.NoHayElementoEnPosicionDelInventarioException;
 import Modelo.Herramientas.HachaDeMadera;
 
 import java.util.ArrayList;
@@ -20,7 +21,11 @@ public class Inventario {
     }
 
     public void mover(int numero){
-        posicionActual = numero;
+
+        if(items.size()>numero)
+            posicionActual = numero;
+        else
+            throw new NoHayElementoEnPosicionDelInventarioException();
     }
 
     public Utilizable getUtilizableActual(){
