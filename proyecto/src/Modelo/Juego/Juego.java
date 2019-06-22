@@ -13,7 +13,7 @@ public class Juego {
     private static Juego instancia_unica = null;
 
     private Juego(){
-        int ancho = 21;
+        int ancho = 19;
         int alto = 13;
         mapa = Mapa.instanciar(ancho, alto);
         jugador = mapa.getPosicion(alto/2, ancho/2);

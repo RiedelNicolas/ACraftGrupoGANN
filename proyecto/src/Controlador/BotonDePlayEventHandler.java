@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Juego.Juego;
 import Vista.InventarioView;
 import Vista.MapaView;
+import Vista.PlayerView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -43,6 +44,5 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         inventario.actualizarInventario();
 
         BotoneraDeAcciones botonera = new BotoneraDeAcciones(root, ancho, alto);
-
     }
 }
