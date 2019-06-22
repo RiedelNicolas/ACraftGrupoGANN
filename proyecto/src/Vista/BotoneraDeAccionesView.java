@@ -1,5 +1,6 @@
-package Controlador;
+package Vista;
 
+import Controlador.*;
 import Modelo.Juego.Juego;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,11 +8,11 @@ import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.layout.BorderPane;
 
-public class BotoneraDeAcciones {
+public class BotoneraDeAccionesView {
 
     private BorderPane pane;
 
-    public BotoneraDeAcciones(Group root, double ancho, double alto){
+    public BotoneraDeAccionesView(Group root, double ancho, double alto){
 
         pane = new BorderPane();
 
@@ -30,33 +31,10 @@ public class BotoneraDeAcciones {
         BotonDeAccion flechaIzquierda = new BotonDeAccion("file:img/flechaIzquierda.png", ancho);
         BotonDeAccion flechaDerecha = new BotonDeAccion("file:img/flechaDerecha.png", ancho);
 
-        flechaArriba.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Juego.instanciar().jugadorPicarArriba();
-            }
-        });
-
-        flechaAbajo.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Juego.instanciar().jugadorPicarAbajo();
-            }
-        });
-
-        flechaDerecha.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Juego.instanciar().jugadorPicarDerecha();
-            }
-        });
-
-        flechaIzquierda.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Juego.instanciar().jugadorPicarIzquierda();
-            }
-        });
+        flechaArriba.setOnAction(new BotonAccionArribaHandler());
+        flechaAbajo.setOnAction(new BotonAccionAbajoHandler());
+        flechaDerecha.setOnAction(new BotonAccionDerechaHandler());
+        flechaIzquierda.setOnAction(new BotonAccionIzquierdaHandler());
 
         pane.setTop(flechaArriba);
         pane.setBottom(flechaAbajo);
