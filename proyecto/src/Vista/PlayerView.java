@@ -64,7 +64,7 @@ public class PlayerView {
 
     public void moverHorizontal(int numero){
 
-        Node nodo = obtenerNodo(coordenadaX, coordenadaY, pane);
+        Node nodo = obtenerNodo(coordenadaY, coordenadaX, pane);
         ImageView p = (ImageView)nodo;
         p.setImage(new Image("file:img/Vacio.png"));
 
