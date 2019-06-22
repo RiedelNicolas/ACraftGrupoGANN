@@ -1,5 +1,6 @@
 package Vista;
 
+import Modelo.Tablero.Mapa;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.Group;
@@ -21,12 +22,14 @@ public class PlayerView {
 
     public PlayerView(Group root, double unAncho, double unAlto, GridPane gridPane){
 
+        int anchoMapa = Mapa.instanciar(0,0).getAncho();
+        int altoMapa = Mapa.instanciar(0,0).getAlto();
         this.root = root;
         this.pane = gridPane;
-        this.ancho = (unAncho * 0.78) / 19;
-        this.alto = (unAlto * 0.95) / 13;
-        this.coordenadaX = (int)(unAncho / 2);
-        this.coordenadaY = (int)(unAlto / 2);
+        this.ancho = (unAncho * 0.78) / (anchoMapa);
+        this.alto = (unAlto * 0.95) / (altoMapa);
+        this.coordenadaX = (int)(anchoMapa / 2);
+        this.coordenadaY = (int)(altoMapa / 2);
 
         Image jugador = new Image("file:img/jugador.jpg");
         imagenDeJugador = new ImageView(jugador);
@@ -39,17 +42,18 @@ public class PlayerView {
         pane.add(imagenDeJugador, coordenadaX, coordenadaY);
     }
 
-    public Node getNodeByRowColumnIndex (final int row, final int column, GridPane gridPane) {
-        Node result = null;
-        ObservableList<Node> childrens = gridPane.getChildren();
+    public Node obtenerNodo (int fila, int columna, GridPane gridPane) {
+        Node resultado = null;
+        ObservableList<Node> hijos = gridPane.getChildren();
 
-        for (Node node : childrens) {
-            if((GridPane.getRowIndex(node) == row) && (GridPane.getColumnIndex(node) == column)) {
-                result = node;
+        for (Node nodo : hijos) {
+
+            if((GridPane.getRowIndex(nodo) == fila) && (GridPane.getColumnIndex(nodo) == columna)) {
+                resultado = nodo;
                 break;
             }
         }
-        return result;
+        return resultado;
     }
 
     public void moverVertical(int numero){
@@ -60,11 +64,8 @@ public class PlayerView {
 
     public void moverHorizontal(int numero){
 
-        Node nodo = getNodeByRowColumnIndex(coordenadaX, coordenadaY, pane);
+        Node nodo = obtenerNodo(coordenadaX, coordenadaY, pane);
         ImageView p = (ImageView)nodo;
-        if(nodo==null){
-            System.out.println("ES NULL!");
-        }
         p.setImage(new Image("file:img/Vacio.png"));
 
         coordenadaX += numero;
