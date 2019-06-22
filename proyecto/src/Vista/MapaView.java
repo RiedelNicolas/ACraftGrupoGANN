@@ -26,7 +26,7 @@ public class MapaView{
 
         this.mapaController = new MapaController();
         this.grid = new GridPane();
-        this.jugadorView = new PlayerView(root, ancho, alto);
+        this.jugadorView = new PlayerView(root, ancho, alto, grid);
         this.anchoGrid = ancho*0.78;
         this.altoGrid = alto*0.95;
         grid.setPrefSize(anchoGrid, altoGrid);
@@ -40,6 +40,7 @@ public class MapaView{
                 BackgroundSize.DEFAULT)));
 
         mapaController.agregarMateriales(grid, altoGrid, anchoGrid);
+        jugadorView.moverHorizontal(1);
 
         root.getChildren().addAll(grid);
     }

@@ -1,5 +1,6 @@
 package Vista;
 
+import javafx.scene.Node;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,8 +22,8 @@ public class PlayerView {
         this.pane = gridPane;
         this.ancho = (unAncho * 0.78) / 19;
         this.alto = (unAlto * 0.95) / 13;
-        this.coordenadaX = 9;
-        this.coordenadaY = 6;
+        this.coordenadaX = (int)(unAncho / 2);
+        this.coordenadaY = (int)(unAlto / 2);
 
         Image jugador = new Image("file:img/jugador.jpg");
         imagenDeJugador = new ImageView(jugador);
@@ -36,25 +37,28 @@ public class PlayerView {
 
     public void dibujar(){
         pane.add(imagenDeJugador, coordenadaX, coordenadaY);
-        root.getChildren().remove(pane);
-        root.getChildren().add(pane);
     }
+
+    private Node getNodeFromGridPane(GridPane gridPane, int col, int row) {
+        for (Node node : gridPane.getChildren()) {
+            if (GridPane.getColumnIndex(node) == col && GridPane.getRowIndex(node) == row) {
+                return node;
+            }
+        }
+        return null;
+    }
+
 
     public void moverVertical(int numero){
 
+        pane.add(new ImageView(new Image("file:img/Vacio.png")), coordenadaX, coordenadaY);
         coordenadaY += numero;
+        dibujar();
     }
 
     public void moverHorizontal(int numero){
-
+        pane.add(new ImageView(new Image("file:img/Vacio.png")), coordenadaX, coordenadaY);
         coordenadaY += numero;
-    }
-
-    public double getCoordenadaX() {
-        return coordenadaX;
-    }
-
-    public double getCoordenadaY() {
-        return coordenadaY;
+        dibujar();
     }
 }
