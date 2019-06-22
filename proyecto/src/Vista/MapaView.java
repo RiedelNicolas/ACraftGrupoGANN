@@ -32,7 +32,6 @@ public class MapaView{
         grid.setPrefSize(anchoGrid, altoGrid);
         grid.setLayoutX(ancho*0.015);
         grid.setLayoutY(alto*0.025);
-        grid.add(jugadorView.getImagenDeJugador(), 9,6);
         Image image = new Image("file:img/pasto.jpg");
         grid.setBackground(new Background(new BackgroundImage(image, BackgroundRepeat.REPEAT,
                 BackgroundRepeat.REPEAT,
@@ -40,7 +39,7 @@ public class MapaView{
                 BackgroundSize.DEFAULT)));
 
         mapaController.agregarMateriales(grid, altoGrid, anchoGrid);
-        jugadorView.moverHorizontal(1);
+        //jugadorView.moverHorizontal(1);
 
         root.getChildren().addAll(grid);
     }
