@@ -1,7 +1,9 @@
 package Controlador;
 
 import Modelo.Inventario.Inventario;
+import Vista.BotonesPicarView;
 import Modelo.Juego.Juego;
+import Vista.BotonesPicarView;
 import Vista.InventarioView;
 import Vista.MapaView;
 import javafx.event.ActionEvent;
@@ -40,6 +42,8 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
 
         MapaView.crearUnico(root, ancho, alto);
         InventarioView inventario = InventarioView.instaciar(root, ancho, alto);
+        BotonesPicarView botonesPicar = BotonesPicarView.crearUnico(root);
+        root.getChildren().add(botonesPicar);
         inventario.actualizarInventario();
 
     }
