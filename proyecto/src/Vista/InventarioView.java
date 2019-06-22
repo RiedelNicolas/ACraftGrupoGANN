@@ -40,7 +40,7 @@ public class InventarioView {
         label.setFitWidth(ancho*0.025);
         label.setFitHeight(ancho*0.025);
         label.setX(ancho*0.885);
-        label.setY(alto*0.715);
+        label.setY(alto*0.69);
 
         root.getChildren().addAll(grid, label);
     }

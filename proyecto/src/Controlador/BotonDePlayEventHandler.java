@@ -7,6 +7,7 @@ import Vista.MapaView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -44,5 +45,29 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         inventario.actualizarInventario();
 
         BotoneraDeAccionesView botonera = new BotoneraDeAccionesView(root, ancho, alto);
+
+        ImageView inventarioLabel = new ImageView(new Image("file:img/inventario.png"));
+        inventarioLabel.setFitHeight(alto*0.05);
+        inventarioLabel.setFitWidth(ancho*0.15);
+        inventarioLabel.setX(ancho*0.825);
+        inventarioLabel.setY(alto*0.07);
+
+        ImageView golpearLabel = new ImageView(new Image("file:img/Golpear.png"));
+        golpearLabel.setFitHeight(alto*0.05);
+        golpearLabel.setFitWidth(ancho*0.12);
+        golpearLabel.setX(ancho*0.84);
+        golpearLabel.setY(alto*0.5);
+
+        Button botonCraftear = new Button();
+        ImageView imagenBoton = new ImageView(new Image("file:img/craftear.png"));
+        imagenBoton.setFitHeight(alto*0.05);
+        imagenBoton.setFitWidth(ancho*0.14);
+        botonCraftear.setGraphic(imagenBoton);
+        botonCraftear.setPrefHeight(alto*0.08);
+        botonCraftear.setPrefWidth(ancho*0.148);
+        botonCraftear.setLayoutX(ancho*0.826);
+        botonCraftear.setLayoutY(alto*0.9);
+
+        root.getChildren().addAll(inventarioLabel, golpearLabel, botonCraftear);
     }
 }
