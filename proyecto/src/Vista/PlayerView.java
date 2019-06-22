@@ -1,10 +1,13 @@
 package Vista;
 
+import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+
+import java.io.PrintStream;
 
 public class PlayerView {
 
@@ -31,21 +34,22 @@ public class PlayerView {
         imagenDeJugador.setFitHeight(this.alto);
     }
 
-    public ImageView getImagenDeJugador() {
-        return imagenDeJugador;
-    }
 
     public void dibujar(){
         pane.add(imagenDeJugador, coordenadaX, coordenadaY);
     }
 
-    private Node getNodeFromGridPane(GridPane gridPane, int col, int row) {
-        for (Node node : gridPane.getChildren()) {
-            if (GridPane.getColumnIndex(node) == col && GridPane.getRowIndex(node) == row) {
-                return node;
+    public Node getNodeByRowColumnIndex (final int row, final int column, GridPane gridPane) {
+        Node result = null;
+        ObservableList<Node> childrens = gridPane.getChildren();
+
+        for (Node node : childrens) {
+            if((GridPane.getRowIndex(node) == row) && (GridPane.getColumnIndex(node) == column)) {
+                result = node;
+                break;
             }
         }
-        return null;
+        return result;
     }
 
     public void moverVertical(int numero){
@@ -56,8 +60,11 @@ public class PlayerView {
 
     public void moverHorizontal(int numero){
 
-        Node nodo = getNodeFromGridPane(pane, coordenadaX, coordenadaY);
+        Node nodo = getNodeByRowColumnIndex(coordenadaX, coordenadaY, pane);
         ImageView p = (ImageView)nodo;
+        if(nodo==null){
+            System.out.println("ES NULL!");
+        }
         p.setImage(new Image("file:img/Vacio.png"));
 
         coordenadaX += numero;

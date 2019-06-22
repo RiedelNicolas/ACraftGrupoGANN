@@ -61,6 +61,14 @@ public class MapaController {
                         grid.add(diamante, j, i, 1, 1);
                     }
                 }
+                else{
+                    ImageView diamante = new ImageView();
+                    diamante.setFitHeight(altoGrid/altoMapa);
+                    diamante.setFitWidth(anchoGrid/anchoMapa);
+                    diamante.setImage(new Image("file:img/Vacio.png"));
+                    grid.add(diamante, j, i, 1, 1);
+
+                }
             }
         }
     }
