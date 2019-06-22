@@ -1,6 +1,5 @@
 package Vista;
 
-import Controlador.BotonDePlay;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -46,7 +45,7 @@ public class Main extends Application {
 
     public void setBotonInicio(){
 
-        BotonDePlay botonInicio = new BotonDePlay(root, ancho, alto);
+        BotonDePlayView botonInicio = new BotonDePlayView(root, ancho, alto);
         root.getChildren().add(botonInicio);
     }
 

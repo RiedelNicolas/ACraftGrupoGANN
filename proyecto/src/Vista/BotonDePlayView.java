@@ -1,15 +1,16 @@
-package Controlador;
+package Vista;
 
+import Controlador.BotonDePlayEventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.*;
 
-public class BotonDePlay extends Button {
+public class BotonDePlayView extends Button {
 
     private BotonDePlayEventHandler botonHandler;
 
-    public BotonDePlay(Group root, double ancho, double alto){
+    public BotonDePlayView(Group root, double ancho, double alto){
         super();
 
         botonHandler = new BotonDePlayEventHandler(root, ancho, alto);

@@ -53,6 +53,21 @@ public class MapaController {
                         diamante.setImage(new Image("file:img/diamante.jpg"));
                         grid.add(diamante, j, i, 1, 1);
                     }
+                    if(actual.getOcupante().getClass().getName().equals("Modelo.Jugador.Jugador")){
+                        ImageView diamante = new ImageView();
+                        diamante.setFitHeight(altoGrid/altoMapa);
+                        diamante.setFitWidth(anchoGrid/anchoMapa);
+                        diamante.setImage(new Image("file:img/jugador.jpg"));
+                        grid.add(diamante, j, i, 1, 1);
+                    }
+                }
+                else{
+                    ImageView vacio = new ImageView();
+                    vacio.setFitHeight(altoGrid/altoMapa);
+                    vacio.setFitWidth(anchoGrid/anchoMapa);
+                    vacio.setImage(new Image("file:img/Vacio.png"));
+                    grid.add(vacio, j, i, 1, 1);
+
                 }
             }
         }

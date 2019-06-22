@@ -9,21 +9,21 @@ public class JugadorTest {
 
     @Test
     public void test01JugadorSeCreaCorrectamente() {
-        Jugador jugador = Jugador.crearUnico();
+        Jugador jugador = Jugador.instanciar();
         Assert.assertNotNull(jugador);
 
     }
 
     @Test
     public void test02JugadorSeCreaConHachaDeMaderaEnMano() {
-        Jugador jugador = Jugador.crearUnico();
+        Jugador jugador = Jugador.instanciar();
         Assert.assertThat(jugador.getUtilizableEnMano(), CoreMatchers.instanceOf(HachaDeMadera.class));
     }
 
     @Test
     public void test03SeCreanDosInstanciasDeJugadorYEsLaMisma(){
-        Jugador jugadorUno = Jugador.crearUnico();
-        Jugador jugadorDos = Jugador.crearUnico();
+        Jugador jugadorUno = Jugador.instanciar();
+        Jugador jugadorDos = Jugador.instanciar();
 
         Assert.assertEquals(jugadorUno, jugadorDos);
     }

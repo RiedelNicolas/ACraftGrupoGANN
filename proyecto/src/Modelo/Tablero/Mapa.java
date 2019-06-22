@@ -34,7 +34,7 @@ public class Mapa {
             }
         }
 
-        Posicion jugador = new Posicion(Jugador.crearUnico(), alto/2, ancho/2);
+        Posicion jugador = new Posicion(Jugador.instanciar(), alto/2, ancho/2);
         ubicar(jugador);
     }
 

@@ -1,18 +1,15 @@
 package Vista;
 
 import Controlador.MapaController;
-import Modelo.Juego.Juego;
-import Modelo.Posicion.Posicion;
-import Modelo.Tablero.Mapa;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
 public class MapaView{
 
     private MapaController mapaController;
     private GridPane grid;
+    private PlayerView jugadorView;
     private double anchoGrid;
     private double altoGrid;
 
@@ -41,6 +38,8 @@ public class MapaView{
                 BackgroundSize.DEFAULT)));
 
         mapaController.agregarMateriales(grid, altoGrid, anchoGrid);
+        this.jugadorView = new PlayerView(root, ancho, alto, grid);
+        jugadorView.moverHorizontal(1);
 
         root.getChildren().addAll(grid);
     }
