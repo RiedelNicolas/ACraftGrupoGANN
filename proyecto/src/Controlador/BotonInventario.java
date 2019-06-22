@@ -1,6 +1,5 @@
 package Controlador;
 
-import Modelo.Inventario.Inventario;
 import Modelo.Inventario.Utilizable;
 import Modelo.Jugador.Jugador;
 import Vista.ImagenInventario;

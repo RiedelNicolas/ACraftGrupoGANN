@@ -1,15 +1,10 @@
 package Controlador;
 
-import Controlador.BotonDeAccion;
 import Modelo.Juego.Juego;
-import Modelo.Jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
 public class BotoneraDeAcciones {
@@ -67,5 +62,7 @@ public class BotoneraDeAcciones {
         pane.setBottom(flechaAbajo);
         pane.setLeft(flechaIzquierda);
         pane.setRight(flechaDerecha);
+        BorderPane.setAlignment(flechaArriba, Pos.TOP_CENTER);
+        BorderPane.setAlignment(flechaAbajo, Pos.BOTTOM_CENTER);
     }
 }
