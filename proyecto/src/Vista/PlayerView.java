@@ -48,17 +48,19 @@ public class PlayerView {
         return null;
     }
 
-
     public void moverVertical(int numero){
-
         pane.add(new ImageView(new Image("file:img/Vacio.png")), coordenadaX, coordenadaY);
         coordenadaY += numero;
         dibujar();
     }
 
     public void moverHorizontal(int numero){
-        pane.add(new ImageView(new Image("file:img/Vacio.png")), coordenadaX, coordenadaY);
-        coordenadaY += numero;
+
+        Node nodo = getNodeFromGridPane(pane, coordenadaX, coordenadaY);
+        ImageView p = (ImageView)nodo;
+        p.setImage(new Image("file:img/Vacio.png"));
+
+        coordenadaX += numero;
         dibujar();
     }
 }
