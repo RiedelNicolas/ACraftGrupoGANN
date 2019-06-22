@@ -3,33 +3,31 @@ package Vista;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 
 public class PlayerView {
 
-    private double coordenadaX;
-    private double coordenadaY;
+    private int coordenadaX;
+    private int coordenadaY;
     private ImageView imagenDeJugador;
     private Group root;
+    private GridPane pane;
     private double ancho;
     private double alto;
 
-    public PlayerView(Group root, double unAncho, double unAlto){
+    public PlayerView(Group root, double unAncho, double unAlto, GridPane gridPane){
 
         this.root = root;
+        this.pane = gridPane;
         this.ancho = (unAncho * 0.78) / 19;
         this.alto = (unAlto * 0.95) / 13;
-        this.coordenadaX = unAncho * 0.015;
-        this.coordenadaY = unAlto * 0.025;
+        this.coordenadaX = 9;
+        this.coordenadaY = 6;
 
         Image jugador = new Image("file:img/jugador.jpg");
         imagenDeJugador = new ImageView(jugador);
         imagenDeJugador.setFitWidth(this.ancho);
         imagenDeJugador.setFitHeight(this.alto);
-        imagenDeJugador.setX(coordenadaX);
-        imagenDeJugador.setY(coordenadaY);
-
-        coordenadaX = imagenDeJugador.getX();
-        coordenadaY = imagenDeJugador.getY();
     }
 
     public ImageView getImagenDeJugador() {
@@ -37,21 +35,26 @@ public class PlayerView {
     }
 
     public void dibujar(){
-        imagenDeJugador.setTranslateX(coordenadaX);
-        imagenDeJugador.setTranslateY(coordenadaY);
-        root.getChildren().remove(imagenDeJugador);
-        root.getChildren().add(imagenDeJugador);
+        pane.add(imagenDeJugador, coordenadaX, coordenadaY);
+        root.getChildren().remove(pane);
+        root.getChildren().add(pane);
     }
 
     public void moverVertical(int numero){
 
-        double actual = imagenDeJugador.getX();
-        imagenDeJugador.setX(actual + numero);
+        coordenadaY += numero;
     }
 
     public void moverHorizontal(int numero){
 
-        double actual = imagenDeJugador.getY();
-        imagenDeJugador.setY(actual + numero);
+        coordenadaY += numero;
+    }
+
+    public double getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public double getCoordenadaY() {
+        return coordenadaY;
     }
 }
