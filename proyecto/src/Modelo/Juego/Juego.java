@@ -19,7 +19,7 @@ public class Juego {
         jugador = mapa.getPosicion(alto/2, ancho/2);
     }
 
-    public static Juego crearUnico(){
+    public static Juego instanciar(){
         if(instancia_unica == null){
             instancia_unica = new Juego();
         }

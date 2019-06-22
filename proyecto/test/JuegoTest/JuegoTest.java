@@ -15,21 +15,21 @@ public class JuegoTest {
 
     @Test
     public void test01JuegoSeCrea() {
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Assert.assertNotNull(juego);
     }
 
     @Test
     public void test02SeCreanDosInstanciasDeJuegoYEsLaMisma(){
-        Juego juegoUno = Juego.crearUnico();
-        Juego juegoDos = Juego.crearUnico();
+        Juego juegoUno = Juego.instanciar();
+        Juego juegoDos = Juego.instanciar();
 
         Assert.assertEquals(juegoUno, juegoDos);
     }
 
     @Test
     public void test03JuegoInstanciaAMapaCorrectamente(){
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Mapa mapa = juego.getMapa();
 
         Assert.assertNotNull(mapa);
@@ -37,7 +37,7 @@ public class JuegoTest {
 
     @Test
     public void test04JuegoTieneLaPosicionDelJugador(){
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion jugador = juego.getJugador();
 
         Assert.assertTrue(jugador.getOcupante() instanceof Jugador);
@@ -46,7 +46,7 @@ public class JuegoTest {
     @Test
     public void test05SeMueveAlJugadorHaciaArriba(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion jugadorPosicionInicial = juego.getJugador();
 
         juego.jugadorMoverArriba();
@@ -58,7 +58,7 @@ public class JuegoTest {
     @Test
     public void test06SeMueveAlJugadorHaciaAbajo(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion jugadorPosicionInicial = juego.getJugador();
 
         juego.jugadorMoverAbajo();
@@ -70,7 +70,7 @@ public class JuegoTest {
     @Test
     public void test07SeMueveAlJugadorHaciaIzquierda(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion jugadorPosicionInicial = juego.getJugador();
 
         juego.jugadorMoverIzquierda();
@@ -82,7 +82,7 @@ public class JuegoTest {
     @Test
     public void test08SeMueveAlJugadorHaciaDerecha(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion jugadorPosicionInicial = juego.getJugador();
 
         juego.jugadorMoverArriba();
@@ -94,7 +94,7 @@ public class JuegoTest {
     @Test
     public void test09NoSeMueveALaDerechaSiLaPosicionEstaOcupada(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion material = new Posicion(new Madera(), ancho/2 + 1, alto/2);
         juego.getMapa().ubicar(material);
         Posicion jugadorPosicionInicial = juego.getJugador();
@@ -108,7 +108,7 @@ public class JuegoTest {
     @Test
     public void test10NoSeMueveALaIzquierdaSiLaPosicionEstaOcupada(){  //
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         Posicion material = new Posicion(new Madera(), ancho/2 - 1, alto/2);
         Posicion jugadorPosicionInicial = juego.getJugador();
 
@@ -121,7 +121,7 @@ public class JuegoTest {
     @Test
     public void test08SeCreaJuegoYContieneMadera(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
         Posicion[][] _mapa = mapa.getCampo();
@@ -142,7 +142,7 @@ public class JuegoTest {
     @Test
     public void test09SeCreaJuegoYContienePiedra(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
         Posicion[][] _mapa = mapa.getCampo();
@@ -163,7 +163,7 @@ public class JuegoTest {
     @Test
     public void test10SeCreaJuegoYContieneDiamante(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
         Posicion[][] _mapa = mapa.getCampo();
@@ -184,7 +184,7 @@ public class JuegoTest {
     @Test
     public void test11SeCreaJuegoYContieneMetal(){
 
-        Juego juego = Juego.crearUnico();
+        Juego juego = Juego.instanciar();
         juego.inicializar();
         Mapa mapa = juego.getMapa();
         Posicion[][] _mapa = mapa.getCampo();

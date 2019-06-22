@@ -14,19 +14,16 @@ public class BotonInventario extends Button {
     private static int contador = 0;
     private int id = 0;
     private double ancho;
-    private Utilizable utilizableAsociado;
     private ArrayList<ImagenInventario> imagenes;
 
     public BotonInventario(double ancho){
 
         this.ancho = ancho;
         this.setMinSize(ancho*0.037, ancho*0.037);
-        this.utilizableAsociado = null;
         this.id = contador++;
         this.inicializarImagenesInventario();
 
         this.setOnAction(new EventHandler<ActionEvent>() {
-
             @Override
             public void handle(ActionEvent event) {
                 Jugador.instanciar().getInventario().mover(id);

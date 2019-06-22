@@ -1,9 +1,6 @@
 package Controlador;
 
-import Modelo.Inventario.Inventario;
-import Vista.BotonesPicarView;
 import Modelo.Juego.Juego;
-import Vista.BotonesPicarView;
 import Vista.InventarioView;
 import Vista.MapaView;
 import javafx.event.ActionEvent;
@@ -27,7 +24,7 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         root.getChildren().remove(0, 3); //borra fondo, logo y a si mismo
-        Juego juego = Juego.crearUnico(); //sacar esto de aca
+        Juego juego = Juego.instanciar();
         juego.inicializar();
         inicilizarPantallaPrincipal();
     }
@@ -41,10 +38,11 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         root.getChildren().add(background);
 
         MapaView.crearUnico(root, ancho, alto);
+
         InventarioView inventario = InventarioView.instaciar(root, ancho, alto);
-        BotonesPicarView botonesPicar = BotonesPicarView.crearUnico(root);
-        root.getChildren().add(botonesPicar);
         inventario.actualizarInventario();
+
+        BotoneraDeAcciones botonera = new BotoneraDeAcciones(root, ancho, alto);
 
     }
 }
