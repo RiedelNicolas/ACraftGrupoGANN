@@ -39,51 +39,35 @@ public class Juego {
     }
 
     public void jugadorMoverArriba(){
-        try {
-            jugador = jugador.moverArriba();
-        } catch (PosicionFueraDeRangoException e){}
+        jugador = jugador.moverArriba();
     }
 
     public void jugadorMoverAbajo(){
-        try {
-            jugador = jugador.moverAbajo();
-        } catch (PosicionFueraDeRangoException e){}
+        jugador = jugador.moverAbajo();
     }
 
     public void jugadorMoverIzquierda(){
-        try {
-            jugador = jugador.moverIzquierda();
-        } catch (PosicionFueraDeRangoException e){}
+        jugador = jugador.moverIzquierda();
     }
 
     public void jugadorMoverDerecha(){
-        try {
-            jugador = jugador.moverDerecha();
-        } catch (PosicionFueraDeRangoException e){}
+        jugador = jugador.moverDerecha();
     }
 
     public void jugadorPicarArriba(){
-        try {
-            jugador.picarArriba();
-        } catch (PosicionNoPicableException e){}
+        jugador.picarArriba();
     }
 
     public void jugadorPicarAbajo(){
-        try {
-            jugador.picarAbajo();
-        } catch (PosicionNoPicableException e){}
+        jugador.picarAbajo();
     }
 
     public void jugadorPicarIzquierda(){
-        try {
-            jugador.picarIzquierda();
-        } catch (PosicionNoPicableException e){}
+        jugador.picarIzquierda();
     }
 
     public void jugadorPicarDerecha(){
-        try {
-            jugador.picarDerecha();
-        } catch (PosicionNoPicableException e){}
+        jugador.picarDerecha();
     }
 
 }
