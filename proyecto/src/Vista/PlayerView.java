@@ -62,12 +62,12 @@ public class PlayerView {
 
     public void moverVertical(int numero) {
 
-        if (!(((coordenadaY == altoMapa - 1) && (numero == 1)) || ((coordenadaY == 0) && (numero == -1)))) {
+        Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
+        Node nodoSiguiente = obtenerNodo(coordenadaY + numero, coordenadaX, pane);
+        ImageView actual = (ImageView) nodoActual;
+        ImageView siguiente = (ImageView) nodoSiguiente;
 
-            Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
-            Node nodoSiguiente = obtenerNodo(coordenadaY + numero, coordenadaX, pane);
-            ImageView actual = (ImageView) nodoActual;
-            ImageView siguiente = (ImageView) nodoSiguiente;
+        if (!(((coordenadaY == altoMapa - 1) && (numero == 1)) || ((coordenadaY == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")) {
             actual.setImage(new Image("file:img/Vacio.png"));
             siguiente.setImage(null);
 
@@ -79,11 +79,12 @@ public class PlayerView {
 
     public void moverHorizontal(int numero){
 
-        if(!(((coordenadaX == anchoMapa - 1) && (numero == 1)) || ((coordenadaX == 0) && (numero == -1)))){
-            Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
-            Node nodoSiguiente = obtenerNodo(coordenadaY, coordenadaX + numero, pane);
-            ImageView actual = (ImageView)nodoActual;
-            ImageView siguiente = (ImageView)nodoSiguiente;
+        Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
+        Node nodoSiguiente = obtenerNodo(coordenadaY, coordenadaX + numero, pane);
+        ImageView actual = (ImageView)nodoActual;
+        ImageView siguiente = (ImageView)nodoSiguiente;
+
+        if(!(((coordenadaX == anchoMapa - 1) && (numero == 1)) || ((coordenadaX == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")){
             actual.setImage(new Image("file:img/Vacio.png"));
             siguiente.setImage(null);
 

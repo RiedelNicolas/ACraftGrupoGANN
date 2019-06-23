@@ -2,6 +2,7 @@ package Vista;
 
 import Controlador.MapaController;
 import Controlador.WASDEventHandler;
+import Modelo.Juego.Juego;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
@@ -43,11 +44,11 @@ public class MapaView{
         mapaController.agregarMateriales(grid, altoGrid, anchoGrid);
         this.jugadorView = new PlayerView(root, ancho, alto, grid);
         root.setOnKeyPressed(new WASDEventHandler(this));
-
         root.getChildren().addAll(grid);
     }
 
     public PlayerView getJugadorView() {
         return jugadorView;
     }
+
 }
