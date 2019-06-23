@@ -22,7 +22,7 @@ public class MapaController {
     public void agregarMateriales(GridPane grid, double altoGrid, double anchoGrid){
         for(int i=0; i<altoMapa; i++){
             for(int j=0; j<anchoMapa; j++) {
-                Posicion actual = campoDeJuego[i][j];
+                Posicion actual = campoDeJuego[j][i];
                 if(actual.getOcupante()!=null){
                     if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Madera")){
                         ImageView madera = new ImageView();
