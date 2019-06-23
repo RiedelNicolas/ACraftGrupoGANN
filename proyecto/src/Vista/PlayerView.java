@@ -73,7 +73,6 @@ public class PlayerView {
 
             coordenadaY += numero;
             dibujar(nodoSiguiente);
-
         }
     }
 
@@ -92,5 +91,17 @@ public class PlayerView {
             dibujar(nodoSiguiente);
 
         }
+    }
+
+    public void picarVertical(int numero){
+        Node nodoAPicar = obtenerNodo(coordenadaY + numero, coordenadaX, pane);
+        ImageView material = (ImageView)nodoAPicar;
+        material.setImage(new Image("file:img/Vacio.png"));
+    }
+
+    public void picarHorizontal(int numero){
+        Node nodoAPicar = obtenerNodo(coordenadaY, coordenadaX  + numero, pane);
+        ImageView material = (ImageView)nodoAPicar;
+        material.setImage(new Image("file:img/Vacio.png"));
     }
 }
