@@ -19,11 +19,13 @@ public class PlayerView {
     private GridPane pane;
     private double ancho;
     private double alto;
+    private int anchoMapa;
+    private int altoMapa;
 
     public PlayerView(Group root, double unAncho, double unAlto, GridPane gridPane){
 
-        int anchoMapa = Mapa.instanciar(0,0).getAncho();
-        int altoMapa = Mapa.instanciar(0,0).getAlto();
+        this.anchoMapa = Mapa.instanciar(0,0).getAncho();
+        this.altoMapa = Mapa.instanciar(0,0).getAlto();
         this.root = root;
         this.pane = gridPane;
         this.ancho = (unAncho * 0.78) / (anchoMapa);
@@ -38,8 +40,10 @@ public class PlayerView {
     }
 
 
-    public void dibujar(){
-        pane.add(imagenDeJugador, coordenadaX, coordenadaY);
+    public void dibujar(Node nodoEnGridPane){
+
+        ImageView imagen = (ImageView) nodoEnGridPane;
+        imagen.setImage(new Image("file:img/jugador.jpg"));
     }
 
     public Node obtenerNodo (int fila, int columna, GridPane gridPane) {
@@ -56,19 +60,36 @@ public class PlayerView {
         return resultado;
     }
 
-    public void moverVertical(int numero){
-        pane.add(new ImageView(new Image("file:img/Vacio.png")), coordenadaX, coordenadaY);
-        coordenadaY += numero;
-        dibujar();
+    public void moverVertical(int numero) {
+
+        if (!(((coordenadaY == altoMapa - 1) && (numero == 1)) || ((coordenadaY == 0) && (numero == -1)))) {
+
+            Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
+            Node nodoSiguiente = obtenerNodo(coordenadaY + numero, coordenadaX, pane);
+            ImageView actual = (ImageView) nodoActual;
+            ImageView siguiente = (ImageView) nodoSiguiente;
+            actual.setImage(new Image("file:img/Vacio.png"));
+            siguiente.setImage(null);
+
+            coordenadaY += numero;
+            dibujar(nodoSiguiente);
+
+        }
     }
 
     public void moverHorizontal(int numero){
 
-        Node nodo = obtenerNodo(coordenadaY, coordenadaX, pane);
-        ImageView p = (ImageView)nodo;
-        p.setImage(new Image("file:img/Vacio.png"));
+        if(!(((coordenadaX == anchoMapa - 1) && (numero == 1)) || ((coordenadaX == 0) && (numero == -1)))){
+            Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
+            Node nodoSiguiente = obtenerNodo(coordenadaY, coordenadaX + numero, pane);
+            ImageView actual = (ImageView)nodoActual;
+            ImageView siguiente = (ImageView)nodoSiguiente;
+            actual.setImage(new Image("file:img/Vacio.png"));
+            siguiente.setImage(null);
 
-        coordenadaX += numero;
-        dibujar();
+            coordenadaX += numero;
+            dibujar(nodoSiguiente);
+
+        }
     }
 }
