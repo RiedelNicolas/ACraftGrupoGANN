@@ -73,7 +73,6 @@ public class PlayerView {
 
             coordenadaY += numero;
             dibujar(nodoSiguiente);
-
         }
     }
 
