@@ -8,8 +8,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Ubicador {
 
-    public Ubicador(){ }
-
     public void ubicarElementos(Mapa mapa, int ancho, int alto){
         ubicarMadera(mapa, ancho, alto);
         ubicarPiedra(mapa, ancho, alto);
@@ -23,7 +21,7 @@ public class Ubicador {
 
         for(int i = 0; i < maderasAUbicar; i++){
 
-            Posicion posicion = new Posicion(new Madera(), ThreadLocalRandom.current().nextInt(0, alto), ThreadLocalRandom.current().nextInt(0,ancho));
+            Posicion posicion = new Posicion(new Madera(), ThreadLocalRandom.current().nextInt(0, ancho), ThreadLocalRandom.current().nextInt(0, alto));
             try{
                 mapa.ubicar(posicion);
             }catch(PosicionOcupadaException e){ }
@@ -37,7 +35,7 @@ public class Ubicador {
 
         for(int i = 0; i < piedrasAUbicar; i++){  //No tenemos un minimo o maximo de piedras para ubicar
 
-            Posicion posicion = new Posicion(new Piedra(), ThreadLocalRandom.current().nextInt(0, alto), ThreadLocalRandom.current().nextInt(0,ancho/2));
+            Posicion posicion = new Posicion(new Piedra(), ThreadLocalRandom.current().nextInt(0, ancho/2), ThreadLocalRandom.current().nextInt(0, alto));
             try{
                 mapa.ubicar(posicion);
             }catch(PosicionOcupadaException e){ }
@@ -51,7 +49,7 @@ public class Ubicador {
 
         for(int i = 0; i < metalesAUbicar; i++){
 
-            Posicion posicion = new Posicion(new Metal(), ThreadLocalRandom.current().nextInt(0, alto), ThreadLocalRandom.current().nextInt((int)(0.75*ancho),ancho));
+            Posicion posicion = new Posicion(new Metal(), ThreadLocalRandom.current().nextInt((int) (0.75 * ancho), ancho), ThreadLocalRandom.current().nextInt(0, alto));
             try{
                 mapa.ubicar(posicion);
             }catch(PosicionOcupadaException e){ }
@@ -65,7 +63,7 @@ public class Ubicador {
 
         for(int i = 0; i < diamantesAUbicar; i++){
 
-            Posicion posicion = new Posicion(new Diamante(), ThreadLocalRandom.current().nextInt(0, alto), ThreadLocalRandom.current().nextInt(0,ancho/4));
+            Posicion posicion = new Posicion(new Diamante(), ThreadLocalRandom.current().nextInt(0, ancho/4), ThreadLocalRandom.current().nextInt(0, alto));
             try{
                 mapa.ubicar(posicion);
             }catch(PosicionOcupadaException e){ }

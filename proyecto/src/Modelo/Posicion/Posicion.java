@@ -20,12 +20,12 @@ public class Posicion {
     private Posicion abajo;
 
     //Métodos
-    public Posicion(int _componenteVertical, int _componenteHorizontal){
+    public Posicion(int _componenteHorizontal, int _componenteVertical){
         this.componenteHorizontal = _componenteHorizontal;
         this.componenteVertical = _componenteVertical;
     }
 
-    public Posicion(Posicionable ocupante, int _componenteVertical, int _componenteHorizontal){
+    public Posicion(Posicionable ocupante, int _componenteHorizontal, int _componenteVertical){
         this.componenteHorizontal = _componenteHorizontal;
         this.componenteVertical = _componenteVertical;
         this.ocupante = ocupante;
@@ -52,19 +52,19 @@ public class Posicion {
 
     public void setPosicionesVecinas(Mapa mapa){
         try {
-            izquierda = mapa.getPosicion(componenteVertical, componenteHorizontal - 1);
+            arriba = mapa.getPosicion(componenteHorizontal, componenteVertical - 1);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            derecha = mapa.getPosicion(componenteVertical, componenteHorizontal + 1);
+            abajo = mapa.getPosicion(componenteHorizontal, componenteVertical + 1);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            arriba = mapa.getPosicion(componenteVertical - 1, componenteHorizontal);
+            izquierda = mapa.getPosicion(componenteHorizontal - 1, componenteVertical);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            abajo = mapa.getPosicion(componenteVertical + 1, componenteHorizontal);
+            derecha = mapa.getPosicion(componenteHorizontal + 1, componenteVertical);
         } catch (PosicionFueraDeRangoException e){}
     }
 
@@ -107,14 +107,12 @@ public class Posicion {
 
     private void picar(Posicion objetivo){
         if(objetivo == null){
-            throw new PosicionFueraDeRangoException();
+            throw new PosicionNoPicableException();
         }
-        try{
-            objetivo.recibirGolpe(ocupante);
-        } catch (PosicionNoPicableException e){}
+        objetivo.recibirGolpe(ocupante);
     }
 
-    public void recibirGolpe(Posicionable posicionable){
+    private void recibirGolpe(Posicionable posicionable){
         if(ocupante == null){
             throw new PosicionNoPicableException();
         }
@@ -123,4 +121,20 @@ public class Posicion {
         } catch (ObjetoIncapazDeGolpearException e){}
     }
 
+    //PARA TESTING
+    public Posicion getArriba(){
+        return arriba;
+    }
+
+    public Posicion getAbajo(){
+        return abajo;
+    }
+
+    public Posicion getIzquierda(){
+        return izquierda;
+    }
+
+    public Posicion getDerecha(){
+        return derecha;
+    }
 }

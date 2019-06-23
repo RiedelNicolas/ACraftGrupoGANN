@@ -25,37 +25,42 @@ public class Mapa {
     private Mapa(int _ancho, int _alto){
         alto = _alto;
         ancho = _ancho;
-        campo = new Posicion[alto][ancho];
+        campo = new Posicion[ancho][alto];
         ubicador = new Ubicador();
 
-        for(int i = 0; i < alto; i++){
-            for(int j = 0; j < ancho; j++){
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
                 campo[i][j] = new Posicion(i, j);
             }
         }
 
-        Posicion jugador = new Posicion(Jugador.instanciar(), alto/2, ancho/2);
+        Posicion jugador = new Posicion(Jugador.instanciar(), ancho/2, alto/2);
         ubicar(jugador);
     }
 
-    public Posicion getPosicion(int fila, int columna){
-        if(!estaEnElCampo(fila, columna)){
+    public Posicion getPosicion(int ancho, int alto){
+        if(!estaEnElCampo(ancho, alto)){
             throw new PosicionFueraDeRangoException();
         }
-        return campo[fila][columna];
+        return campo[ancho][alto];
     }
 
     public void ubicar(Posicion posicion){
-        campo[posicion.componenteVertical()][posicion.componenteHorizontal()].ocupar(posicion.getOcupante());
+        campo[posicion.componenteHorizontal()][posicion.componenteVertical()] = posicion;
+        this.actualizarCampo();
     }
 
     public void inicializar(){
-        for(int i = 0; i < alto; i++){
-            for(int j = 0; j < ancho; j++){
+        this.actualizarCampo();
+        ubicador.ubicarElementos(this, ancho, alto);
+    }
+
+    public void actualizarCampo(){
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
                 campo[i][j].setPosicionesVecinas(this);
             }
         }
-        ubicador.ubicarElementos(this, ancho, alto);
     }
 
     public Posicion[][] getCampo(){
@@ -70,7 +75,7 @@ public class Mapa {
         return ancho;
     }
 
-    private boolean estaEnElCampo(int fila, int columna){
+    private boolean estaEnElCampo(int columna, int fila){
         return 0 <= columna && columna < ancho && 0 <= fila && fila < alto;
     }
 

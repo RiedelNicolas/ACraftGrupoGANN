@@ -39,9 +39,7 @@ public class Juego {
     }
 
     public void jugadorMoverArriba(){
-        try {
-            jugador = jugador.moverArriba();
-        } catch (PosicionFueraDeRangoException e){}
+        jugador = jugador.moverArriba();
     }
 
     public void jugadorMoverAbajo(){
@@ -85,5 +83,4 @@ public class Juego {
             jugador.picarDerecha();
         } catch (PosicionNoPicableException e){}
     }
-
 }
