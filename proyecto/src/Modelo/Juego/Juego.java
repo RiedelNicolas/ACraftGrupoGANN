@@ -1,5 +1,7 @@
 package Modelo.Juego;
 
+import Modelo.Excepciones.PosicionFueraDeRangoException;
+import Modelo.Excepciones.PosicionNoGolpeableException;
 import Modelo.Posicion.Posicion;
 import Modelo.Tablero.*;
 
@@ -37,40 +39,58 @@ public class Juego {
     }
 
     public void jugadorMoverArriba(){
-        jugador = jugador.moverArriba();
+        try {
+            jugador = jugador.moverArriba();
+        }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverAbajo(){
-        jugador = jugador.moverAbajo();
+        try {
+            jugador = jugador.moverAbajo();
+        }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverIzquierda(){
-        jugador = jugador.moverIzquierda();
+        try {
+            jugador = jugador.moverIzquierda();
+        }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverDerecha(){
-        jugador = jugador.moverDerecha();
+        try {
+            jugador = jugador.moverDerecha();
+        }catch (PosicionFueraDeRangoException e){}
     }
 
-    public void jugadorGolpearArriba(){
-        jugador.golpearArriba();
+    public void jugadorGolpearArriba() {
+        try {
+            jugador.golpearArriba();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
     public void jugadorGolpearAbajo(){
-        jugador.golpearAbajo();
+        try {
+            jugador.golpearAbajo();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
     public void jugadorGolpearIzquierda(){
-        jugador.golpearIzquierda();
+        try {
+            jugador.golpearIzquierda();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
     public void jugadorGolpearDerecha(){
-        jugador.golpearDerecha();
+        try {
+            jugador.golpearDerecha();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
     //PARA TESTING
     public void restaurar(){
-        mapa = mapa.limpiar(19, 13);
-        //jugador = jugador.getOcupante().restaurar();
+        int ancho = 19;
+        int alto = 13;
+        mapa = mapa.limpiar(ancho, alto);
+        jugador = mapa.getPosicion(ancho/2, alto/2);
     }
 }

@@ -81,10 +81,4 @@ public class Jugador implements Posicionable {
     public Inventario getInventario(){
         return inventario;
     }
-
-    //PARA TESTING
-    public Jugador restaurar(){
-        instanciaUnica = null;
-        return instanciar();
-    }
 }

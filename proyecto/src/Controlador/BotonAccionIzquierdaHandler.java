@@ -1,6 +1,5 @@
 package Controlador;
 
-import Modelo.Excepciones.PosicionNoPicableException;
 import Modelo.Juego.Juego;
 import Vista.InventarioView;
 import Vista.MapaView;

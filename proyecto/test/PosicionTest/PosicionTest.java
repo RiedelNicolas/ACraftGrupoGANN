@@ -2,7 +2,7 @@ package PosicionTest;
 
 import Modelo.Excepciones.MaterialRotoException;
 import Modelo.Excepciones.PosicionFueraDeRangoException;
-import Modelo.Excepciones.PosicionNoPicableException;
+import Modelo.Excepciones.PosicionNoGolpeableException;
 import Modelo.Excepciones.PosicionOcupadaException;
 import Modelo.Jugador.Jugador;
 import Modelo.Materiales.*;
@@ -368,7 +368,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearAbajo();
     }
 
@@ -380,7 +380,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearArriba();
     }
 
@@ -392,7 +392,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearIzquierda();
     }
 
@@ -404,7 +404,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearDerecha();
     }
 
@@ -497,7 +497,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearIzquierda();
     }
 
@@ -510,7 +510,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearDerecha();
     }
 
@@ -523,7 +523,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearArriba();
     }
 
@@ -536,7 +536,7 @@ public class PosicionTest {
 
         mapa.ubicar(posicion);
 
-        thrown.expect(PosicionNoPicableException.class);
+        thrown.expect(PosicionNoGolpeableException.class);
         posicion.golpearAbajo();
     }
 

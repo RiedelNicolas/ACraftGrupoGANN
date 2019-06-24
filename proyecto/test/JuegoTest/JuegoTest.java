@@ -101,14 +101,74 @@ public class JuegoTest {
         Posicion material = new Posicion(new Madera(), ancho/2 + 1, alto/2);
 
         mapa.ubicar(material);
-        Posicion jugadorPosicionInicial = juego.getJugador();
 
-//        Assert.assertNotNull(mapa.getPosicion(ancho/2 + 1, alto/2).getOcupante());
+        Assert.assertNotNull(juego.getJugador().getDerecha().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getJugador();
 
         juego.jugadorMoverDerecha();
         Posicion jugadorPosicionFinal = juego.getJugador();
 
-        Assert.assertEquals(jugadorPosicionInicial.getOcupante(), jugadorPosicionFinal.getOcupante());
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
+
+    @Test
+    public void test10NoSeMueveALaIzquierdaSiLaPosicionEstaOcupada(){
+
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Mapa mapa = juego.getMapa();
+        mapa.limpiar(ancho, alto);
+        Posicion material = new Posicion(new Madera(), ancho/2 - 1, alto/2);
+
+        mapa.ubicar(material);
+
+        Assert.assertNotNull(juego.getJugador().getIzquierda().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getJugador();
+
+        juego.jugadorMoverIzquierda();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
+
+    @Test
+    public void test11NoSeMueveParaArribaSiLaPosicionEstaOcupada(){
+
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Mapa mapa = juego.getMapa();
+        mapa.limpiar(ancho, alto);
+        Posicion material = new Posicion(new Madera(), ancho/2, alto/2 - 1);
+
+        mapa.ubicar(material);
+
+        Assert.assertNotNull(juego.getJugador().getArriba().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getJugador();
+
+        juego.jugadorMoverArriba();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
+
+    @Test
+    public void test12NoSeMueveParaAbajoSiLaPosicionEstaOcupada(){
+
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Mapa mapa = juego.getMapa();
+        mapa.limpiar(ancho, alto);
+        Posicion material = new Posicion(new Madera(), ancho/2, alto/2 + 1);
+
+        mapa.ubicar(material);
+
+        Assert.assertNotNull(juego.getJugador().getAbajo().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getJugador();
+
+        juego.jugadorMoverAbajo();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
 
 //    @Test

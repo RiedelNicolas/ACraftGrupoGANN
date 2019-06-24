@@ -1,7 +1,6 @@
 package Modelo.Posicion;
 
 import Modelo.Excepciones.*;
-import Modelo.Jugador.Jugador;
 import Modelo.Materiales.Material;
 import Modelo.Tablero.Mapa;
 
@@ -103,14 +102,14 @@ public class Posicion {
 
     private void golpear(Posicion objetivo){
         if(objetivo == null){
-            throw new PosicionNoPicableException();
+            throw new PosicionNoGolpeableException();
         }
         objetivo.recibirGolpe(ocupante);
     }
 
     private void recibirGolpe(Posicionable posicionable){
         if(ocupante == null){
-            throw new PosicionNoPicableException();
+            throw new PosicionNoGolpeableException();
         }
         try{
             posicionable.golpear((Material) ocupante);
@@ -135,8 +134,4 @@ public class Posicion {
     public Posicion getDerecha(){
         return derecha;
     }
-
-//    public Posicion restaurar(){
-//        //(Jugador) ocupante.restaurar();
-//    }
 }
