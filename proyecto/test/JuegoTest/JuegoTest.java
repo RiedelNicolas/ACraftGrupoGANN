@@ -170,17 +170,4 @@ public class JuegoTest {
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
-
-//    @Test
-//    public void test10NoSeMueveALaIzquierdaSiLaPosicionEstaOcupada(){
-//
-//        Juego juego = Juego.instanciar();
-//        Posicion material = new Posicion(new Madera(), ancho/2 - 1, alto/2);
-//        Posicion jugadorPosicionInicial = juego.getJugador();
-//
-//        juego.jugadorMoverDerecha();
-//        Posicion jugadorPosicionFinal = juego.getJugador();
-//
-//        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
-//    }
 }
