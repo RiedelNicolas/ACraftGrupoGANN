@@ -49,19 +49,8 @@ public class MapaView{
         root.getChildren().addAll(grid);
     }
 
-    public void actualizarGrid(){
-
-        GridPane gridNuevo = new GridPane();
-        grid.setPrefSize(anchoGrid, altoGrid);
-        grid.setLayoutX(anchoGrid / 0.78 *0.015);
-        Image image = new Image("file:img/pasto.jpg");
-        gridNuevo.setBackground(new Background(new BackgroundImage(image, BackgroundRepeat.REPEAT,
-                BackgroundRepeat.REPEAT,
-                BackgroundPosition.DEFAULT,
-                BackgroundSize.DEFAULT)));
-        mapaController.agregarMateriales(gridNuevo, altoGrid, anchoGrid);
-        root.getChildren().remove(grid);
-        root.getChildren().add(gridNuevo);
+    public void actualizarMapa(){
+        mapaController.actualizarMapa(grid, altoGrid, anchoGrid);
     }
 
     public PlayerView getJugadorView() {
