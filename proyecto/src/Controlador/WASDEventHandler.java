@@ -19,22 +19,22 @@ public class WASDEventHandler implements EventHandler<KeyEvent> {
         if(keyEvent.getCode() == KeyCode.W) {
             Juego.instanciar().jugadorMoverArriba();
             //mapaView.getJugadorView().moverVertical(-1);
-            mapaView.actualizarGrid();
+            mapaView.actualizarMapa();
         }
         if( keyEvent.getCode() == KeyCode.S) {
             Juego.instanciar().jugadorMoverAbajo();
             //mapaView.getJugadorView().moverVertical(1);
-            mapaView.actualizarGrid();
+            mapaView.actualizarMapa();
         }
         if (keyEvent.getCode() == KeyCode.D) {
             Juego.instanciar().jugadorMoverDerecha();
             //mapaView.getJugadorView().moverHorizontal(1);
-            mapaView.actualizarGrid();
+            mapaView.actualizarMapa();
         }
         if (keyEvent.getCode() == KeyCode.A) {
             Juego.instanciar().jugadorMoverIzquierda();
             //mapaView.getJugadorView().moverHorizontal(-1);
-            mapaView.actualizarGrid();
+            mapaView.actualizarMapa();
         }
         keyEvent.consume();
     }

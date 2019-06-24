@@ -45,7 +45,7 @@ public class MapaController {
             for (int j = 0; j < anchoMapa; j++) {
                 for (Node nodo : hijos) {
                     if((GridPane.getRowIndex(nodo) == i) && (GridPane.getColumnIndex(nodo) == j)) {
-                        asignarImagen(campoDeJuego[i][j], (ImageView)nodo);
+                        asignarImagen(campoDeJuego[j][i], (ImageView)nodo);
                     }
                 }
             }

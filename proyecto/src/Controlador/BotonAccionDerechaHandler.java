@@ -16,9 +16,7 @@ public class BotonAccionDerechaHandler implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent){
-        try {
-            Juego.instanciar().jugadorGolpearDerecha();
-            mapaView.getJugadorView().picarHorizontal(1);
-        }catch (PosicionNoPicableException e){}
+        Juego.instanciar().jugadorGolpearDerecha();
+        mapaView.actualizarMapa();
     }
 }

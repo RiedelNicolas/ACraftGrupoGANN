@@ -16,9 +16,7 @@ public class BotonAccionAbajoHandler implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent){
-        try {
-            Juego.instanciar().jugadorGolpearAbajo();
-            mapaView.getJugadorView().picarVertical(1);
-        }catch (PosicionNoPicableException e){}
+        Juego.instanciar().jugadorGolpearAbajo();
+        mapaView.actualizarMapa();
     }
 }
