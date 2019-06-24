@@ -1,5 +1,7 @@
 package Vista;
 
+import Modelo.Juego.Juego;
+import Modelo.Posicion.Posicion;
 import Modelo.Tablero.Mapa;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
@@ -15,6 +17,7 @@ public class PlayerView {
     private int coordenadaX;
     private int coordenadaY;
     private ImageView imagenDeJugador;
+    private Posicion jugador;
     private Group root;
     private GridPane pane;
     private double ancho;
@@ -24,14 +27,16 @@ public class PlayerView {
 
     public PlayerView(Group root, double unAncho, double unAlto, GridPane gridPane){
 
+
+        this.jugador = Juego.instanciar().getJugador();
         this.anchoMapa = Mapa.instanciar(0,0).getAncho();
         this.altoMapa = Mapa.instanciar(0,0).getAlto();
         this.root = root;
         this.pane = gridPane;
         this.ancho = (unAncho * 0.78) / (anchoMapa);
         this.alto = (unAlto * 0.95) / (altoMapa);
-        this.coordenadaX = (int)(anchoMapa / 2);
-        this.coordenadaY = (int)(altoMapa / 2);
+        this.coordenadaX = jugador.componenteHorizontal();
+        this.coordenadaY = jugador.componenteVertical();
 
         Image jugador = new Image("file:img/jugador.jpg");
         imagenDeJugador = new ImageView(jugador);

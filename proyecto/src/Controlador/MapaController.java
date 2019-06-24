@@ -54,11 +54,11 @@ public class MapaController {
                         grid.add(diamante, j, i, 1, 1);
                     }
                     if(actual.getOcupante().getClass().getName().equals("Modelo.Jugador.Jugador")){
-                        ImageView diamante = new ImageView();
-                        diamante.setFitHeight(altoGrid/altoMapa);
-                        diamante.setFitWidth(anchoGrid/anchoMapa);
-                        diamante.setImage(new Image("file:img/jugador.jpg"));
-                        grid.add(diamante, j, i, 1, 1);
+                        ImageView jugador = new ImageView();
+                        jugador.setFitHeight(altoGrid/altoMapa);
+                        jugador.setFitWidth(anchoGrid/anchoMapa);
+                        jugador.setImage(new Image("file:img/jugador.jpg"));
+                        grid.add(jugador, j, i, 1, 1);
                     }
                 }
                 else{
