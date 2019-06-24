@@ -1,9 +1,6 @@
 package Modelo.Posicion;
 
-import Modelo.Excepciones.ObjetoIncapazDeGolpearException;
-import Modelo.Excepciones.PosicionFueraDeRangoException;
-import Modelo.Excepciones.PosicionOcupadaException;
-import Modelo.Excepciones.PosicionNoPicableException;
+import Modelo.Excepciones.*;
 import Modelo.Materiales.Material;
 import Modelo.Tablero.Mapa;
 
@@ -118,7 +115,9 @@ public class Posicion {
         }
         try{
             posicionable.golpear((Material) ocupante);
-        } catch (ObjetoIncapazDeGolpearException e){}
+        } catch (MaterialRotoException e){
+            ocupante = null;
+        }
     }
 
     //PARA TESTING

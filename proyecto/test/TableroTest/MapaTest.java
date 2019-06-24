@@ -1,5 +1,6 @@
 package TableroTest;
 
+import Modelo.Excepciones.PosicionOcupadaException;
 import Modelo.Jugador.Jugador;
 import Modelo.Materiales.*;
 import Modelo.Posicion.Posicion;
@@ -48,6 +49,16 @@ public class MapaTest {
         Posicion jugador = mapa.getPosicion(ancho/2, alto/2);
 
         Assert.assertTrue(jugador.getOcupante() instanceof  Jugador);
+    }
+
+    @Test
+    public void test05UnaPosicionNoPuedeUbicarseEnUnaPosicionOcupada(){
+        Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar();
+        Posicion posicion = new Posicion(ancho/2, alto/2);
+
+        thrown.expect(PosicionOcupadaException.class);
+        mapa.ubicar(posicion);
     }
 
     @Test

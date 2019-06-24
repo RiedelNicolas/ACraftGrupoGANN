@@ -46,6 +46,7 @@ public class Jugador implements Posicionable {
 
                 try{
                     materiaPrima.equipar(inventario);
+                    throw new MaterialRotoException();
 
                 } catch (MateriaPrimaNoEquipableException e3) {}
 

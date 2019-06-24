@@ -2,6 +2,7 @@
 package Modelo.Tablero;
 
 import Modelo.Excepciones.PosicionFueraDeRangoException;
+import Modelo.Excepciones.PosicionOcupadaException;
 import Modelo.Jugador.Jugador;
 import Modelo.Posicion.Posicion;
 
@@ -46,6 +47,9 @@ public class Mapa {
     }
 
     public void ubicar(Posicion posicion){
+        if(campo[posicion.componenteHorizontal()][posicion.componenteVertical()].getOcupante() != null){
+            throw new PosicionOcupadaException();
+        }
         campo[posicion.componenteHorizontal()][posicion.componenteVertical()] = posicion;
         this.actualizarCampo();
     }
@@ -67,14 +71,6 @@ public class Mapa {
         return campo;
     }
 
-    public int getAlto(){
-        return alto;
-    }
-
-    public int getAncho(){
-        return ancho;
-    }
-
     private boolean estaEnElCampo(int columna, int fila){
         return 0 <= columna && columna < ancho && 0 <= fila && fila < alto;
     }
@@ -83,6 +79,14 @@ public class Mapa {
     public Mapa limpiar(){
         instanciaUnica = null;
         return instanciar(ancho, alto);
+    }
+
+    public int getAlto(){
+        return alto;
+    }
+
+    public int getAncho(){
+        return ancho;
     }
 }
 
