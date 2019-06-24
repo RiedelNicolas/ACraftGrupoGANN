@@ -4,6 +4,7 @@ import Controlador.BotonInventario;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -27,22 +28,23 @@ public class InventarioView {
 
         this.grid = new GridPane();
         this.root = root;
-        ImageView label = new ImageView();
-        label.setImage(new Image("file:img/HachaDeMadera.png"));
+        ImageView labelImagen = new ImageView();
+        Label labelEnMano = new Label("HachaDeMadera");
+        labelImagen.setImage(new Image("file:img/HachaDeMadera.png"));
 
         for(int i=0; i<altoGrid; i++){
             for(int j=0; j<anchoGrid; j++) {
-                grid.add(new BotonInventario(ancho, label), j, i, 1, 1);
+                grid.add(new BotonInventario(ancho, labelImagen, labelEnMano), j, i, 1, 1);
             }
         }
         grid.setLayoutX(ancho*0.825);
-        grid.setLayoutY(alto*0.16);
-        label.setFitWidth(ancho*0.025);
-        label.setFitHeight(ancho*0.025);
-        label.setX(ancho*0.885);
-        label.setY(alto*0.69);
+        grid.setLayoutY(alto*0.10);
+        labelImagen.setFitWidth(ancho*0.025);
+        labelImagen.setFitHeight(ancho*0.025);
+        labelImagen.setX(ancho*0.885);
+        labelImagen.setY(alto*0.63);
 
-        root.getChildren().addAll(grid, label);
+        root.getChildren().addAll(grid, labelImagen);
     }
 
     public void actualizarInventario(){

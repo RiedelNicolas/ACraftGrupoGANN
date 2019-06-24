@@ -16,7 +16,7 @@ public class BotoneraDeAccionesView {
         mapaView = MapaView.crearUnico(root, ancho, alto);
 
         pane.setLayoutX(ancho*0.825);
-        pane.setLayoutY(alto*0.575);
+        pane.setLayoutY(alto*0.515);
         pane.setPrefSize(ancho*0.148,ancho*0.148);
         inicializarBotones(ancho);
 

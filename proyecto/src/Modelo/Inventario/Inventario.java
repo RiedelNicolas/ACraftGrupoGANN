@@ -21,22 +21,20 @@ public class Inventario {
     }
 
     public void mover(int numero){
-
-        if(items.size()>numero)
-            posicionActual = numero;
-        else
-            throw new NoHayElementoEnPosicionDelInventarioException();
+        posicionActual = numero;
     }
 
     public Utilizable getUtilizableActual(){
-        if(items.isEmpty()) {
-            throw new InventarioVacioException();
+        if(posicionActual >= items.size()) {
+            throw new NoHayElementoEnPosicionDelInventarioException();
         }
         return items.get(posicionActual);
     }
 
-    public Utilizable quitar(){
-        return items.remove(posicionActual);
+    public void quitar(){
+        if(posicionActual < items.size()) {
+            items.remove(posicionActual);
+        }
     }
 
     public void equipar(Utilizable item){

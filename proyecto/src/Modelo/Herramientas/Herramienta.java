@@ -35,4 +35,16 @@ public abstract class Herramienta implements Utilizable {
         throw new NoSePuedeAnadirUtilizableAMesa();
     }
 
+    //PARA EL CONTROLADOR
+    @Override
+    public int getUsosRestantes(){
+        int restantes = 0;
+        int durabilidadParcial = durabilidad;
+
+       // while()
+
+
+        return 5;
+    }
+
 }

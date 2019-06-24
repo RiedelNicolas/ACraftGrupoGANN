@@ -7,6 +7,7 @@ import Vista.ImagenInventario;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -17,14 +18,15 @@ public class BotonInventario extends Button {
     private static int contador = 0;
     private int id = 0;
     private double ancho;
-    private ImageView label;
+    private ImageView labelImagen;
+    private Label labelUtilizable;
     private ArrayList<ImagenInventario> imagenes;
 
-    public BotonInventario(double ancho, ImageView label){
+    public BotonInventario(double ancho, ImageView label, Label nombreUtilizable){
 
         this.ancho = ancho;
         this.setMinSize(ancho*0.037, ancho*0.037);
-        this.label = label;
+        this.labelImagen = label;
         this.id = contador++;
         this.inicializarImagenesInventario();
 
@@ -33,9 +35,9 @@ public class BotonInventario extends Button {
             public void handle(ActionEvent event) {
                 try{
                     Jugador.instanciar().getInventario().mover(id);
-                    actualizarLabel(label);
+                    actualizarLabel(labelImagen);
                 }catch(NoHayElementoEnPosicionDelInventarioException e){
-                    label.setImage(new Image("file:img/Vacio.png"));
+                    labelImagen.setImage(new Image("file:img/Vacio.png"));
                 }
             }
         });
@@ -58,14 +60,19 @@ public class BotonInventario extends Button {
         else{
             this.setGraphic(imagenes.get(0));
         }
+        actualizarLabel(labelImagen);
     }
 
     private void actualizarLabel(ImageView label){
 
-        Utilizable itemActual = Jugador.instanciar().getInventario().getUtilizableActual();
-        for (ImagenInventario imagen : imagenes) {
-            if (itemActual.getClass().getSimpleName().equals(imagen.getNombreItem()))
-                label.setImage(imagen.getImage());
+        try {
+            Utilizable itemActual = Jugador.instanciar().getInventario().getUtilizableActual();
+            for (ImagenInventario imagen : imagenes) {
+                if (itemActual.getClass().getSimpleName().equals(imagen.getNombreItem()))
+                    label.setImage(imagen.getImage());
+            }
+        } catch (NoHayElementoEnPosicionDelInventarioException e){
+            label.setImage(new Image("file:img/Vacio.png"));
         }
 
     }
