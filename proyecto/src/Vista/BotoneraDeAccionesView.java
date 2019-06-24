@@ -1,14 +1,9 @@
 package Vista;
 
 import Controlador.*;
-import Modelo.Juego.Juego;
-import Modelo.Tablero.Mapa;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 
 public class BotoneraDeAccionesView {
 
@@ -30,10 +25,10 @@ public class BotoneraDeAccionesView {
 
     private void inicializarBotones(double ancho){
 
-        BotonDeAccion flechaArriba = new BotonDeAccion("file:img/flechaArriba.png", ancho);
-        BotonDeAccion flechaAbajo = new BotonDeAccion("file:img/flechaAbajo.png", ancho);
-        BotonDeAccion flechaIzquierda = new BotonDeAccion("file:img/flechaIzquierda.png", ancho);
-        BotonDeAccion flechaDerecha = new BotonDeAccion("file:img/flechaDerecha.png", ancho);
+        BotonDeAccionView flechaArriba = new BotonDeAccionView("file:img/flechaArriba.png", ancho);
+        BotonDeAccionView flechaAbajo = new BotonDeAccionView("file:img/flechaAbajo.png", ancho);
+        BotonDeAccionView flechaIzquierda = new BotonDeAccionView("file:img/flechaIzquierda.png", ancho);
+        BotonDeAccionView flechaDerecha = new BotonDeAccionView("file:img/flechaDerecha.png", ancho);
 
         flechaArriba.setOnAction(new BotonAccionArribaHandler(mapaView));
         flechaAbajo.setOnAction(new BotonAccionAbajoHandler(mapaView));

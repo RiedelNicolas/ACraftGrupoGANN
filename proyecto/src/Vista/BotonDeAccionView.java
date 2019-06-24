@@ -1,12 +1,12 @@
-package Controlador;
+package Vista;
 
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class BotonDeAccion extends Button {
+public class BotonDeAccionView extends Button {
 
-    public BotonDeAccion(String pathImagen, double ancho){
+    public BotonDeAccionView(String pathImagen, double ancho){
 
         this.setMinSize(ancho*0.05, ancho*0.05);
         ImageView imagen = new ImageView(new Image(pathImagen));

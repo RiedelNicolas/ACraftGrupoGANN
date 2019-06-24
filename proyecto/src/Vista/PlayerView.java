@@ -72,13 +72,13 @@ public class PlayerView {
         ImageView actual = (ImageView) nodoActual;
         ImageView siguiente = (ImageView) nodoSiguiente;
 
-        if (!(((coordenadaY == altoMapa - 1) && (numero == 1)) || ((coordenadaY == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")) {
+        //if (!(((coordenadaY == altoMapa - 1) && (numero == 1)) || ((coordenadaY == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")) {
             actual.setImage(new Image("file:img/Vacio.png"));
             siguiente.setImage(null);
 
             coordenadaY += numero;
             dibujar(nodoSiguiente);
-        }
+       // }
     }
 
     public void moverHorizontal(int numero){
@@ -88,14 +88,14 @@ public class PlayerView {
         ImageView actual = (ImageView)nodoActual;
         ImageView siguiente = (ImageView)nodoSiguiente;
 
-        if(!(((coordenadaX == anchoMapa - 1) && (numero == 1)) || ((coordenadaX == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")){
+       // if(!(((coordenadaX == anchoMapa - 1) && (numero == 1)) || ((coordenadaX == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")){
             actual.setImage(new Image("file:img/Vacio.png"));
             siguiente.setImage(null);
 
             coordenadaX += numero;
             dibujar(nodoSiguiente);
 
-        }
+        //}
     }
 
     public void picarVertical(int numero){
