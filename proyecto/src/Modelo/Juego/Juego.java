@@ -1,7 +1,5 @@
 package Modelo.Juego;
 
-import Modelo.Excepciones.PosicionFueraDeRangoException;
-import Modelo.Excepciones.PosicionNoPicableException;
 import Modelo.Posicion.Posicion;
 import Modelo.Tablero.*;
 
@@ -16,7 +14,7 @@ public class Juego {
         int ancho = 19;
         int alto = 13;
         mapa = Mapa.instanciar(ancho, alto);
-        jugador = mapa.getPosicion(alto/2, ancho/2);
+        jugador = mapa.getPosicion(ancho/2, alto/2);
     }
 
     public static Juego instanciar(){
@@ -54,19 +52,25 @@ public class Juego {
         jugador = jugador.moverDerecha();
     }
 
-    public void jugadorPicarArriba(){
-        jugador.picarArriba();
+    public void jugadorGolpearArriba(){
+        jugador.golpearArriba();
     }
 
-    public void jugadorPicarAbajo(){
-        jugador.picarAbajo();
+    public void jugadorGolpearAbajo(){
+        jugador.golpearAbajo();
     }
 
-    public void jugadorPicarIzquierda(){
-        jugador.picarIzquierda();
+    public void jugadorGolpearIzquierda(){
+        jugador.golpearIzquierda();
     }
 
-    public void jugadorPicarDerecha(){
-        jugador.picarDerecha();
+    public void jugadorGolpearDerecha(){
+        jugador.golpearDerecha();
+    }
+
+    //PARA TESTING
+    public void restaurar(){
+        mapa = mapa.limpiar(19, 13);
+        //jugador = jugador.getOcupante().restaurar();
     }
 }

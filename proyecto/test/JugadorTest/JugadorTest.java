@@ -29,8 +29,15 @@ public class JugadorTest {
     }
 
 //    @Test
-    //public void test04JugadorUtilizaSuHerramientaEnMano
+//    public void test04JugadorUtilizaSuHerramientaEnMano
 
+    @Test
+    public void testDeRestauracion(){
+        Jugador jugador1 = Jugador.instanciar();
+        Jugador jugador2 = jugador1.restaurar();
+
+        Assert.assertNotEquals(jugador1, jugador2);
+    }
 
 
 }

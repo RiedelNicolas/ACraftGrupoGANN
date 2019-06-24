@@ -1,6 +1,7 @@
 package Modelo.Posicion;
 
 import Modelo.Excepciones.*;
+import Modelo.Jugador.Jugador;
 import Modelo.Materiales.Material;
 import Modelo.Tablero.Mapa;
 
@@ -77,17 +78,15 @@ public class Posicion {
         return mover(izquierda);
     }
 
-    public Posicion moverDerecha(){
-        return mover(derecha);
-    }
+    public Posicion moverDerecha() { return mover(derecha); }
 
-    public void picarArriba() { picar(arriba); }
+    public void golpearArriba() { golpear(arriba); }
 
-    public void picarAbajo() { picar(abajo); }
+    public void golpearAbajo() { golpear(abajo); }
 
-    public void picarIzquierda() { picar(izquierda); }
+    public void golpearIzquierda() { golpear(izquierda); }
 
-    public void picarDerecha() { picar(derecha); }
+    public void golpearDerecha() { golpear(derecha); }
 
     private Posicion mover(Posicion posicion){
         if(posicion == null){
@@ -102,7 +101,7 @@ public class Posicion {
         }
     }
 
-    private void picar(Posicion objetivo){
+    private void golpear(Posicion objetivo){
         if(objetivo == null){
             throw new PosicionNoPicableException();
         }
@@ -136,4 +135,8 @@ public class Posicion {
     public Posicion getDerecha(){
         return derecha;
     }
+
+//    public Posicion restaurar(){
+//        //(Jugador) ocupante.restaurar();
+//    }
 }

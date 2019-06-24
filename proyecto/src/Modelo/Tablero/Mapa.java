@@ -76,9 +76,9 @@ public class Mapa {
     }
 
     //PARA TESTING
-    public Mapa limpiar(){
+    public Mapa limpiar(int _ancho, int _alto){
         instanciaUnica = null;
-        return instanciar(ancho, alto);
+        return instanciar(_ancho, _alto);
     }
 
     public int getAlto(){
