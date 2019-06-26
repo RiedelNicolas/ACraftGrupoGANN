@@ -56,7 +56,7 @@ public class Mapa {
 
     public void inicializar(){
         this.actualizarCampo();
-        ubicador.ubicarElementos(this, ancho, alto);
+        ubicador.ubicarMateriales(this, ancho, alto);
     }
 
     public void actualizarCampo(){
