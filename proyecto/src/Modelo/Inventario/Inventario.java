@@ -20,7 +20,7 @@ public class Inventario {
         posicionActual = 0;
     }
 
-    public void mover(int numero){
+    public void mover(int numero) {
         posicionActual = numero;
     }
 
@@ -43,6 +43,10 @@ public class Inventario {
             throw new InventarioLlenoException();
         }
         items.add(item);
+    }
+
+    public int getPosicionActual() {
+        return posicionActual;
     }
 
     //PARA CONTROLADOR
