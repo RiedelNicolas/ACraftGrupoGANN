@@ -17,20 +17,18 @@ public abstract class Receta {
     protected static final int METAL = 3;
 
 
-    public void comparar(ArrayList<MateriaPrima> materialesEnMesa){
+    public void comparar(ArrayList<MateriaPrima> materialesEnMesa) {
 
         int i = 0;
 
-        while((i < receta.size()) && (materialesEnMesa.get(i).getId() == receta.get(i))){
+        while ((i < receta.size()) && (materialesEnMesa.get(i).getId() == receta.get(i))) {
             i++;
         }
 
-        if (i != receta.size()){
+        if (i != receta.size()) {
             throw new RecetaIncompatibleException();
         }
     }
 
-    public Herramienta getHerramienta() {
-        return herramientaAsociada;
-    }
+    public abstract Herramienta getHerramienta();
 }

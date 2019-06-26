@@ -1,5 +1,6 @@
 package Modelo.Recetas;
 
+import Modelo.Herramientas.Herramienta;
 import Modelo.Herramientas.PicoDePiedra;
 
 import java.util.ArrayList;
@@ -12,5 +13,11 @@ public class RecetaPicoDePiedra extends Receta {
         receta = new ArrayList<>(Arrays.asList(PIEDRA, PIEDRA, PIEDRA,
                                                       VACIO, MADERA, VACIO,
                                                       VACIO, MADERA, VACIO));
+    }
+
+
+    @Override
+    public Herramienta getHerramienta(){
+        return new PicoDePiedra();
     }
 }
