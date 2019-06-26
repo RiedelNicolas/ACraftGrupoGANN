@@ -6,10 +6,15 @@ import Modelo.Jugador.Jugador;
 import Vista.ImagenInventario;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 
 import java.util.ArrayList;
 
@@ -98,4 +103,22 @@ public class BotonInventario extends Button {
         imagenes.add(new ImagenInventario("MateriaPrimaMetal", "file:img/MateriaPrimaMetal.png", ancho));
         imagenes.add(new ImagenInventario("MateriaPrimaDiamante", "file:img/MateriaPrimaDiamante.png", ancho));
     }
+
+    public void inicializarArrastre(){
+
+        this.setOnDragDetected(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+
+                Dragboard db = ((Node)event.getSource()).startDragAndDrop(TransferMode.COPY);
+
+                /* Put a string on a dragboard */
+                ClipboardContent content = new ClipboardContent();
+             //   content.putString(this.getText());
+                db.setContent(content);
+
+                event.consume();
+            }
+        });
+    }
+
 }

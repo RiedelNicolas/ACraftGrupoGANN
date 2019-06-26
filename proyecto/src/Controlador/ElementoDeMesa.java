@@ -13,8 +13,8 @@ public class ElementoDeMesa extends ImageView {
     public ElementoDeMesa(double ancho){
 
         this.item = "Vacio";
-        this.setFitHeight(ancho*0.3);
-        this.setFitWidth(ancho*0.3);
+        this.setFitHeight(ancho*0.32);
+        this.setFitWidth(ancho*0.32);
         this.setImage(new Image("file:img/elementoVacio.jpg"));
         this.id = contador++;
     }

@@ -43,7 +43,7 @@ public class BotonCraftearEventHandler implements EventHandler<ActionEvent> {
     private void insertarInventario(Group root, double ancho, double alto){
 
         InventarioView inventario = InventarioView.instaciar(root, 0, 0);
-        inventario.setLayoutX(ancho*0.5);
+        inventario.setLayoutX(ancho*0.53);
         inventario.setLayoutY(alto*0.1);
         root.getChildren().add(inventario);
     }
@@ -51,8 +51,8 @@ public class BotonCraftearEventHandler implements EventHandler<ActionEvent> {
     private void insertarContenedorDeElementos(Group root, double ancho, double alto){
 
         ContenedorDeElementos contenedor = new ContenedorDeElementos(ancho*0.4);
-        contenedor.setLayoutX(alto*0.3);
-        contenedor.setLayoutY(ancho*0.5);
+        contenedor.setLayoutX(ancho*0.07);
+        contenedor.setLayoutY(alto*0.1);
         root.getChildren().add(contenedor);
     }
 }

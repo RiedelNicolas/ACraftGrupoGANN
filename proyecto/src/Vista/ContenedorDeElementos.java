@@ -19,8 +19,8 @@ public class ContenedorDeElementos extends GridPane {
                 this.add(new ElementoDeMesa(ancho), j, i, 1, 1);
             }
         }
-
-        this.setPadding(new Insets(5,5,5,5));
+        this.setHgap(3);
+        this.setVgap(3);
         this.setMinSize(ancho*0.4, ancho*0.4);
     }
 }
