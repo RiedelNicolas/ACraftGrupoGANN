@@ -8,7 +8,7 @@ import Modelo.Tablero.*;
 public class Juego {
 
     private Mapa mapa;
-    private Posicion jugador;
+    private Posicion posicionJugador;
 
     private static Juego instancia_unica = null;
 
@@ -16,7 +16,7 @@ public class Juego {
         int ancho = 19;
         int alto = 13;
         mapa = Mapa.instanciar(ancho, alto);
-        jugador = mapa.getPosicion(ancho/2, alto/2);
+        posicionJugador = mapa.getPosicion(ancho/2, alto/2);
     }
 
     public static Juego instanciar(){
@@ -34,55 +34,55 @@ public class Juego {
         return mapa;
     }
 
-    public Posicion getJugador(){
-        return jugador;
+    public Posicion getPosicionJugador(){
+        return posicionJugador;
     }
 
     public void jugadorMoverArriba(){
         try {
-            jugador = jugador.moverArriba();
+            posicionJugador = posicionJugador.moverArriba();
         }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverAbajo(){
         try {
-            jugador = jugador.moverAbajo();
+            posicionJugador = posicionJugador.moverAbajo();
         }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverIzquierda(){
         try {
-            jugador = jugador.moverIzquierda();
+            posicionJugador = posicionJugador.moverIzquierda();
         }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverDerecha(){
         try {
-            jugador = jugador.moverDerecha();
+            posicionJugador = posicionJugador.moverDerecha();
         }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorGolpearArriba() {
         try {
-            jugador.golpearArriba();
+            posicionJugador.golpearArriba();
         } catch (PosicionNoGolpeableException e) {}
     }
 
     public void jugadorGolpearAbajo(){
         try {
-            jugador.golpearAbajo();
+            posicionJugador.golpearAbajo();
         } catch (PosicionNoGolpeableException e) {}
     }
 
     public void jugadorGolpearIzquierda(){
         try {
-            jugador.golpearIzquierda();
+            posicionJugador.golpearIzquierda();
         } catch (PosicionNoGolpeableException e) {}
     }
 
     public void jugadorGolpearDerecha(){
         try {
-            jugador.golpearDerecha();
+            posicionJugador.golpearDerecha();
         } catch (PosicionNoGolpeableException e) {}
     }
 
@@ -91,6 +91,6 @@ public class Juego {
         int ancho = 19;
         int alto = 13;
         mapa = mapa.limpiar(ancho, alto);
-        jugador = mapa.getPosicion(ancho/2, alto/2);
+        posicionJugador = mapa.getPosicion(ancho/2, alto/2);
     }
 }

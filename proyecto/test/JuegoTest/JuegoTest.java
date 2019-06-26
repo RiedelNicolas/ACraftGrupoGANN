@@ -38,7 +38,7 @@ public class JuegoTest {
     @Test
     public void test04JuegoTieneLaPosicionDelJugador(){
         Juego juego = Juego.instanciar();
-        Posicion jugador = juego.getJugador();
+        Posicion jugador = juego.getPosicionJugador();
 
         Assert.assertTrue(jugador.getOcupante() instanceof Jugador);
     }
@@ -47,10 +47,10 @@ public class JuegoTest {
     public void test05SeMueveAlJugadorHaciaArriba(){
 
         Juego juego = Juego.instanciar();
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverArriba();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -59,10 +59,10 @@ public class JuegoTest {
     public void test06SeMueveAlJugadorHaciaAbajo(){
 
         Juego juego = Juego.instanciar();
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverAbajo();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -71,10 +71,10 @@ public class JuegoTest {
     public void test07SeMueveAlJugadorHaciaIzquierda(){
 
         Juego juego = Juego.instanciar();
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverIzquierda();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -83,10 +83,10 @@ public class JuegoTest {
     public void test08SeMueveAlJugadorHaciaDerecha(){
 
         Juego juego = Juego.instanciar();
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverArriba();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertNotEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -102,11 +102,11 @@ public class JuegoTest {
 
         mapa.ubicar(material);
 
-        Assert.assertNotNull(juego.getJugador().getDerecha().getOcupante());
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Assert.assertNotNull(juego.getPosicionJugador().getDerecha().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverDerecha();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -122,11 +122,11 @@ public class JuegoTest {
 
         mapa.ubicar(material);
 
-        Assert.assertNotNull(juego.getJugador().getIzquierda().getOcupante());
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Assert.assertNotNull(juego.getPosicionJugador().getIzquierda().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverIzquierda();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -142,11 +142,11 @@ public class JuegoTest {
 
         mapa.ubicar(material);
 
-        Assert.assertNotNull(juego.getJugador().getArriba().getOcupante());
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Assert.assertNotNull(juego.getPosicionJugador().getArriba().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverArriba();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
@@ -162,11 +162,11 @@ public class JuegoTest {
 
         mapa.ubicar(material);
 
-        Assert.assertNotNull(juego.getJugador().getAbajo().getOcupante());
-        Posicion jugadorPosicionInicial = juego.getJugador();
+        Assert.assertNotNull(juego.getPosicionJugador().getAbajo().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getPosicionJugador();
 
         juego.jugadorMoverAbajo();
-        Posicion jugadorPosicionFinal = juego.getJugador();
+        Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
