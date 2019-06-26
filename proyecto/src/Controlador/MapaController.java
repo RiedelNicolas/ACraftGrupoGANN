@@ -41,8 +41,8 @@ public class MapaController {
     public void actualizarMapa(GridPane grid){
 
         ObservableList<Node> hijos = grid.getChildren();
-        int horizontalJugador = Juego.instanciar().getJugador().componenteHorizontal();
-        int verticalJugador = Juego.instanciar().getJugador().componenteVertical();
+        int horizontalJugador = Juego.instanciar().getPosicionJugador().componenteHorizontal();
+        int verticalJugador = Juego.instanciar().getPosicionJugador().componenteVertical();
 
         for(int i=verticalJugador-2; i<verticalJugador+2; i++) {
             for (int j=horizontalJugador-2; j <horizontalJugador+2; j++) {
