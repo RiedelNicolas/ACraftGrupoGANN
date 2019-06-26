@@ -16,4 +16,15 @@ public class DesgastePorPorcentajeDeDurabilidad extends DesgastePorPorcentaje {
         durabilidad -= (durabilidad / porcentaje);
         return durabilidad;
     }
+
+    public int calcularUsosRestantes(int _durabilidad){
+        int durabilidadInicial = _durabilidad;
+        int i = 0;
+
+        while(durabilidadInicial > 0){
+            durabilidadInicial -= (durabilidadInicial * 0.1);
+            i++;
+        }
+        return i;
+    }
 }

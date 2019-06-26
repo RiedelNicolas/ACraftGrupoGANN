@@ -11,6 +11,7 @@ public class HachaDeMetal extends Hacha {
         durabilidad = 400;
         fuerza = 10;
         desgaste = new DesgastePorPorcentajeDeFuerza(2, fuerza);
+        usosRestantes = desgaste.calcularUsosRestantes(durabilidad);
 
     }
 

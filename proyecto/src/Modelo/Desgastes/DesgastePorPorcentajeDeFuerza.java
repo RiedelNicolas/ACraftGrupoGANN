@@ -20,4 +20,8 @@ public class DesgastePorPorcentajeDeFuerza extends DesgastePorPorcentaje{
 
         return durabilidad;
     }
+
+    public int calcularUsosRestantes(int _durabilidad){
+        return (int)(_durabilidad / (fuerza / porcentaje));
+    }
 }

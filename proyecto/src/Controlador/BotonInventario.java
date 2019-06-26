@@ -25,11 +25,12 @@ public class BotonInventario extends Button {
     private double ancho;
     private ImageView labelImagen;
     private Label labelNombre;
-    private Label labelUtilizable;
+    private Label labelUsos;
     private ArrayList<ImagenInventario> imagenes;
 
-    public BotonInventario(double ancho, ImageView label, Label nombre){
+    public BotonInventario(double ancho, ImageView label, Label nombre, Label labelUsos){
 
+        this.labelUsos = labelUsos;
         this.labelNombre = nombre;
         this.ancho = ancho;
         this.setMinSize(ancho*0.037, ancho*0.037);
@@ -42,7 +43,7 @@ public class BotonInventario extends Button {
             public void handle(ActionEvent event) {
                 try{
                     Jugador.instanciar().getInventario().mover(id);
-                    actualizarLabel(labelImagen, labelNombre);
+                    actualizarLabel(labelImagen, labelNombre, labelUsos);
                 }catch(NoHayElementoEnPosicionDelInventarioException e){
                     labelImagen.setImage(new Image("file:img/Vacio.png"));
                 }
@@ -67,10 +68,10 @@ public class BotonInventario extends Button {
         else{
             this.setGraphic(imagenes.get(0));
         }
-        actualizarLabel(labelImagen, labelNombre);
+        actualizarLabel(labelImagen, labelNombre, labelUsos);
     }
 
-    private void actualizarLabel(ImageView label, Label labelNombre){
+    private void actualizarLabel(ImageView label, Label labelNombre, Label labelUsos){
 
         try {
             Utilizable itemActual = Jugador.instanciar().getInventario().getUtilizableActual();
@@ -78,10 +79,12 @@ public class BotonInventario extends Button {
                 if (itemActual.getClass().getSimpleName().equals(imagen.getNombreItem()))
                     label.setImage(imagen.getImage());
                     labelNombre.setText(itemActual.getClass().getSimpleName());
+                    labelUsos.setText("" + itemActual.getUsosRestantes());
             }
         } catch (NoHayElementoEnPosicionDelInventarioException e){
             label.setImage(new Image("file:img/Vacio.png"));
             labelNombre.setText(" - ");
+            labelUsos.setText(" - ");
         }
 
     }
@@ -103,22 +106,4 @@ public class BotonInventario extends Button {
         imagenes.add(new ImagenInventario("MateriaPrimaMetal", "file:img/MateriaPrimaMetal.png", ancho));
         imagenes.add(new ImagenInventario("MateriaPrimaDiamante", "file:img/MateriaPrimaDiamante.png", ancho));
     }
-
-    public void inicializarArrastre(){
-
-        this.setOnDragDetected(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-
-                Dragboard db = ((Node)event.getSource()).startDragAndDrop(TransferMode.COPY);
-
-                /* Put a string on a dragboard */
-                ClipboardContent content = new ClipboardContent();
-             //   content.putString(this.getText());
-                db.setContent(content);
-
-                event.consume();
-            }
-        });
-    }
-
 }

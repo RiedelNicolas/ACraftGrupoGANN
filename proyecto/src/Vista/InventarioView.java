@@ -28,11 +28,12 @@ public class InventarioView extends GridPane{
 
         ImageView labelImagen = new ImageView();
         Label labelEnMano = new Label("HachaDeMadera");
+        Label labelUsos = new Label("50");
         labelImagen.setImage(new Image("file:img/HachaDeMadera.png"));
 
         for(int i=0; i<altoGrid; i++){
             for(int j=0; j<anchoGrid; j++) {
-                this.add(new BotonInventario(ancho, labelImagen, labelEnMano), j, i, 1, 1);
+                this.add(new BotonInventario(ancho, labelImagen, labelEnMano, labelUsos), j, i, 1, 1);
             }
         }
 
@@ -41,12 +42,19 @@ public class InventarioView extends GridPane{
         labelImagen.setX(ancho*0.885);
         labelImagen.setY(alto*0.63);
 
-        labelEnMano.setLayoutX(ancho*0.9);
+        labelEnMano.setLayoutX(ancho*0.8705);
         labelEnMano.setLayoutY(alto*0.81);
         labelEnMano.setTextFill(Color.WHITE);
-        labelEnMano.setFont(new Font("Arial", 20));
+        labelEnMano.setStyle("-fx-font-weight: bold;");
+        labelEnMano.setFont(new Font(14));
 
-        root.getChildren().addAll(labelImagen, labelEnMano);
+        labelUsos.setLayoutX(ancho*0.905);
+        labelUsos.setLayoutY(alto*0.84);
+        labelUsos.setTextFill(Color.WHITE);
+        labelUsos.setStyle("-fx-font-weight: bold;");
+        labelUsos.setFont(new Font(14));
+
+        root.getChildren().addAll(labelImagen, labelEnMano, labelUsos);
     }
 
     public void actualizarInventario(){

@@ -30,6 +30,6 @@ public abstract class MateriaPrima implements Utilizable {
     //PARA EL CONTROLADOR
     @Override
     public int getUsosRestantes(){
-        return -1;
+        return 0;
     }
 }
