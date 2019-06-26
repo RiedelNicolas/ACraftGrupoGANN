@@ -10,8 +10,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-import java.io.PrintStream;
-
 public class PlayerView {
 
     private int coordenadaX;
@@ -28,7 +26,7 @@ public class PlayerView {
     public PlayerView(Group root, double unAncho, double unAlto, GridPane gridPane){
 
 
-        this.jugador = Juego.instanciar().getJugador();
+        this.jugador = Juego.instanciar().getPosicionJugador();
         this.anchoMapa = Mapa.instanciar(0,0).getAncho();
         this.altoMapa = Mapa.instanciar(0,0).getAlto();
         this.root = root;

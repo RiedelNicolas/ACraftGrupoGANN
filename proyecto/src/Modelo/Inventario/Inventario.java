@@ -1,7 +1,6 @@
 package Modelo.Inventario;
 
 import Modelo.Excepciones.InventarioLlenoException;
-import Modelo.Excepciones.InventarioVacioException;
 import Modelo.Excepciones.NoHayElementoEnPosicionDelInventarioException;
 import Modelo.Herramientas.HachaDeMadera;
 
