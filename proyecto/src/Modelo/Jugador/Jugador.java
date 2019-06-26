@@ -61,11 +61,7 @@ public class Jugador implements Posicionable {
     }
 
     public void crearHerramienta(){
-        try{
-            inventario.equipar(mesaDeCrafteo.craftear());
-        }catch(ConstruccionInvalidaException e){
-            //Coming soon
-        }
+        inventario.equipar(mesaDeCrafteo.craftear());
     }
 
     public void anadirMateriaPrimaAMesa(int posicion){

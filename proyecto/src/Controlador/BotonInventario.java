@@ -1,12 +1,12 @@
 package Controlador;
 
 import Modelo.Excepciones.NoHayElementoEnPosicionDelInventarioException;
+import Modelo.Inventario.Inventario;
 import Modelo.Inventario.Utilizable;
 import Modelo.Jugador.Jugador;
 import Vista.ImagenInventario;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -25,9 +25,9 @@ public class BotonInventario extends Button {
     private Label labelNombre;
     private Label labelUsos;
     private ArrayList<ImagenInventario> imagenes;
-    private TransportadorDeImagen transportador;
+    private Transportador transportador;
 
-    public BotonInventario(double ancho, ImageView label, Label nombre, Label labelUsos, TransportadorDeImagen transportador){
+    public BotonInventario(double ancho, ImageView label, Label nombre, Label labelUsos, Transportador transportador){
 
         this.labelUsos = labelUsos;
         this.labelNombre = nombre;
@@ -45,7 +45,7 @@ public class BotonInventario extends Button {
                 try{
                     Jugador.instanciar().getInventario().mover(id);
                     actualizarLabel(labelImagen, labelNombre, labelUsos);
-                    transportador.mover(imagenAsociada);
+                    transportador.mover(imagenAsociada, Jugador.instanciar().getUtilizableEnMano());
                 }catch(NoHayElementoEnPosicionDelInventarioException e){
                     imagenAsociada.setImage(new Image("file:img/Vacio.png"));
                     labelImagen.setImage(imagenAsociada.getImage());

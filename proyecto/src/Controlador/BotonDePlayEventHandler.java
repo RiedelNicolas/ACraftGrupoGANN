@@ -73,7 +73,7 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         botonCraftear.setPrefWidth(ancho*0.148);
         botonCraftear.setLayoutX(ancho*0.826);
         botonCraftear.setLayoutY(alto*0.9);
-        botonCraftear.setOnAction(new BotonCraftearEventHandler());
+        botonCraftear.setOnAction(new BotonCraftearEventHandler(root));
 
         Button botonDesequipar = new Button("DESEQUIPAR");
         botonDesequipar.setPrefSize(ancho*0.074, alto*0.03);

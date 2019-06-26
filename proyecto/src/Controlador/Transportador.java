@@ -1,27 +1,28 @@
 package Controlador;
 
 import Modelo.Inventario.Utilizable;
-import Modelo.Jugador.Jugador;
-import Modelo.MateriaPrima.Antimateria;
-import Modelo.MateriaPrima.MateriaPrima;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import java.util.ArrayList;
-
-public class TransportadorDeImagen{
+public class Transportador {
 
     private Image imagenAsociada;
+    private Utilizable utilizableAsociado;
 
-    public TransportadorDeImagen(){
+    public Transportador(){
         imagenAsociada = new Image("file:img/Vacio.png");
     }
 
-    public void mover(ImageView imagen){
+    public void mover(ImageView imagen, Utilizable utilizable){
         this.imagenAsociada = imagen.getImage();
+        this.utilizableAsociado = utilizable;
     }
 
     public Image getImagenAsociada(){
         return imagenAsociada;
+    }
+
+    public Utilizable getUtilizableAsociado(){
+        return utilizableAsociado;
     }
 }
