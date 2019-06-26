@@ -69,13 +69,9 @@ public class Jugador implements Posicionable {
     }
 
     public void anadirMateriaPrimaAMesa(int posicion){
-        try{
-            Utilizable utilizable = inventario.getUtilizableActual();
-            utilizable.ubicarse(mesaDeCrafteo, posicion);
-            inventario.quitar();
-        }catch(NoSePuedeAnadirUtilizableAMesa e){
-            //Coming soon
-        }
+        Utilizable utilizable = inventario.getUtilizableActual();
+        utilizable.ubicarse(mesaDeCrafteo, posicion);
+        inventario.quitar();
     }
 
     public void quitarMateriaPrimaDeMesa(int posicion){

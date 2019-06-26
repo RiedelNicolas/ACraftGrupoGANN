@@ -1,7 +1,9 @@
 package Vista;
 
 import Controlador.ElementoDeMesa;
+import Controlador.TransportadorDeImagen;
 import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
@@ -13,10 +15,11 @@ public class ContenedorDeElementos extends GridPane {
     public ContenedorDeElementos(double ancho){
 
         elementos = new ArrayList<ElementoDeMesa>();
+        TransportadorDeImagen transportador = InventarioView.instaciar(new Group(), 0, 0).getTransportador();
 
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                this.add(new ElementoDeMesa(ancho), j, i, 1, 1);
+                this.add(new ElementoDeMesa(ancho, transportador), j, i, 1, 1);
             }
         }
         this.setHgap(3);

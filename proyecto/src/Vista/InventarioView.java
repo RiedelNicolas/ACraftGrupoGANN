@@ -1,6 +1,7 @@
 package Vista;
 
 import Controlador.BotonInventario;
+import Controlador.TransportadorDeImagen;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -16,6 +17,7 @@ public class InventarioView extends GridPane{
     private final int anchoGrid = 4;
     private final int altoGrid = 4;
     private static InventarioView instancia_unica = null;
+    private TransportadorDeImagen transportador;
 
     public static InventarioView instaciar(Group root, double ancho, double alto){
         if(instancia_unica==null){
@@ -26,6 +28,7 @@ public class InventarioView extends GridPane{
 
     private InventarioView(Group root, double ancho, double alto){
 
+        this.transportador = new TransportadorDeImagen();
         ImageView labelImagen = new ImageView();
         Label labelEnMano = new Label("HachaDeMadera");
         Label labelUsos = new Label("50");
@@ -33,7 +36,7 @@ public class InventarioView extends GridPane{
 
         for(int i=0; i<altoGrid; i++){
             for(int j=0; j<anchoGrid; j++) {
-                this.add(new BotonInventario(ancho, labelImagen, labelEnMano, labelUsos), j, i, 1, 1);
+                this.add(new BotonInventario(ancho, labelImagen, labelEnMano, labelUsos, transportador), j, i, 1, 1);
             }
         }
 
@@ -65,6 +68,10 @@ public class InventarioView extends GridPane{
             BotonInventario boton = (BotonInventario)hijo;
             boton.actualizar();
         }
+    }
+
+    public TransportadorDeImagen getTransportador(){
+        return transportador;
     }
 
 }
