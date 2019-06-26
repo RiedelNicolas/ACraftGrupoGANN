@@ -10,6 +10,7 @@ public class PicoDePiedra extends Pico {
         durabilidad = 200;
         fuerza = 4;
         desgaste = new DesgastePorPorcentajeDeFuerza(1.5, fuerza);
+        usosRestantes = desgaste.calcularUsosRestantes(durabilidad);
     }
 
     @Override

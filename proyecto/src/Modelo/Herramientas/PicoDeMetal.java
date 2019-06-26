@@ -11,6 +11,7 @@ public class PicoDeMetal extends Pico {
         durabilidad = 400;
         fuerza = 12;
         desgaste = new DesgastePorGolpes(10);
+        usosRestantes = desgaste.calcularUsosRestantes(durabilidad);
     }
 
     @Override

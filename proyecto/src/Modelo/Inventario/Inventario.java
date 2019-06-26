@@ -20,23 +20,21 @@ public class Inventario {
         posicionActual = 0;
     }
 
-    public void mover(int numero){
-
-        if(items.size()>numero)
-            posicionActual = numero;
-        else
-            throw new NoHayElementoEnPosicionDelInventarioException();
+    public void mover(int numero) {
+        posicionActual = numero;
     }
 
     public Utilizable getUtilizableActual(){
-        if(items.isEmpty()) {
-            throw new InventarioVacioException();
+        if(posicionActual >= items.size()) {
+            throw new NoHayElementoEnPosicionDelInventarioException();
         }
         return items.get(posicionActual);
     }
 
-    public Utilizable quitar(){
-        return items.remove(posicionActual);
+    public void quitar(){
+        if(posicionActual < items.size()) {
+            items.remove(posicionActual);
+        }
     }
 
     public void equipar(Utilizable item){
@@ -45,6 +43,10 @@ public class Inventario {
             throw new InventarioLlenoException();
         }
         items.add(item);
+    }
+
+    public int getPosicionActual() {
+        return posicionActual;
     }
 
     //PARA CONTROLADOR

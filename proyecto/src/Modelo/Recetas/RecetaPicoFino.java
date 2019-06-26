@@ -1,5 +1,6 @@
 package Modelo.Recetas;
 
+import Modelo.Herramientas.Herramienta;
 import Modelo.Herramientas.PicoFino;
 
 import java.util.ArrayList;
@@ -12,5 +13,11 @@ public class RecetaPicoFino extends Receta {
         receta = new ArrayList<>(Arrays.asList(METAL, METAL, METAL,
                                                       PIEDRA, MADERA, VACIO,
                                                       VACIO, MADERA, VACIO));
+    }
+
+
+    @Override
+    public Herramienta getHerramienta(){
+        return new PicoFino();
     }
 }

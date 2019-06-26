@@ -2,6 +2,8 @@ package Controlador;
 
 import Modelo.Posicion.Posicion;
 import Modelo.Tablero.Mapa;
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -20,56 +22,58 @@ public class MapaController {
     }
 
     public void agregarMateriales(GridPane grid, double altoGrid, double anchoGrid){
+
         for(int i=0; i<altoMapa; i++){
             for(int j=0; j<anchoMapa; j++) {
-                Posicion actual = campoDeJuego[i][j];
-                if(actual.getOcupante()!=null){
-                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Madera")){
-                        ImageView madera = new ImageView();
-                        madera.setFitHeight(altoGrid/altoMapa);
-                        madera.setFitWidth(anchoGrid/anchoMapa);
-                        madera.setImage(new Image("file:img/madera.jpg"));
-                        grid.add(madera, j, i, 1, 1);
-                    }
-                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Piedra")){
-                        ImageView piedra = new ImageView();
-                        piedra.setFitHeight(altoGrid/altoMapa);
-                        piedra.setFitWidth(anchoGrid/anchoMapa);
-                        piedra.setImage(new Image("file:img/piedra.jpg"));
-                        grid.add(piedra, j, i, 1, 1);
-                    }
+                Posicion actual = campoDeJuego[j][i];
+                ImageView imagen = new ImageView();
+                imagen.setFitHeight(altoGrid/altoMapa);
+                imagen.setFitWidth(anchoGrid/anchoMapa);
 
-                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Metal")){
-                        ImageView metal = new ImageView();
-                        metal.setFitHeight(altoGrid/altoMapa);
-                        metal.setFitWidth(anchoGrid/anchoMapa);
-                        metal.setImage(new Image("file:img/metal.jpg"));
-                        grid.add(metal, j, i, 1, 1);
-                    }
-                    if(actual.getOcupante().getClass().getName().equals("Modelo.Materiales.Diamante")){
-                        ImageView diamante = new ImageView();
-                        diamante.setFitHeight(altoGrid/altoMapa);
-                        diamante.setFitWidth(anchoGrid/anchoMapa);
-                        diamante.setImage(new Image("file:img/diamante.jpg"));
-                        grid.add(diamante, j, i, 1, 1);
-                    }
-                    if(actual.getOcupante().getClass().getName().equals("Modelo.Jugador.Jugador")){
-                        ImageView diamante = new ImageView();
-                        diamante.setFitHeight(altoGrid/altoMapa);
-                        diamante.setFitWidth(anchoGrid/anchoMapa);
-                        diamante.setImage(new Image("file:img/jugador.jpg"));
-                        grid.add(diamante, j, i, 1, 1);
-                    }
-                }
-                else{
-                    ImageView vacio = new ImageView();
-                    vacio.setFitHeight(altoGrid/altoMapa);
-                    vacio.setFitWidth(anchoGrid/anchoMapa);
-                    vacio.setImage(new Image("file:img/Vacio.png"));
-                    grid.add(vacio, j, i, 1, 1);
+                asignarImagen(actual, imagen);
 
+                grid.add(imagen, j, i, 1, 1);
+            }
+        }
+    }
+
+    public void actualizarMapa(GridPane grid, double altoGrid, double anchoGrid){
+
+        ObservableList<Node> hijos = grid.getChildren();
+
+        for(int i=0; i<altoMapa; i++) {
+            for (int j = 0; j < anchoMapa; j++) {
+                for (Node nodo : hijos) {
+                    if((GridPane.getRowIndex(nodo) == i) && (GridPane.getColumnIndex(nodo) == j)) {
+                        asignarImagen(campoDeJuego[j][i], (ImageView)nodo);
+                    }
                 }
             }
         }
     }
+
+
+    public void asignarImagen(Posicion actual, ImageView imagen){
+        if(actual.getOcupante()!=null){
+            if(actual.getOcupante().getClass().getSimpleName().equals("Madera")){
+                imagen.setImage(new Image("file:img/madera.jpg"));
+            }
+            if(actual.getOcupante().getClass().getSimpleName().equals("Piedra")){
+                imagen.setImage(new Image("file:img/piedra.jpg"));
+            }
+            if(actual.getOcupante().getClass().getSimpleName().equals("Metal")){
+                imagen.setImage(new Image("file:img/metal.jpg"));
+            }
+            if(actual.getOcupante().getClass().getSimpleName().equals("Diamante")){
+                imagen.setImage(new Image("file:img/diamante.jpg"));
+            }
+            if(actual.getOcupante().getClass().getSimpleName().equals("Jugador")){
+                imagen.setImage(new Image("file:img/jugador.jpg"));
+            }
+        }
+        else{
+            imagen.setImage(new Image("file:img/Vacio.png"));
+        }
+    }
+
 }

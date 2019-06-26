@@ -1,7 +1,7 @@
 package Modelo.Juego;
 
 import Modelo.Excepciones.PosicionFueraDeRangoException;
-import Modelo.Excepciones.PosicionNoPicableException;
+import Modelo.Excepciones.PosicionNoGolpeableException;
 import Modelo.Posicion.Posicion;
 import Modelo.Tablero.*;
 
@@ -16,7 +16,7 @@ public class Juego {
         int ancho = 19;
         int alto = 13;
         mapa = Mapa.instanciar(ancho, alto);
-        jugador = mapa.getPosicion(alto/2, ancho/2);
+        jugador = mapa.getPosicion(ancho/2, alto/2);
     }
 
     public static Juego instanciar(){
@@ -41,49 +41,56 @@ public class Juego {
     public void jugadorMoverArriba(){
         try {
             jugador = jugador.moverArriba();
-        } catch (PosicionFueraDeRangoException e){}
+        }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverAbajo(){
         try {
             jugador = jugador.moverAbajo();
-        } catch (PosicionFueraDeRangoException e){}
+        }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverIzquierda(){
         try {
             jugador = jugador.moverIzquierda();
-        } catch (PosicionFueraDeRangoException e){}
+        }catch (PosicionFueraDeRangoException e){}
     }
 
     public void jugadorMoverDerecha(){
         try {
             jugador = jugador.moverDerecha();
-        } catch (PosicionFueraDeRangoException e){}
+        }catch (PosicionFueraDeRangoException e){}
     }
 
-    public void jugadorPicarArriba(){
+    public void jugadorGolpearArriba() {
         try {
-            jugador.picarArriba();
-        } catch (PosicionNoPicableException e){}
+            jugador.golpearArriba();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
-    public void jugadorPicarAbajo(){
+    public void jugadorGolpearAbajo(){
         try {
-            jugador.picarAbajo();
-        } catch (PosicionNoPicableException e){}
+            jugador.golpearAbajo();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
-    public void jugadorPicarIzquierda(){
+    public void jugadorGolpearIzquierda(){
         try {
-            jugador.picarIzquierda();
-        } catch (PosicionNoPicableException e){}
+            jugador.golpearIzquierda();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
-    public void jugadorPicarDerecha(){
+    public void jugadorGolpearDerecha(){
         try {
-            jugador.picarDerecha();
-        } catch (PosicionNoPicableException e){}
+            jugador.golpearDerecha();
+        } catch (PosicionNoGolpeableException e) {}
     }
 
+    //PARA TESTING
+    public void restaurar(){
+        int ancho = 19;
+        int alto = 13;
+        mapa = mapa.limpiar(ancho, alto);
+        jugador = mapa.getPosicion(ancho/2, alto/2);
+    }
 }

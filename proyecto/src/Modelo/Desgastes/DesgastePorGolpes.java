@@ -27,6 +27,10 @@ public class DesgastePorGolpes implements Desgaste {
         throw new HerramientaRotaException();
     }
 
+    public int calcularUsosRestantes(int _durabilidad){
+        return golpesMaximos;
+    }
+
     public int getGolpesMaximos(){
         return golpesMaximos;
     }

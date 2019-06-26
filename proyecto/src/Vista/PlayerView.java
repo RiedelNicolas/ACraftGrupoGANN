@@ -1,5 +1,7 @@
 package Vista;
 
+import Modelo.Juego.Juego;
+import Modelo.Posicion.Posicion;
 import Modelo.Tablero.Mapa;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
@@ -15,21 +17,26 @@ public class PlayerView {
     private int coordenadaX;
     private int coordenadaY;
     private ImageView imagenDeJugador;
+    private Posicion jugador;
     private Group root;
     private GridPane pane;
     private double ancho;
     private double alto;
+    private int anchoMapa;
+    private int altoMapa;
 
     public PlayerView(Group root, double unAncho, double unAlto, GridPane gridPane){
 
-        int anchoMapa = Mapa.instanciar(0,0).getAncho();
-        int altoMapa = Mapa.instanciar(0,0).getAlto();
+
+        this.jugador = Juego.instanciar().getJugador();
+        this.anchoMapa = Mapa.instanciar(0,0).getAncho();
+        this.altoMapa = Mapa.instanciar(0,0).getAlto();
         this.root = root;
         this.pane = gridPane;
         this.ancho = (unAncho * 0.78) / (anchoMapa);
         this.alto = (unAlto * 0.95) / (altoMapa);
-        this.coordenadaX = (int)(anchoMapa / 2);
-        this.coordenadaY = (int)(altoMapa / 2);
+        this.coordenadaX = jugador.componenteHorizontal();
+        this.coordenadaY = jugador.componenteVertical();
 
         Image jugador = new Image("file:img/jugador.jpg");
         imagenDeJugador = new ImageView(jugador);
@@ -38,8 +45,10 @@ public class PlayerView {
     }
 
 
-    public void dibujar(){
-        pane.add(imagenDeJugador, coordenadaX, coordenadaY);
+    public void dibujar(Node nodoEnGridPane){
+
+        ImageView imagen = (ImageView) nodoEnGridPane;
+        imagen.setImage(new Image("file:img/jugador.jpg"));
     }
 
     public Node obtenerNodo (int fila, int columna, GridPane gridPane) {
@@ -56,19 +65,48 @@ public class PlayerView {
         return resultado;
     }
 
-    public void moverVertical(int numero){
-        pane.add(new ImageView(new Image("file:img/Vacio.png")), coordenadaX, coordenadaY);
-        coordenadaY += numero;
-        dibujar();
+    public void moverVertical(int numero) {
+
+        Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
+        Node nodoSiguiente = obtenerNodo(coordenadaY + numero, coordenadaX, pane);
+        ImageView actual = (ImageView) nodoActual;
+        ImageView siguiente = (ImageView) nodoSiguiente;
+
+        //if (!(((coordenadaY == altoMapa - 1) && (numero == 1)) || ((coordenadaY == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")) {
+            actual.setImage(new Image("file:img/Vacio.png"));
+            siguiente.setImage(null);
+
+            coordenadaY += numero;
+            dibujar(nodoSiguiente);
+       // }
     }
 
     public void moverHorizontal(int numero){
 
-        Node nodo = obtenerNodo(coordenadaY, coordenadaX, pane);
-        ImageView p = (ImageView)nodo;
-        p.setImage(new Image("file:img/Vacio.png"));
+        Node nodoActual = obtenerNodo(coordenadaY, coordenadaX, pane);
+        Node nodoSiguiente = obtenerNodo(coordenadaY, coordenadaX + numero, pane);
+        ImageView actual = (ImageView)nodoActual;
+        ImageView siguiente = (ImageView)nodoSiguiente;
 
-        coordenadaX += numero;
-        dibujar();
+       // if(!(((coordenadaX == anchoMapa - 1) && (numero == 1)) || ((coordenadaX == 0) && (numero == -1))) && siguiente.getImage().getUrl().equals("file:img/Vacio.png")){
+            actual.setImage(new Image("file:img/Vacio.png"));
+            siguiente.setImage(null);
+
+            coordenadaX += numero;
+            dibujar(nodoSiguiente);
+
+        //}
+    }
+
+    public void picarVertical(int numero){
+        Node nodoAPicar = obtenerNodo(coordenadaY + numero, coordenadaX, pane);
+        ImageView material = (ImageView)nodoAPicar;
+        material.setImage(new Image("file:img/Vacio.png"));
+    }
+
+    public void picarHorizontal(int numero){
+        Node nodoAPicar = obtenerNodo(coordenadaY, coordenadaX  + numero, pane);
+        ImageView material = (ImageView)nodoAPicar;
+        material.setImage(new Image("file:img/Vacio.png"));
     }
 }

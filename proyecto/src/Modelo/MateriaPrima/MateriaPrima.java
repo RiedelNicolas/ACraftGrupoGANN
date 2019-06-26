@@ -26,4 +26,10 @@ public abstract class MateriaPrima implements Utilizable {
     public void equipar(Inventario inventario){
         inventario.equipar(this);
     }
+
+    //PARA EL CONTROLADOR
+    @Override
+    public int getUsosRestantes(){
+        return 0;
+    }
 }

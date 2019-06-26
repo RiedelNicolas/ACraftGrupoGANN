@@ -29,7 +29,7 @@ public class Jugador implements Posicionable {
         return instanciaUnica;
     }
 
-    public Utilizable getUtilizableEnMano(){
+    public Utilizable getUtilizableEnMano() {
         return inventario.getUtilizableActual();
     }
 
@@ -42,34 +42,32 @@ public class Jugador implements Posicionable {
             utilizable = this.getUtilizableEnMano();
 
             try {
-                materiaPrima = utilizable.usarContra(material);
-
                 try{
-                    materiaPrima.equipar(inventario);
+                    materiaPrima = utilizable.usarContra(material);
 
-                } catch (MateriaPrimaNoEquipableException e3) {}
+                    try{
+                        materiaPrima.equipar(inventario);
+                        throw new MaterialRotoException();
 
-            } catch (ObjetoIncapazDeGolpearException e2) {}
+                    } catch (MateriaPrimaNoEquipableException e3) {}
 
-        } catch (InventarioVacioException e1) {}
+                } catch (ObjetoIncapazDeGolpearException e2) {}
+
+            } catch (HerramientaRotaException e4){
+                inventario.quitar();
+            }
+
+        } catch (NoHayElementoEnPosicionDelInventarioException e1) {}
     }
 
     public void crearHerramienta(){
-        try{
-            inventario.equipar(mesaDeCrafteo.craftear());
-        }catch(ConstruccionInvalidaException e){
-            //Coming soon
-        }
+        inventario.equipar(mesaDeCrafteo.craftear());
     }
 
     public void anadirMateriaPrimaAMesa(int posicion){
-        try{
-            Utilizable utilizable = inventario.getUtilizableActual();
-            utilizable.ubicarse(mesaDeCrafteo, posicion);
-            inventario.quitar();
-        }catch(NoSePuedeAnadirUtilizableAMesa e){
-            //Coming soon
-        }
+        Utilizable utilizable = inventario.getUtilizableActual();
+        utilizable.ubicarse(mesaDeCrafteo, posicion);
+        inventario.quitar();
     }
 
     public void quitarMateriaPrimaDeMesa(int posicion){
@@ -80,5 +78,4 @@ public class Jugador implements Posicionable {
     public Inventario getInventario(){
         return inventario;
     }
-
 }

@@ -12,6 +12,8 @@ public abstract class Herramienta implements Utilizable {
 
     protected int durabilidad;
 
+    protected int usosRestantes;
+
     protected Desgaste desgaste;
 
 
@@ -20,6 +22,7 @@ public abstract class Herramienta implements Utilizable {
     public void desgastar(){
 
         durabilidad = desgaste.aplicar(durabilidad);
+        usosRestantes--;
     }
 
     public int getDurabilidad(){
@@ -33,6 +36,14 @@ public abstract class Herramienta implements Utilizable {
     @Override
     public void ubicarse(MesaDeCrafteo mesa, int posicion){
         throw new NoSePuedeAnadirUtilizableAMesa();
+    }
+
+    //PARA EL CONTROLADOR
+
+    @Override
+    public int getUsosRestantes(){
+
+        return usosRestantes;
     }
 
 }

@@ -1,9 +1,6 @@
 package Modelo.Posicion;
 
-import Modelo.Excepciones.ObjetoIncapazDeGolpearException;
-import Modelo.Excepciones.PosicionFueraDeRangoException;
-import Modelo.Excepciones.PosicionOcupadaException;
-import Modelo.Excepciones.PosicionNoPicableException;
+import Modelo.Excepciones.*;
 import Modelo.Materiales.Material;
 import Modelo.Tablero.Mapa;
 
@@ -20,12 +17,12 @@ public class Posicion {
     private Posicion abajo;
 
     //Métodos
-    public Posicion(int _componenteVertical, int _componenteHorizontal){
+    public Posicion(int _componenteHorizontal, int _componenteVertical){
         this.componenteHorizontal = _componenteHorizontal;
         this.componenteVertical = _componenteVertical;
     }
 
-    public Posicion(Posicionable ocupante, int _componenteVertical, int _componenteHorizontal){
+    public Posicion(Posicionable ocupante, int _componenteHorizontal, int _componenteVertical){
         this.componenteHorizontal = _componenteHorizontal;
         this.componenteVertical = _componenteVertical;
         this.ocupante = ocupante;
@@ -52,19 +49,19 @@ public class Posicion {
 
     public void setPosicionesVecinas(Mapa mapa){
         try {
-            izquierda = mapa.getPosicion(componenteVertical, componenteHorizontal - 1);
+            arriba = mapa.getPosicion(componenteHorizontal, componenteVertical - 1);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            derecha = mapa.getPosicion(componenteVertical, componenteHorizontal + 1);
+            abajo = mapa.getPosicion(componenteHorizontal, componenteVertical + 1);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            arriba = mapa.getPosicion(componenteVertical - 1, componenteHorizontal);
+            izquierda = mapa.getPosicion(componenteHorizontal - 1, componenteVertical);
         } catch (PosicionFueraDeRangoException e){}
 
         try {
-            abajo = mapa.getPosicion(componenteVertical + 1, componenteHorizontal);
+            derecha = mapa.getPosicion(componenteHorizontal + 1, componenteVertical);
         } catch (PosicionFueraDeRangoException e){}
     }
 
@@ -80,17 +77,15 @@ public class Posicion {
         return mover(izquierda);
     }
 
-    public Posicion moverDerecha(){
-        return mover(derecha);
-    }
+    public Posicion moverDerecha() { return mover(derecha); }
 
-    public void picarArriba() { picar(arriba); }
+    public void golpearArriba() { golpear(arriba); }
 
-    public void picarAbajo() { picar(abajo); }
+    public void golpearAbajo() { golpear(abajo); }
 
-    public void picarIzquierda() { picar(izquierda); }
+    public void golpearIzquierda() { golpear(izquierda); }
 
-    public void picarDerecha() { picar(derecha); }
+    public void golpearDerecha() { golpear(derecha); }
 
     private Posicion mover(Posicion posicion){
         if(posicion == null){
@@ -105,22 +100,38 @@ public class Posicion {
         }
     }
 
-    private void picar(Posicion objetivo){
+    private void golpear(Posicion objetivo){
         if(objetivo == null){
-            throw new PosicionFueraDeRangoException();
+            throw new PosicionNoGolpeableException();
         }
-        try{
-            objetivo.recibirGolpe(ocupante);
-        } catch (PosicionNoPicableException e){}
+        objetivo.recibirGolpe(ocupante);
     }
 
-    public void recibirGolpe(Posicionable posicionable){
+    private void recibirGolpe(Posicionable posicionable){
         if(ocupante == null){
-            throw new PosicionNoPicableException();
+            throw new PosicionNoGolpeableException();
         }
         try{
             posicionable.golpear((Material) ocupante);
-        } catch (ObjetoIncapazDeGolpearException e){}
+        } catch (MaterialRotoException e){
+            ocupante = null;
+        }
     }
 
+    //PARA TESTING
+    public Posicion getArriba(){
+        return arriba;
+    }
+
+    public Posicion getAbajo(){
+        return abajo;
+    }
+
+    public Posicion getIzquierda(){
+        return izquierda;
+    }
+
+    public Posicion getDerecha(){
+        return derecha;
+    }
 }

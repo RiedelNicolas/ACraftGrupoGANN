@@ -1,5 +1,6 @@
 package Modelo.Construccion;
 
+import Modelo.Excepciones.MaterialRotoException;
 import Modelo.Herramientas.Herramienta;
 import Modelo.MateriaPrima.Antimateria;
 import Modelo.MateriaPrima.MateriaPrima;
@@ -23,7 +24,12 @@ public class MesaDeCrafteo {
     }
 
     public Herramienta craftear(){
-        return constructor.construirCon(elementosEnMesa);
+
+        Herramienta herramienta = constructor.construirCon(elementosEnMesa);
+        for(int i=0; i<9; i++){
+            elementosEnMesa.set(i, new Antimateria());
+        }
+        return herramienta;
     }
 
     public void anadirMateriaPrima(MateriaPrima materiaPrima, int posicion){
@@ -33,7 +39,7 @@ public class MesaDeCrafteo {
     public MateriaPrima quitarMateriaPrima(int posicion){
 
         MateriaPrima elementoRemovido = elementosEnMesa.get(posicion);
-        elementosEnMesa.add(posicion, new Antimateria());
+        elementosEnMesa.set(posicion, new Antimateria());
 
         return elementoRemovido;
     }

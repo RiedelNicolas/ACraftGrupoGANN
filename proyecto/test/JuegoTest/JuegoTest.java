@@ -10,8 +10,8 @@ import Modelo.Materiales.*;
 import org.junit.*;
 
 public class JuegoTest {
-    private final int alto = 45;
-    private final int ancho = 81;
+    private final int alto = 13;
+    private final int ancho = 19;
 
     @Test
     public void test01JuegoSeCrea() {
@@ -95,8 +95,14 @@ public class JuegoTest {
     public void test09NoSeMueveALaDerechaSiLaPosicionEstaOcupada(){
 
         Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Mapa mapa = juego.getMapa();
+        mapa.limpiar(ancho, alto);
         Posicion material = new Posicion(new Madera(), ancho/2 + 1, alto/2);
-        juego.getMapa().ubicar(material);
+
+        mapa.ubicar(material);
+
+        Assert.assertNotNull(juego.getJugador().getDerecha().getOcupante());
         Posicion jugadorPosicionInicial = juego.getJugador();
 
         juego.jugadorMoverDerecha();
@@ -106,101 +112,62 @@ public class JuegoTest {
     }
 
     @Test
-    public void test10NoSeMueveALaIzquierdaSiLaPosicionEstaOcupada(){  //
+    public void test10NoSeMueveALaIzquierdaSiLaPosicionEstaOcupada(){
 
         Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Mapa mapa = juego.getMapa();
+        mapa.limpiar(ancho, alto);
         Posicion material = new Posicion(new Madera(), ancho/2 - 1, alto/2);
+
+        mapa.ubicar(material);
+
+        Assert.assertNotNull(juego.getJugador().getIzquierda().getOcupante());
         Posicion jugadorPosicionInicial = juego.getJugador();
 
-        juego.jugadorMoverDerecha();
+        juego.jugadorMoverIzquierda();
         Posicion jugadorPosicionFinal = juego.getJugador();
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
-    //pruebasParaEnunciado.
+
     @Test
-    public void test08SeCreaJuegoYContieneMadera(){
+    public void test11NoSeMueveParaArribaSiLaPosicionEstaOcupada(){
 
         Juego juego = Juego.instanciar();
-        juego.inicializar();
+        juego.restaurar();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
+        mapa.limpiar(ancho, alto);
+        Posicion material = new Posicion(new Madera(), ancho/2, alto/2 - 1);
 
-        boolean contiene = false;
+        mapa.ubicar(material);
 
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if((_mapa[i][j]).getOcupante() instanceof Madera){
-                    contiene = true;
-                }
-            }
-        }
+        Assert.assertNotNull(juego.getJugador().getArriba().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getJugador();
 
-        Assert.assertTrue(contiene);
+        juego.jugadorMoverArriba();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
 
     @Test
-    public void test09SeCreaJuegoYContienePiedra(){
+    public void test12NoSeMueveParaAbajoSiLaPosicionEstaOcupada(){
 
         Juego juego = Juego.instanciar();
-        juego.inicializar();
+        juego.restaurar();
         Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
+        mapa.limpiar(ancho, alto);
+        Posicion material = new Posicion(new Madera(), ancho/2, alto/2 + 1);
 
-        boolean contiene = false;
+        mapa.ubicar(material);
 
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if((_mapa[i][j]).getOcupante() instanceof Piedra){
-                    contiene = true;
-                }
-            }
-        }
+        Assert.assertNotNull(juego.getJugador().getAbajo().getOcupante());
+        Posicion jugadorPosicionInicial = juego.getJugador();
 
-        Assert.assertTrue(contiene);
+        juego.jugadorMoverAbajo();
+        Posicion jugadorPosicionFinal = juego.getJugador();
+
+        Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
     }
-
-    @Test
-    public void test10SeCreaJuegoYContieneDiamante(){
-
-        Juego juego = Juego.instanciar();
-        juego.inicializar();
-        Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
-
-        boolean contiene = false;
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if((_mapa[i][j]).getOcupante() instanceof Diamante){
-                    contiene = true;
-                }
-            }
-        }
-
-        Assert.assertTrue(contiene);
-    }
-
-    @Test
-    public void test11SeCreaJuegoYContieneMetal(){
-
-        Juego juego = Juego.instanciar();
-        juego.inicializar();
-        Mapa mapa = juego.getMapa();
-        Posicion[][] _mapa = mapa.getCampo();
-
-        boolean contiene = false;
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if((_mapa[i][j]).getOcupante() instanceof Metal){
-                    contiene = true;
-                }
-            }
-        }
-
-        Assert.assertTrue(contiene);
-    }
-
-
 }

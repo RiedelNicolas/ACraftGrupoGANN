@@ -10,5 +10,7 @@ public interface Utilizable {
 
     void ubicarse(MesaDeCrafteo mesa, int posicion);
 
+    //PARA CONTROLADOR
+    int getUsosRestantes();
 }
 

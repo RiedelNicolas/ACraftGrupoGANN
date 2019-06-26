@@ -29,10 +29,7 @@ public class JugadorTest {
     }
 
 //    @Test
-    //public void test04JugadorUtilizaSuHerramientaEnMano
-
-
-
+//    public void test04JugadorUtilizaSuHerramientaEnMano
 }
 
 

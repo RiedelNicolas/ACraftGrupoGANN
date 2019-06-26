@@ -11,15 +11,15 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 public class MapaTest {
-    private final int alto = 45;
-    private final int ancho = 81;
+    private final int alto = 13;
+    private final int ancho = 19;
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void test01MapaSeInstanciaConUnMetodoPropio(){
-        Mapa mapa = Mapa.instanciar(ancho, alto);
+        Mapa mapa = Mapa.instanciar(alto, ancho);
         Assert.assertNotNull(mapa);
     }
 
@@ -35,6 +35,7 @@ public class MapaTest {
     public void test03MapaSeCreaConUnaPosicionOcupadaEnElCentro(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
         Posicion posicion = mapa.getPosicion(ancho/2, alto/2);
 
         Assert.assertNotNull(posicion.getOcupante());
@@ -44,15 +45,36 @@ public class MapaTest {
     public void test04MapaSeCreaConElJugadorEnElCentro(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
         Posicion jugador = mapa.getPosicion(ancho/2, alto/2);
 
         Assert.assertTrue(jugador.getOcupante() instanceof  Jugador);
     }
 
     @Test
-    public void test05MapaTieneAlmenos1Madera(){
+    public void test05UnaPosicionNoPuedeUbicarseEnUnaPosicionOcupada(){
+        Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
+        Posicion posicion = new Posicion(ancho/2, alto/2);
+
+        thrown.expect(PosicionOcupadaException.class);
+        mapa.ubicar(posicion);
+    }
+
+    @Test
+    public void test05MapaSeInicializaSinErrores(){
+        Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
+        mapa.inicializar();
+
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    public void test06MapaTieneAlmenos1Madera(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
         mapa.inicializar();
         int total = 0;
 
@@ -68,9 +90,10 @@ public class MapaTest {
     }
 
     @Test
-    public void test06MapaTieneAlmenos1Metal(){
+    public void test07MapaTieneAlmenos1Metal(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
         mapa.inicializar();
         int total = 0;
 
@@ -86,9 +109,10 @@ public class MapaTest {
     }
 
     @Test
-    public void test07MapaTieneAlmenos1Piedra(){
+    public void test08MapaTieneAlmenos1Piedra(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
         mapa.inicializar();
         int total = 0;
 
@@ -104,9 +128,10 @@ public class MapaTest {
     }
 
     @Test
-    public void test08MapaTieneAlmenos1Diamante(){
+    public void test09MapaTieneAlmenos1Diamante(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa = mapa.limpiar(ancho, alto);
         mapa.inicializar();
         int total = 0;
 
@@ -166,4 +191,47 @@ public class MapaTest {
 //        thrown.expect(PosicionOcupadaException.class);
 //        mapa.ubicar(material2);
 //    }
+
+    @Test
+
+    public void testDeLimpieza(){
+        Mapa mapa = Mapa.instanciar(ancho, alto);
+        mapa.inicializar();
+        mapa = mapa.limpiar(ancho, alto);
+        int total = 0;
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if(mapa.getPosicion(i, j).getOcupante() instanceof Diamante){
+                    total++;
+                }
+            }
+        }
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if(mapa.getPosicion(i, j).getOcupante() instanceof Madera){
+                    total++;
+                }
+            }
+        }
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if(mapa.getPosicion(i, j).getOcupante() instanceof Metal){
+                    total++;
+                }
+            }
+        }
+
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
+                if(mapa.getPosicion(i, j).getOcupante() instanceof Piedra){
+                    total++;
+                }
+            }
+        }
+
+        Assert.assertTrue(total == 0);
+    }
 }
