@@ -6,7 +6,9 @@ import Modelo.MateriaPrima.MateriaPrimaMadera;
 
 public class Madera extends Material {
 
+    //Metodos
     public Madera(){
+
         durabilidad = 10;
         id = 1;
         materiaPrimaAsociada = new MateriaPrimaMadera();

@@ -5,6 +5,7 @@ import Modelo.Inventario.Inventario;
 
 public class Antimateria extends MateriaPrima {
 
+    //Metodos
     public Antimateria(){
         id = 0;
     }

@@ -7,12 +7,14 @@ import Modelo.Tablero.*;
 
 public class Juego {
 
+    //Atributos
     private Mapa mapa;
     private Posicion posicionJugador;
-
     private static Juego instancia_unica = null;
 
+    //Metodos
     private Juego(){
+
         int ancho = 19;
         int alto = 13;
         mapa = Mapa.instanciar(ancho, alto);

@@ -8,14 +8,14 @@ import Modelo.Posicion.Posicion;
 
 public class Mapa {
 
-//Atributos
+    //Atributos
     private Posicion[][] campo;
     private int alto;
     private int ancho;
     private Ubicador ubicador;
     private static Mapa instanciaUnica = null;
 
-//Metodos
+    //Metodos
     public static Mapa instanciar(int _ancho, int _alto){
         if(instanciaUnica == null ){
             instanciaUnica = new Mapa(_ancho, _alto);

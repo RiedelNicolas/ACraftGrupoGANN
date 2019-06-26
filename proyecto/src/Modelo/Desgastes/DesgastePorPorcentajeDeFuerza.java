@@ -4,8 +4,10 @@ import Modelo.Excepciones.HerramientaRotaException;
 
 public class DesgastePorPorcentajeDeFuerza extends DesgastePorPorcentaje{
 
+    //Atributos
     private int fuerza;
 
+    //Metodos
     public DesgastePorPorcentajeDeFuerza(double unPorcentaje, int unaFuerza){
         porcentaje = unPorcentaje;
         fuerza = unaFuerza;

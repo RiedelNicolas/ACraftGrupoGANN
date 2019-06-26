@@ -8,10 +8,11 @@ import java.util.ArrayList;
 
 public class MesaDeCrafteo {
 
+    //Atributos
     private ArrayList<MateriaPrima> elementosEnMesa;
     private Constructor constructor;
 
-
+    //Metodos
     public MesaDeCrafteo(){
 
         constructor = new Constructor();
@@ -25,9 +26,10 @@ public class MesaDeCrafteo {
     public Herramienta craftear(){
 
         Herramienta herramienta = constructor.construirCon(elementosEnMesa);
-        for(int i=0; i<9; i++){
+        for(int i = 0; i < 9; i++){
             elementosEnMesa.set(i, new Antimateria());
         }
+
         return herramienta;
     }
 

@@ -8,13 +8,13 @@ import java.util.Arrays;
 
 public class RecetaPicoFino extends Receta {
 
+    //Metodos
     public RecetaPicoFino(){
         herramientaAsociada = new PicoFino();
         receta = new ArrayList<>(Arrays.asList(METAL, METAL, METAL,
-                                                      PIEDRA, MADERA, VACIO,
-                                                      VACIO, MADERA, VACIO));
+                                               PIEDRA, MADERA, VACIO,
+                                               VACIO, MADERA, VACIO));
     }
-
 
     @Override
     public Herramienta getHerramienta(){

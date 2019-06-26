@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public abstract class Receta {
 
+    //Atributos
     protected ArrayList<Integer> receta;
     protected Herramienta herramientaAsociada;
 
@@ -17,6 +18,7 @@ public abstract class Receta {
     protected static final int METAL = 3;
 
 
+    //Metodos
     public void comparar(ArrayList<MateriaPrima> materialesEnMesa) {
 
         int i = 0;

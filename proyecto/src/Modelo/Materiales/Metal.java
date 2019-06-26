@@ -6,7 +6,9 @@ import Modelo.MateriaPrima.MateriaPrimaMetal;
 
 public class Metal extends Material {
 
+    //Metodos
     public Metal (){
+
         durabilidad = 50;
         id = 3;
         materiaPrimaAsociada = new MateriaPrimaMetal();

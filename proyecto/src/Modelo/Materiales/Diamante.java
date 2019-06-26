@@ -7,7 +7,9 @@ import Modelo.MateriaPrima.MateriaPrimaDiamante;
 
 public class Diamante extends Material {
 
+    //Metodos
     public Diamante(){
+
         durabilidad = 100;
         id = 4;
         materiaPrimaAsociada = new MateriaPrimaDiamante();
@@ -18,8 +20,7 @@ public class Diamante extends Material {
         try {
             pico.desgastar();
             return desgastarse(pico.getFuerza());
-        } catch (HerramientaRotaException e){
-            throw e;
-        }
+
+        } catch (HerramientaRotaException e){ throw e; }
     }
 }

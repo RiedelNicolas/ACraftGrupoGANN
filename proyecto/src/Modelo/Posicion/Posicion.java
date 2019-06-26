@@ -95,9 +95,7 @@ public class Posicion {
             posicion.ocupar(ocupante);
             ocupante = null;
             return posicion;
-        } catch (PosicionOcupadaException e){
-            return this;
-        }
+        } catch (PosicionOcupadaException e){ return this; }
     }
 
     private void golpear(Posicion objetivo){

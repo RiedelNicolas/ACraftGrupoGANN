@@ -4,6 +4,7 @@ import Modelo.Excepciones.HerramientaRotaException;
 
 public class DesgastePorPorcentajeDeDurabilidad extends DesgastePorPorcentaje {
 
+    //Metodos
     public DesgastePorPorcentajeDeDurabilidad(double unPorcentaje){
         porcentaje = unPorcentaje;
     }
@@ -14,6 +15,7 @@ public class DesgastePorPorcentajeDeDurabilidad extends DesgastePorPorcentaje {
             throw new HerramientaRotaException();
         }
         durabilidad -= (durabilidad / porcentaje);
+
         return durabilidad;
     }
 
@@ -25,6 +27,7 @@ public class DesgastePorPorcentajeDeDurabilidad extends DesgastePorPorcentaje {
             durabilidadInicial -= (durabilidadInicial * 0.1);
             i++;
         }
+
         return i;
     }
 }

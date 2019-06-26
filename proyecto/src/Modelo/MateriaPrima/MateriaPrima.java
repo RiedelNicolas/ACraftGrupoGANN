@@ -8,8 +8,10 @@ import Modelo.Materiales.Material;
 
 public abstract class MateriaPrima implements Utilizable {
 
+    //Atributos
     protected int id;
 
+    //Metodos
     @Override
     public MateriaPrima usarContra(Material material){
 
@@ -18,10 +20,11 @@ public abstract class MateriaPrima implements Utilizable {
 
     @Override
     public void ubicarse(MesaDeCrafteo mesa, int posicion){
+
         mesa.anadirMateriaPrima(this, posicion);
     }
 
-    public int getId(){return id;}
+    public int getId(){ return id; }
 
     public void equipar(Inventario inventario){
         inventario.equipar(this);

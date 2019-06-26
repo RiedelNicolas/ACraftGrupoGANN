@@ -6,8 +6,8 @@ import Modelo.Materiales.Material;
 
 public interface Utilizable {
 
-    MateriaPrima usarContra(Material material);  //Hacer prueba para que si se rompe la herramienta, no se desgaste el material
-
+    //Metodos
+    MateriaPrima usarContra(Material material);
     void ubicarse(MesaDeCrafteo mesa, int posicion);
 
     //PARA CONTROLADOR

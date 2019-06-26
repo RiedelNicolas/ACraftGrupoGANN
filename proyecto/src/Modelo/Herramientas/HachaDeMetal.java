@@ -6,6 +6,7 @@ import Modelo.Materiales.Material;
 
 public class HachaDeMetal extends Hacha {
 
+    //Metodos
     public HachaDeMetal(){
 
         durabilidad = 400;
@@ -19,7 +20,7 @@ public class HachaDeMetal extends Hacha {
     public MateriaPrima usarContra(Material material) {
 
         desgastar();
-        return material.gastarCon(this);
 
+        return material.gastarCon(this);
     }
 }

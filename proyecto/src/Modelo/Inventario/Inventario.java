@@ -8,10 +8,12 @@ import java.util.ArrayList;
 
 public class Inventario {
 
+    //Atributos
     private ArrayList<Utilizable> items;
     private int posicionActual;
     private final int tamanioMaximo = 16;
 
+    //Metodos
     public Inventario(){
 
         items = new ArrayList<>();
@@ -38,7 +40,7 @@ public class Inventario {
 
     public void equipar(Utilizable item){
 
-        if(items.size()>=tamanioMaximo) {
+        if(items.size() >= tamanioMaximo) {
             throw new InventarioLlenoException();
         }
         items.add(item);

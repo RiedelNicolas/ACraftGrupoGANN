@@ -7,7 +7,6 @@ public class DesgastePorGolpes implements Desgaste {
     //Atributos
     private int golpesMaximos;
 
-
     //Métodos
     public DesgastePorGolpes(int unaCantidadDeGolpes){
         golpesMaximos = unaCantidadDeGolpes;

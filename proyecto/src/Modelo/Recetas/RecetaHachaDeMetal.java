@@ -8,13 +8,13 @@ import java.util.Arrays;
 
 public class RecetaHachaDeMetal extends Receta {
 
+    //Metodos
     public RecetaHachaDeMetal(){
         herramientaAsociada = new HachaDeMetal();
         receta = new ArrayList<>(Arrays.asList(METAL, METAL, VACIO,
-                                                      METAL, MADERA, VACIO,
-                                                      VACIO, MADERA, VACIO));
+                                               METAL, MADERA, VACIO,
+                                               VACIO, MADERA, VACIO));
     }
-
 
     @Override
     public Herramienta getHerramienta(){

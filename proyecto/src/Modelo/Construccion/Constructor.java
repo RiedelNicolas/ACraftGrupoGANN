@@ -10,9 +10,10 @@ import java.util.ArrayList;
 
 public class Constructor {
 
+    //Atributos
     private ArrayList<Receta> recetas;
 
-
+    //Metodos
     public Constructor(){
         recetas = new ArrayList<>();
         recetas.add(new RecetaPicoDeMadera());

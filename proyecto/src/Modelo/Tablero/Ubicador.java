@@ -8,6 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Ubicador {
 
+    //Metodos
     public void ubicarElementos(Mapa mapa, int ancho, int alto){
         ubicarMadera(mapa, ancho, alto);
         ubicarPiedra(mapa, ancho, alto);

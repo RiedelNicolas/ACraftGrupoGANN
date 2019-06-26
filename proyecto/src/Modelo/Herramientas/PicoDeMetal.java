@@ -6,6 +6,7 @@ import Modelo.Materiales.Material;
 
 public class PicoDeMetal extends Pico {
 
+    //Metodos
     public PicoDeMetal(){
 
         durabilidad = 400;
@@ -18,7 +19,7 @@ public class PicoDeMetal extends Pico {
     public MateriaPrima usarContra(Material material) {
 
         desgastar();
-        return material.gastarCon(this);
 
+        return material.gastarCon(this);
     }
 }

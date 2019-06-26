@@ -6,7 +6,9 @@ import Modelo.Materiales.Material;
 
 public class PicoDePiedra extends Pico {
 
+    //Metodos
     public PicoDePiedra (){
+
         durabilidad = 200;
         fuerza = 4;
         desgaste = new DesgastePorPorcentajeDeFuerza(1.5, fuerza);
@@ -17,7 +19,7 @@ public class PicoDePiedra extends Pico {
     public MateriaPrima usarContra(Material material) {
 
         desgastar();
-        return material.gastarCon(this);
 
+        return material.gastarCon(this);
     }
 }

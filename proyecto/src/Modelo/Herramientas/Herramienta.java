@@ -9,16 +9,11 @@ public abstract class Herramienta implements Utilizable {
 
     //Atributos
     protected int fuerza;
-
     protected int durabilidad;
-
     protected int usosRestantes;
-
     protected Desgaste desgaste;
 
-
     //Métodos
-
     public void desgastar(){
 
         durabilidad = desgaste.aplicar(durabilidad);
@@ -38,11 +33,10 @@ public abstract class Herramienta implements Utilizable {
         throw new NoSePuedeAnadirUtilizableAMesa();
     }
 
-    //PARA EL CONTROLADOR
 
+    //PARA EL CONTROLADOR
     @Override
     public int getUsosRestantes(){
-
         return usosRestantes;
     }
 

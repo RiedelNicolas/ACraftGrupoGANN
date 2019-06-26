@@ -6,6 +6,7 @@ import Modelo.Materiales.*;
 
 public class PicoFino extends Pico {
 
+    //Metodos
     public PicoFino (){
 
         durabilidad = 1000;
@@ -16,8 +17,6 @@ public class PicoFino extends Pico {
 
     @Override
     public MateriaPrima usarContra(Material material) {
-
         return material.gastarCon(this);
-
     }
 }

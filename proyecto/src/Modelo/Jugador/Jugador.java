@@ -10,13 +10,13 @@ import Modelo.Posicion.Posicionable;
 
 
 public class Jugador implements Posicionable {
-    //Atributos
 
-    private static Jugador instanciaUnica = null;
+    //Atributos
     private Inventario inventario;
     private MesaDeCrafteo mesaDeCrafteo;
+    private static Jugador instanciaUnica = null;
 
-
+    //Metodos
     private Jugador() {
         inventario = new Inventario();
         mesaDeCrafteo = new MesaDeCrafteo();
@@ -39,9 +39,11 @@ public class Jugador implements Posicionable {
         Utilizable utilizable;
 
         try {
+
             utilizable = this.getUtilizableEnMano();
 
             try {
+
                 try{
                     materiaPrima = utilizable.usarContra(material);
 
@@ -53,11 +55,10 @@ public class Jugador implements Posicionable {
 
                 } catch (ObjetoIncapazDeGolpearException e2) {}
 
-            } catch (HerramientaRotaException e4){
-                inventario.quitar();
-            }
+            } catch (HerramientaRotaException e4){ inventario.quitar();}
 
         } catch (NoHayElementoEnPosicionDelInventarioException e1) {}
+
     }
 
     public void crearHerramienta(){
@@ -65,6 +66,7 @@ public class Jugador implements Posicionable {
     }
 
     public void anadirMateriaPrimaAMesa(int posicion){
+
         Utilizable utilizable = inventario.getUtilizableActual();
         utilizable.ubicarse(mesaDeCrafteo, posicion);
         inventario.quitar();
