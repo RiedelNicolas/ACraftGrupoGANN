@@ -1,6 +1,5 @@
 package Modelo.Construccion;
 
-import Modelo.Excepciones.MaterialRotoException;
 import Modelo.Herramientas.Herramienta;
 import Modelo.MateriaPrima.Antimateria;
 import Modelo.MateriaPrima.MateriaPrima;
