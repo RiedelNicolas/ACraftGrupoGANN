@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Excepciones.NoHayElementoEnPosicionDelInventarioException;
 import Modelo.Excepciones.NoSePuedeAnadirUtilizableAMesa;
 import Modelo.Jugador.Jugador;
+import Modelo.MateriaPrima.Antimateria;
 import Modelo.MateriaPrima.MateriaPrima;
 import Vista.InventarioView;
 import javafx.event.EventHandler;
@@ -52,15 +53,13 @@ public class ElementoDeMesa extends ImageView {
 
     public void limpiar(){
         this.setImage(new Image("file:img/elementoVacio.jpg"));
-        materia = null;
+        materia = new Antimateria();
         ocupado = false;
     }
 
     public void devolver() {
-        if (materia != null && materia.getClass().getSimpleName() != "Antimateria"){
+        if (materia != null && materia.getClass().getSimpleName() != "Antimateria")
             materia.equipar(Jugador.instanciar().getInventario());
-            System.out.println(id);
-        }
         this.limpiar();
     }
 
