@@ -45,7 +45,10 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         MapaView.crearUnico(root, ancho, alto);
 
         InventarioView inventario = InventarioView.instaciar(root, ancho, alto);
+        inventario.setLayoutX(ancho*0.825);
+        inventario.setLayoutY(alto*0.10);
         inventario.actualizarInventario();
+        root.getChildren().add(inventario);
 
         BotoneraDeAccionesView botonera = new BotoneraDeAccionesView(root, ancho, alto);
 

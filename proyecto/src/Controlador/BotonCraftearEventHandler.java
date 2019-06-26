@@ -1,5 +1,7 @@
 package Controlador;
 
+import Vista.ContenedorDeElementos;
+import Vista.InventarioView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -32,6 +34,22 @@ public class BotonCraftearEventHandler implements EventHandler<ActionEvent> {
         mesaDeCrafteo.setMinHeight(alto);
         mesaDeCrafteo.setMinWidth(ancho);
 
+        insertarInventario(root, ancho, alto);
+        insertarContenedorDeElementos(root, ancho, alto);
+
         mesaDeCrafteo.show();
+    }
+
+    private void insertarInventario(Group root, double ancho, double alto){
+
+        InventarioView inventario = InventarioView.instaciar(root, 0, 0);
+        inventario.setLayoutX(ancho*0.5);
+        inventario.setLayoutY(alto*0.1);
+        root.getChildren().add(inventario);
+    }
+
+    private void insertarContenedorDeElementos(Group root, double ancho, double alto){
+
+        ContenedorDeElementos contenedor = new ContenedorDeElementos(ancho, alto);
     }
 }
