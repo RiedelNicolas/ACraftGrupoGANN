@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Juego.Juego;
 import Modelo.Posicion.Posicion;
 import Modelo.Tablero.Mapa;
 import javafx.collections.ObservableList;
@@ -37,12 +38,14 @@ public class MapaController {
         }
     }
 
-    public void actualizarMapa(GridPane grid, double altoGrid, double anchoGrid){
+    public void actualizarMapa(GridPane grid){
 
         ObservableList<Node> hijos = grid.getChildren();
+        int horizontalJugador = Juego.instanciar().getJugador().componenteHorizontal();
+        int verticalJugador = Juego.instanciar().getJugador().componenteVertical();
 
-        for(int i=0; i<altoMapa; i++) {
-            for (int j = 0; j < anchoMapa; j++) {
+        for(int i=verticalJugador-2; i<verticalJugador+2; i++) {
+            for (int j=horizontalJugador-2; j <horizontalJugador+2; j++) {
                 for (Node nodo : hijos) {
                     if((GridPane.getRowIndex(nodo) == i) && (GridPane.getColumnIndex(nodo) == j)) {
                         asignarImagen(campoDeJuego[j][i], (ImageView)nodo);
@@ -68,7 +71,7 @@ public class MapaController {
                 imagen.setImage(new Image("file:img/diamante.jpg"));
             }
             if(actual.getOcupante().getClass().getSimpleName().equals("Jugador")){
-                imagen.setImage(new Image("file:img/jugador.jpg"));
+                imagen.setImage(new Image("file:img/steve.png"));
             }
         }
         else{
