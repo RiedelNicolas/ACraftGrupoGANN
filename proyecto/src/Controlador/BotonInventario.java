@@ -16,14 +16,16 @@ import java.util.ArrayList;
 public class BotonInventario extends Button {
 
     private static int contador = 0;
-    private int id = 0;
+    private int id;
     private double ancho;
     private ImageView labelImagen;
+    private Label labelNombre;
     private Label labelUtilizable;
     private ArrayList<ImagenInventario> imagenes;
 
-    public BotonInventario(double ancho, ImageView label, Label nombreUtilizable){
+    public BotonInventario(double ancho, ImageView label, Label nombre){
 
+        this.labelNombre = nombre;
         this.ancho = ancho;
         this.setMinSize(ancho*0.037, ancho*0.037);
         this.labelImagen = label;
@@ -35,7 +37,7 @@ public class BotonInventario extends Button {
             public void handle(ActionEvent event) {
                 try{
                     Jugador.instanciar().getInventario().mover(id);
-                    actualizarLabel(labelImagen);
+                    actualizarLabel(labelImagen, labelNombre);
                 }catch(NoHayElementoEnPosicionDelInventarioException e){
                     labelImagen.setImage(new Image("file:img/Vacio.png"));
                 }
@@ -60,19 +62,21 @@ public class BotonInventario extends Button {
         else{
             this.setGraphic(imagenes.get(0));
         }
-        actualizarLabel(labelImagen);
+        actualizarLabel(labelImagen, labelNombre);
     }
 
-    private void actualizarLabel(ImageView label){
+    private void actualizarLabel(ImageView label, Label labelNombre){
 
         try {
             Utilizable itemActual = Jugador.instanciar().getInventario().getUtilizableActual();
             for (ImagenInventario imagen : imagenes) {
                 if (itemActual.getClass().getSimpleName().equals(imagen.getNombreItem()))
                     label.setImage(imagen.getImage());
+                    labelNombre.setText(itemActual.getClass().getSimpleName());
             }
         } catch (NoHayElementoEnPosicionDelInventarioException e){
             label.setImage(new Image("file:img/Vacio.png"));
+            labelNombre.setText(" - ");
         }
 
     }

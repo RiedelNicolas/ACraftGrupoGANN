@@ -8,6 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 
 public class InventarioView extends GridPane{
 
@@ -39,7 +41,12 @@ public class InventarioView extends GridPane{
         labelImagen.setX(ancho*0.885);
         labelImagen.setY(alto*0.63);
 
-        root.getChildren().addAll(labelImagen);
+        labelEnMano.setLayoutX(ancho*0.9);
+        labelEnMano.setLayoutY(alto*0.81);
+        labelEnMano.setTextFill(Color.WHITE);
+        labelEnMano.setFont(new Font("Arial", 20));
+
+        root.getChildren().addAll(labelImagen, labelEnMano);
     }
 
     public void actualizarInventario(){

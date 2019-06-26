@@ -83,13 +83,18 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
 
         Label labelEnMano = new Label("En mano: ");
         labelEnMano.setLayoutX(ancho*0.826);
-        labelEnMano.setLayoutY(alto*0.80);
+        labelEnMano.setLayoutY(alto*0.81);
         labelEnMano.setTextFill(Color.WHITE);
         labelEnMano.setFont(new Font("Arial", 20));
-        //labelEnMano.
+
+        Label labelUsos = new Label("Usos Restantes: ");
+        labelUsos.setLayoutX(ancho*0.826);
+        labelUsos.setLayoutY(alto*0.84);
+        labelUsos.setTextFill(Color.WHITE);
+        labelUsos.setFont(new Font("Arial", 20));
 
 
 
-        root.getChildren().addAll(inventarioLabel, golpearLabel, botonCraftear, botonDesequipar, labelEnMano);
+        root.getChildren().addAll(inventarioLabel, golpearLabel, botonCraftear, botonDesequipar, labelEnMano, labelUsos);
     }
 }
