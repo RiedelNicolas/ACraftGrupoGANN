@@ -50,6 +50,9 @@ public class BotonCraftearEventHandler implements EventHandler<ActionEvent> {
 
     private void insertarContenedorDeElementos(Group root, double ancho, double alto){
 
-        ContenedorDeElementos contenedor = new ContenedorDeElementos(ancho, alto);
+        ContenedorDeElementos contenedor = new ContenedorDeElementos(ancho*0.4);
+        contenedor.setLayoutX(alto*0.3);
+        contenedor.setLayoutY(ancho*0.5);
+        root.getChildren().add(contenedor);
     }
 }
