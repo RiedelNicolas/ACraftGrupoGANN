@@ -134,7 +134,6 @@ public class MesaDeCrafteoTest {
     public void test09SePuedeConstruirPicoDeMaderaPeroAlRemoverUnMaterialEIntentarCraftearSeLanzaExcepcion() {
 
         MesaDeCrafteo mesa = new MesaDeCrafteo();
-        boolean noSePudoConstruir = false;
 
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 0);
         mesa.anadirMateriaPrima(new MateriaPrimaMadera(), 1);

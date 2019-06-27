@@ -43,19 +43,15 @@ public class Jugador implements Posicionable {
             utilizable = this.getUtilizableEnMano();
 
             try {
+                materiaPrima = utilizable.usarContra(material);
 
                 try{
-                    materiaPrima = utilizable.usarContra(material);
+                    materiaPrima.equipar(inventario);
+                    throw new MaterialRotoException();
 
-                    try{
-                        materiaPrima.equipar(inventario);
-                        throw new MaterialRotoException();
+                } catch (MateriaPrimaNoEquipableException e3) {}
 
-                    } catch (MateriaPrimaNoEquipableException e3) {}
-
-                } catch (ObjetoIncapazDeGolpearException e2) {}
-
-            } catch (HerramientaRotaException e4){ inventario.quitar();}
+            } catch (HerramientaRotaException e2){ inventario.quitar();}
 
         } catch (NoHayElementoEnPosicionDelInventarioException e1) {}
 
@@ -79,5 +75,11 @@ public class Jugador implements Posicionable {
     //PARA CONTROLADOR
     public Inventario getInventario(){
         return inventario;
+    }
+
+    //PARA TESTING
+    public Jugador restaurar(){
+        instanciaUnica = null;
+        return instanciar();
     }
 }

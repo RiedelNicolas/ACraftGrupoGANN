@@ -14,7 +14,6 @@ import static org.junit.Assert.assertTrue;
 public class UbicadorTest {
     private final int ancho = 19;
     private final int alto = 13;
-    //el mapa está dividido en 4 regiones verticales
 
     @Test
     public void test01SeUbicaMaderaEnEl20PorcientoDelMapa(){
@@ -22,18 +21,18 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19, 13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int contadorDeMaderas = 0;
+        int contador = 0;
 
-        for(int i=0; i<ancho; i++){
-            for(int j=0; j<alto; j++){
+        for(int i = 0; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Madera.class))){
-                    contadorDeMaderas++;
+                    contador++;
                 }
             }
         }
-        assertEquals(0.2, ((float)contadorDeMaderas/(ancho*alto)), 0.1);
+        assertEquals(0.2, ((float)contador/(ancho*alto)), 0.1);
     }
 
     @Test
@@ -42,21 +41,18 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19,13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int i = 0, j = 0;
-        int contadorDeDiamantes = 0;
+        int contador = 0;
 
-        while(i<ancho/4 && contadorDeDiamantes==0){
-            while(j<alto && contadorDeDiamantes==0){
+        for(int i = 0; i < ancho/4 ; i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Diamante.class))){
-                    contadorDeDiamantes++;
+                    contador++;
                 }
-                j++;
             }
-            i++;
         }
-        assertTrue(contadorDeDiamantes!=0);
+        assertTrue(contador > 0);
     }
 
     @Test
@@ -65,18 +61,18 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19, 13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int contadorDeDiamantes = 0;
+        int contador= 0;
 
-        for(int i=ancho/4; i<ancho; i++){
-            for(int j=0; j<alto; j++){
+        for(int i = ancho/4; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Diamante.class))){
-                    contadorDeDiamantes++;
+                    contador++;
                 }
             }
         }
-        assertTrue(contadorDeDiamantes==0);
+        assertEquals(0, contador);
     }
 
     @Test
@@ -85,21 +81,18 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19, 13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int i = 0, j = 0;
-        int contadorDePiedras = 0;
+        int contador = 0;
 
-        while(i<ancho/2 && contadorDePiedras==0){
-            while(j<alto && contadorDePiedras==0){
+        for(int i = 0; i < ancho/2; i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Piedra.class))){
-                    contadorDePiedras++;
+                    contador++;
                 }
-                j++;
             }
-            i++;
         }
-        assertTrue(contadorDePiedras!=0);
+        assertTrue(contador > 0);
     }
 
     @Test
@@ -108,18 +101,18 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19, 13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int contadorDePiedras = 0;
+        int contador = 0;
 
-        for(int i=ancho/2; i<ancho; i++){
-            for(int j=0; j<alto; j++){
+        for(int i = ancho/2; i < ancho; i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Piedra.class))){
-                    contadorDePiedras++;
+                    contador++;
                 }
             }
         }
-        assertTrue(contadorDePiedras==0);
+        assertEquals(0, contador);
     }
 
     @Test
@@ -128,18 +121,18 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19, 13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int contadorDeMetal = 0;
+        int contador = 0;
 
-        for(int i=0; i<((int)0.75*ancho); i++){
-            for(int j=0; j<alto; j++){
+        for(int i = 0; i < (int)(0.75*ancho); i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Metal.class))){
-                    contadorDeMetal++;
+                    contador++;
                 }
             }
         }
-        assertTrue(contadorDeMetal==0);
+        assertEquals(0, contador);
     }
 
     @Test
@@ -148,20 +141,17 @@ public class UbicadorTest {
         Mapa mapa = Mapa.instanciar(19, 13);
         mapa.limpiar(19, 13);
         Posicion[][] elementosDelMapa = mapa.getCampo();
-        mapa.inicializar();//el unico metodo de ubicador se llama aca adentro
+        mapa.inicializar();
 
-        int i = (int)(0.75*ancho), j = 0;
-        int contadorDeMetal = 0;
+        int contador = 0;
 
-        while(i<ancho && contadorDeMetal==0){
-            while(j<alto && contadorDeMetal==0){
+        for(int i = (int)(0.75*ancho); i < ancho; i++){
+            for(int j = 0; j < alto; j++){
                 if(elementosDelMapa[i][j].getOcupante() != null && (elementosDelMapa[i][j].getOcupante().getClass().equals(Metal.class))){
-                    contadorDeMetal++;
+                    contador++;
                 }
-                j++;
             }
-            i++;
         }
-        assertTrue(contadorDeMetal!=0);
+        assertTrue(contador > 0);
     }
 }

@@ -1,7 +1,6 @@
 package Modelo.MateriaPrima;
 
 import Modelo.Construccion.MesaDeCrafteo;
-import Modelo.Excepciones.ObjetoIncapazDeGolpearException;
 import Modelo.Inventario.Inventario;
 import Modelo.Inventario.Utilizable;
 import Modelo.Materiales.Material;
@@ -14,8 +13,7 @@ public abstract class MateriaPrima implements Utilizable {
     //Metodos
     @Override
     public MateriaPrima usarContra(Material material){
-
-        throw new ObjetoIncapazDeGolpearException();
+        return new Antimateria();
     }
 
     @Override

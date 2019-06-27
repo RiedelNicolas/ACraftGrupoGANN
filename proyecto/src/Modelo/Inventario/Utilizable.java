@@ -8,6 +8,7 @@ public interface Utilizable {
 
     //Metodos
     MateriaPrima usarContra(Material material);
+
     void ubicarse(MesaDeCrafteo mesa, int posicion);
 
     //PARA CONTROLADOR
