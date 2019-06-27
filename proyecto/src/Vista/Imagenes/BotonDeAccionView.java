@@ -1,4 +1,4 @@
-package Vista;
+package Vista.Imagenes;
 
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;

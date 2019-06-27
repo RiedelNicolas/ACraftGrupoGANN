@@ -1,4 +1,4 @@
-package Controlador;
+package Controlador.Mapa;
 
 import Modelo.Juego.Juego;
 import Modelo.Posicion.Posicion;

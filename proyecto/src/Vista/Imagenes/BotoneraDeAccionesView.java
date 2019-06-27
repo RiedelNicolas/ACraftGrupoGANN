@@ -1,6 +1,9 @@
-package Vista;
+package Vista.Imagenes;
 
-import Controlador.*;
+import Controlador.Clickeable.BotonAccionAbajoHandler;
+import Controlador.Clickeable.BotonAccionArribaHandler;
+import Controlador.Clickeable.BotonAccionDerechaHandler;
+import Controlador.Clickeable.BotonAccionIzquierdaHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.layout.BorderPane;

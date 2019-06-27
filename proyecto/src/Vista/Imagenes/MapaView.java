@@ -1,7 +1,7 @@
-package Vista;
+package Vista.Imagenes;
 
-import Controlador.MapaController;
-import Controlador.WASDEventHandler;
+import Controlador.Mapa.MapaController;
+import Controlador.Movimiento.WASDEventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;

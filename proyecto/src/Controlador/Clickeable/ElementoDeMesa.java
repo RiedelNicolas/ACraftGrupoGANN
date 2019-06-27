@@ -1,11 +1,10 @@
-package Controlador;
+package Controlador.Clickeable;
 
 import Modelo.Excepciones.NoHayElementoEnPosicionDelInventarioException;
 import Modelo.Excepciones.NoSePuedeAnadirUtilizableAMesa;
 import Modelo.Jugador.Jugador;
-import Modelo.MateriaPrima.Antimateria;
 import Modelo.MateriaPrima.MateriaPrima;
-import Vista.InventarioView;
+import Vista.Imagenes.InventarioView;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.Image;

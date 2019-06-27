@@ -1,6 +1,6 @@
-package Vista;
+package Vista.Imagenes;
 
-import Controlador.BotonDePlayEventHandler;
+import Controlador.Clickeable.BotonDePlayEventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

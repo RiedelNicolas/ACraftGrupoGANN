@@ -1,7 +1,7 @@
-package Vista;
+package Vista.Imagenes;
 
-import Controlador.BotonInventario;
-import Controlador.Transportador;
+import Controlador.Clickeable.BotonInventario;
+import Controlador.Clickeable.Transportador;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;

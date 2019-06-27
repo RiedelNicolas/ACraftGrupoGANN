@@ -1,4 +1,4 @@
-package Vista;
+package Vista.Imagenes;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

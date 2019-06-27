@@ -1,4 +1,4 @@
-package Controlador;
+package Controlador.Clickeable;
 
 import Modelo.Inventario.Utilizable;
 import javafx.scene.image.Image;

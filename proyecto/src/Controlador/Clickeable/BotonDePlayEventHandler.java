@@ -1,9 +1,9 @@
-package Controlador;
+package Controlador.Clickeable;
 
 import Modelo.Juego.Juego;
-import Vista.BotoneraDeAccionesView;
-import Vista.InventarioView;
-import Vista.MapaView;
+import Vista.Imagenes.BotoneraDeAccionesView;
+import Vista.Imagenes.InventarioView;
+import Vista.Imagenes.MapaView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;

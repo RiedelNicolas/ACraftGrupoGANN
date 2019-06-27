@@ -1,10 +1,9 @@
-package Controlador;
+package Controlador.Clickeable;
 
 import Modelo.Excepciones.NoHayElementoEnPosicionDelInventarioException;
-import Modelo.Inventario.Inventario;
 import Modelo.Inventario.Utilizable;
 import Modelo.Jugador.Jugador;
-import Vista.ImagenInventario;
+import Vista.Imagenes.ImagenInventario;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
