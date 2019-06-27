@@ -27,6 +27,9 @@ public class MesaDeCrafteo {
 
         Herramienta herramienta = constructor.construirCon(elementosEnMesa);
 
+        for(int i=0; i<9; i++)
+            elementosEnMesa.set(i, new Antimateria());
+
         return herramienta;
     }
 
