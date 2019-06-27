@@ -1,7 +1,7 @@
-package Controlador;
+package Controlador.Movimiento;
 
 import Modelo.Juego.Juego;
-import Vista.MapaView;
+import Vista.Imagenes.MapaView;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.input.KeyCode;

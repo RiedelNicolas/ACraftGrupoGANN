@@ -1,4 +1,4 @@
-package Vista;
+package Vista.Imagenes;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -7,9 +7,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 
@@ -38,9 +38,14 @@ public class Main extends Application {
         primaryStage.setTitle("AlgoCraft-AlgoritmosYProgramacionIII");
         primaryStage.setScene(scene);
 
-        String rutaAudio = "src/Vista/sonido/musica.mp3";
+        String rutaAudio = "src/Vista/Sonido/musica2.mp3";
         Media media = new Media(new File(rutaAudio).toURI().toString());
         mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setOnEndOfMedia(new Runnable() {
+            public void run() {
+                mediaPlayer.seek(Duration.ZERO);
+            }
+        });
         mediaPlayer.play();
 
 

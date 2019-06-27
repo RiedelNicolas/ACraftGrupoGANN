@@ -1,8 +1,7 @@
-package Controlador;
+package Controlador.Clickeable;
 
-import Modelo.Inventario.Inventario;
 import Modelo.Jugador.Jugador;
-import Vista.InventarioView;
+import Vista.Imagenes.InventarioView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;

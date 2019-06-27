@@ -1,9 +1,9 @@
-package Controlador;
+package Controlador.Clickeable;
 
 import Modelo.Excepciones.ConstruccionInvalidaException;
 import Modelo.Jugador.Jugador;
-import Vista.ContenedorDeElementos;
-import Vista.InventarioView;
+import Vista.Imagenes.ContenedorDeElementos;
+import Vista.Imagenes.InventarioView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -46,6 +46,7 @@ public class BotonCraftearEventHandler implements EventHandler<ActionEvent> {
         mesaDeCrafteo.setMinHeight(alto);
         mesaDeCrafteo.setMinWidth(ancho);
 
+        insertarBackground(root, ancho, alto);
         insertarInventario(root, ancho, alto);
         insertarContenedorDeElementos(root, ancho, alto);
         insertarBotonMesaDeCrafteo(root, ancho, alto);
@@ -59,6 +60,14 @@ public class BotonCraftearEventHandler implements EventHandler<ActionEvent> {
         });
 
         mesaDeCrafteo.show();
+    }
+
+    private void insertarBackground(Group root, double ancho, double alto){
+
+        ImageView background = new ImageView(new Image("file:img/mesa.jpg"));
+        background.setFitWidth(ancho);
+        background.setFitHeight(alto);
+        root.getChildren().add(background);
     }
 
     private void insertarInventario(Group root, double ancho, double alto){

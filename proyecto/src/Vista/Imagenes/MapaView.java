@@ -1,7 +1,7 @@
-package Vista;
+package Vista.Imagenes;
 
-import Controlador.MapaController;
-import Controlador.WASDEventHandler;
+import Controlador.Mapa.MapaController;
+import Controlador.Movimiento.WASDEventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -11,7 +11,6 @@ public class MapaView{
     private Group root;
     private MapaController mapaController;
     private GridPane grid;
-    private PlayerView jugadorView;
     private double anchoGrid;
     private double altoGrid;
 
@@ -41,7 +40,6 @@ public class MapaView{
                 BackgroundSize.DEFAULT)));
 
         mapaController.agregarMateriales(grid, altoGrid, anchoGrid);
-        this.jugadorView = new PlayerView(root, ancho, alto, grid);
         root.setOnKeyPressed(new WASDEventHandler(this));
         root.getChildren().addAll(grid);
     }
