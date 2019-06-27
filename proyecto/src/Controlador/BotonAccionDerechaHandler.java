@@ -18,6 +18,7 @@ public class BotonAccionDerechaHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent){
         Juego.instanciar().jugadorGolpearDerecha();
+        MapaView.instanciar(new Group(), 0, 0).rotarJugador('d');
         InventarioView.instaciar(new Group(), 0, 0).actualizarInventario();
         mapaView.actualizarMapa();
     }

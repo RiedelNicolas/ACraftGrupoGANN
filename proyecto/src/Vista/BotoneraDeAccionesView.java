@@ -13,7 +13,7 @@ public class BotoneraDeAccionesView {
     public BotoneraDeAccionesView(Group root, double ancho, double alto){
 
         pane = new BorderPane();
-        mapaView = MapaView.crearUnico(root, ancho, alto);
+        mapaView = MapaView.instanciar(root, ancho, alto);
 
         pane.setLayoutX(ancho*0.825);
         pane.setLayoutY(alto*0.515);

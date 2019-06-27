@@ -18,6 +18,7 @@ public class BotonAccionArribaHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         Juego.instanciar().jugadorGolpearArriba();
+        MapaView.instanciar(new Group(), 0, 0).rotarJugador('w');
         InventarioView.instaciar(new Group(), 0, 0).actualizarInventario();
         mapaView.actualizarMapa();
     }

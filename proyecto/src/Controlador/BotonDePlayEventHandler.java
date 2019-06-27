@@ -42,7 +42,7 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         background.setFitWidth(ancho);
         root.getChildren().add(background);
 
-        MapaView.crearUnico(root, ancho, alto);
+        MapaView.instanciar(root, ancho, alto);
 
         InventarioView inventario = InventarioView.instaciar(root, ancho, alto);
         inventario.setLayoutX(ancho*0.825);
