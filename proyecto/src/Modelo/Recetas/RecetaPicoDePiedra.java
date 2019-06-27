@@ -10,7 +10,6 @@ public class RecetaPicoDePiedra extends Receta {
 
     //Metodos
     public RecetaPicoDePiedra(){
-        herramientaAsociada = new PicoDePiedra();
         receta = new ArrayList<>(Arrays.asList(PIEDRA, PIEDRA, PIEDRA,
                                                VACIO, MADERA, VACIO,
                                               VACIO, MADERA, VACIO));

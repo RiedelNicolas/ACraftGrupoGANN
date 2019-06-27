@@ -10,7 +10,6 @@ public class RecetaHachaDePiedra extends Receta {
 
     //Metodos
     public RecetaHachaDePiedra(){
-        herramientaAsociada = new HachaDePiedra();
         receta = new ArrayList<>(Arrays.asList(PIEDRA, PIEDRA, VACIO,
                                               PIEDRA, MADERA, VACIO,
                                                VACIO, MADERA, VACIO));

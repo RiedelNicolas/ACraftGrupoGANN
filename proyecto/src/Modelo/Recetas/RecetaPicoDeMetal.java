@@ -10,7 +10,6 @@ public class RecetaPicoDeMetal extends Receta {
 
     //Metodos
     public RecetaPicoDeMetal(){
-        herramientaAsociada = new PicoDeMetal();
         receta = new ArrayList<>(Arrays.asList(METAL, METAL, METAL,
                                                VACIO, MADERA, VACIO,
                                                VACIO, MADERA, VACIO));
