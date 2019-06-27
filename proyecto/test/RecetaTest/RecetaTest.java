@@ -21,11 +21,15 @@ public class RecetaTest {
         RecetaHachaDeMadera receta = new RecetaHachaDeMadera();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof HachaDeMadera);
     }
