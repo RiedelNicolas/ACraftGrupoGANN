@@ -201,7 +201,7 @@ public class JuegoTest {
     }
 
     @Test
-    public void test15SiElJugadorGolpeaUnMaterialElJuegoContinuaComoDebe(){
+    public void test15SiElJugadorGolpeaUnMaterialAbajoElJuegoContinuaComoDebe(){
         Juego juego = Juego.instanciar();
         juego.restaurar();
         Madera madera = new Madera();
@@ -218,4 +218,63 @@ public class JuegoTest {
         Assert.assertNotEquals(durabilidadMaterialInicial, madera.getDurabilidad());
         Assert.assertNotEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
     }
+
+    @Test
+    public void test16SiElJugadorGolpeaUnMaterialASuIzquierdaElJuegoContinuaComoDebe(){
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Madera madera = new Madera();
+        Posicion posicionMaterial = new Posicion(madera, ancho/2 -1, alto/2);
+        Jugador jugador = (Jugador) juego.getPosicionJugador().getOcupante();
+
+        juego.getMapa().ubicar(posicionMaterial);
+
+        int usosHerramientaInicial = jugador.getUtilizableEnMano().getUsosRestantes();
+        int durabilidadMaterialInicial = madera.getDurabilidad();
+
+        juego.jugadorGolpearIzquierda();
+
+        Assert.assertNotEquals(durabilidadMaterialInicial, madera.getDurabilidad());
+        Assert.assertNotEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
+    }
+
+
+    @Test
+    public void test17SiElJugadorGolpeaUnMaterialArribaElJuegoContinuaComoDebe(){
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Madera madera = new Madera();
+        Posicion posicionMaterial = new Posicion(madera, ancho/2, alto/2 -1);
+        Jugador jugador = (Jugador) juego.getPosicionJugador().getOcupante();
+
+        juego.getMapa().ubicar(posicionMaterial);
+
+        int usosHerramientaInicial = jugador.getUtilizableEnMano().getUsosRestantes();
+        int durabilidadMaterialInicial = madera.getDurabilidad();
+
+        juego.jugadorGolpearArriba();
+
+        Assert.assertNotEquals(durabilidadMaterialInicial, madera.getDurabilidad());
+        Assert.assertNotEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
+    }
+
+    @Test
+    public void test18SiElJugadorGolpeaUnMaterialAsuDerechaElJuegoContinuaComoDebe(){
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Madera madera = new Madera();
+        Posicion posicionMaterial = new Posicion(madera, ancho/2 +1, alto/2);
+        Jugador jugador = (Jugador) juego.getPosicionJugador().getOcupante();
+
+        juego.getMapa().ubicar(posicionMaterial);
+
+        int usosHerramientaInicial = jugador.getUtilizableEnMano().getUsosRestantes();
+        int durabilidadMaterialInicial = madera.getDurabilidad();
+
+        juego.jugadorGolpearDerecha();
+
+        Assert.assertNotEquals(durabilidadMaterialInicial, madera.getDurabilidad());
+        Assert.assertNotEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
+    }
+
 }

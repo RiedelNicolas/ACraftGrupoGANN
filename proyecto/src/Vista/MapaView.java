@@ -17,7 +17,7 @@ public class MapaView{
 
     private static MapaView instancia_unica = null;
 
-    public static MapaView crearUnico(Group root, double ancho, double alto){
+    public static MapaView instanciar(Group root, double ancho, double alto){
         if(instancia_unica == null){
             instancia_unica = new MapaView(root, ancho, alto);
         }
@@ -50,8 +50,8 @@ public class MapaView{
         mapaController.actualizarMapa(grid);
     }
 
-    public PlayerView getJugadorView() {
-        return jugadorView;
+    public void rotarJugador(char orientacion) {
+        mapaController.rotarJugador(orientacion);
     }
 
 }

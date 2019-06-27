@@ -14,12 +14,14 @@ public class MapaController {
     private int altoMapa;
     private int anchoMapa;
     private Posicion[][] campoDeJuego;
+    private char orientacionJugador;
 
     public MapaController(){
         Mapa mapa = Mapa.instanciar(0,0);
         this.campoDeJuego = mapa.getCampo();
         this.altoMapa = mapa.getAlto();
         this.anchoMapa = mapa.getAncho();
+        this.orientacionJugador = 's';
     }
 
     public void agregarMateriales(GridPane grid, double altoGrid, double anchoGrid){
@@ -71,7 +73,8 @@ public class MapaController {
                 imagen.setImage(new Image("file:img/diamante.jpg"));
             }
             if(actual.getOcupante().getClass().getSimpleName().equals("Jugador")){
-                imagen.setImage(new Image("file:img/steve.png"));
+                imagen.setImage(new Image("file:img/Jugador.png"));
+                rotarImagenJugador(imagen);
             }
         }
         else{
@@ -79,4 +82,18 @@ public class MapaController {
         }
     }
 
+    public void rotarJugador(char orientacion){
+        this.orientacionJugador = orientacion;
+    }
+
+    private void rotarImagenJugador(ImageView imagen){
+        if (orientacionJugador == 'a')
+            imagen.setRotate(90);
+        else if (orientacionJugador == 'd')
+            imagen.setRotate(270);
+        else if (orientacionJugador == 'w')
+            imagen.setRotate(180);
+        else
+            imagen.setRotate(0);
+    }
 }

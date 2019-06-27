@@ -5,8 +5,13 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class Main extends Application {
 
@@ -14,6 +19,7 @@ public class Main extends Application {
     private Scene scene;
     private static double ancho;
     private static double alto;
+    private static MediaPlayer mediaPlayer;
 
 
     public static void main(String[] args) {
@@ -31,6 +37,13 @@ public class Main extends Application {
         dibujarPantallaInicial();
         primaryStage.setTitle("AlgoCraft-AlgoritmosYProgramacionIII");
         primaryStage.setScene(scene);
+
+        String rutaAudio = "src/Vista/sonido/musica.mp3";
+        Media media = new Media(new File(rutaAudio).toURI().toString());
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
+
+
         primaryStage.show();
     }
 
