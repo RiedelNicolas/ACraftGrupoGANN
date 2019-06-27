@@ -9,6 +9,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 
@@ -37,10 +38,15 @@ public class Main extends Application {
         primaryStage.setTitle("AlgoCraft-AlgoritmosYProgramacionIII");
         primaryStage.setScene(scene);
 
-//        String rutaAudio = "src/Vista/sonido/musica.mp3";
-//        Media media = new Media(new File(rutaAudio).toURI().toString());
-//        mediaPlayer = new MediaPlayer(media);
-//        mediaPlayer.play();
+        String rutaAudio = "src/Vista/sonido/musica2.mp3";
+        Media media = new Media(new File(rutaAudio).toURI().toString());
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setOnEndOfMedia(new Runnable() {
+            public void run() {
+                mediaPlayer.seek(Duration.ZERO);
+            }
+        });
+        mediaPlayer.play();
 
 
         primaryStage.show();
