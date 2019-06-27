@@ -27,12 +27,11 @@ public class Constructor {
         recetas.add(new RecetaHachaDeMetal());
     }
 
-    public Herramienta construirCon(ArrayList<MateriaPrima> elementosEnMesa){  //Cada receta es unica
+    public Herramienta construirCon(ArrayList<MateriaPrima> elementosEnMesa){
 
         for( Receta receta : recetas){
             try{
-                receta.comparar(elementosEnMesa);
-                return receta.getHerramienta();
+                return receta.comparar(elementosEnMesa);
             } catch (RecetaIncompatibleException e){}
 
         }
