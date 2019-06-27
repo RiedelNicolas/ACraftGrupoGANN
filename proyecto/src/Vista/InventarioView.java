@@ -45,15 +45,15 @@ public class InventarioView extends GridPane{
         labelImagen.setX(ancho*0.885);
         labelImagen.setY(alto*0.63);
 
-        labelEnMano.setLayoutX(ancho*0.8705);
-        labelEnMano.setLayoutY(alto*0.81);
-        labelEnMano.setTextFill(Color.WHITE);
+        labelEnMano.setLayoutX(ancho*0.88);
+        labelEnMano.setLayoutY(alto*0.815);
+        labelEnMano.setTextFill(Color.BLACK);
         labelEnMano.setStyle("-fx-font-weight: bold;");
         labelEnMano.setFont(new Font(14));
 
-        labelUsos.setLayoutX(ancho*0.905);
-        labelUsos.setLayoutY(alto*0.84);
-        labelUsos.setTextFill(Color.WHITE);
+        labelUsos.setLayoutX(ancho*0.915);
+        labelUsos.setLayoutY(alto*0.845);
+        labelUsos.setTextFill(Color.BLACK);
         labelUsos.setStyle("-fx-font-weight: bold;");
         labelUsos.setFont(new Font(14));
 

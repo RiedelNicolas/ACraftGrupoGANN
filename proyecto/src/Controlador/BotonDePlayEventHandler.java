@@ -37,7 +37,7 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
     private void inicilizarPantallaPrincipal(){
 
         ImageView background= new ImageView();
-        background.setImage(new Image("file:img/fondoGris.jpg"));
+        background.setImage(new Image("file:img/fondo.jpg"));
         background.setFitHeight(alto);
         background.setFitWidth(ancho);
         root.getChildren().add(background);
@@ -82,16 +82,16 @@ public class BotonDePlayEventHandler implements EventHandler<ActionEvent> {
         botonDesequipar.setOnAction(new BotonDesequiparEventHandler());
 
         Label labelEnMano = new Label("En mano: ");
-        labelEnMano.setLayoutX(ancho*0.815);
-        labelEnMano.setLayoutY(alto*0.81);
-        labelEnMano.setTextFill(Color.WHITE);
+        labelEnMano.setLayoutX(ancho*0.828);
+        labelEnMano.setLayoutY(alto*0.815);
+        labelEnMano.setTextFill(Color.BLACK);
         labelEnMano.setStyle("-fx-font-weight: bold;");
         labelEnMano.setFont(new Font(14));
 
         Label labelUsos = new Label("Usos Restantes: ");
-        labelUsos.setLayoutX(ancho*0.815);
-        labelUsos.setLayoutY(alto*0.84);
-        labelUsos.setTextFill(Color.WHITE);
+        labelUsos.setLayoutX(ancho*0.828);
+        labelUsos.setLayoutY(alto*0.845);
+        labelUsos.setTextFill(Color.BLACK);
         labelUsos.setStyle("-fx-font-weight: bold;");
         labelUsos.setFont(new Font(14));
 
