@@ -39,11 +39,15 @@ public class RecetaTest {
         RecetaHachaDeMetal receta = new RecetaHachaDeMetal();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(1, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(3, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof HachaDeMetal);
     }
@@ -53,11 +57,15 @@ public class RecetaTest {
         RecetaHachaDePiedra receta = new RecetaHachaDePiedra();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(1, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(3, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof HachaDePiedra);
     }
@@ -67,11 +75,15 @@ public class RecetaTest {
         RecetaPicoDeMadera receta = new RecetaPicoDeMadera();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(2, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof PicoDeMadera);
     }
@@ -81,11 +93,15 @@ public class RecetaTest {
         RecetaPicoDeMetal receta = new RecetaPicoDeMetal();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(1, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(2, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof PicoDeMetal);
     }
@@ -95,11 +111,15 @@ public class RecetaTest {
         RecetaPicoDePiedra receta = new RecetaPicoDePiedra();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(1, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(2, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof PicoDePiedra);
     }
@@ -109,12 +129,15 @@ public class RecetaTest {
         RecetaPicoFino receta = new RecetaPicoFino();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(1, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(2, new MateriaPrimaMetal());
-        elementosDeLaMesa.set(3, new MateriaPrimaPiedra());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         Assert.assertTrue(receta.comparar(elementosDeLaMesa) instanceof PicoFino);
     }
@@ -124,11 +147,15 @@ public class RecetaTest {
         RecetaHachaDeMadera receta = new RecetaHachaDeMadera();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
@@ -139,11 +166,15 @@ public class RecetaTest {
         RecetaHachaDeMetal receta = new RecetaHachaDeMetal();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
@@ -154,11 +185,15 @@ public class RecetaTest {
         RecetaHachaDePiedra receta = new RecetaHachaDePiedra();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
@@ -169,11 +204,15 @@ public class RecetaTest {
         RecetaPicoDeMadera receta = new RecetaPicoDeMadera();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
@@ -184,11 +223,15 @@ public class RecetaTest {
         RecetaPicoDeMetal receta = new RecetaPicoDeMetal();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
@@ -199,11 +242,15 @@ public class RecetaTest {
         RecetaPicoDePiedra receta = new RecetaPicoDePiedra();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
@@ -214,12 +261,15 @@ public class RecetaTest {
         RecetaPicoFino receta = new RecetaPicoFino();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
-        elementosDeLaMesa.set(0, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(1, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(2, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(3, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(4, new MateriaPrimaMadera());
-        elementosDeLaMesa.set(7, new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaMetal());
+        elementosDeLaMesa.add(new MateriaPrimaPiedra());
+        elementosDeLaMesa.add(new MateriaPrimaMadera());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new Antimateria());
+        elementosDeLaMesa.add(new MateriaPrimaDiamante());
+        elementosDeLaMesa.add(new Antimateria());
 
         thrown.expect(RecetaIncompatibleException.class);
         receta.comparar(elementosDeLaMesa);
