@@ -97,7 +97,6 @@ public class JuegoTest {
         Juego juego = Juego.instanciar();
         juego.restaurar();
         Mapa mapa = juego.getMapa();
-        mapa.limpiar(ancho, alto);
         Posicion material = new Posicion(new Madera(), ancho/2 + 1, alto/2);
 
         mapa.ubicar(material);
@@ -117,7 +116,6 @@ public class JuegoTest {
         Juego juego = Juego.instanciar();
         juego.restaurar();
         Mapa mapa = juego.getMapa();
-        mapa.limpiar(ancho, alto);
         Posicion material = new Posicion(new Madera(), ancho/2 - 1, alto/2);
 
         mapa.ubicar(material);
@@ -137,7 +135,6 @@ public class JuegoTest {
         Juego juego = Juego.instanciar();
         juego.restaurar();
         Mapa mapa = juego.getMapa();
-        mapa.limpiar(ancho, alto);
         Posicion material = new Posicion(new Madera(), ancho/2, alto/2 - 1);
 
         mapa.ubicar(material);
@@ -157,7 +154,6 @@ public class JuegoTest {
         Juego juego = Juego.instanciar();
         juego.restaurar();
         Mapa mapa = juego.getMapa();
-        mapa.limpiar(ancho, alto);
         Posicion material = new Posicion(new Madera(), ancho/2, alto/2 + 1);
 
         mapa.ubicar(material);
@@ -169,5 +165,57 @@ public class JuegoTest {
         Posicion jugadorPosicionFinal = juego.getPosicionJugador();
 
         Assert.assertEquals(jugadorPosicionInicial, jugadorPosicionFinal);
+    }
+
+    @Test
+    public void test13SiElJugadorIntentaGolpearFueraDelMapaNoSeProducenCambiosEnElJuego(){
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Jugador jugador = (Jugador) juego.getPosicionJugador().getOcupante();
+
+        int usosHerramientaInicial = jugador.getUtilizableEnMano().getUsosRestantes();
+        Posicion PosicionAntesDelGolpe = juego.getPosicionJugador();
+
+        juego.jugadorGolpearDerecha();
+
+        Assert.assertEquals(PosicionAntesDelGolpe, juego.getPosicionJugador());
+        Assert.assertEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
+    }
+
+    @Test
+    public void test14SiElJugadorIntentaGolpearUnLugarVacioNoSeProducenCambiosEnElJuego(){
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Posicion vacio = new Posicion(ancho/2, alto/2 + 1);
+        Jugador jugador = (Jugador) juego.getPosicionJugador().getOcupante();
+
+        juego.getMapa().ubicar(vacio);
+
+        int usosHerramientaInicial = jugador.getUtilizableEnMano().getUsosRestantes();
+        Posicion PosicionAntesDelGolpe = juego.getPosicionJugador();
+
+        juego.jugadorGolpearAbajo();
+
+        Assert.assertEquals(PosicionAntesDelGolpe, juego.getPosicionJugador());
+        Assert.assertEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
+    }
+
+    @Test
+    public void test15SiElJugadorGolpeaUnMaterialElJuegoContinuaComoDebe(){
+        Juego juego = Juego.instanciar();
+        juego.restaurar();
+        Madera madera = new Madera();
+        Posicion posicionMaterial = new Posicion(madera, ancho/2, alto/2 + 1);
+        Jugador jugador = (Jugador) juego.getPosicionJugador().getOcupante();
+
+        juego.getMapa().ubicar(posicionMaterial);
+
+        int usosHerramientaInicial = jugador.getUtilizableEnMano().getUsosRestantes();
+        int durabilidadMaterialInicial = madera.getDurabilidad();
+
+        juego.jugadorGolpearAbajo();
+
+        Assert.assertNotEquals(durabilidadMaterialInicial, madera.getDurabilidad());
+        Assert.assertNotEquals(usosHerramientaInicial, jugador.getUtilizableEnMano().getUsosRestantes());
     }
 }

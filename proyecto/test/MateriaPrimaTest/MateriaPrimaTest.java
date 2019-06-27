@@ -69,7 +69,7 @@ public class MateriaPrimaTest {
 
         materiaPrimaMadera.equipar(inventario);
 
-        inventario.mover(2);
+        inventario.mover(1);
 
         Assert.assertEquals("MateriaPrimaMadera", inventario.getUtilizableActual().getClass().getSimpleName());
     }
