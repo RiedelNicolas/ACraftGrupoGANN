@@ -3,8 +3,10 @@ package Modelo.Construccion;
 import Modelo.Excepciones.ConstruccionInvalidaException;
 import Modelo.Excepciones.RecetaIncompatibleException;
 import Modelo.Herramientas.*;
+import Modelo.MateriaPrima.Antimateria;
 import Modelo.MateriaPrima.MateriaPrima;
 import Modelo.Recetas.*;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.util.ArrayList;
 
@@ -32,10 +34,13 @@ public class Constructor {
                 receta.comparar(elementosEnMesa);
                 return receta.getHerramienta();
             } catch (RecetaIncompatibleException e){}
-        }
 
+        }
+        for(int i=0; i<9; i++)
+            elementosEnMesa.set(i, new Antimateria());
         throw new ConstruccionInvalidaException();
     }
+
 
     public ArrayList<Receta> getRecetas() {
         return recetas;

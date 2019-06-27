@@ -53,7 +53,7 @@ public class ElementoDeMesa extends ImageView {
 
     public void limpiar(){
         this.setImage(new Image("file:img/elementoVacio.jpg"));
-        materia = new Antimateria();
+        materia = null;
         ocupado = false;
     }
 

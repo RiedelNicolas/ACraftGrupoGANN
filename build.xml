@@ -8,7 +8,7 @@
 	<property name="reports.dir" location="${build}/reports" />
 	<property name="reports.xml.dir" location="${reports.dir}/junit-xml" />
 	<property name="reports.html.dir" location="${reports.dir}/junit-html" />
-	<property name="src.dir" location="proyecto/src" />
+	<property name="src.dir" location="${proyecto}/src" />
 	<property name="coverage.xml.dir" location="${reports.dir}/cobertura-xml" />
 	<property name="coverage.summaryxml.dir" location="${reports.dir}/cobertura-summary-xml" />
 	<property name="coverage.html.dir" location="${reports.dir}/cobertura-html" />
