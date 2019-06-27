@@ -62,7 +62,7 @@ public class MapaTest {
     }
 
     @Test
-    public void test05MapaSeInicializaSinErrores(){
+    public void test06MapaSeInicializaSinErrores(){
         Mapa mapa = Mapa.instanciar(ancho, alto);
         mapa = mapa.limpiar(ancho, alto);
         mapa.inicializar();
@@ -71,7 +71,7 @@ public class MapaTest {
     }
 
     @Test
-    public void test06MapaTieneAlmenos1Madera(){
+    public void test07MapaTieneAlmenos1Madera(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
         mapa = mapa.limpiar(ancho, alto);
@@ -90,7 +90,7 @@ public class MapaTest {
     }
 
     @Test
-    public void test07MapaTieneAlmenos1Metal(){
+    public void test08MapaTieneAlmenos1Metal(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
         mapa = mapa.limpiar(ancho, alto);
@@ -109,7 +109,7 @@ public class MapaTest {
     }
 
     @Test
-    public void test08MapaTieneAlmenos1Piedra(){
+    public void test09MapaTieneAlmenos1Piedra(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
         mapa = mapa.limpiar(ancho, alto);
@@ -128,7 +128,7 @@ public class MapaTest {
     }
 
     @Test
-    public void test09MapaTieneAlmenos1Diamante(){
+    public void test10MapaTieneAlmenos1Diamante(){
 
         Mapa mapa = Mapa.instanciar(ancho, alto);
         mapa = mapa.limpiar(ancho, alto);
@@ -144,94 +144,5 @@ public class MapaTest {
         }
 
         Assert.assertTrue(total > 0);
-    }
-
-//    @Test
-//    public void testintermedia(){
-//        int alto = 45;
-//        int ancho = 81;
-//
-//        Mapa mapa = Mapa.instanciar();
-//        Posicion[][] _mapa = mapa.getCampo();
-//        int total = 0;
-//
-//        for(int i = 0; i < ancho; i++){
-//            for(int j = 0; j < alto; j++){
-//                if((_mapa[i][j]).getOcupante() instanceof Diamante){
-//                    total++;
-//                }
-//            }
-//        }
-//
-//        Assert.assertTrue(total > 0);
-//    }
-
-//    @Test
-//    public void test10MapaPermiteOcuparUnCasilleroVacioAUnMaterial(){
-//        Mapa mapa = Mapa.instanciar();
-//        Posicion material = new Posicion(new Metal(), 3, 3);
-//
-//        Posicion posicionDeseada = mapa.getPosicion(3, 3);
-//
-//        Assert.assertNull(posicionDeseada.getOcupante());
-//        mapa.ubicar(material);
-//        Assert.assertTrue();
-//    }
-//
-//    @Test
-//    public void test11MapaNoPermitePosicionarUnObjetoPosicionableDondeYaSeEncuentraUnoPosicionable(){
-//        Mapa mapa = Mapa.instanciar();
-//        Posicion material1 = new Posicion(new Madera(), 6, 8);
-//        Posicion material2 = new Posicion(new Diamante(), 6, 8);
-//        Posicion[][] _mapa = mapa.getCampo();
-//
-//        mapa.ubicar(material1);
-//        Assert.assertTrue(_mapa[6][8].estaOcupada());
-//
-//        thrown.expect(PosicionOcupadaException.class);
-//        mapa.ubicar(material2);
-//    }
-
-    @Test
-
-    public void testDeLimpieza(){
-        Mapa mapa = Mapa.instanciar(ancho, alto);
-        mapa.inicializar();
-        mapa = mapa.limpiar(ancho, alto);
-        int total = 0;
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if(mapa.getPosicion(i, j).getOcupante() instanceof Diamante){
-                    total++;
-                }
-            }
-        }
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if(mapa.getPosicion(i, j).getOcupante() instanceof Madera){
-                    total++;
-                }
-            }
-        }
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if(mapa.getPosicion(i, j).getOcupante() instanceof Metal){
-                    total++;
-                }
-            }
-        }
-
-        for(int i = 0; i < ancho; i++){
-            for(int j = 0; j < alto; j++){
-                if(mapa.getPosicion(i, j).getOcupante() instanceof Piedra){
-                    total++;
-                }
-            }
-        }
-
-        Assert.assertTrue(total == 0);
     }
 }

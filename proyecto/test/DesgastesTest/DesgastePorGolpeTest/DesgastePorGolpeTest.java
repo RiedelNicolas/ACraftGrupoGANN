@@ -1,4 +1,5 @@
 package DesgastesTest.DesgastePorGolpeTest;
+
 import Modelo.Desgastes.*;
 import Modelo.Excepciones.HerramientaRotaException;
 import org.hamcrest.CoreMatchers;
@@ -32,7 +33,7 @@ public class DesgastePorGolpeTest {
     public void test04DesgastePorCantidadDeGolpesAplicaBienElDesgaste() {
         int durabilidad = 100;
         DesgastePorGolpes desgaste = new DesgastePorGolpes(5);
-        for (int i = 0; i < 4; i++) { // cantidad de desgastes es menor a cantidad de golpes, asi que deberia seguir igual la durabilidad
+        for (int i = 0; i < 4; i++) {
             durabilidad = desgaste.aplicar(durabilidad);
         }
         Assert.assertEquals(100, durabilidad);

@@ -125,7 +125,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test06RecetaPicoFinoDevuelvePicoFinoSiLosElementosDeLaMesaSonIgualesASuReceta(){
+    public void test07RecetaPicoFinoDevuelvePicoFinoSiLosElementosDeLaMesaSonIgualesASuReceta(){
         RecetaPicoFino receta = new RecetaPicoFino();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -143,7 +143,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test07RecetaHachaDeMaderaDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
+    public void test08RecetaHachaDeMaderaDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
         RecetaHachaDeMadera receta = new RecetaHachaDeMadera();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -162,7 +162,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test08RecetaHachaDeMetalDevuelveExcepcionSiLosElementosDeLaMesaNOSonIgualesASuReceta(){
+    public void test09RecetaHachaDeMetalDevuelveExcepcionSiLosElementosDeLaMesaNOSonIgualesASuReceta(){
         RecetaHachaDeMetal receta = new RecetaHachaDeMetal();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -181,7 +181,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test09RecetaHachaDePiedraDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
+    public void test10RecetaHachaDePiedraDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
         RecetaHachaDePiedra receta = new RecetaHachaDePiedra();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -200,7 +200,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test10RecetaPicoDeMaderaDevuelveExcepcionSiLosElementosDeLaMesaSonIgualesASuReceta(){
+    public void test11RecetaPicoDeMaderaDevuelveExcepcionSiLosElementosDeLaMesaSonIgualesASuReceta(){
         RecetaPicoDeMadera receta = new RecetaPicoDeMadera();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -219,7 +219,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test11RecetaPicoDeMetalDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
+    public void test12RecetaPicoDeMetalDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
         RecetaPicoDeMetal receta = new RecetaPicoDeMetal();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -238,7 +238,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test12RecetaPicoDePiedraDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
+    public void test13RecetaPicoDePiedraDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
         RecetaPicoDePiedra receta = new RecetaPicoDePiedra();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 
@@ -257,7 +257,7 @@ public class RecetaTest {
     }
 
     @Test
-    public void test13RecetaPicoFinoDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
+    public void test14RecetaPicoFinoDevuelveExcepcionSiLosElementosDeLaMesaNoSonIgualesASuReceta(){
         RecetaPicoFino receta = new RecetaPicoFino();
         ArrayList<MateriaPrima> elementosDeLaMesa = new ArrayList<>();
 

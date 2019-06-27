@@ -56,7 +56,7 @@ public class MateriaPrimaTest {
     }
 
     @Test
-    public void test063MateriaPrimaDiamanteDevulveUnId4(){
+    public void test06MateriaPrimaDiamanteDevulveUnId4(){
         MateriaPrimaDiamante materiaPrimaDiamante = new MateriaPrimaDiamante();
 
         Assert.assertEquals(4, materiaPrimaDiamante.getId());
