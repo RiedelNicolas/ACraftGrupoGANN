@@ -9,7 +9,7 @@ public class HachaDeMadera extends Hacha {
     //Metodos
     public HachaDeMadera(){
 
-        durabilidad = 100;
+        durabilidad = 10000;
         fuerza = 2;
         desgaste = new DesgastePorPorcentajeDeFuerza(1, fuerza);
         usosRestantes = desgaste.calcularUsosRestantes(durabilidad);

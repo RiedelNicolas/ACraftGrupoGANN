@@ -1,6 +1,7 @@
 package Modelo.MateriaPrima;
 
 import Modelo.Construccion.MesaDeCrafteo;
+import Modelo.Excepciones.InventarioLlenoException;
 import Modelo.Excepciones.ObjetoIncapazDeGolpearException;
 import Modelo.Inventario.Inventario;
 import Modelo.Inventario.Utilizable;
@@ -27,7 +28,9 @@ public abstract class MateriaPrima implements Utilizable {
     public int getId(){ return id; }
 
     public void equipar(Inventario inventario){
-        inventario.equipar(this);
+        try {
+            inventario.equipar(this);
+        }catch(InventarioLlenoException e){ }
     }
 
     //PARA EL CONTROLADOR
