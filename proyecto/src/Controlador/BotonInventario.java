@@ -58,7 +58,6 @@ public class BotonInventario extends Button {
     public void actualizar() {
 
         ArrayList<Utilizable> items = Jugador.instanciar().getInventario().getItems();
-
         if (items.size() > id) {
             Utilizable itemCorrespondiente = items.get(id);
 
